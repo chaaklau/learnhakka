@@ -120,8 +120,8 @@
           { "hak": "十", "rom": "sìp*", "zh": "十" },
           { "hak": "百", "rom": "băk*", "zh": "百" },
           { "hak": "千", "rom": "cién*", "zh": "千" },
-          { "hak": "萬", "rom": "vàn*", "zh": "萬" },
-          { "hak": "億", "rom": "yí*", "zh": "億" }
+          { "hak": "萬", "rom": "màn", "zh": "萬" },
+          { "hak": "億", "rom": "yì", "zh": "億" }
         ]
       },
       {
@@ -828,9 +828,9 @@
           { "hak": "轉屋卡", "rom": "zŏn vŭk ká", "zh": "回家" },
           { "hak": "轉去", "rom": "zŏn hì", "zh": "回去" },
           { "hak": "黏等", "rom": "ngièm dĕn*", "zh": "跟着" },
-          { "hak": "愛", "rom": "òi*", "zh": "要" },
-          { "hak": "好像", "rom": "hău siòng*", "zh": "好像" },
-          { "hak": "渾", "rom": "vūn*", "zh": "大概" },
+          { "hak": "愛", "rom": "òi", "zh": "要" },
+          { "hak": "好像", "rom": "hău ciòng", "zh": "好像" },
+          { "hak": "渾", "rom": "vōn*", "zh": "大概" },
           { "hak": "轉到屋", "rom": "zŏn dàu vŭk*", "zh": "回到家" },
           { "hak": "幾久", "rom": "gĭt gĭu*", "zh": "多久" },
           { "hak": "小巴", "rom": "siău bá*", "zh": "小巴" },
