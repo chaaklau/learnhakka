@@ -1,0 +1,100 @@
+:root {
+  --font-serif: "Noto Serif TC", serif;
+  --font-sans: "Zen Kaku Gothic New", "Noto Sans TC", sans-serif;
+  --font-mono: "Menlo", "Monaco", "Courier New", monospace;
+  
+  --color-bg: #f4f4f0;      /* Wabi-sabi off-white */
+  --color-surface: #ffffff;
+  --color-text: #3e3e3e;
+  --color-accent: #7d8a68;  /* Muted moss green */
+  --color-accent-light: #e8ede3;
+  --color-subtle: #9ca3af;
+  --color-border: #e5e7eb;
+  --color-error: #b91c1c;   /* For unproofread marker */
+  
+  --sidebar-width: 250px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+#app {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 4px;
+}
+
+/* Typography utilities */
+.font-hakka {
+  font-family: var(--font-serif);
+}
+.font-rom {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  color: #555;
+  letter-spacing: 0.02em;
+}
+
+/* Common Components */
+.btn {
+  background: transparent;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+.btn:hover, .btn.active {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+/* Audio Placeholder */
+.audio-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-accent-light);
+  color: var(--color-accent);
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 12px;
+  border: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.audio-btn:hover {
+  opacity: 1;
+}
+
+/* Inline Hakka Text highlight */
+.inline-hakka {
+  font-family: var(--font-serif);
+  color: #2c3e50;
+  font-weight: 500;
+  background-color: rgba(125, 138, 104, 0.1);
+  padding: 0 4px;
+  border-radius: 2px;
+}

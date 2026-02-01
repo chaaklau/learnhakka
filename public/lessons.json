@@ -1,0 +1,1362 @@
+[
+  {
+    "id": 1,
+    "title": { "hak": "厓、你、佢", "rom": "ngāi、ngī、gī", "en": "" },
+    "blocks": [
+      {
+        "type": "vocab",
+        "items": [
+          { "hak": "厓", "rom": "ngāi", "zh": "我" },
+          { "hak": "你", "rom": "ngī", "zh": "你" },
+          { "hak": "佢", "rom": "gī", "zh": "他" },
+          { "hak": "係", "rom": "hè", "zh": "是" },
+          { "hak": "安做", "rom": "ón zò", "zh": "叫做" },
+          { "hak": "乜介", "rom": "măk gài", "zh": "什麼" },
+          { "hak": "名", "rom": "miāng", "zh": "名字" },
+          { "hak": "貴姓", "rom": "gùi siàng", "zh": "貴姓" },
+          { "hak": "哪人", "rom": "là ngīn", "zh": "誰" },
+          { "hak": "唔係", "rom": "m hè", "zh": "不是" }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "items": [
+          { "sp": "A", "hak": "同學你好。你貴姓？", "zh": "同學你好。你貴姓？" },
+          { "sp": "B", "hak": "厓姓陳。", "zh": "我姓陳。" },
+          { "sp": "A", "hak": "你安做乜介名？", "zh": "你叫什麼名字？" },
+          { "sp": "B", "hak": "厓安做陳大明。你呢？", "zh": "我叫陳大明。你呢？" },
+          { "sp": "A", "hak": "厓係羅春蘭。佢係哪人？", "zh": "我是羅春蘭。他是誰？" },
+          { "sp": "B", "hak": "佢係何小安。", "zh": "他是何小安。" },
+          { "sp": "A", "hak": "你係唔係客家人？", "zh": "你是不是客家人？" },
+          { "sp": "B", "hak": "係，厓係客家人。", "zh": "是，我是客家人。" },
+          { "sp": "A", "hak": "佢呢, 佢係唔係客家人？", "zh": "他呢, 他是不是客家人？" },
+          { "sp": "A", "hak": "唔係，佢唔係客家人。", "zh": "不是，他不是客家人。" }
+        ]
+      },
+      {
+        "type": "sentence_practice",
+        "items": [
+          { "hak": "厓/你/佢 + 姓陳/姓李/姓黃", "rom": "", "en": "" },
+          { "hak": "厓安做/你安做/佢安做 ….", "rom": "", "en": "" },
+          { "hak": "厓係/你係/佢係 …", "rom": "", "en": "" },
+          { "hak": "你/佢 + 安做乜介名?", "rom": "", "en": "" },
+          { "hak": "你/佢係唔係 何小安/客家人", "rom": "", "en": "" }
+        ]
+      },
+      {
+        "type": "pronunciation_practice",
+        "description": { "hak": "姓", "rom": "siàng", "en": "Surnames" },
+        "rows": [
+          [
+            { "hak": "包", "rom": "báu*" },
+            { "hak": "潘", "rom": "pán*" },
+            { "hak": "梅", "rom": "mōi*" },
+            { "hak": "方", "rom": "fóng*" },
+            { "hak": "溫", "rom": "vún*" },
+            { "hak": "戴", "rom": "dài*" },
+            { "hak": "田", "rom": "tiēn*" },
+            { "hak": "廖", "rom": "liàu*" }
+          ],
+          [
+            { "hak": "曾", "rom": "zén*" },
+            { "hak": "陳", "rom": "cīn*" },
+            { "hak": "沈", "rom": "sĭm*" },
+            { "hak": "郭", "rom": "gŏk*" },
+            { "hak": "柯", "rom": "kó*" },
+            { "hak": "魏", "rom": "ngùi*" },
+            { "hak": "韓", "rom": "hōn*" },
+            { "hak": "袁", "rom": "yēn*" },
+            { "hak": "歐", "rom": "íu*" }
+          ],
+          [
+            { "hak": "趙", "rom": "càu*" },
+            { "hak": "錢", "rom": "ciēn*" },
+            { "hak": "孫", "rom": "sún*" },
+            { "hak": "李", "rom": "lĭ*" },
+            { "hak": "周", "rom": "zíu*" },
+            { "hak": "吳", "rom": "n̄g*" },
+            { "hak": "鄭", "rom": "càng*" },
+            { "hak": "王", "rom": "vōng*" }
+          ]
+        ]
+      },
+      {
+        "type": "grammar_notes",
+        "items": [
+          {
+            "zh": "客家話的聲母連零聲母在內有17個，符號是b, p, m. f, v, d, t, l, z, c. s, g, k, ng, h, y。{零聲母}就是不帶上述聲母符號，直接用a, e, o開頭的音節。",
+            "en": "Hakka has 17 initials (including zero initial): b, p, m, f, v, d, t, l, z, c, s, g, k, ng, h, y. {Zero initial} means syllables beginning directly with a, e, o without any of the above initial consonants."
+          },
+          {
+            "zh": "客家話的韻母有{i介音}，但元音只有a, i, u, e, o五個（跟日語相同）。",
+            "en": "Hakka has the {i-medial}, but only five vowels: a, i, u, e, o (same as Japanese)."
+          },
+          { "zh": "客家話的韻尾有六個：m, n, ng, p, t, k。", "en": "Hakka has six syllable endings: m, n, ng, p, t, k." },
+          {
+            "zh": "客家話的疑問詞誰是{哪人}，發音是{là ngīn}。客家話區別{哪個}和{誰}，分別是{奈隻}和{哪人}。",
+            "en": "The Hakka question word for 'who' is {哪人} ({là ngīn}). Hakka distinguishes between {which one} and {who}: {奈隻} and {哪人}."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": { "hak": "數數", "rom": "", "en": "" },
+    "blocks": [
+      {
+        "type": "vocab",
+        "items": [
+          { "hak": "零", "rom": "lāng*", "zh": "零" },
+          { "hak": "一", "rom": "yĭt*", "zh": "一" },
+          { "hak": "二", "rom": "ngì*", "zh": "二" },
+          { "hak": "三", "rom": "sám*", "zh": "三" },
+          { "hak": "四", "rom": "sì*", "zh": "四" },
+          { "hak": "五", "rom": "n̆g*", "zh": "五" },
+          { "hak": "六", "rom": "lŭk*", "zh": "六" },
+          { "hak": "七", "rom": "cĭt*", "zh": "七" },
+          { "hak": "八", "rom": "băt*", "zh": "八" },
+          { "hak": "九", "rom": "gĭu*", "zh": "九" },
+          { "hak": "十", "rom": "sìp*", "zh": "十" },
+          { "hak": "百", "rom": "băk*", "zh": "百" },
+          { "hak": "千", "rom": "cién*", "zh": "千" },
+          { "hak": "萬", "rom": "vàn*", "zh": "萬" },
+          { "hak": "億", "rom": "yí*", "zh": "億" }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "items": [
+              { "hak": "58", "rom": "n̆g sìp băt*", "zh": "58" },
+              { "hak": "246", "rom": "ngì băk sì sìp lŭk*", "zh": "246" },
+              { "hak": "3407", "rom": "sám cién sì băk lāng cĭt*", "zh": "3407" },
+              { "hak": "42 348", "rom": "sì vàn ngì cién sám băk sì sìp băt*", "zh": "42 348" },
+              { "hak": "789 306", "rom": "cĭt sìp băt vàn gĭu cién sám băk lāng lŭk*", "zh": "789 306" }
+            ]
+      },
+      {
+        "type": "dialogue",
+        "items": [
+          { "sp": null, "hak": "乘數表", "en": "Multiplication Table"},
+          { "sp": null, "hak": "三一如三，三二如六，三三歸九，三四一十二"},
+          { "sp": null, "hak": "三五一十五，三六一十八，三七二十一，三八二十四"}
+        ]
+      },
+      {
+        "type": "sentence_practice",
+        "items": [
+          { "hak": "109，4567，789 000", "rom": "", "en": "" },
+          { "hak": "一億三千萬、十四億", "rom": "", "en": "" },
+          { "hak": "唸出其他倍數的乘數表", "rom": "", "en": "" }
+        ]
+      },
+      {
+        "type": "pronunciation_practice",
+        "description": { "hak": "", "rom": "", "en": "Tones and Initials" },
+        "rows": [
+          [
+            { "hak": "沙", "rom": "sá" },
+            { "hak": "蛇", "rom": "sā" },
+            { "hak": "灑", "rom": "să" },
+            { "hak": "灑", "rom": "sà" }
+          ],
+          [
+            { "hak": "車", "rom": "cá" },
+            { "hak": "茶", "rom": "cā" },
+            { "hak": "扯", "rom": "că" },
+            { "hak": "岔", "rom": "cà" }
+          ],
+          [
+            { "hak": "西", "rom": "sí" },
+            { "hak": "時", "rom": "sī" },
+            { "hak": "死", "rom": "sĭ" },
+            { "hak": "四", "rom": "sì" }
+          ],
+          [
+            { "hak": "居", "rom": "gí" },
+            { "hak": "佢", "rom": "gī" },
+            { "hak": "幾", "rom": "gĭ" },
+            { "hak": "記", "rom": "gì" }
+          ],
+          [
+            { "hak": "夫", "rom": "fú" },
+            { "hak": "胡", "rom": "fū" },
+            { "hak": "府", "rom": "fŭ" },
+            { "hak": "婦", "rom": "fù" }
+          ],
+          [
+            { "hak": "亨", "rom": "hén" },
+            { "hak": "恆", "rom": "hēn" },
+            { "hak": "肯", "rom": "hĕn" },
+            { "hak": "幸", "rom": "hèn" }
+          ],
+          [
+            { "hak": "坐", "rom": "có" },
+            { "hak": "鋤", "rom": "cō" },
+            { "hak": "楚", "rom": "cŏ" },
+            { "hak": "挫", "rom": "cò" }
+          ],
+          [
+            { "hak": "買", "rom": "mái" },
+            { "hak": "埋", "rom": "māi" },
+            { "hak": "嘪", "rom": "măi" },
+            { "hak": "賣", "rom": "mài" }
+          ],
+          [
+            { "hak": "拋", "rom": "páu" },
+            { "hak": "袍", "rom": "pāu" },
+            { "hak": "跑", "rom": "pău" },
+            { "hak": "炮", "rom": "pàu" }
+          ]
+        ]
+      },
+      {
+        "type": "proverbs",
+        "items": [
+          { "hak": "一代親，二代表，三代閒了了。", "rom": "yĭt tòi cín, ngì tòi biău, sám tòi hān liău liău" },
+          { "hak": "人冇千日好，花冇百日紅。", "rom": "ngīn māu cién ngĭt hău, fá māu băt ngĭt fūng" }
+        ]
+      },
+      {
+        "type": "grammar_notes",
+        "items": [
+          {
+            "zh": "客家話有六個聲調，其中兩個是{入聲}。以上是一至四調的符號示範。",
+            "en": "Hakka has six tones, two of which are {Entering Tones} (Ru Sheng). The above are examples of the symbols for tones 1 to 4."
+          },
+          {
+            "zh": "“{你}”在客家話有{口語音}和{讀書音}的不同。惠陽腔客家話{口語}發音是{ngī}，{讀書音}為{lí}。",
+            "en": "\"{You}\" ({你}) in Hakka has a difference between {spoken} and {literary} pronunciations. In Huiyang Hakka, the {spoken} pronunciation is {ngī}, while the {literary} pronunciation is {lí}."
+          },
+          {
+            "zh": "“{數}”的發音只有一個 “{sù}”。沒有其他發音。",
+            "en": "The character \"{number}\" ({數}) has only one pronunciation: \"{sù}\". There are no other pronunciations."
+          },
+          {
+            "zh": "客家話21-29，{口語}可以說“{兩十一}、{兩十二}、... {兩十九}”，廣州話、普通話不能這樣說。",
+            "en": "In Hakka {spoken language}, numbers 21-29 can be said as \"{two-ten-one}\", \"{two-ten-two}\", ... \"{two-ten-nine}\". This is not done in Cantonese or Mandarin."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": { "hak": "吾、惹、其", "rom": "ngá、ngiá、giá", "en": "" },
+    "blocks": [
+      {
+        "type": "vocab",
+        "items": [
+          { "hak": "吾", "rom": "ngá", "zh": "我的" },
+          { "hak": "惹", "rom": "ngiá", "zh": "你的" },
+          { "hak": "其", "rom": "giá", "zh": "他的" },
+          { "hak": "表弟", "rom": "biău tì", "zh": "表弟" },
+          { "hak": "大舅", "rom": "tài kíu", "zh": "媽媽的哥哥" },
+          { "hak": "姊妹", "rom": "zĭ mòi", "zh": "姊妹" },
+          { "hak": "咩係", "rom": "mé hè*", "zh": "不就是" },
+          { "hak": "阿㜆", "rom": "á mí", "zh": "媽媽" },
+          { "hak": "阿哥", "rom": "á gó*", "zh": "哥哥" },
+          { "hak": "幾多", "rom": "gĭt dó*", "zh": "幾多" },
+          { "hak": "兩十二", "rom": "liŏng sìp ngì", "zh": "二十二" },
+          { "hak": "左手析", "rom": "zŏ sĭu săk*", "zh": "左邊" },
+          { "hak": "三隻", "rom": "sám zăk*", "zh": "三個" },
+          { "hak": "歲", "rom": "sòi*", "zh": "歲" }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "items": [
+          { "sp": "A", "hak": "同學你好。你安做乜介名？", "zh": "同學你好。你叫什麼名字？" },
+          { "sp": "B", "hak": "厓安做葉錦嫦。", "zh": "我叫葉錦嫦。" },
+          { "sp": "A", "hak": "你識惹左手析嘅同學麼？", "zh": "你認識你左邊的同學嗎？" },
+          { "sp": "B", "hak": "識呀，佢係李偉雄。佢係吾表弟。其爸係吾大舅。", "zh": "認識呀，他是李偉雄。他是我表弟。他爸是我的大舅舅。" },
+          { "sp": "A", "hak": "大舅係乜介意思？", "zh": "大舅舅是什麼意思？" },
+          { "sp": "B", "hak": "大舅咩係阿㜆嘅阿哥囖。", "zh": "大舅舅就是媽媽的哥哥嘛。" },
+          { "sp": "A", "hak": "噢，厓明白咯。", "zh": "噢，我明白了。" },
+          { "sp": "B", "hak": "你今年幾多歲？", "zh": "你今年幾歲？" },
+          { "sp": "A", "hak": "厓今年兩十二歲。", "zh": "我今年二十二歲。" },
+          { "sp": "B", "hak": "你幾多姊妹？", "zh": "你有多少兄弟姊妹？" },
+          { "sp": "A", "hak": "厓有一隻阿哥。", "zh": "我有一個哥哥。" },
+          { "sp": "B", "hak": "惹哥幾多歲？", "zh": "你哥哥幾歲？" },
+          { "sp": "A", "hak": "佢兩十九歲。", "zh": "他二十九歲。" }
+        ]
+      },
+      {
+        "type": "sentence_practice",
+        "items": [
+          { "hak": "佢係 吾表弟/吾表哥/吾㜆/吾爸/吾大舅", "rom": "", "en": "" },
+          { "hak": "厓係 其表弟/其表哥/其㜆/其爸/其大舅", "rom": "", "en": "" },
+          { "hak": "厓/你/佢 + 今年幾多歲？", "rom": "", "en": "" },
+          { "hak": "厓/你/佢 + 今年...歲。", "rom": "", "en": "" },
+          { "hak": "厓有...隻 + 阿哥/表哥/表弟/大舅", "rom": "", "en": "" },
+          { "hak": "惹 + 哥/表哥/表弟/大舅 幾多歲？", "rom": "", "en": "" },
+          { "hak": "吾 + 哥/表哥/表弟/大舅...歲", "rom": "", "en": "" }
+        ]
+      },
+      {
+        "type": "pronunciation_practice",
+        "description": { "hak": "", "rom": "", "en": "Tone 5 & 6 (Entering Tones -p, -t, -k, -m, -n, -ng) and Blank Filling" },
+        "rows": [
+          [
+            { "hak": "金", "rom": "gím" },
+            { "hak": "__", "rom": "gīm" },
+            { "hak": "錦", "rom": "gĭm" },
+            { "hak": "禁", "rom": "gìm" },
+            { "hak": "急", "rom": "gĭp" },
+            { "hak": "__", "rom": "gìp" }
+          ],
+          [
+            { "hak": "番", "rom": "fán" },
+            { "hak": "繁", "rom": "fān" },
+            { "hak": "反", "rom": "făn" },
+            { "hak": "飯", "rom": "fàn" },
+            { "hak": "發", "rom": "făt" },
+            { "hak": "活", "rom": "fàt" }
+          ],
+          [
+            { "hak": "淵", "rom": "yén" },
+            { "hak": "園", "rom": "yēn" },
+            { "hak": "遠", "rom": "yĕn" },
+            { "hak": "縣", "rom": "yèn" },
+            { "hak": "乙", "rom": "yĕt" },
+            { "hak": "越", "rom": "yèt" }
+          ],
+          [
+            { "hak": "旱", "rom": "hón" },
+            { "hak": "寒", "rom": "hōn" },
+            { "hak": "罕", "rom": "hŏn" },
+            { "hak": "汗", "rom": "hòn" },
+            { "hak": "喝", "rom": "hŏt" },
+            { "hak": "__", "rom": "hòt" }
+          ],
+          [
+            { "hak": "閹", "rom": "yám" },
+            { "hak": "鹽", "rom": "yām" },
+            { "hak": "掩", "rom": "yăm" },
+            { "hak": "豔", "rom": "yàm" },
+            { "hak": "醃", "rom": "yăp" },
+            { "hak": "葉", "rom": "yàp" }
+          ],
+          [
+            { "hak": "商", "rom": "sóng" },
+            { "hak": "常", "rom": "sōng" },
+            { "hak": "賞", "rom": "sŏng" },
+            { "hak": "尚", "rom": "sòng" },
+            { "hak": "索", "rom": "sŏk" },
+            { "hak": "勺", "rom": "sòk" }
+          ],
+          [
+            { "hak": "冷", "rom": "láng" },
+            { "hak": "零", "rom": "lāng" },
+            { "hak": "㘄", "rom": "lăng" },
+            { "hak": "另", "rom": "làng" },
+            { "hak": "壢", "rom": "lăk" },
+            { "hak": "曆", "rom": "làk" }
+          ],
+          [
+            { "hak": "風", "rom": "fúng" },
+            { "hak": "馮", "rom": "fūng" },
+            { "hak": "哄", "rom": "fŭng" },
+            { "hak": "鳳", "rom": "fùng" },
+            { "hak": "福", "rom": "fŭk" },
+            { "hak": "伏", "rom": "fùk" }
+          ]
+        ],
+        "extension_practice": "ban, pong, min, fan, dam, tung, sim"
+      },
+      {
+        "type": "proverbs",
+        "items": [
+          { "hak": "瓠打瓠，瓜打瓜，唔係像阿㜆就像阿爸。", "rom": "pū dă pū, gá dă gá, m hè ciòng á mí cìu ciòng á bá", "note": "打：結果子/開花的動作" }
+        ]
+      },
+      {
+        "type": "grammar_notes",
+        "items": [
+          {
+            "zh": "{第五}和{第六調}是{入聲}，跟{第三}、{第四調}的調值相似，符號都是一樣的。",
+            "en": "{Tone 5} and {Tone 6} are {Entering Tones}. Their pitch values are similar to {Tone 3} and {Tone 4}, so the symbols used are the same."
+          },
+          {
+            "zh": "客家話的{人稱代名詞}{屬格}的變化，原理類似英語。{厓}、{你}、{佢}（= I, you, he/she） -> {吾}、{惹}、{其}（= my, your, his/her）。",
+            "en": "The change in Hakka {personal pronouns} for the {genitive case} is similar in principle to English. {厓}, {你}, {佢} (= I, you, he/she) -> {吾}, {惹}, {其} (= my, your, his/her)."
+          },
+          {
+            "zh": "客家話的{析}（{săk}）是{邊}的意思。例如{左手析}、{右手析}、{西瓜切做兩析}。",
+            "en": "In Hakka, {析} ({săk}) means {side}. For example: {left side} ({左手析}), {right side} ({右手析}), {cut the watermelon into two halves} ({西瓜切做兩析})."
+          },
+          {
+            "zh": "香港客家話區分{舅父}比媽媽大還是小，哥哥是{大舅}、弟弟是{舅仔}。",
+            "en": "Hong Kong Hakka distinguishes whether a {maternal uncle} is older or younger than one's mother. The older brother is {大舅}, and the younger brother is {舅仔}."
+          },
+          {
+            "zh": "{幾}在發問，或者意思是{甚爲}的時候，發音是{gĭt}，例如{幾多}、{幾時}、{幾好看}、{幾聰明}。另外也有{gĭ} 的發音， 詳見第六課。",
+            "en": "When {幾} is used in questions or means \"how\", it is pronounced {gĭt}. For example: {how many} ({幾多}), {when} ({幾時}), {how nice} ({幾好看}), {how clever} ({幾聰明}). There is also the pronunciation {gĭ}, detailed in Lesson 6."
+          },
+          {
+            "zh": "{你幾多姊妹}是連同自己計算的，是你父母有多少個孩子的意思。傳統客家話不說{兄弟姊妹}，只說{姊妹}。",
+            "en": "\"{How many siblings do you have?}\" ({你幾多姊妹}) includes yourself in the count; it asks how many children your parents have. Traditional Hakka says {姊妹} (sisters/siblings) instead of {兄弟姊妹} (brothers and sisters)."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": { "hak": "做乜介、恁、摎、還、在、擺", "rom": "", "en": "" },
+    "blocks": [
+      {
+        "type": "vocab",
+        "items": [
+          { "hak": "半隻", "rom": "bàn zăk", "zh": "半個/半隻" },
+          { "hak": "吾爸", "rom": "ngā bá", "zh": "我爸爸" },
+          { "hak": "吾㜆", "rom": "ngā mí", "zh": "我媽媽" },
+          { "hak": "做乜介", "rom": "zò măk gài", "zh": "爲什麼" },
+          { "hak": "恁", "rom": "ān", "zh": "這麼" },
+          { "hak": "因爲", "rom": "yín vùi", "zh": "因爲" },
+          { "hak": "在", "rom": "cói", "zh": "在" },
+          { "hak": "屋卡", "rom": "vŭk ká", "zh": "家裏" },
+          { "hak": "長日", "rom": "cōng ngĭt", "zh": "經常" },
+          { "hak": "摎", "rom": "láu", "zh": "和/跟" },
+          { "hak": "囉", "rom": "ló", "zh": "嘛" },
+          { "hak": "還曉", "rom": "hān hiău", "zh": "還會" },
+          { "hak": "第一擺", "rom": "tùi yĭt băi*", "zh": "第一次" },
+          { "hak": "能替", "rom": "nēn tì*", "zh": "能幹" }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "items": [
+          { "sp": "A", "hak": "你係客家人麼？", "zh": "你是客家人嗎？" },
+          { "sp": "B", "hak": "厓係半隻客家人，吾爸係潮州人，但吾㜆係香港客家人。你呢？", "zh": "我是半個客家人，我爸是潮州人，但我媽是香港客家人。你呢？" },
+          { "sp": "A", "hak": "厓係馬來西亞客家人， 吾屋卡在沙巴。", "zh": "我是馬來西亞客家人， 我家在沙巴。" },
+          { "sp": "B", "hak": "你係唔係第一擺來香港噢？", "zh": "你是不是第一次來香港呢？" },
+          { "sp": "A", "hak": "係呀。做乜介惹客家話講得恁流利嘅？", "zh": "是呀。爲什麼你客家話說得那麼流利的？" },
+          { "sp": "B", "hak": "因爲吾㜆在屋卡長日摎厓講囉。", "zh": "因爲我媽在家裏經常跟我說。" },
+          { "sp": "A", "hak": "你曉講潮州話麼？", "zh": "你會說潮州話嗎？" },
+          { "sp": "B", "hak": "曉少少。厓還曉講普通話摎英文。", "zh": "懂一點。我還會講普通話和英文。" },
+          { "sp": "A", "hak": "你好能替喔。", "zh": "你好棒耶。" }
+        ]
+      },
+      {
+        "type": "sentence_practice",
+        "items": [
+          { "hak": "惹爸係唔係客家人？", "rom": "", "en": "" },
+          { "hak": "吾爸係客家人/吾爸唔係客家人，佢係...人。", "rom": "", "en": "" },
+          { "hak": "惹㜆係唔係客家人？", "rom": "", "en": "" },
+          { "hak": "吾㜆係客家人/吾㜆唔係客家人，佢係...人。", "rom": "", "en": "" },
+          { "hak": "厓係香港人， 你呢？", "rom": "", "en": "" },
+          { "hak": "厓係...人。", "rom": "", "en": "" },
+          { "hak": "吾屋卡在...", "rom": "", "en": "" },
+          { "hak": "你曉講乜介話？", "rom": "", "en": "" },
+          { "hak": "厓曉講...話摎...。", "rom": "", "en": "" },
+          { "hak": "做乜介你曉講...話？", "rom": "", "en": "" },
+          { "hak": "吾爸摎厓講...話", "rom": "", "en": "" },
+          { "hak": "你係咩第一擺來香港？", "rom": "", "en": "" },
+          { "hak": "係/ 唔係，厓第...擺來香港。", "rom": "", "en": "" }
+        ]
+      },
+      {
+        "type": "pronunciation_practice",
+        "description": { "hak": "", "rom": "", "en": "Tone Drills (Phrases)" },
+        "rows": [
+          [
+            { "hak": "三", "rom": "sám*" },
+            { "hak": "零", "rom": "lāng*" },
+            { "hak": "五", "rom": "n̆g*" },
+            { "hak": "二", "rom": "ngì*" }
+          ],
+          [
+            { "hak": "專", "rom": "zón" },
+            { "hak": "題", "rom": "tī" },
+            { "hak": "訪", "rom": "fŏng" },
+            { "hak": "問", "rom": "mùn" }
+          ],
+          [
+            { "hak": "精", "rom": "zín" },
+            { "hak": "神", "rom": "sīn" },
+            { "hak": "爽", "rom": "sŏng" },
+            { "hak": "利", "rom": "lì" }
+          ],
+          [
+            { "hak": "妖", "rom": "yáu" },
+            { "hak": "魔", "rom": "mō" },
+            { "hak": "鬼", "rom": "gŭi" },
+            { "hak": "怪", "rom": "gài" }
+          ],
+          [
+            { "hak": "豬", "rom": "zú" },
+            { "hak": "嫲", "rom": "mā" },
+            { "hak": "上", "rom": "sóng" },
+            { "hak": "樹", "rom": "sù" }
+          ],
+          [
+            { "hak": "鮮", "rom": "sién" },
+            { "hak": "魚", "rom": "nḡ" },
+            { "hak": "酒", "rom": "zĭu" },
+            { "hak": "菜", "rom": "còi" }
+          ]
+        ]
+      },
+      {
+        "type": "grammar_notes",
+        "items": [
+          {
+            "zh": "{在}有兩個發音: (a){口語音}是{cói} ({在唔在}、{在卡}); (b) {書面語}唸{cài} ({自在}、{在意})。",
+            "en": "{在} has two pronunciations: (a) {Spoken}: {cói} ({在唔在}, {在卡}); (b) {Written/Formal}: {cài} ({自在}, {在意})."
+          },
+          {
+            "zh": "{屋}的聲母是{v}，不是{零聲母}。",
+            "en": "The initial consonant of {屋} is {v}, not a {zero initial}."
+          },
+          {
+            "zh": "客家話的{曉}有兩個意思: (a) 表示能力 ({厓曉游水}); (b) 表示可能性 ({今晚曉落水})。",
+            "en": "In Hakka, {曉} has two meanings: (a) Indicating ability ({I can swim} - {厓曉游水}); (b) Indicating possibility ({It might rain tonight} - {今晚曉落水})."
+          },
+          {
+            "zh": "連接詞{摎}，用法相當於廣州話的{同}。",
+            "en": "The conjunction {摎} is used like {同} in Cantonese (meaning \"and\" or \"with\")."
+          },
+          {
+            "zh": "客家話的{恁}相當於廣州話的{咁}。",
+            "en": "Hakka's {恁} is equivalent to Cantonese's {咁} (meaning \"so\" or \"this\")."
+          },
+          {
+            "zh": "{做乜介}有兩個意思，通常是{爲什麼}，但也可以是{做什麼}。",
+            "en": "{做乜介} has two meanings: usually {why}, but it can also mean {what are you doing}."
+          },
+          {
+            "zh": "媽媽有兩個稱呼：{阿媽}是{面稱}，{阿㜆}是{背稱}。",
+            "en": "There are two terms for mother: {阿媽} is used when addressing her directly, {阿㜆} is used when referring to her indirectly."
+          },
+          {
+            "zh": "{屋卡}本來是{屋下}的變音，但爲免引起誤會，寫作{屋卡}。",
+            "en": "{屋卡} is originally a sound change from {屋下}, but it is written as {屋卡} to avoid misunderstanding."
+          },
+          {
+            "zh": "{曉多少}是比較傳統的說法，也可以說{曉少少}。",
+            "en": "{曉多少} is a more traditional way of saying \"know a little\", but {曉少少} is also used."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": { "hak": "裏背、這裏、唉裏、奈裏", "rom": "dí bòi、ngiă lí、ài lí、lài lí", "en": "" },
+    "blocks": [
+      {
+        "type": "vocab",
+        "items": [
+          { "hak": "裏背", "rom": "dí bòi", "zh": "裏面" },
+          { "hak": "這裏", "rom": "ngiă lí", "zh": "這裏" },
+          { "hak": "唉裏", "rom": "ài lí", "zh": "那邊" },
+          { "hak": "共總", "rom": "kiùng zŭng", "zh": "總共" },
+          { "hak": "先生", "rom": "sín sáng", "zh": "老師" },
+          { "hak": "奈埞", "rom": "lài tàng", "zh": "哪裏" },
+          { "hak": "奈裏", "rom": "lài lí", "zh": "哪裏" },
+          { "hak": "還吂", "rom": "hān mān", "zh": "還沒有" },
+          { "hak": "學校", "rom": "hòk gău", "zh": "學校" },
+          { "hak": "附近", "rom": "fù kiùn*", "zh": "附近" }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "items": [
+          { "sp": "A", "hak": "這間課室裏背有幾多隻人？", "zh": "這間課室裏面有多少人？" },
+          { "sp": "B", "hak": "這裏有四隻人，唉裏有五隻人，共總九隻人。", "zh": "這裏有四個人，那裏有五個人，總共九個人。" },
+          { "sp": "A", "hak": "冇看到先生喔，佢在奈埞呢？", "zh": "沒看到老師耶，他在哪裏呢？" },
+          { "sp": "B", "hak": "先生還吂來到。先生住得比較遠。", "zh": "老師還沒來到。老師住得比較遠。" },
+          { "sp": "A", "hak": "先生住在奈裏呢？", "zh": "老師住在哪裏呢？" },
+          { "sp": "B", "hak": "佢住在筲箕灣。", "zh": "他住在筲箕灣。" },
+          { "sp": "A", "hak": "你住在奈裏呢？", "zh": "你住在哪裏呢？" },
+          { "sp": "B", "hak": "厓住在荃灣。", "zh": "我住在荃灣。" },
+          { "sp": "A", "hak": "有冇哪人住在學校附近嘅呢？", "zh": "有沒有誰住在學校附近的呢？" },
+          { "sp": "B", "hak": "有呀，吾表哥就住在學校附近。", "zh": "有呀，我表哥就住在學校附近。" }
+        ]
+      },
+      {
+        "type": "sentence_practice",
+        "items": [
+          { "hak": "這裏/唉裏坐嗨幾多隻人？", "rom": "", "en": "" },
+          { "hak": "這裏/唉裏坐嗨六隻人。", "rom": "", "en": "" },
+          { "hak": "唉裏/唉埞坐嗨幾多隻人？", "rom": "", "en": "" },
+          { "hak": "唉裏/唉埞坐嗨七隻人。", "rom": "", "en": "" },
+          { "hak": "這間課室裏背有幾多隻人？", "rom": "", "en": "" },
+          { "hak": "課室裏背有十三隻人。", "rom": "", "en": "" },
+          { "hak": "這間課室共總有幾多隻人？", "rom": "", "en": "" },
+          { "hak": "這裏共總十三隻人。", "rom": "", "en": "" },
+          { "hak": "先生坐在奈裏？", "rom": "", "en": "" },
+          { "hak": "先生還吂來。", "rom": "", "en": "" },
+          { "hak": "陳大文/何小安/…還吂來。", "rom": "", "en": "" },
+          { "hak": "你住在奈裏？", "rom": "", "en": "" },
+          { "hak": "厓住在沙田/大埔/...", "rom": "", "en": "" },
+          { "hak": "哪人住在學校附近嘅呢？", "rom": "", "en": "" },
+          { "hak": "…住在學校附近。", "rom": "", "en": "" }
+        ]
+      },
+      {
+        "type": "pronunciation_practice",
+        "description": { "hak": "", "rom": "", "en": "Two-Character Combinations" },
+        "rows": [
+          [
+            { "hak": "姓名", "rom": "siàng miāng" },
+            { "hak": "性別", "rom": "sìn pièt" },
+            { "hak": "旺盛", "rom": "vòng sàng" },
+            { "hak": "聲音", "rom": "sáng yím" }
+          ],
+          [
+            { "hak": "兄弟", "rom": "hiúng tì" },
+            { "hak": "空地", "rom": "kúng tì" },
+            { "hak": "年輕", "rom": "ngiēn kiáng" },
+            { "hak": "年青", "rom": "ngiēn ciáng" }
+          ],
+          [
+            { "hak": "天公", "rom": "tién gúng" },
+            { "hak": "天宮", "rom": "tién giúng" },
+            { "hak": "山谷", "rom": "sán gŭk" },
+            { "hak": "山菊", "rom": "sán kiŭk" }
+          ],
+          [
+            { "hak": "工時", "rom": "gúng sī*" },
+            { "hak": "恭喜", "rom": "giúng hĭ*" },
+            { "hak": "攻佔", "rom": "gúng ziàm*" },
+            { "hak": "弓箭", "rom": "giúng zièn*" }
+          ],
+          [
+            { "hak": "嶺崗", "rom": "liáng góng" },
+            { "hak": "另外", "rom": "làng ngòi" },
+            { "hak": "禾庭", "rom": "vō tāng" },
+            { "hak": "客廳", "rom": "hăk tiáng" }
+          ],
+          [
+            { "hak": "紅帽", "rom": "fūng màu" },
+            { "hak": "熊貓", "rom": "yūng miàu" },
+            { "hak": "英雄", "rom": "yín hiūng" },
+            { "hak": "洪水", "rom": "fūng sŭi" }
+          ],
+          [
+            { "hak": "涼爽", "rom": "liōng sŏng" },
+            { "hak": "遐想", "rom": "hā sŏng" },
+            { "hak": "常識", "rom": "sōng sĭt" },
+            { "hak": "顔色", "rom": "ngān sĕt" }
+          ]
+        ]
+      },
+      {
+        "type": "nursery_rhymes",
+        "items": [
+          { "hak": "先生教厓讀書，厓教先生打山豬。", "rom": "sín sáng gáu ngāi tùk sú, ngāi gáu sín sáng dă sán zú." },
+          { "hak": "山豬飆過河，嚇到先生兩公婆。", "rom": "sán zú biáu gò hō, hăk dău sín sáng liŏng gúng pō" }
+        ]
+      },
+      {
+        "type": "grammar_notes",
+        "items": [
+          {
+            "zh": "客家話有{介音i}，是廣州話沒有的，要注意發音。例如{餅biăng}、{茄kiō}、{向hiòng}、{腳giŏk}、{銀ngiūn}、{艾ngiòi}。",
+            "en": "Hakka has the {i-medial}, which Cantonese lacks. Pay attention to the pronunciation. E.g., {cake} ({餅biăng}), {eggplant} ({茄kiō}), {direction} ({向hiòng}), {leg} ({腳giŏk}), {silver} ({銀ngiūn}), {mugwort} ({艾ngiòi})."
+          },
+          {
+            "zh": "客家話有{ung/iung}的對立，例如{公工攻}/{弓宮恭}。要注意發音。",
+            "en": "Hakka distinguishes between {ung} and {iung}. For example: {public/work/attack} ({公工攻}) vs. {bow/palace/respect} ({弓宮恭}). Pay attention to the pronunciation."
+          },
+          {
+            "zh": "{先生}有兩個發音：(a) {sín sáng}意思爲老師。(b) {sien sáng}是對成年男性的禮貌稱呼。",
+            "en": "{先生} has two pronunciations: (a) {sín sáng} means teacher. (b) {sien sáng} is a polite title for an adult male (Mr.)."
+          },
+          {
+            "zh": "普通話的疑問詞{哪}，客家話發音是{lài}（中文字寫作{奈}）。",
+            "en": "The Mandarin question word {哪} is pronounced {lài} in Hakka (written as {奈})."
+          },
+          {
+            "zh": "{哪裏}有三個說法：{奈埞}、{奈裏}、{奈}。其中{奈埞}是惠陽腔特有口語詞。",
+            "en": "There are three ways to say {where}: {奈埞}, {奈裏}, {奈}. Among them, {奈埞} is a colloquial term specific to the Huiyang accent."
+          },
+          {
+            "zh": "{吂}是客家話常用詞，惠陽腔包括香港的發音是{mān}。代表{尚未}發生的動作（沒、沒有）。",
+            "en": "{吂} is a common Hakka word, pronounced {mān} in the Huiyang accent (including Hong Kong). It indicates an action that has {not yet} happened."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": { "hak": "吾兜嘅、惹兜嘅、其兜嘅", "rom": "ngá déu è、giá déu è、giá déu è", "en": "" },
+    "blocks": [
+      {
+        "type": "vocab",
+        "items": [
+          { "hak": "吾兜", "rom": "ngá déu", "zh": "我們" },
+          { "hak": "惹兜", "rom": "ngiá déu", "zh": "你們" },
+          { "hak": "其兜", "rom": "giá déu", "zh": "他們" },
+          { "hak": "吾兜嘅", "rom": "ngá déu è", "zh": "我們的" },
+          { "hak": "惹兜嘅", "rom": "giá déu è", "zh": "你們的" },
+          { "hak": "其兜嘅", "rom": "giá déu è", "zh": "他們的" },
+          { "hak": "兩公婆", "rom": "liŏng gúng pō*", "zh": "兩夫婦" },
+          { "hak": "擺擺", "rom": "băi băi*", "zh": "每次" },
+          { "hak": "兩十幾", "rom": "liŏng sìp gĭ*", "zh": "二十幾" },
+          { "hak": "鬧熱", "rom": "làu ngièt*", "zh": "熱鬧" },
+          { "hak": "真係", "rom": "zín hè*", "zh": "真的是" },
+          { "hak": "好食祿", "rom": "hău sìt lŭk*", "zh": "有口福" }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "items": [
+          { "sp": "A", "hak": "這兩隻係吾㜆吾爸，其兜係在英國開餐館嘅。", "zh": "這兩個是我父母，他們是在英國開餐館的。" },
+          { "sp": "B", "hak": "惹兜在英國奈裏嘅呢？", "zh": "你們在英國哪裏的呢？" },
+          { "sp": "A", "hak": "吾兜住在倫敦外面。但吾兜嘅餐館在倫敦。", "zh": "我們住在倫敦外面。但我們的餐館在倫敦。" },
+          { "sp": "B", "hak": "其兜兩公婆嘅兄弟姊妹也係在英國嘅麼？", "zh": "他們兩夫妻的兄弟姊妹也是在英國的嗎？" },
+          { "sp": "A", "hak": "係呀，吾兜嘅親戚全部都在倫敦附近。", "zh": "是呀，我們的親戚全部都在倫敦附近。" },
+          { "sp": "B", "hak": "惹兜嘅家庭聚會咩好多人咯？", "zh": "你們的家庭聚會不就很多人嗎？" },
+          { "sp": "A", "hak": "係呀，擺擺都有兩十幾人嘅呀。", "zh": "是呀，每次都有二十幾人的。" },
+          { "sp": "B", "hak": "哇，好鬧熱喔。惹兜好開心喔。", "zh": "哇，好熱鬧耶。你們好開心啊。" },
+          { "sp": "A", "hak": "係呀，吾㜆曉煮好多客家菜， 好好食嘅呀。", "zh": "是呀，我媽媽會做很多客家菜， 很好吃的呀" },
+          { "sp": "B", "hak": "惹兜真係好食祿咯。", "zh": "你們真好口福氣呀" }
+        ]
+      },
+      {
+        "type": "sentence_practice",
+        "items": [
+          { "hak": "惹㜆惹爸住在奈裏呢？", "rom": "", "en": "" },
+          { "hak": "吾㜆吾爸住在 …", "rom": "", "en": "" },
+          { "hak": "其兜在...做乜介 ？", "rom": "", "en": "" },
+          { "hak": "其兜係做... 嘅", "rom": "", "en": "" },
+          { "hak": "其兜有冇兄弟姊妹？有幾多隻？", "rom": "", "en": "" },
+          { "hak": "吾㜆有/冇...姊妹。吾爸有/冇... 姊妹。", "rom": "", "en": "" },
+          { "hak": "其兜住在奈埞呢？", "rom": "", "en": "" },
+          { "hak": "其兜住在...", "rom": "", "en": "" },
+          { "hak": "惹兜嘅親戚多唔多家庭聚會？", "rom": "", "en": "" },
+          { "hak": "多，吾兜長日見面。", "rom": "", "en": "" },
+          { "hak": "惹㜆曉唔曉煮客家菜？", "rom": "", "en": "" },
+          { "hak": "曉， 佢曉煮客家菜。", "rom": "", "en": "" },
+          { "hak": "惹㜆煮菜好唔好食？", "rom": "", "en": "" },
+          { "hak": "吾㜆煮菜好好食。吾兜擺擺都好開心。", "rom": "", "en": "" }
+        ]
+      },
+      {
+        "type": "pronunciation_practice",
+        "description": { "hak": "", "rom": "", "en": "Two-Character Combinations" },
+        "rows": [
+          [
+            { "hak": "機關", "rom": "gí gán" },
+            { "hak": "金山", "rom": "gím sán" },
+            { "hak": "西方", "rom": "sí fóng" },
+            { "hak": "新衫", "rom": "sín sám" }
+          ],
+          [
+            { "hak": "銅錢", "rom": "tūng ciēn" },
+            { "hak": "龍船", "rom": "lūng sōn" },
+            { "hak": "雲南", "rom": "yūn nām" },
+            { "hak": "廚房", "rom": "cū fōng" }
+          ],
+          [
+            { "hak": "校長", "rom": "gău zŏng" },
+            { "hak": "米酒", "rom": "mĭ zĭu" },
+            { "hak": "喜粄", "rom": "hĭ băn" },
+            { "hak": "水桶", "rom": "sŭi tŭng" }
+          ],
+          [
+            { "hak": "半路", "rom": "bàn lù" },
+            { "hak": "見面", "rom": "gièn mièn" },
+            { "hak": "富貴", "rom": "fù gùi" },
+            { "hak": "運氣", "rom": "yùn hì" }
+          ],
+          [
+            { "hak": "木屋", "rom": "mŭk vŭk" },
+            { "hak": "腳骨", "rom": "giŏk gŭt" },
+            { "hak": "八百", "rom": "băt băk" },
+            { "hak": "德國", "rom": "dĕt gĕt" }
+          ],
+          [
+            { "hak": "特別", "rom": "tièt pièt" },
+            { "hak": "復活", "rom": "fùk vàt" },
+            { "hak": "獨立", "rom": "tùk lìp" },
+            { "hak": "學習", "rom": "hòk sìp" }
+          ]
+        ]
+      },
+      {
+        "type": "nursery_rhymes",
+        "items": [
+          { "hak": "月光光，秀才郎，騎白馬，過蓮塘，蓮塘背，種韭菜，韭菜花，結親家，"},
+          { "hak": "親家門前一口塘，放條鯉嫲八尺長。", "notes": "鯉嫲：鯉魚" }
+        ]
+      },
+      {
+        "type": "grammar_notes",
+        "items": [
+          {
+            "zh": "香港客家話屬於{惠陽腔}，沒有{u介音}，所以{廣/港}、{關/間}、{過/個}、{郭/角}同音。",
+            "en": "Hong Kong Hakka belongs to the {Huiyang accent} and lacks the {u-medial}. Therefore, {wide/port} ({廣/港}), {pass/between} ({關/間}), {cross/individual} ({過/個}), {surname Guo/corner} ({郭/角}) are homophones."
+          },
+          {
+            "zh": "{國}傳統發音是{gĕt}，近似英語的{get}，不唸{gŏk}。",
+            "en": "The traditional pronunciation of {國} is {gĕt}, similar to the English {get}, not {gŏk}."
+          },
+          {
+            "zh": "客家話有{m收音}，除了幾個字以外，絕大部分和廣州話相同。",
+            "en": "Hakka has the {m-ending}. Except for a few characters, it is largely the same as in Cantonese."
+          },
+          {
+            "zh": "{人稱代名詞複數}是{屬格}加詞綴{兜} ({吾兜} = we)。複數的{屬格}只需要加{嘅} ({吾兜嘅} = our)。",
+            "en": "{Plural personal pronouns} are formed by adding the suffix {兜} to the {genitive} form ({吾兜} = {we}). The {plural genitive} only requires adding {嘅} ({吾兜嘅} = {our})."
+          },
+          {
+            "zh": "客家話的{量詞}：一般用{隻}代替廣州話的{個}（{一隻人}），而四條腿的動物是{條}（{一條貓公}）。",
+            "en": "Hakka {classifiers}: {隻} is generally used instead of Cantonese's {個} (e.g., {one person} - {一隻人}). For four-legged animals, {條} is used (e.g., {one male cat} - {一條貓公})."
+          },
+          {
+            "zh": "{幾}在發問，或者意思爲{是甚爲}的時候，發音是{gĭt}。另外也有{gĭ} 的發音，例如{幾十歲}、{幾百年}、{第幾}。",
+            "en": "When {幾} is used in questions or means \"what/why\", it is pronounced {gĭt}. There is also the pronunciation {gĭ}, used in e.g., {tens of years old} ({幾十歲}), {hundreds of years} ({幾百年}), {which one (ordinal)} ({第幾})."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": { "hak": "恁樣、仰邊、黏等、下子、愛", "rom": "", "en": "" },
+    "blocks": [
+      {
+        "type": "vocab",
+        "items": [
+          { "hak": "恁樣", "rom": "ān yòng", "zh": "這樣" },
+          { "hak": "仰邊", "rom": "ngiòng bién", "zh": "怎樣" },
+          { "hak": "轉屋卡", "rom": "zŏn vŭk ká", "zh": "回家" },
+          { "hak": "轉去", "rom": "zŏn hì", "zh": "回去" },
+          { "hak": "黏等", "rom": "ngièm dĕn*", "zh": "跟着" },
+          { "hak": "愛", "rom": "òi*", "zh": "要" },
+          { "hak": "好像", "rom": "hău siòng*", "zh": "好像" },
+          { "hak": "渾", "rom": "vūn*", "zh": "大概" },
+          { "hak": "轉到屋", "rom": "zŏn dàu vŭk*", "zh": "回到家" },
+          { "hak": "幾久", "rom": "gĭt gĭu*", "zh": "多久" },
+          { "hak": "小巴", "rom": "siău bá*", "zh": "小巴" },
+          { "hak": "巴士", "rom": "bá sĭ*", "zh": "巴士" },
+          { "hak": "或者", "rom": "fèt ză*", "zh": "或者" }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "items": [
+          { "sp": "先生", "hak": "吾兜嘅學校在鑽石山， 惹兜仰邊轉屋卡呢？", "zh": "你們的學校在鑽石山，你們怎樣回家的呢？" },
+          { "sp": "A", "hak": "你住在奈裏呢？", "zh": "你住在哪裏呢？" },
+          { "sp": "B", "hak": "厓住在觀塘。", "zh": "我住在觀塘。" },
+          { "sp": "A", "hak": "你放學之後仰邊轉屋卡呢？", "zh": "你放學之後怎樣回家的呢？" },
+          { "sp": "B", "hak": "厓直接坐地鐵轉去。你呢？", "zh": "我直接坐地鐵回去。你呢？" },
+          { "sp": "A", "hak": "厓住在橫台山，愛坐火車去錦上路，黏等愛轉小巴或者巴士。", "zh": "我住在橫台山，要坐火車去錦上路，然後要轉小巴或者巴士。" },
+          { "sp": "B", "hak": "哇，好像好遠欸。轉到屋愛幾久噢？", "zh": "哇，好像好遠欸。回到家要多幾久呢？" },
+          { "sp": "A", "hak": "連等車渾點鐘久啦（lá）。", "zh": "連等車大概一個小時吧。" },
+          { "sp": "B", "hak": "恁樣來回咩愛兩隻鐘頭？你幾多點睡目嘅呢？", "zh": "這樣來回不就要兩個小時嗎？你幾點睡覺呢？" },
+          { "sp": "A", "hak": "厓十一點鐘睡目。", "zh": "我十一點鐘睡覺。" }
+        ]
+      },
+      {
+        "type": "sentence_practice",
+        "items": [
+          { "hak": "你住在奈裏？", "rom": "", "en": "" },
+          { "hak": "厓住在...", "rom": "", "en": "" },
+          { "hak": "你放學之後仰邊轉屋卡？", "rom": "", "en": "" },
+          { "hak": "厓坐火車去....，黏等就轉巴士。// 厓直接坐地鐵/巴士。", "rom": "", "en": "" },
+          { "hak": "你轉到屋卡愛幾久？", "rom": "", "en": "" },
+          { "hak": "厓轉到去愛一點鐘久。", "rom": "", "en": "" },
+          { "hak": "恁樣你幾多點睡目？", "rom": "", "en": "" },
+          { "hak": "厓十一點/十一點半/…睡目。", "rom": "", "en": "" },
+          { "hak": "你睡目愛睡幾久？", "rom": "", "en": "" },
+          { "hak": "厓愛睡八隻鐘頭。", "rom": "", "en": "" }
+        ]
+      },
+      {
+        "type": "pronunciation_practice",
+        "description": { "hak": "", "rom": "", "en": "Two-Character Combinations" },
+        "rows": [
+          [
+            { "hak": "雲南", "rom": "yūn lām" },
+            { "hak": "銀行", "rom": "ngiūn hōng" },
+            { "hak": "意義", "rom": "yì ngì" },
+            { "hak": "語言", "rom": "ngí ngiēn" }
+          ],
+          [
+            { "hak": "耳環", "rom": "ngĭ wān" },
+            { "hak": "遇到", "rom": "ngì dău" },
+            { "hak": "責任", "rom": "zĭt ngìm" },
+            { "hak": "讓座", "rom": "ngiòng co" }
+          ],
+          [
+            { "hak": "日頭", "rom": "ngĭt tēu" },
+            { "hak": "月光", "rom": "ngièt góng" },
+            { "hak": "過年", "rom": "gò ngiēn" },
+            { "hak": "元旦", "rom": "ngiēn dàn" }
+          ],
+          [
+            { "hak": "原來", "rom": "ngiēn lōi" },
+            { "hak": "水源", "rom": "sŭi ngiēn" },
+            { "hak": "圓規", "rom": "yēn gúi" },
+            { "hak": "願望", "rom": "ngièn mòng" }
+          ],
+          [
+            { "hak": "軟弱", "rom": "ngión ngiòk" },
+            { "hak": "韌帶", "rom": "ngiùn dài" },
+            { "hak": "艾草", "rom": "ngiòi cău" },
+            { "hak": "攰死", "rom": "kiòi sĭ" }
+          ],
+          [
+            { "hak": "嚴格", "rom": "ngiām găk" },
+            { "hak": "鹽田", "rom": "yām tiēn" },
+            { "hak": "乳牛", "rom": "yúi ngīu" },
+            { "hak": "濃密", "rom": "ngiūng mìt" }
+          ]
+        ]
+      },
+      {
+        "type": "proverbs",
+        "items": [
+          { "hak": "一夜冇睡目，十夜補唔足。", "rom": "yĭt yà māu sòi mŭk, sìp yà bŭ m zŭk." },
+          { "hak": "老虎都曉啄目睡。", "rom": "Làu fŭ dú hiău dŭk mŭk sòi.", "note": "啄目睡： 打瞌睡" }
+        ]
+      },
+      {
+        "type": "grammar_notes",
+        "items": [
+          {
+            "zh": "“{恁樣}”代表{這樣}、{這樣子的}意思。",
+            "en": "\"{恁樣}\" means {this way} or {like this}."
+          },
+          {
+            "zh": "{恁}代表{那麼}的意思。例如{恁高}、{恁大}、{恁厲害}。",
+            "en": "{恁} means {so} or {that}. For example: {so tall} ({恁高}), {so big} ({恁大}), {so terrible/great} ({恁厲害})."
+          },
+          {
+            "zh": "{仰邊}是疑問詞，香港傳統發音是{ngiòng bién}。",
+            "en": "{仰邊} is a question word (how). The traditional Hong Kong pronunciation is {ngiòng bién}."
+          },
+          {
+            "zh": "傳統客家話說{好像} ，不說 {好似}。",
+            "en": "Traditional Hakka says {好像} (seem), not {好似}."
+          },
+          {
+            "zh": "{渾}有{差不多}、{大概}、{整整}的意思，相當於廣州話的“{成}”。（注意傳統客家話不說“{成}”。）",
+            "en": "{渾} means {almost}, {approximately}, or {whole}. It is equivalent to Cantonese's \"{成}\". (Note: Traditional Hakka does not use \"{成}\")."
+          },
+          {
+            "zh": "注意{巴}在{小巴}、{巴士}的發音不一樣。",
+            "en": "Note that {巴} is pronounced differently in {minibus} ({小巴}) and {bus} ({巴士})."
+          },
+          {
+            "zh": "注意{老}在{老虎}的發音是{làu}。",
+            "en": "Note that {老} in {tiger} ({老虎}) is pronounced {làu}."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": { "hak": "親屬關係（1）", "rom": "", "en": "" },
+    "blocks": [
+      {
+        "type": "vocab",
+        "items": [
+          { "hak": "吾公", "rom": "ngá gúng", "zh": "我的爺爺" },
+          { "hak": "舊相片", "rom": "kìu siòng piĕn", "zh": "舊照片" },
+          { "hak": "吾伯", "rom": "ngá băk", "zh": "我的伯伯" },
+          { "hak": "吾婆", "rom": "ngá pō", "zh": "我的奶奶" },
+          { "hak": "吂曾", "rom": "mān cēn", "zh": "未曾" },
+          { "hak": "大姑", "rom": "tài gú", "zh": "姑媽" },
+          { "hak": "共總", "rom": "kiùng zŭng", "zh": "總共" },
+          { "hak": "出世", "rom": "cŭt sè", "zh": "出生" },
+          { "hak": "老妹", "rom": "lău mòi", "zh": "妹妹" },
+          { "hak": "老弟", "rom": "lău tái", "zh": "弟弟" },
+          { "hak": "姑仔", "rom": "gú zăi", "zh": "姑姑" },
+          { "hak": "吾叔", "rom": "ngá sŭk", "zh": "我的叔叔" },
+          { "hak": "賴子", "rom": "lài zú", "zh": "兒子" },
+          { "hak": "妹子", "rom": "mòi zú", "zh": "女兒" },
+          { "hak": "姐公", "rom": "ziă gúng", "zh": "外祖父" },
+          { "hak": "姐婆", "rom": "ziă pō", "zh": "外祖母" },
+          { "hak": "隻隻", "rom": "zăk zăk*", "zh": "每一個" },
+          { "hak": "邏", "rom": "lā", "zh": "探訪" },
+          { "hak": "子女", "rom": "zŭ n̆g", "zh": "子女" }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "items": [
+          { "sp": "A", "hak": "這張係吾公嘅舊相片。這隻係吾公，這隻係吾婆。", "zh": "這張是我爺爺的舊相片。這個我爺爺，這個是我奶奶。" },
+          { "sp": "B", "hak": "這兩隻係吾爸嘅阿哥摎阿姐。其兜係吾伯摎大姑。", "zh": "這兩個是我爸的哥哥和姐姐。他們是我伯父和姑媽。" },
+          { "sp": "A", "hak": "惹爸呢？", "zh": "你爸呢？" },
+          { "sp": "B", "hak": "吾爸還吂曾出世。", "zh": "我爸還沒出生。" },
+          { "sp": "A", "hak": "惹公共總有幾多隻子女？", "zh": "你爺爺總共有幾個子女？" },
+          { "sp": "B", "hak": "五隻，三隻賴子，兩隻妹子。", "zh": "五個，三個兒子，兩個女兒。" },
+          { "sp": "A", "hak": "吾爸還有一隻老妹摎一隻老弟。其兜係吾叔摎姑仔。", "zh": "我爸還有一個妹妹和一個弟弟。他們是我的叔叔和姑姑。" },
+          { "sp": "B", "hak": "你有冇惹姐公姐婆嘅舊相呢 ？", "zh": "你有沒有你外公外婆的舊相片呢 ？" },
+          { "sp": "A", "hak": "冇呀，但係厓隻隻禮拜都去邏其兜嘅。", "zh": "沒有呀，但是我每個星期都去探望他們的。" },
+          { "sp": "B", "hak": "哇， 惹兜感情好好喔。", "zh": "噢， 你們感情很好耶。" },
+          { "sp": "A", "hak": "係呀，吾兜好孝順嘅呀。", "zh": "是呀，我們很孝順的呢。" }
+        ]
+      },
+      {
+        "type": "sentence_practice",
+        "items": [
+          { "hak": "惹公摎惹婆有幾多隻子女？", "rom": "", "en": "" },
+          { "hak": "吾公摎吾婆有...隻子女。", "rom": "", "en": "" },
+          { "hak": "惹姐公摎惹姐婆有幾多隻子女？", "rom": "", "en": "" },
+          { "hak": "吾姐公摎吾姐婆有...隻子女。", "rom": "", "en": "" },
+          { "hak": "吾爸有...隻阿哥摎...隻阿姐。", "rom": "", "en": "" },
+          { "hak": "吾爸冇阿哥阿姐。", "rom": "", "en": "" },
+          { "hak": "吾爸有...隻老弟摎...隻老妹。", "rom": "", "en": "" },
+          { "hak": "吾爸冇老弟老妹。", "rom": "", "en": "" },
+          { "hak": "吾㜆有...隻阿哥摎...隻阿姐。", "rom": "", "en": "" },
+          { "hak": "吾㜆冇阿哥阿姐。", "rom": "", "en": "" },
+          { "hak": "吾㜆有...隻老弟摎...隻老妹。", "rom": "", "en": "" },
+          { "hak": "厓有...隻阿哥摎...隻阿姐。", "rom": "", "en": "" },
+          { "hak": "厓冇阿哥阿姐。", "rom": "", "en": "" },
+          { "hak": "厓有...隻老弟摎...隻老妹。", "rom": "", "en": "" },
+          { "hak": "你有冇去邏惹姐公姐婆？", "rom": "", "en": "" },
+          { "hak": "厓隻隻禮拜都去邏其兜。", "rom": "", "en": "" }
+        ]
+      },
+      {
+        "type": "pronunciation_practice",
+        "description": { "hak": "", "rom": "", "en": "Two-Character Combinations" },
+        "rows": [
+          [
+            { "hak": "內在", "rom": "lùi cài" },
+            { "hak": "軍隊", "rom": "giún dùi" },
+            { "hak": "謹慎", "rom": "giŭn sĭn" },
+            { "hak": "屈服", "rom": "kiŭt fùk" }
+          ],
+          [
+            { "hak": "曬穀", "rom": "sài gŭk" },
+            { "hak": "鞠躬", "rom": "kiŭk giúng" },
+            { "hak": "浴缸", "rom": "yŭk góng" },
+            { "hak": "玉器", "rom": "ngiùk hì" }
+          ],
+          [
+            { "hak": "酷熱", "rom": "kùk ngièt" },
+            { "hak": "郵局", "rom": "yīu kiùk" },
+            { "hak": "訓練", "rom": "hiùn lièn" },
+            { "hak": "奮鬥", "rom": "fùn dèu" }
+          ],
+          [
+            { "hak": "勳章", "rom": "hiún zóng" },
+            { "hak": "分贓", "rom": "fún zóng" },
+            { "hak": "祖墳", "rom": "zŭ fūn" },
+            { "hak": "餐館", "rom": "cón gŏn" }
+          ],
+          [
+            { "hak": "模範", "rom": "mū fàm" },
+            { "hak": "辦法", "rom": "pàn făp" },
+            { "hak": "帆船", "rom": "fām sōn" },
+            { "hak": "壓力", "rom": "ăp lìt" }
+          ],
+          [
+            { "hak": "活動", "rom": "fàt tùng" },
+            { "hak": "滿足", "rom": "mán zŭk" },
+            { "hak": "永遠", "rom": "yún yĕn" },
+            { "hak": "榮幸", "rom": "yīn hèn" }
+          ]
+        ]
+      },
+      {
+        "type": "proverbs",
+        "items": [
+          { "hak": "爺娘記子長江水，子記爺娘冇擔竿長。", "rom": "yā ngiōng gì zŭ cōng góng sŭi, zŭ gì yā ngiōng māu dàm gón cōng." },
+          { "hak": "早死爺娘冇冇教招。", "rom": "zău sĭ yā ngiōng māu gáu záu." }
+        ]
+      },
+      {
+        "type": "grammar_notes",
+        "items": [
+          {
+            "zh": "有部分字{合口韻尾am/ap}比較特別，要特別留意。",
+            "en": "Some characters with {closed-mouth endings am/ap} are quite special and require attention."
+          },
+          {
+            "zh": "{賴子}、 {妹子}的 {子}唸{第一聲zú}，相當於普通話{輕聲}的用法。但{子女}、{孔子}的{子}唸{第三聲}。",
+            "en": "The {子} in {son} ({賴子}) and {daughter} ({妹子}) is pronounced with the {first tone zú}, similar to the {neutral tone} in Mandarin. However, {子} in {children} ({子女}) and {Confucius} ({孔子}) is pronounced with the {third tone}."
+          },
+          {
+            "zh": "注意{女}在{子女}的發音是{n̆g} ，是比較{文言}的發音，來自{梅縣話}，{子女}跟{子午}同音。其他{女}發音是{ngĭ}。",
+            "en": "Note that {女} in {children} ({子女}) is pronounced {n̆g}. This is a more {formal/literary} pronunciation from {Meixian dialect}; {子女} and {子午} (midnight/noon) are homophones. In other cases, {女} is pronounced {ngĭ}."
+          },
+          {
+            "zh": "{子}在口語不能單獨使用，只有在諺語或文言文才用作兒子的意思。兒子口語要說成{賴子}",
+            "en": "{子} cannot be used alone in spoken language; it means \"son\" only in proverbs or classical texts. In spoken language, \"son\" is {賴子}."
+          },
+          {
+            "zh": "{祖父母}、{外祖父母}的稱呼跟廣州話、普通話都不一樣。",
+            "en": "The terms for {paternal grandparents} and {maternal grandparents} are different from Cantonese and Mandarin."
+          },
+          {
+            "zh": "{弟弟}、{妹妹}都帶個{老}字前綴。",
+            "en": "{Younger brother} and {younger sister} both take the prefix {老}."
+          },
+          {
+            "zh": "客家話區別爸爸的姐妹。姐姐是{大姑}，妹妹是{姑仔}。",
+            "en": "Hakka distinguishes between father's sisters. The older sister is {大姑}, and the younger sister is {姑仔}."
+          },
+          {
+            "zh": "父母文雅的說法是{爺娘}、{爺娭}，口語是{阿㜆}、{阿爸}。",
+            "en": "Formal terms for parents are {爺娘} or {爺娭}; colloquial terms are {阿㜆} and {阿爸}."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": { "hak": "親屬關係(2)", "rom": "", "en": "" },
+    "blocks": [
+      {
+        "type": "vocab",
+        "items": [
+          { "hak": "屋卡人", "rom": "vŭk ká ngīn", "zh": "家人" },
+          { "hak": "相", "rom": "siòng*", "zh": "照片" },
+          { "hak": "心臼", "rom": "sím kíu", "zh": "兒媳婦" },
+          { "hak": "婿郎", "rom": "sè lōng", "zh": "女婿" },
+          { "hak": "正", "rom": "zàng", "zh": "才" },
+          { "hak": "還有", "rom": "hān yíu*", "zh": "還有" },
+          { "hak": "英國人", "rom": "yín gŭk ngīn*", "zh": "英國人" },
+          { "hak": "孫女", "rom": "sún ňg", "zh": "孫女" },
+          { "hak": "孫子", "rom": "sún zú", "zh": "孫子" },
+          { "hak": "塞子", "rom": "sĕt zú", "zh": "曾孫" }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "items": [
+          { "sp": "A", "hak": "張伯你今年幾多歲咯？", "zh": "張伯你今年幾歲了？" },
+          { "sp": "B", "hak": "厓今年九十二歲啦。", "zh": "我今年九十二歲啦。" },
+          { "sp": "A", "hak": "你有屋卡人麼？", "zh": "你有家人嗎？" },
+          { "sp": "B", "hak": "有呀，這張係吾嘅全家福相。", "zh": "有呀，這張是我的全家福照片。" },
+          { "sp": "A", "hak": "這隻係咩惹妹子呢？", "zh": "這隻是咩惹妹子呢？" },
+          { "sp": "B", "hak": "唔係，佢係吾心臼。最左手析唉隻正係吾妹子。", "zh": "不是，她是我兒媳。最左邊那個才是我女兒。" },
+          { "sp": "A", "hak": "這隻外國人係哪人呢？", "zh": "這個外國人是誰呢？" },
+          { "sp": "B", "hak": "佢係吾婿郎，佢係英國人。", "zh": "佢是我女婿，他是英國人。" },
+          { "sp": "A", "hak": "你有幾多隻孫子呢？", "zh": "你有幾個孫子呢？" },
+          { "sp": "B", "hak": "厓有四隻孫子，四隻孫女。", "zh": "我有四個孫子，四個孫女。" },
+          { "sp": "A", "hak": "有冇塞子呢？", "zh": "有沒有曾孫呢？" },
+          { "sp": "B", "hak": "有呀，有兩隻塞子。", "zh": "有呀，有兩個曾孫。" }
+        ]
+      },
+      {
+        "type": "sentence_practice",
+        "items": [
+          { "hak": "這隻係咩惹妹子呢？", "rom": "", "en": "" },
+          { "hak": "唔係，佢係吾心臼。中間唉隻正係吾妹子。", "rom": "", "en": "" },
+          { "hak": "這隻係咩惹賴子呢？", "rom": "", "en": "" },
+          { "hak": "唔係，佢係吾婿郎。右手析唉隻正係吾賴子。", "rom": "", "en": "" },
+          { "hak": "最左手析唉隻係哪人呢？", "rom": "", "en": "" },
+          { "hak": "佢係吾老弟。", "rom": "", "en": "" },
+          { "hak": "這隻外國女人係哪人呢？", "rom": "", "en": "" },
+          { "hak": "佢係吾老弟嘅女朋友。", "rom": "", "en": "" },
+          { "hak": "佢係奈裏人呢？", "rom": "", "en": "" },
+          { "hak": "佢係英國人/…。", "rom": "", "en": "" },
+          { "hak": "惹爸有幾多隻孫子？", "rom": "", "en": "" },
+          { "hak": "吾爸有...隻孫子。", "rom": "", "en": "" },
+          { "hak": "塞子係乜介意思呢？", "rom": "", "en": "" },
+          { "hak": "塞子係孫子嘅賴子。", "rom": "", "en": "" }
+        ]
+      },
+      {
+        "type": "pronunciation_practice",
+        "description": { "hak": "", "rom": "", "en": "Two-Character Combinations" },
+        "rows": [
+          [
+            { "hak": "欠款", "rom": "kiàm kàn" },
+            { "hak": "勸解", "rom": "kièn găi" },
+            { "hak": "牽掛", "rom": "kién gà" },
+            { "hak": "禁忌", "rom": "gìm kì" }
+          ],
+          [
+            { "hak": "嫌疑", "rom": "hiām ngī" },
+            { "hak": "遺產", "rom": "vūi săn" },
+            { "hak": "魏國", "rom": "ngùi gĕt" },
+            { "hak": "藝術", "rom": "ngì sùt" }
+          ],
+          [
+            { "hak": "梅縣", "rom": "mōi yèn" },
+            { "hak": "出現", "rom": "cŭt hièn" },
+            { "hak": "柴犬", "rom": "cāi kiĕn" },
+            { "hak": "明顯", "rom": "mīn hiĕn" }
+          ],
+          [
+            { "hak": "賢才", "rom": "hiēn cōi" },
+            { "hak": "姓丘", "rom": "siàng híu" },
+            { "hak": "莧菜", "rom": "hàn còi" },
+            { "hak": "自然", "rom": "cù yēn" }
+          ],
+          [
+            { "hak": "決定", "rom": "giĕt tìn" },
+            { "hak": "結果", "rom": "giĕt gŏ" },
+            { "hak": "構造", "rom": "gèu càu" },
+            { "hak": "購買", "rom": "gèu mái" }
+          ],
+          [
+            { "hak": "魚鈎", "rom": "n̄g géu" },
+            { "hak": "斑鳩", "rom": "bán géu" },
+            { "hak": "視頻", "rom": "sì pīn" },
+            { "hak": "食品", "rom": "sìt pĭn" }
+          ]
+        ]
+      },
+      {
+        "type": "proverbs",
+        "items": [
+          { "hak": "養子唔知娘辛苦，養女正曉謝娘恩。", "rom": "yóng zŭ m dí ngiōng sín kŭ, yóng ngĭ zàng hiău cià ngiōng én." },
+          { "hak": "蛇過正來打棍。" }
+        ]
+      },
+      {
+        "type": "grammar_notes",
+        "items": [
+          {
+            "zh": "客家話的{兒子}、{女兒}、{兒媳}和{女婿}的說法，都跟廣州話和普通話不同。",
+            "en": "The Hakka terms for {son}, {daughter}, {daughter-in-law}, and {son-in-law} are all different from Cantonese and Mandarin."
+          },
+          {
+            "zh": "{賴子}、{妹子}、{孫子}、{塞子}的{子}唸{第一聲zú}。",
+            "en": "The {子} in {賴子}, {妹子}, {孫子}, {塞子} is pronounced with the {first tone zú}."
+          },
+          {
+            "zh": "{正}在客家話有三個發音： {záng} ({正月})。{zàng} ({才/剛才})。{zìn} ({正確}、{正能量})。",
+            "en": "{正} has three pronunciations in Hakka: {záng} ({First Month} - {正月}); {zàng} ({just/only then} - {才/剛才}); {zìn} ({correct/positive} - {正確}, {正能量})."
+          },
+          {
+            "zh": "客家話的{恩}讀{én}，不讀{yín}。",
+            "en": "Hakka's {恩} (grace) is pronounced {én}, not {yín}."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": { "hak": "方位(1)", "rom": "", "en": "" },
+    "blocks": [
+      {
+        "type": "vocab",
+        "items": [
+          { "hak": "同下", "rom": "tūng hà", "zh": "一起" },
+          { "hak": "臉前", "rom": "ngiàm ciēn", "zh": "前面" },
+          { "hak": "種嗨兜", "rom": "zùng hòi déu", "zh": "種了些" },
+          { "hak": "屋背戶", "rom": "vŭk bòi fú", "zh": "房子後面" },
+          { "hak": "棟心", "rom": "dùng sím", "zh": "中心" },
+          { "hak": "頂高", "rom": "dăng gáu", "zh": "上面" },
+          { "hak": "腳下", "rom": "giŏk hà*", "zh": "下面" },
+          { "hak": "長凳", "rom": "cōng dèn*", "zh": "長凳" },
+          { "hak": "中意", "rom": "zúng yì*", "zh": "喜歡" },
+          { "hak": "係講", "rom": "hè gŏng*", "zh": "如果" },
+          { "hak": "跌下來", "rom": "tièt hà lōi*", "zh": "掉下來" },
+          { "hak": "大來", "rom": "tài lōi*", "zh": "長大後" }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "items": [
+          { "sp": null, "hak": "這隻係吾表弟阿傑，係吾舅仔嘅賴子。", "zh": "這個是我表弟阿傑，是我小舅舅的兒子。" },
+          { "sp": null, "hak": "佢摎其公其婆同下住在英國蘇格蘭。", "zh": "他跟他爺爺奶奶一起住在英國蘇格蘭。" },
+          { "sp": null, "hak": "其公其婆就係吾嘅姐公姐婆。", "zh": "他爺爺奶奶就是我的外公外婆。" },
+          { "sp": null, "hak": "其間屋好大間，共總有六間房。", "zh": "他的房子好大，總共有六間臥室。" },
+          { "sp": null, "hak": "屋臉前有隻花園仔，種嗨兜繡球摎玫瑰花。", "zh": "屋前面有個小花園，種了些繡球和玫瑰花。" },
+          { "sp": null, "hak": "屋背戶有隻大花園，棟心有棵大蘋果樹。", "zh": "屋後面有個大花園，中心有棵大蘋果樹。" },
+          { "sp": null, "hak": "樹頂高有好多蘋果。", "zh": "樹上面有好多蘋果。" },
+          { "sp": null, "hak": "樹腳下有一張長凳，阿傑好中意坐在唉裏讀書。", "zh": "樹下面有一張長凳，阿傑好喜歡坐在那裏讀書。" },
+          { "sp": null, "hak": "佢長日想：係講有蘋果跌下來打中厓，", "zh": "佢經常想：如果有蘋果掉下來打中我，" },
+          { "sp": null, "hak": "厓大來就係科學家咯。", "zh": "厓長大以後就是科學家了。" }
+        ]
+      },
+      {
+        "type": "sentence_practice",
+        "items": [
+          { "hak": "這隻係吾表妹阿蘭，係吾姑仔嘅妹子。", "rom": "", "en": "" },
+          { "hak": "佢摎其公其婆同下住在...", "rom": "", "en": "" },
+          { "hak": "其間屋臉前有棵大樹/… 。", "rom": "", "en": "" },
+          { "hak": "屋背戶有隻菜園，種嗨兜好多青菜/…。", "rom": "", "en": "" },
+          { "hak": "樹頂高有好多樹葉/…。", "rom": "", "en": "" },
+          { "hak": "樹腳下/…有一條白貓/…。", "rom": "", "en": "" },
+          { "hak": "阿傑好中意來吾屋卡/…。", "rom": "", "en": "" },
+          { "hak": "佢長日想做科學家/…。", "rom": "", "en": "" },
+          { "hak": "厓大來想做...", "rom": "", "en": "" },
+          { "hak": "你大來想做乜介？", "rom": "", "en": "" },
+          { "hak": "係講厓住在英國，吾英文就曉好流利咯 。", "rom": "", "en": "" },
+          { "hak": "係講你住在德國，惹德文就曉好流利咯。", "rom": "", "en": "" },
+          { "hak": "係講你住在...，惹...就曉好流利咯", "rom": "", "en": "" }
+        ]
+      },
+      {
+        "type": "pronunciation_practice",
+        "description": { "hak": "", "rom": "", "en": "Two-Character Combinations" },
+        "rows": [
+          [
+            { "hak": "肥佬", "rom": "pūi lău" },
+            { "hak": "淋肥", "rom": "līm pūi" },
+            { "hak": "廢水", "rom": "fùi sŭi" },
+            { "hak": "沸水", "rom": "bùi sŭi" }
+          ],
+          [
+            { "hak": "豬肺", "rom": "zú pùi" },
+            { "hak": "充沛", "rom": "cúng pùi" },
+            { "hak": "斧頭", "rom": "bŭ tēu" },
+            { "hak": "符水", "rom": "pū sŭi" }
+          ],
+          [
+            { "hak": "文字", "rom": "vūn sù" },
+            { "hak": "無力", "rom": "vū lìt" },
+            { "hak": "物理", "rom": "vùt lí" },
+            { "hak": "房屋", "rom": "fōng vŭk" }
+          ],
+          [
+            { "hak": "扶穩", "rom": "pū vŭn" },
+            { "hak": "糞缸", "rom": "bùn góng" },
+            { "hak": "發冷", "rom": "bŏt láng" },
+            { "hak": "剝皮", "rom": "bŏk pī" }
+          ],
+          [
+            { "hak": "婦娘", "rom": "bú ngiōng" },
+            { "hak": "寬闊", "rom": "kón făt" },
+            { "hak": "西湖", "rom": "sí fū" },
+            { "hak": "華南", "rom": "fā lām" }
+          ],
+          [
+            { "hak": "鳳凰", "rom": "fùng fōng" },
+            { "hak": "皇室", "rom": "fōng sĭt" },
+            { "hak": "或者", "rom": "fèt ză" },
+            { "hak": "宏偉", "rom": "fēn vŭi" }
+          ]
+        ]
+      },
+      {
+        "type": "nursery_rhymes",
+        "items": [
+          { "hak": "落大水，發大風，阿姨仔，嫁老公。"},
+          { "hak": "嫁去奈？嫁海豐。食乜介，食老蟹摎蝦公。"},
+          { "notes": "發(bŏt)大風：颳大風; 老蟹：螃蟹; 阿姨仔：小阿姨; 蝦公：蝦子" }
+        ]
+      },
+      {
+        "type": "grammar_notes",
+        "items": [
+          { 
+            "zh": "客家話有少部分字的聲母跟廣州話不同，要注意發音。", 
+            "en": "A small number of Hakka characters have different initial consonants compared to Cantonese. Pay attention to pronunciation." 
+          },
+          {
+            "zh": "{老}在{老虎}、{老蟹}、{老鼠}中唸{第四聲 làu} ，比較特別。其他情況唸{第三聲 lău}。",
+            "en": "{老} is pronounced with the {fourth tone làu} in {tiger} ({老虎}), {crab} ({老蟹}), and {rat} ({老鼠}), which is quite special. In other cases, it is pronounced with the {third tone lău}."
+          },
+          {
+            "zh": "{發}在跟身體的病理或生理現象有關，或跟天氣現象有關時唸{bŏt}。其他情況尤其是來自北方話的詞彙唸{făt}。",
+            "en": "{發} is pronounced {bŏt} when related to pathological/physiological phenomena or weather. In other cases, especially in vocabulary from Mandarin, it is pronounced {făt}."
+          },
+          {
+            "zh": "{兜}是{一些}的意思。例如{菜園種嗨兜青菜}",
+            "en": "{兜} means {some}. For example: {菜園種嗨兜青菜} (The vegetable garden has planted some vegetables)."
+          }
+        ]
+      }
+    ]
+  }
+]
