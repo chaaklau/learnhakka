@@ -53,7 +53,8 @@
           <div class="lesson-header">
             <div class="lesson-meta">Lesson {{ currentLesson.id }}</div>
             <h1 class="font-hakka">{{ currentLesson.title.hak }}</h1>
-            <div class="font-rom">{{ currentLesson.title.rom }}</div>
+            <div class="font-rom" style="margin-bottom: 0.5rem">{{ currentLesson.title.rom }}</div>
+            <div class="subtle-trans" style="font-size: 1rem">{{ currentLesson.title.en }}</div>
           </div>
 
           <!-- Blocks -->
@@ -519,9 +520,10 @@ function playAudio(lessonId, type, identifier, col) {
 .vocab-desc {
   font-size: 0.85rem;
   color: #888;
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
   border-top: 1px dotted #e5e7eb;
-  padding-top: 0.4rem;
+  padding-top: 0.5rem;
+  line-height: 1.4;
 }
 
 .unproofread {
