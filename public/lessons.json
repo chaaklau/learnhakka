@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": {"hak": "厓、你、佢", "rom": "ngāi、ngī、gī", "en": "I, You, He/She"},
+    "title": {"hak": "厓(我)、你、佢(他)", "rom": "ngāi、ngī、gī", "en": "I, You, He/She"},
     "blocks": [
       {
         "type": "vocab",
@@ -22,11 +22,11 @@
         "type": "dialogue",
         "items": [
           {"sp": "A", "hak": "同學你好。你貴姓？", "zh": "同學你好。你貴姓？", "en": "Hello, classmate. What is your surname?"},
-          {"sp": "B", "hak": "厓姓陳。", "zh": "我姓陳。", "en": "My surname is Chen."},
+          {"sp": "B", "hak": "厓姓陳。", "zh": "我姓陳。", "en": "My surname is Cin."},
           {"sp": "A", "hak": "你安做乜介名？", "zh": "你叫什麼名字？", "en": "What is your name?"},
-          {"sp": "B", "hak": "厓安做陳大明。你呢？", "zh": "我叫陳大明。你呢？", "en": "My name is Chen Daming. And you?"},
-          {"sp": "A", "hak": "厓係羅春蘭。佢係哪人？", "zh": "我是羅春蘭。他是誰？", "en": "I am Luo Chunlan. Who is he?"},
-          {"sp": "B", "hak": "佢係何小安。", "zh": "他是何小安。", "en": "He is He Xiaoan."},
+          {"sp": "B", "hak": "厓安做陳大明。你呢？", "zh": "我叫陳大明。你呢？", "en": "My name is Cin Tai-min. And you?"},
+          {"sp": "A", "hak": "厓係羅春蘭。佢係哪人？", "zh": "我是羅春蘭。他是誰？", "en": "I am Lo Cun-lan. Who is he?"},
+          {"sp": "B", "hak": "佢係何小安。", "zh": "他是何小安。", "en": "He is Ho siau-an."},
           {"sp": "A", "hak": "你係唔係客家人？", "zh": "你是不是客家人？", "en": "Are you Hakka?"},
           {"sp": "B", "hak": "係，厓係客家人。", "zh": "是，我是客家人。", "en": "Yes, I am Hakka."},
           {"sp": "A", "hak": "佢呢, 佢係唔係客家人？", "zh": "他呢, 他是不是客家人？", "en": "What about him, is he Hakka?"},
@@ -149,7 +149,7 @@
             {"hak": "沙", "rom": "sá"},
             {"hak": "蛇", "rom": "sā"},
             {"hak": "灑", "rom": "să"},
-            {"hak": "灑", "rom": "sà"}
+            {"hak": "射", "rom": "sà"}
           ],
           [
             {"hak": "車", "rom": "cá"},
@@ -221,7 +221,7 @@
   },
   {
     "id": 3,
-    "title": {"hak": "吾、惹、其", "rom": "ngá、ngiá、giá", "en": "My, Your, His/Her"},
+    "title": {"hak": "吾(我的)、惹(你的)、其(他的)", "rom": "ngá、ngiá、giá", "en": "My, Your, His/Her"},
     "blocks": [
       {
         "type": "vocab",
@@ -232,7 +232,7 @@
           {"hak": "表弟", "rom": "biău tì", "zh": "表弟", "en": "Cousin (younger male, mother's side)"},
           {"hak": "大舅", "rom": "tài kíu", "zh": "媽媽的哥哥", "en": "Uncle (Mother's oldest brother)"},
           {"hak": "姊妹", "rom": "zĭ mòi", "zh": "姊妹", "en": "Sisters / Siblings"},
-          {"hak": "咩係", "rom": "mé hè*", "zh": "不就是", "en": "Isn't it / Is it not"},
+          {"hak": "咩係", "rom": "mè hè*", "zh": "不就是", "en": "Isn't it / Is it not"},
           {"hak": "阿㜆", "rom": "á mí", "zh": "媽媽", "en": "Mother"},
           {"hak": "阿哥", "rom": "á gó*", "zh": "哥哥", "en": "Older Brother"},
           {"hak": "幾多", "rom": "gĭt dó*", "zh": "幾多", "en": "How many / How much"},
@@ -445,10 +445,10 @@
             {"hak": "怪", "rom": "gài"}
           ],
           [
-            {"hak": "豬", "rom": "zú"},
-            {"hak": "嫲", "rom": "mā"},
-            {"hak": "上", "rom": "sóng"},
-            {"hak": "樹", "rom": "sù"}
+            {"hak": "山", "rom": "sán"},
+            {"hak": "神", "rom": "sīn"},
+            {"hak": "土", "rom": "tŭ"},
+            {"hak": "地", "rom": "tì"}
           ],
           [
             {"hak": "鮮", "rom": "sién"},
@@ -476,7 +476,7 @@
   },
   {
     "id": 5,
-    "title": {"hak": "裏背、這裏、唉裏、奈裏", "rom": "dí bòi、ngiă lí、ài lí、lài lí", "en": "Inside, Here, There, Where"},
+    "title": {"hak": "裏背(後面)、這裏、唉(那)裏、奈(哪)裏", "rom": "dí bòi、ngiă lí、ài lí、lài lí", "en": "Inside, Here, There, Where"},
     "blocks": [
       {
         "type": "vocab",
@@ -499,7 +499,7 @@
           {"sp": "A", "hak": "這間課室裏背有幾多隻人？", "zh": "這間課室裏面有多少人？", "en": "How many people are inside this classroom?"},
           {"sp": "B", "hak": "這裏有四隻人，唉裏有五隻人，共總九隻人。", "zh": "這裏有四個人，那裏有五個人，總共九個人。", "en": "There are four people here, five people there, nine people in total."},
           {"sp": "A", "hak": "冇看到先生喔，佢在奈埞呢？", "zh": "沒看到老師耶，他在哪裏呢？", "en": "I don't see the teacher, where is he?"},
-          {"sp": "B", "hak": "先生還吂來到。先生住得比較遠。", "zh": "老師還沒來到。老師住得比較遠。", "en": "The teacher hasn't arrived yet. The teacher lives quite far away."},
+          {"sp": "B", "hak": "先生還吂來到。佢住得比較遠。", "zh": "老師還沒來到。他住得比較遠。", "en": "The teacher hasn't arrived yet. He lives quite far away."},
           {"sp": "A", "hak": "先生住在奈裏呢？", "zh": "老師住在哪裏呢？", "en": "Where does the teacher live?"},
           {"sp": "B", "hak": "佢住在筲箕灣。", "zh": "他住在筲箕灣。", "en": "He lives in Shau Kei Wan."},
           {"sp": "A", "hak": "你住在奈裏呢？", "zh": "你住在哪裏呢？", "en": "Where do you live?"},
@@ -570,7 +570,7 @@
           ],
           [
             {"hak": "涼爽", "rom": "liōng sŏng"},
-            {"hak": "遐想", "rom": "hā sŏng"},
+            {"hak": "遐想", "rom": "hā siŏng"},
             {"hak": "常識", "rom": "sōng sĭt"},
             {"hak": "顔色", "rom": "ngān sĕt"}
           ]
@@ -598,7 +598,7 @@
   },
   {
     "id": 6,
-    "title": {"hak": "吾兜嘅、惹兜嘅、其兜嘅", "rom": "ngá déu è、giá déu è、giá déu è", "en": "Ours, Yours, Theirs"},
+    "title": {"hak": "吾兜嘅(我們的)、惹兜嘅(你們的)、其兜嘅(他們的)", "rom": "ngá déu è、giá déu è、giá déu è", "en": "Ours, Yours, Theirs"},
     "blocks": [
       {
         "type": "vocab",
@@ -614,7 +614,9 @@
           {"hak": "兩十幾", "rom": "liŏng sìp gĭ*", "zh": "二十幾", "en": "Twenty-something"},
           {"hak": "鬧熱", "rom": "làu ngièt*", "zh": "熱鬧", "en": "Lively / Bustling"},
           {"hak": "真係", "rom": "zín hè*", "zh": "真的是", "en": "Really is"},
-          {"hak": "好食祿", "rom": "hău sìt lŭk*", "zh": "有口福", "en": "Have good fortune in eating (Gourmet luck)"}
+          {"hak": "好食祿", "rom": "hău sìt lŭk*", "zh": "有口福", "en": "Have good fortune in eating (Gourmet luck)"},
+          {"hak": "餐館", "rom": "cón gŏn", "zh": "真的是", "en": "Really is"},
+          {"hak": "聚會", "rom": "cì fùi", "zh": "有口福", "en": "Have good fortune in eating (Gourmet luck)"}
         ]
       },
       {
@@ -627,7 +629,7 @@
           {"sp": "A", "hak": "係呀，吾兜嘅親戚全部都在倫敦附近。", "zh": "是呀，我們的親戚全部都在倫敦附近。", "en": "Yes, all our relatives are near London."},
           {"sp": "B", "hak": "惹兜嘅家庭聚會咩好多人咯？", "zh": "你們的家庭聚會不就很多人嗎？", "en": "Isn't your family gathering very large then?"},
           {"sp": "A", "hak": "係呀，擺擺都有兩十幾人嘅呀。", "zh": "是呀，每次都有二十幾人的。", "en": "Yes, every time there are twenty-something people."},
-          {"sp": "B", "hak": "哇，好鬧熱喔。惹兜好開心喔。", "zh": "哇，好熱鬧耶。你們好開心啊。", "en": "Wow, so lively. You must be very happy."},
+          {"sp": "B", "hak": "哇，好鬧熱噢。惹兜好開心喔。", "zh": "哇，好熱鬧耶。你們好開心啊。", "en": "Wow, so lively. You must be very happy."},
           {"sp": "A", "hak": "係呀，吾㜆曉煮好多客家菜， 好好食嘅呀。", "zh": "是呀，我媽媽會做很多客家菜， 很好吃的呀", "en": "Yes, my mom cooks a lot of Hakka dishes, they are delicious."},
           {"sp": "B", "hak": "惹兜真係好食祿咯。", "zh": "你們真好口福氣呀", "en": "You really have good luck with food."}
         ]
@@ -664,7 +666,7 @@
           [
             {"hak": "銅錢", "rom": "tūng ciēn"},
             {"hak": "龍船", "rom": "lūng sōn"},
-            {"hak": "雲南", "rom": "yūn nām"},
+            {"hak": "雲南", "rom": "yūn lām"},
             {"hak": "廚房", "rom": "cū fōng"}
           ],
           [
@@ -687,7 +689,7 @@
           ],
           [
             {"hak": "特別", "rom": "tièt pièt"},
-            {"hak": "復活", "rom": "fùk vàt"},
+            {"hak": "復活", "rom": "fùk fàt"},
             {"hak": "獨立", "rom": "tùk lìp"},
             {"hak": "學習", "rom": "hòk sìp"}
           ]
@@ -727,7 +729,7 @@
           {"hak": "黏等", "rom": "ngièm dĕn*", "zh": "跟着", "en": "Then / Following"},
           {"hak": "愛", "rom": "òi", "zh": "要", "en": "Need / Want"},
           {"hak": "好像", "rom": "hău ciòng", "zh": "好像", "en": "Seem like"},
-          {"hak": "渾", "rom": "vōn*", "zh": "大概", "en": "Approximately / About"},
+          {"hak": "渾", "rom": "vōn", "zh": "大概", "en": "Approximately / About"},
           {"hak": "轉到屋", "rom": "zŏn dàu vŭk*", "zh": "回到家", "en": "Arrive home"},
           {"hak": "幾久", "rom": "gĭt gĭu*", "zh": "多久", "en": "How long"},
           {"hak": "小巴", "rom": "siău bá*", "zh": "小巴", "en": "Minibus"},
@@ -738,7 +740,7 @@
       {
         "type": "dialogue",
         "items": [
-          {"sp": "先生", "hak": "吾兜嘅學校在鑽石山， 惹兜仰邊轉屋卡呢？", "zh": "你們的學校在鑽石山，你們怎樣回家的呢？", "en": "Our school is in Diamond Hill, how do you go home?"},
+          {"sp": "先生", "hak": "吾兜嘅學校在鑽石山， 惹兜仰邊轉屋卡嘅呢？", "zh": "你們的學校在鑽石山，你們怎樣回家的呢？", "en": "Our school is in Diamond Hill, how do you go home?"},
           {"sp": "A", "hak": "你住在奈裏呢？", "zh": "你住在哪裏呢？", "en": "Where do you live?"},
           {"sp": "B", "hak": "厓住在觀塘。", "zh": "我住在觀塘。", "en": "I live in Kwun Tong."},
           {"sp": "A", "hak": "你放學之後仰邊轉屋卡呢？", "zh": "你放學之後怎樣回家的呢？", "en": "How do you go home after school?"},
@@ -747,7 +749,7 @@
           {"sp": "B", "hak": "哇，好像好遠欸。轉到屋愛幾久噢？", "zh": "哇，好像好遠欸。回到家要多幾久呢？", "en": "Wow, seems very far. How long does it take to get home?"},
           {"sp": "A", "hak": "連等車渾點鐘久啦（lá）。", "zh": "連等車大概一個小時吧。", "en": "Including waiting for the car, about an hour."},
           {"sp": "B", "hak": "恁樣來回咩愛兩隻鐘頭？你幾多點睡目嘅呢？", "zh": "這樣來回不就要兩個小時嗎？你幾點睡覺呢？", "en": "Doesn't that mean two hours back and forth? What time do you sleep?"},
-          {"sp": "A", "hak": "厓十一點鐘睡目。", "zh": "我十一點鐘睡覺。", "en": "I sleep at eleven o'clock."}
+          {"sp": "A", "hak": "厓十一點鐘睡目嘅。", "zh": "我十一點鐘睡覺。", "en": "I sleep at eleven o'clock."}
         ]
       },
       {
@@ -770,7 +772,7 @@
         "description": {"hak": "", "rom": "", "en": "Two-Character Combinations"},
         "rows": [
           [
-            {"hak": "雲南", "rom": "yūn lām"},
+            {"hak": "童年", "rom": "tūng ngiēn"},
             {"hak": "銀行", "rom": "ngiūn hōng"},
             {"hak": "意義", "rom": "yì ngì"},
             {"hak": "語言", "rom": "ngí ngiēn"}
@@ -779,7 +781,7 @@
             {"hak": "耳環", "rom": "ngĭ wān"},
             {"hak": "遇到", "rom": "ngì dău"},
             {"hak": "責任", "rom": "zĭt ngìm"},
-            {"hak": "讓座", "rom": "ngiòng co"}
+            {"hak": "讓座", "rom": "ngiòng cò"}
           ],
           [
             {"hak": "日頭", "rom": "ngĭt tēu"},
@@ -860,11 +862,11 @@
         "type": "dialogue",
         "items": [
           {"sp": "A", "hak": "這張係吾公嘅舊相片。這隻係吾公，這隻係吾婆。", "zh": "這張是我爺爺的舊相片。這個我爺爺，這個是我奶奶。", "en": "This is an old photo of my grandpa. This is my grandpa, this is my grandma."},
-          {"sp": "B", "hak": "這兩隻係吾爸嘅阿哥摎阿姐。其兜係吾伯摎大姑。", "zh": "這兩個是我爸的哥哥和姐姐。他們是我伯父和姑媽。", "en": "These two are my dad's brother and sister. They are my uncle and aunt."},
-          {"sp": "A", "hak": "惹爸呢？", "zh": "你爸呢？", "en": "What about your dad?"},
-          {"sp": "B", "hak": "吾爸還吂曾出世。", "zh": "我爸還沒出生。", "en": "My dad wasn't born yet."},
-          {"sp": "A", "hak": "惹公共總有幾多隻子女？", "zh": "你爺爺總共有幾個子女？", "en": "How many children did your grandpa have in total?"},
-          {"sp": "B", "hak": "五隻，三隻賴子，兩隻妹子。", "zh": "五個，三個兒子，兩個女兒。", "en": "Five. Three sons, two daughters."},
+          {"sp": "A", "hak": "這兩隻係吾爸嘅阿哥摎阿姐。其兜係吾伯摎大姑。", "zh": "這兩個是我爸的哥哥和姐姐。他們是我伯父和姑媽。", "en": "These two are my dad's brother and sister. They are my uncle and aunt."},
+          {"sp": "B", "hak": "惹爸呢？", "zh": "你爸呢？", "en": "What about your dad?"},
+          {"sp": "A", "hak": "吾爸還吂曾出世。", "zh": "我爸還沒出生。", "en": "My dad wasn't born yet."},
+          {"sp": "B", "hak": "惹公共總有幾多隻子女噢？", "zh": "你爺爺總共有幾個子女？", "en": "How many children did your grandpa have in total?"},
+          {"sp": "A", "hak": "五隻，三隻賴子，兩隻妹子。", "zh": "五個，三個兒子，兩個女兒。", "en": "Five. Three sons, two daughters."},
           {"sp": "A", "hak": "吾爸還有一隻老妹摎一隻老弟。其兜係吾叔摎姑仔。", "zh": "我爸還有一個妹妹和一個弟弟。他們是我的叔叔和姑姑。", "en": "My dad also has a younger sister and a younger brother. They are my uncle and aunt."},
           {"sp": "B", "hak": "你有冇惹姐公姐婆嘅舊相呢 ？", "zh": "你有沒有你外公外婆的舊相片呢 ？", "en": "Do you have old photos of your maternal grandparents?"},
           {"sp": "A", "hak": "冇呀，但係厓隻隻禮拜都去邏其兜嘅。", "zh": "沒有呀，但是我每個星期都去探望他們的。", "en": "No, but I visit them every week."},
@@ -919,7 +921,7 @@
             {"hak": "勳章", "rom": "hiún zóng"},
             {"hak": "分贓", "rom": "fún zóng"},
             {"hak": "祖墳", "rom": "zŭ fūn"},
-            {"hak": "餐館", "rom": "cón gŏn"}
+            {"hak": "餐廳", "rom": "cón tiàng"}
           ],
           [
             {"hak": "模範", "rom": "mū fàm"},
@@ -939,7 +941,7 @@
         "type": "proverbs",
         "items": [
           {"hak": "爺娘記子長江水，子記爺娘冇擔竿長。", "rom": "yā ngiōng gì zŭ cōng góng sŭi, zŭ gì yā ngiōng māu dàm gón cōng."},
-          {"hak": "早死爺娘冇冇教招。", "rom": "zău sĭ yā ngiōng māu gáu záu."}
+          {"hak": "早死爺娘冇教招。", "rom": "zău sĭ yā ngiōng māu gáu záu."}
         ]
       },
       {
@@ -965,7 +967,7 @@
         "type": "vocab",
         "items": [
           {"hak": "屋卡人", "rom": "vŭk ká ngīn", "zh": "家人", "en": "Family Members / People at home"},
-          {"hak": "相", "rom": "siòng*", "zh": "照片", "en": "Photo"},
+          {"hak": "相", "rom": "siòng", "zh": "照片", "en": "Photo"},
           {"hak": "心臼", "rom": "sím kíu", "zh": "兒媳婦", "en": "Daughter-in-law"},
           {"hak": "婿郎", "rom": "sè lōng", "zh": "女婿", "en": "Son-in-law"},
           {"hak": "正", "rom": "zàng", "zh": "才", "en": "Only then / Just"},
@@ -979,7 +981,7 @@
       {
         "type": "dialogue",
         "items": [
-          {"sp": "A", "hak": "張伯你今年幾多歲咯？", "zh": "張伯你今年幾歲了？", "en": "Uncle Zhang, how old are you this year?"},
+          {"sp": "A", "hak": "阿張伯你今年幾多歲咯？", "zh": "張伯你今年幾歲了？", "en": "Uncle Zhang, how old are you this year?"},
           {"sp": "B", "hak": "厓今年九十二歲啦。", "zh": "我今年九十二歲啦。", "en": "I am ninety-two years old."},
           {"sp": "A", "hak": "你有屋卡人麼？", "zh": "你有家人嗎？", "en": "Do you have family?"},
           {"sp": "B", "hak": "有呀，這張係吾嘅全家福相。", "zh": "有呀，這張是我的全家福照片。", "en": "Yes, this is my family portrait."},
@@ -1017,7 +1019,7 @@
         "description": {"hak": "", "rom": "", "en": "Two-Character Combinations"},
         "rows": [
           [
-            {"hak": "欠款", "rom": "kiàm kàn"},
+            {"hak": "欠款", "rom": "kiàm kăn"},
             {"hak": "勸解", "rom": "kièn găi"},
             {"hak": "牽掛", "rom": "kién gà"},
             {"hak": "禁忌", "rom": "gìm kì"}
@@ -1057,7 +1059,7 @@
       {
         "type": "proverbs",
         "items": [
-          {"hak": "養子唔知娘辛苦，養女正曉謝娘恩。", "rom": "yóng zŭ m dí ngiōng sín kŭ, yóng ngĭ zàng hiău cià ngiōng én."},
+          {"hak": "養子唔知娘辛苦，養女正曉謝娘恩。", "rom": "yóng zŭ m dí ngiōng sín kŭ, yóng n̆g zàng hiău cià ngiōng én."},
           {"hak": "蛇過正來打棍。"}
         ]
       },
@@ -1087,7 +1089,7 @@
           {"hak": "頂高", "rom": "dăng gáu", "zh": "上面", "en": "Above / On top"},
           {"hak": "腳下", "rom": "giŏk hà*", "zh": "下面", "en": "Below / Under"},
           {"hak": "長凳", "rom": "cōng dèn*", "zh": "長凳", "en": "Bench"},
-          {"hak": "中意", "rom": "zúng yì*", "zh": "喜歡", "en": "Like"},
+          {"hak": "中意", "rom": "zùng yì*", "zh": "喜歡", "en": "Like"},
           {"hak": "係講", "rom": "hè gŏng*", "zh": "如果", "en": "If"},
           {"hak": "跌下來", "rom": "diĕt hà lōi*", "zh": "掉下來", "en": "Fall down"},
           {"hak": "大來", "rom": "tài lōi*", "zh": "長大後", "en": "Grow up"}
@@ -1096,16 +1098,20 @@
       {
         "type": "dialogue",
         "items": [
-          {"sp": null, "hak": "這隻係吾表弟阿傑，係吾舅仔嘅賴子。", "zh": "這個是我表弟阿傑，是我小舅舅的兒子。", "en": "This is my cousin Ajie, he is my younger uncle's son."},
-          {"sp": null, "hak": "佢摎其公其婆同下住在英國蘇格蘭。", "zh": "他跟他爺爺奶奶一起住在英國蘇格蘭。", "en": "He lives in Scotland, UK with his grandparents."},
-          {"sp": null, "hak": "其公其婆就係吾嘅姐公姐婆。", "zh": "他爺爺奶奶就是我的外公外婆。", "en": "His grandparents are my maternal grandparents."},
-          {"sp": null, "hak": "其間屋好大間，共總有六間房。", "zh": "他的房子好大，總共有六間臥室。", "en": "His house is very big, with six bedrooms in total."},
-          {"sp": null, "hak": "屋臉前有隻花園仔，種嗨兜繡球摎玫瑰花。", "zh": "屋前面有個小花園，種了些繡球和玫瑰花。", "en": "There is a small garden in front of the house, with some hydrangeas and roses planted."},
-          {"sp": null, "hak": "屋背戶有隻大花園，棟心有棵大蘋果樹。", "zh": "屋後面有個大花園，中心有棵大蘋果樹。", "en": "There is a large garden behind the house, with a big apple tree in the center."},
-          {"sp": null, "hak": "樹頂高有好多蘋果。", "zh": "樹上面有好多蘋果。", "en": "There are many apples on the tree."},
-          {"sp": null, "hak": "樹腳下有一張長凳，阿傑好中意坐在唉裏讀書。", "zh": "樹下面有一張長凳，阿傑好喜歡坐在那裏讀書。", "en": "There is a bench under the tree, Ajie likes to sit there and read."},
-          {"sp": null, "hak": "佢長日想：係講有蘋果跌下來打中厓，", "zh": "佢經常想：如果有蘋果掉下來打中我，", "en": "He often thinks: If an apple falls down and hits me,"},
-          {"sp": null, "hak": "厓大來就係科學家咯。", "zh": "厓長大以後就是科學家了。", "en": "I will be a scientist when I grow up."}
+            {"sp": "A", "hak": "這隻係吾表弟阿傑，係吾舅仔嘅賴子。", "zh": "這個是我表弟阿傑，是我小舅舅的兒子。", "en": "This is my cousin A-kiet, he is my younger uncle's son."},
+            {"sp": "B", "hak": "相片嘅背景好像在外國，係麼？", "zh": "相片的背景好像在外國，是嗎？", "en": "The background of the photo seems to be in a foreign country, doesn't it?"},
+            {"sp": "A", "hak": "係呀，佢摎其公其婆同下住在英國蘇格蘭。", "zh": "是呀，他跟他爺爺奶奶一起住在英國蘇格蘭。", "en": "Yes, he lives in Scotland, UK with his grandparents."},
+            {"sp": "A", "hak": "其公其婆就係吾嘅姐公姐婆。", "zh": "他爺爺奶奶就是我的外公外婆。", "en": "His grandparents are my maternal grandparents."},
+            {"sp": "B", "hak": "其間屋好像好大間喔。", "zh": "他的房子好像很大呀。", "en": "His house seems very big."},
+            {"sp": "A", "hak": "係呀，其間屋共總有六間房。", "zh": "是呀，他的房子總共有六間臥室。", "en": "Yes, his house has six bedrooms in total."},
+            {"sp": "B", "hak": "屋臉前還有隻花園仔添。", "zh": "房子前面還有個小花園。", "en": "There is also a small garden in front of the house."},
+            {"sp": "A", "hak": "其兜在這花園仔，種嗨兜繡球摎玫瑰花。", "zh": "他們在這個小花園裏種了一些繡球花和玫瑰花。", "en": "They planted some hydrangeas and roses in this small garden."},
+            {"sp": "B", "hak": "其兜屋背戶應該有一隻大花園係麼？", "zh": "他的房子後面應該有個大花園吧？", "en": "There should be a large garden behind his house, right?"},         
+            {"sp": "A", "hak": "係呀，屋背戶嘅花園好大，棟心有棵大蘋果樹。", "zh": "是呀，房子後面的花園很大，中心有棵大蘋果樹。", "en": "Yes, the garden behind the house is very large, with a big apple tree in the center."},
+            {"sp": "A", "hak": "樹頂高有好多蘋果。", "zh": "樹上面有好多蘋果。", "en": "There are many apples on the tree."},
+            {"sp": "B", "hak": "坐在花園休息看書，真係好舒服喔。", "zh": "坐在花園裏休息看書，真的好舒服呀。", "en": "It's really comfortable to sit in the garden and read."},
+            {"sp": "A", "hak": "蘋果樹腳下有一張長凳，阿傑好中意坐在唉裏看書嘅。", "zh": "蘋果樹下面有一張長凳，阿傑很喜歡坐在那裏看書。", "en": "There is a bench under the apple tree, Ajie likes to sit there and read."},
+            {"sp": "B", "hak": "係講有蘋果跌下來打中佢，佢大來就係科學家咯。", "zh": "如果有蘋果掉下來打中他，他長大以後就是科學家了。", "en": "If an apple would fall down and hit him, he would grow up and become a scientist!"}
         ]
       },
       {
