@@ -723,15 +723,16 @@ onUnmounted(() => {
 
 onMounted(async () => {
   try {
-    const [lr, lx, tr] = await Promise.all([
-      fetch('/lessons.json'),
-      fetch('/lexicon.csv'),
-      fetch('/timestamps.json').catch(() => null)
+    const base = import.meta.env.BASE_URL
+    const [lr, cr, tr] = await Promise.all([
+      fetch(base + 'lessons.json'),
+      fetch(base + 'lexicon.csv'),
+      fetch(base + 'timestamps.json').catch(() => null)
     ])
-    if (!lr.ok || !lx.ok) throw new Error('Failed to load assets.')
+    if (!lr.ok || !cr.ok) throw new Error('Failed to load assets.')
 
     const lessonsData = await lr.json()
-    const csvText = await lx.text()
+    const csvText = await cr.text()
     if (tr && tr.ok) timestamps.value = await tr.json()
     const map = new Map()
     const lines = csvText.replace(/^\uFEFF/, '').split(/\r?\n/)
