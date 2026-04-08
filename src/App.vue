@@ -50,7 +50,7 @@
           <span class="kicker">Lesson {{ currentLesson.id }}</span>
           <h1 class="font-hakka" v-html="renderTitleRuby(currentLesson.title.hak)"></h1>
           <p class="hero-sub">{{ currentLesson.title.en }}</p>
-          <button type="button" class="audio-btn" @click="playAudio(`/audio/ch${currentLesson.id}-title.m4a`)">▶ Title</button>
+          <button type="button" class="audio-btn" @click="playAudio(baseUrl + `audio/ch${currentLesson.id}-title.m4a`)">▶ Title</button>
         </section>
 
         <section class="blocks">
@@ -191,6 +191,8 @@
 
 <script setup>
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
+
+const baseUrl = import.meta.env.BASE_URL
 
 const loading = ref(true)
 const lessons = ref([])
@@ -608,9 +610,9 @@ function getBlockAudio(lessonId, block, blockIndex) {
   }
   if (sameType.length > 1 && block.type === 'main') {
     const typeIdx = sameType.indexOf(blockIndex) + 1
-    return '/audio/ch' + lessonId + '-main-' + typeIdx + '.m4a'
+    return baseUrl + 'audio/ch' + lessonId + '-main-' + typeIdx + '.m4a'
   }
-  return '/audio/ch' + lessonId + '-' + block.type + '.m4a'
+  return baseUrl + 'audio/ch' + lessonId + '-' + block.type + '.m4a'
 }
 
 const audioLabel = computed(() => {
@@ -723,11 +725,10 @@ onUnmounted(() => {
 
 onMounted(async () => {
   try {
-    const base = import.meta.env.BASE_URL
     const [lr, cr, tr] = await Promise.all([
-      fetch(base + 'lessons.json'),
-      fetch(base + 'lexicon.csv'),
-      fetch(base + 'timestamps.json').catch(() => null)
+      fetch(baseUrl + 'lessons.json'),
+      fetch(baseUrl + 'lexicon.csv'),
+      fetch(baseUrl + 'timestamps.json').catch(() => null)
     ])
     if (!lr.ok || !cr.ok) throw new Error('Failed to load assets.')
 
