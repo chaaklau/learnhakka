@@ -1,100 +1,71 @@
 :root {
-  --font-serif: "Noto Serif TC", serif;
-  --font-sans: "Zen Kaku Gothic New", "Noto Sans TC", sans-serif;
-  --font-mono: "Menlo", "Monaco", "Courier New", monospace;
-  
-  --color-bg: #f4f4f0;      /* Wabi-sabi off-white */
+  --font-display: "Iowan Old Style", "Noto Serif TC", serif;
+  --font-body: "Avenir Next", "PingFang TC", "Noto Sans TC", sans-serif;
+  --font-mono: "SFMono-Regular", "Menlo", monospace;
+
+  --color-bg: #ffffff;
   --color-surface: #ffffff;
-  --color-text: #3e3e3e;
-  --color-accent: #7d8a68;  /* Muted moss green */
-  --color-accent-light: #e8ede3;
-  --color-subtle: #9ca3af;
-  --color-border: #e5e7eb;
-  --color-error: #b91c1c;   /* For unproofread marker */
-  
-  --sidebar-width: 250px;
+  --color-surface-soft: #f7faf7;
+  --color-text: #111111;
+  --color-green: #183c32;
+  --color-crimson: #8c1d27;
+  --color-muted: #51635d;
+  --color-border: #d8e0da;
+  --color-border-strong: #9aaea4;
+
+  --shadow-card: 0 16px 40px rgba(24, 60, 50, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: var(--font-sans);
-  background-color: var(--color-bg);
+  font-family: var(--font-body);
   color: var(--color-text);
+  background:
+    radial-gradient(circle at top left, rgba(24, 60, 50, 0.08), transparent 18rem),
+    radial-gradient(circle at bottom right, rgba(140, 29, 39, 0.06), transparent 22rem),
+    var(--color-bg);
   line-height: 1.6;
 }
 
-#app {
-  height: 100vh;
-  display: flex;
-  overflow: hidden;
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
 
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 8px;
+#app {
+  min-height: 100vh;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
-  background-color: #d1d5db;
-  border-radius: 4px;
+  background: rgba(24, 60, 50, 0.2);
+  border-radius: 999px;
 }
 
-/* Typography utilities */
 .font-hakka {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
 }
+
 .font-rom {
   font-family: var(--font-mono);
-  font-size: 0.9em;
-  color: #555;
-  letter-spacing: 0.02em;
-}
-
-/* Common Components */
-.btn {
-  background: transparent;
-  border: 1px solid var(--color-accent);
-  color: var(--color-accent);
-  padding: 0.25rem 0.75rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.875rem;
-  transition: all 0.2s;
-}
-.btn:hover, .btn.active {
-  background-color: var(--color-accent);
-  color: white;
-}
-
-/* Audio Placeholder */
-.audio-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: var(--color-accent-light);
-  color: var(--color-accent);
-  cursor: pointer;
-  margin-left: 8px;
-  font-size: 12px;
-  border: none;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-}
-.audio-btn:hover {
-  opacity: 1;
-}
-
-/* Inline Hakka Text highlight */
-.inline-hakka {
-  font-family: var(--font-serif);
-  color: #2c3e50;
-  font-weight: 500;
-  background-color: rgba(125, 138, 104, 0.1);
-  padding: 0 4px;
-  border-radius: 2px;
+  letter-spacing: 0.03em;
+  color: var(--color-green);
 }
