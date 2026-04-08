@@ -677,7 +677,7 @@ function onAudioTimeUpdate() {
 function getBlockTimestamps(lessonId, block, blockIndex) {
   const src = getBlockAudio(lessonId, block, blockIndex)
   if (!src) return null
-  const key = src.replace(/^\/audio\//, '').replace('.m4a', '')
+  const key = src.replace(/^.*\/audio\//, '').replace('.m4a', '')
   return timestamps.value[key] || null
 }
 
