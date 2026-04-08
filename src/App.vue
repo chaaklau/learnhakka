@@ -191,16 +191,17 @@
 
 <script setup>
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 
+const route = useRoute()
+const router = useRouter()
 const baseUrl = import.meta.env.BASE_URL
 
 const loading = ref(true)
 const lessons = ref([])
 const lexicon = ref(new Map())
-const currentLessonId = ref(null)
 const displayLang = ref('zh')
 const sidebarOpen = ref(false)
-const page = ref('textbook')
 const audioEl = ref(null)
 const playingAudio = ref('')
 const timestamps = ref({})
@@ -208,6 +209,17 @@ let stopAtTime = null
 const heroEl = ref(null)
 const heroVisible = ref(true)
 let heroObserver = null
+
+const page = computed(() => {
+  if (route.name === 'about') return 'about'
+  if (route.name === 'acknowledgement') return 'acknowledgement'
+  return 'textbook'
+})
+
+const currentLessonId = computed(() => {
+  if (route.name === 'chapter' && route.params.id) return parseInt(route.params.id)
+  return null
+})
 
 const blockTitlesEn = {
   vocab: 'Vocabulary',
@@ -698,15 +710,18 @@ function playTokenAudio(block, blockIndex, tokenIndex) {
 }
 
 function selectLesson(id) {
-  currentLessonId.value = id
+  router.push({ name: 'chapter', params: { id } })
   sidebarOpen.value = false
-  window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 function navigateTo(p) {
-  page.value = p
+  if (p === 'textbook') {
+    const id = currentLessonId.value || lessons.value[0]?.id || 1
+    router.push({ name: 'chapter', params: { id } })
+  } else {
+    router.push({ name: p })
+  }
   sidebarOpen.value = false
-  window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 watch(heroEl, (el) => {
@@ -749,7 +764,6 @@ onMounted(async () => {
 
     lessons.value = lessonsData
     lexicon.value = map
-    currentLessonId.value = lessonsData[0]?.id || null
   } catch (e) {
     console.error(e)
   } finally {
