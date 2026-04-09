@@ -406,9 +406,32 @@ function formatHakka(text) {
   return String(text).replace(/\(([^)]+)\)/g, '<span class="anno">$1</span>')
 }
 
+function renderItermRuby(inner) {
+  // If the content has CJK characters, render with ruby like vocab
+  if (/[\u3400-\u9FFF\uF900-\uFAFF]/.test(inner)) {
+    return '<span class="iterm">' + renderSentenceRuby(inner) + '</span>'
+  }
+  return '<span class="iterm">' + escapeHtml(inner) + '</span>'
+}
+
 function formatNoteText(text) {
   if (!text) return ''
-  return formatHakka(text).replace(/\{(.*?)\}/g, '<span class="iterm">$1</span>')
+  // Process {…} placeholders first on raw text, then annotations and bold
+  let result = ''
+  let rest = String(text)
+  const re = /\{(.*?)\}/g
+  let lastIdx = 0
+  let m
+  while ((m = re.exec(rest)) !== null) {
+    // Process the text before this match through formatHakka
+    result += formatHakka(rest.slice(lastIdx, m.index))
+    result += renderItermRuby(m[1])
+    lastIdx = re.lastIndex
+  }
+  result += formatHakka(rest.slice(lastIdx))
+  // Support **bold**
+  result = result.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+  return result
 }
 
 function renderWithRuby(text, rom) {
@@ -1113,7 +1136,7 @@ onMounted(async () => {
   color: var(--color-text);
 }
 .vocab-card.sm .vocab-hak {
-  font-size: 1.35rem;
+  font-size: 1.85rem;
   font-weight: 400;
 }
 .vocab-mean {
@@ -1207,7 +1230,7 @@ onMounted(async () => {
   padding-left: 1.1rem;
   display: grid;
   gap: 0.4rem;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: var(--color-muted);
   line-height: 1.5;
 }
@@ -1226,7 +1249,7 @@ onMounted(async () => {
   border: 1px solid var(--color-border);
   vertical-align: top;
   background: var(--color-surface-soft);
-  font-size: 1.05rem;
+  font-size: 1.85rem;
   line-height: 1.8;
 }
 
@@ -1237,9 +1260,9 @@ onMounted(async () => {
 }
 .note-item {
   padding: 0.55rem 0.7rem;
-  font-size: 0.88rem;
+  font-size: 1.05rem;
   color: var(--color-muted);
-  line-height: 1.55;
+  line-height: 1.65;
 }
 .note-item + .note-item {
   border-top: 1px solid var(--color-border);
@@ -1280,8 +1303,18 @@ onMounted(async () => {
   font-family: var(--font-body);
 }
 :deep(.iterm) {
-  color: var(--color-green);
+  display: inline-block;
   font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.8;
+  color: var(--color-text);
+  padding: 0.1rem 0.3rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-soft);
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 0.15rem;
 }
 
 /* ── Sentence practice ── */

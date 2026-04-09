@@ -534,14 +534,12 @@
       {
         "type": "notes",
         "items": [
-          {"zh":"“{恁樣}”代表{這樣}、{這樣子的}意思。","en":"\"{恁樣}\" means {this way} or {like this}."},
-          {
-            "zh": "{恁}代表{那麼}的意思。例如{恁高}、{恁大}、{恁厲害}。",
-            "en": "{恁} means {so} or {that}. For example: {so tall} ({恁高}), {so big} ({恁大}), {so terrible/great} ({恁厲害})."
+          {"zh":"{恁樣}代表「這樣」、「這樣子的」意思。","en":"{恁樣} means “this way” or “like this”."},
+          {"zh": "{恁}代表「那麼」的意思。例如{恁高}、{恁大}、{恁厲害}。","en": "{恁} means ”so” or ”that”. For example, {恁高} “so tall”、{恁大} “so big”、{恁厲害} “so great/terrible”."
           },
           {
-            "zh": "{仰邊}是疑問詞，香港傳統發音是{ngiòng bién}。",
-            "en": "{仰邊} is a question word (how). The traditional Hong Kong pronunciation is {ngiòng bién}."
+            "zh": "{仰邊}是疑問詞，香港傳統發音是 *ngiòng bién*。",
+            "en": "{仰邊} is the question word ”how”. The traditional Hong Kong pronunciation is *ngiòng bién*."
           },
           {"zh":"傳統客家話說{好像} ，不說 {好似}。","en":"Traditional Hakka says {好像} (seem), not {好似}."},
           {
