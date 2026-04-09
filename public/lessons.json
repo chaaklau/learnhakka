@@ -16,10 +16,10 @@
           {"hak":"你係唔係客家人？","sp":"A","zh":"你是不是客家人？","en":"Are you Hakka?"},
           {"hak":"係，厓係客家人。","sp":"B","zh":"是，我是客家人。","en":"Yes, I am Hakka."},
           {"hak":"佢呢, 佢係唔係客家人？","sp":"A","zh":"他呢, 他是不是客家人？","en":"What about him, is he Hakka?"},
-          {"hak":"唔係，佢唔係客家人。","sp":"A","zh":"不是，他不是客家人。","en":"No, he is not Hakka."}
+          {"hak":"唔係，佢唔係客家人。","sp":"B","zh":"不是，他不是客家人。","en":"No, he is not Hakka."}
         ]
       },
-      {"type":"sentence_practice","items":["厓/你/佢 + 姓陳/姓李/姓黃","厓安做/你安做/佢安做 ….","厓係/你係/佢係 …","你/佢 + 安做乜介名?","你/佢係唔係 何小安/客家人"]},
+      {"type":"sentence_practice","items":["厓/你/佢 + 姓 + 陳/李/黃","厓/你/佢 + 安做 + ….","厓/你/佢 + 係 + …","你/佢 + 安做 乜介名?","你/佢 + 係唔係 + 何小安/客家人"]},
       {
         "type": "practice",
         "description": {"hak":"姓","en":"Surnames"},
@@ -29,17 +29,17 @@
         "type": "notes",
         "items": [
           {
-            "zh": "客家話的聲母連零聲母在內有17個，符號是b, p, m. f, v, d, t, l, z, c. s, g, k, ng, h, y。{零聲母}就是不帶上述聲母符號，直接用a, e, o開頭的音節。",
-            "en": "Hakka has 17 initials (including zero initial): b, p, m, f, v, d, t, l, z, c, s, g, k, ng, h, y. {Zero initial} means syllables beginning directly with a, e, o without any of the above initial consonants."
+            "zh": "客家話的**聲母**連零聲母在內有17個，符號是 `b`, `p`, `m`, `f`, `v`, `d`, `t`, `l`, `z`, `c`, `s`, `g`, `k`, `ng`, `h`, `y`。**零聲母**就是不帶上述聲母符號，直接用 `a`, `e`, `i`, `o` 開頭的音節。",
+            "en": "Hakka has 17 **initials** (including the zero initial): `b`, `p`, `m`, `f`, `v`, `d`, `t`, `l`, `z`, `c`, `s`, `g`, `k`, `ng`, `h`, `y`. The **zero initial** refers to syllables beginning directly with `a`, `e`, `i`, `o` without any of the above initial consonants."
           },
           {
-            "zh": "客家話的韻母有{i介音}，但元音只有a, i, u, e, o五個（跟日語相同）。",
-            "en": "Hakka has the {i-medial}, but only five vowels: a, i, u, e, o (same as Japanese)."
+            "zh": "客家話的**韻母**由介音、元音、韻尾組成。介音只有 `i`，元音只有 `a`, `i`, `u`, `e`, `o` 五個（跟日語相同）。",
+            "en": "A Hakka rhyme is made up of a medial, a vowel, and a coda. There is an optional `i` medial, and only five vowels: `a`, `i`, `u`, `e`, `o` (same as Japanese)."
           },
-          {"zh":"客家話的韻尾有六個：m, n, ng, p, t, k。","en":"Hakka has six syllable endings: m, n, ng, p, t, k."},
+          {"zh":"客家話的韻尾有六個：`m`, `n`, `ng`, `p`, `t`, `k`。","en":"Hakka has six syllable codas: `m`, `n`, `ng`, `p`, `t`, `k`."},
           {
-            "zh": "客家話的疑問詞誰是{哪人}，發音是{là ngīn}。客家話區別{哪個}和{誰}，分別是{奈隻}和{哪人}。",
-            "en": "The Hakka question word for 'who' is {哪人} ({là ngīn}). Hakka distinguishes between {which one} and {who}: {奈隻} and {哪人}."
+            "zh": "客家話的疑問詞「誰」是{哪人}，發音是 `là ngīn`。客家話區別「哪個」和「誰」，分別是{奈隻}和{哪人}。",
+            "en": "The Hakka question word for 'who' is {哪人} (`là ngīn`). Hakka distinguishes between 'which one' and 'who': {奈隻} and {哪人}."
           }
         ]
       }
@@ -53,11 +53,11 @@
       {
         "type": "main",
         "items": [
-          {"hak":"58","zh":"58","en":"58"},
-          {"hak":"246","zh":"246","en":"246"},
-          {"hak":"3407","zh":"3407","en":"3407"},
-          {"hak":"42 348","zh":"42 348","en":"42,348"},
-          {"hak":"789 306","zh":"789 306","en":"789,306"}
+          {"hak":"58","zh":"五十八","en":"58"},
+          {"hak":"246","zh":"二百四十六","en":"246"},
+          {"hak":"3407","zh":"三千四百零七","en":"3407"},
+          {"hak":"42 348","zh":"四萬二千三百四十八","en":"42,348"},
+          {"hak":"789 306","zh":"七十八萬九千三百零六","en":"789,306"}
         ]
       },
       {
@@ -89,20 +89,20 @@
         "type": "notes",
         "items": [
           {
-            "zh": "客家話有六個聲調，其中兩個是{入聲}。以上是一至四調的符號示範。",
-            "en": "Hakka has six tones, two of which are {Entering Tones} (Ru Sheng). The above are examples of the symbols for tones 1 to 4."
+            "zh": "客家話有六個**聲調**，其中兩個是**入聲**。以上是`1`至`4`調的符號示範。",
+            "en": "Hakka has six **tones**, two of which are **Entering Tones**. The above are examples of the symbols for tones `1` to `4`."
           },
           {
-            "zh": "“{你}”在客家話有{口語音}和{讀書音}的不同。惠陽腔客家話{口語}發音是{ngī}，{讀書音}為{lí}。",
-            "en": "\"{You}\" ({你}) in Hakka has a difference between {spoken} and {literary} pronunciations. In Fuiyong Hakka, the {spoken} pronunciation is {ngī}, while the {literary} pronunciation is {lí}."
+            "zh": "「你」在客家話有**口語音**和**讀書音**的不同。惠陽腔客家話中，口語音是 `ngī`，讀書音為 `lí`。",
+            "en": " The character 你 (you) in Hakka has both **colloquial** and **literary** pronunciations. In Fuiyong Hakka, the colloquial pronunciation is `ngī`, while the literary pronunciation is `lí`."
           },
           {
-            "zh": "“{數}”的發音只有一個 “{sù}”。沒有其他發音。",
-            "en": "The character \"{number}\" ({數}) has only one pronunciation: \"{sù}\". There are no other pronunciations."
+            "zh": "「數」的發音只有一個 `sù`，沒有其他發音。",
+            "en": "The character 數 (number, count) has only one pronunciation: `sù`. There are no other pronunciations."
           },
           {
-            "zh": "客家話21-29，{口語}可以說“{兩十一}、{兩十二}、... {兩十九}”，廣州話、普通話不能這樣說。",
-            "en": "In Hakka {spoken language}, numbers 21-29 can be said as \"{two-ten-one}\", \"{two-ten-two}\", ... \"{two-ten-nine}\". This is not done in Cantonese or Mandarin."
+            "zh": "客家話 21～29，口語可以說{兩十一}、{兩十二}、... {兩十九}，廣州話、普通話不能這樣說。",
+            "en": "In colloquial Hakka, numbers 21-29, the {兩十} is used instead of {二十}, {兩十一}、{兩十二}、... {兩十九}. This is not done in Cantonese or Mandarin."
           }
         ]
       }
@@ -116,31 +116,31 @@
       {
         "type": "main",
         "items": [
-          {"hak":"同學你好。你安做乜介名？","sp":"A","zh":"同學你好。你叫什麼名字？","en":"Hello. What is your name?"},
-          {"hak":"厓安做葉錦嫦。","sp":"B","zh":"我叫葉錦嫦。","en":"My name is Ye Jinchang."},
-          {"hak":"你識惹左手析嘅同學麼？","sp":"A","zh":"你認識你左邊的同學嗎？","en":"Do you know the student on your left?"},
+          {"hak":"同學你好。你安做乜介名？","sp":"B","zh":"同學你好。你叫什麼名字？","en":"Hello. What is your name?"},
+          {"hak":"厓安做葉錦嫦。","sp":"A","zh":"我叫葉錦嫦。","en":"My name is Ye Jinchang."},
+          {"hak":"你識惹左手析嘅同學麼？","sp":"B","zh":"你認識你左邊的同學嗎？","en":"Do you know the student on your left?"},
           {
             "hak": "識呀，佢係李偉雄。佢係吾表弟。其爸係吾大舅。",
-            "sp": "B",
+            "sp": "A",
             "zh": "認識呀，他是李偉雄。他是我表弟。他爸是我的大舅舅。",
             "en": "Yes, he is Li Weixiong. He is my cousin. His dad is my eldest uncle."
           },
-          {"hak":"大舅係乜介意思？","sp":"A","zh":"大舅舅是什麼意思？","en":"What does 'Dajiu' mean?"},
-          {"hak":"大舅咩係阿㜆嘅阿哥囖。","sp":"B","zh":"大舅舅就是媽媽的哥哥嘛。","en":"'Dajiu' just means mom's older brother."},
-          {"hak":"噢，厓明白咯。","sp":"A","zh":"噢，我明白了。","en":"Oh, I understand now."},
-          {"hak":"你今年幾多歲？","sp":"B","zh":"你今年幾歲？","en":"How old are you this year?"},
-          {"hak":"厓今年兩十二歲。","sp":"A","zh":"我今年二十二歲。","en":"I am twenty-two years old."},
-          {"hak":"你幾多姊妹？","sp":"B","zh":"你有多少兄弟姊妹？","en":"How many siblings do you have?"},
-          {"hak":"厓有一隻阿哥。","sp":"A","zh":"我有一個哥哥。","en":"I have one older brother."},
-          {"hak":"惹哥幾多歲？","sp":"B","zh":"你哥哥幾歲？","en":"How old is your brother?"},
-          {"hak":"佢兩十九歲。","sp":"A","zh":"他二十九歲。","en":"He is twenty-nine years old."}
+          {"hak":"大舅係乜介意思？","sp":"B","zh":"大舅舅是什麼意思？","en":"What does 'Dajiu' mean?"},
+          {"hak":"大舅咩係阿㜆嘅阿哥囖。","sp":"A","zh":"大舅舅就是媽媽的哥哥嘛。","en":"'Dajiu' just means mom's older brother."},
+          {"hak":"噢，厓明白咯。","sp":"B","zh":"噢，我明白了。","en":"Oh, I understand now."},
+          {"hak":"你今年幾多歲？","sp":"A","zh":"你今年幾歲？","en":"How old are you this year?"},
+          {"hak":"厓今年兩十二歲。","sp":"B","zh":"我今年二十二歲。","en":"I am twenty-two years old."},
+          {"hak":"你幾多姊妹？","sp":"A","zh":"你有多少兄弟姊妹？","en":"How many siblings do you have?"},
+          {"hak":"厓有一隻阿哥。","sp":"B","zh":"我有一個哥哥。","en":"I have one older brother."},
+          {"hak":"惹哥幾多歲？","sp":"A","zh":"你哥哥幾歲？","en":"How old is your brother?"},
+          {"hak":"佢兩十九歲。","sp":"B","zh":"他二十九歲。","en":"He is twenty-nine years old."}
         ]
       },
       {
         "type": "sentence_practice",
         "items": [
-          "佢係 吾表弟/吾表哥/吾㜆/吾爸/吾大舅",
-          "厓係 其表弟/其表哥/其㜆/其爸/其大舅",
+          "佢係 + 吾表弟/吾表哥/吾㜆/吾爸/吾大舅",
+          "厓係 + 其表弟/其表哥/其㜆/其爸/其大舅",
           "厓/你/佢 + 今年幾多歲？",
           "厓/你/佢 + 今年...歲。",
           "厓有...隻 + 阿哥/表哥/表弟/大舅",
@@ -150,12 +150,12 @@
       },
       {
         "type": "practice",
-        "description": {"en":"Tone 5 & 6 (Entering Tones -p, -t, -k, -m, -n, -ng) and Blank Filling"},
+        "description": {"en":"Tone 5 & 6 (Entering Tones `-p`, `-t`, `-k`, `-m`, `-n`, `-ng`)"},
         "rows": [
-          ["金","__.gim2","錦","禁","急","__.gip6"],
+          ["金","＿.gim2","錦","禁","急","＿.gip6"],
           ["番","繁","反","飯","發","活"],
           ["淵","園","遠","縣","乙","越"],
-          ["旱","寒","罕","汗","喝","__.hot6"],
+          ["旱","寒","罕","汗","喝","＿.hot6"],
           ["閹","鹽","掩","豔","醃","葉"],
           ["商","常","賞","尚","索","勺"],
           ["冷","零","㘄","另","壢","曆"],
@@ -562,30 +562,30 @@
         "items": [
           {
             "hak": "這張係吾公嘅舊相片。這隻係吾公，這隻係吾婆。",
-            "sp": "A",
+            "sp": "B",
             "zh": "這張是我爺爺的舊相片。這個我爺爺，這個是我奶奶。",
             "en": "This is an old photo of my grandpa. This is my grandpa, this is my grandma."
           },
           {
             "hak": "這兩隻係吾爸嘅阿哥摎阿姐。其兜係吾伯摎大姑。",
-            "sp": "A",
+            "sp": "B",
             "zh": "這兩個是我爸的哥哥和姐姐。他們是我伯父和姑媽。",
             "en": "These two are my dad's brother and sister. They are my uncle and aunt."
           },
-          {"hak":"惹爸呢？","sp":"B","zh":"你爸呢？","en":"What about your dad?"},
-          {"hak":"吾爸還吂曾出世。","sp":"A","zh":"我爸還沒出生。","en":"My dad wasn't born yet."},
-          {"hak":"惹公共總有幾多隻子女噢？","sp":"B","zh":"你爺爺總共有幾個子女？","en":"How many children did your grandpa have in total?"},
-          {"hak":"五隻，三隻賴子，兩隻妹子。","sp":"A","zh":"五個，三個兒子，兩個女兒。","en":"Five. Three sons, two daughters."},
+          {"hak":"惹爸呢？","sp":"A","zh":"你爸呢？","en":"What about your dad?"},
+          {"hak":"吾爸還吂曾出世。","sp":"B","zh":"我爸還沒出生。","en":"My dad wasn't born yet."},
+          {"hak":"惹公共總有幾多隻子女噢？","sp":"A","zh":"你爺爺總共有幾個子女？","en":"How many children did your grandpa have in total?"},
+          {"hak":"五隻，三隻賴子，兩隻妹子。","sp":"B","zh":"五個，三個兒子，兩個女兒。","en":"Five. Three sons, two daughters."},
           {
             "hak": "吾爸還有一隻老妹摎一隻老弟。其兜係吾叔摎姑仔。",
-            "sp": "A",
+            "sp": "B",
             "zh": "我爸還有一個妹妹和一個弟弟。他們是我的叔叔和姑姑。",
             "en": "My dad also has a younger sister and a younger brother. They are my uncle and aunt."
           },
-          {"hak":"你有冇惹姐公姐婆嘅舊相呢 ？","sp":"B","zh":"你有沒有你外公外婆的舊相片呢 ？","en":"Do you have old photos of your maternal grandparents?"},
-          {"hak":"冇呀，但係厓隻隻禮拜都去邏其兜嘅。","sp":"A","zh":"沒有呀，但是我每個星期都去探望他們的。","en":"No, but I visit them every week."},
-          {"hak":"哇， 惹兜感情好好喔。","sp":"B","zh":"噢， 你們感情很好耶。","en":"Oh, your relationship is very good."},
-          {"hak":"係呀，吾兜好孝順嘅呀。","sp":"A","zh":"是呀，我們很孝順的呢。","en":"Yes, we are very filial."}
+          {"hak":"你有冇惹姐公姐婆嘅舊相呢 ？","sp":"A","zh":"你有沒有你外公外婆的舊相片呢 ？","en":"Do you have old photos of your maternal grandparents?"},
+          {"hak":"冇呀，但係厓隻隻禮拜都去邏其兜嘅。","sp":"B","zh":"沒有呀，但是我每個星期都去探望他們的。","en":"No, but I visit them every week."},
+          {"hak":"哇， 惹兜感情好好喔。","sp":"A","zh":"噢， 你們感情很好耶。","en":"Oh, your relationship is very good."},
+          {"hak":"係呀，吾兜好孝順嘅呀。","sp":"B","zh":"是呀，我們很孝順的呢。","en":"Yes, we are very filial."}
         ]
       },
       {

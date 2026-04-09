@@ -126,7 +126,10 @@
 
             <template v-else-if="block.type === 'practice' && Array.isArray(block.items)">
               <ol class="prompt-list">
-                <li v-for="(item, ii) in block.items" :key="ii" v-show="!slidesMode || ii === getSlideRow(bi, block.items.length)" v-html="formatNoteText(item)"></li>
+                <li v-for="(item, ii) in block.items" :key="ii" v-show="!slidesMode || ii === getSlideRow(bi, block.items.length)">
+                  <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn" @click.stop="playBlockItem(currentLesson.id, block, bi, ii)">▶</button>
+                  <span v-html="formatNoteText(item)"></span>
+                </li>
               </ol>
               <div v-if="slidesMode && block.items.length > 1" class="slide-row-nav">
                 <button type="button" class="slide-row-btn" @click="advanceSlideRow(bi, block.items.length, -1)">‹</button>
@@ -136,9 +139,12 @@
             </template>
 
             <div v-else-if="block.type === 'practice' && Array.isArray(block.rows)" class="drill-rows">
-              <div v-for="(row, ri) in block.rows" :key="ri" class="vocab-grid" v-show="!slidesMode || ri === getSlideRow(bi, block.rows.length)">
-                <div v-for="(cell, ci) in row" :key="ci" class="vocab-card sm">
-                  <p class="vocab-hak font-hakka" v-html="renderTokenRuby(cell)"></p>
+              <div v-for="(row, ri) in block.rows" :key="ri" class="drill-row-wrap" v-show="!slidesMode || ri === getSlideRow(bi, block.rows.length)">
+                <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn" @click.stop="playBlockItem(currentLesson.id, block, bi, ri)">▶</button>
+                <div class="vocab-grid">
+                  <div v-for="(cell, ci) in row" :key="ci" class="vocab-card sm">
+                    <p class="vocab-hak font-hakka" v-html="renderTokenRuby(cell)"></p>
+                  </div>
                 </div>
               </div>
               <div v-if="slidesMode && block.rows.length > 1" class="slide-row-nav">
@@ -323,8 +329,8 @@ function numeralToDiacritic(syl) {
   let idx = -1
   for (let i = 0; i < base.length; i++) {
     if (VOWELS.includes(base[i])) {
-      // Check if this 'i' is a glide
-      if (base[i] === 'i' && i + 1 < base.length && 'aeou'.includes(base[i + 1])) {
+      // Check if this 'i' is a glide (before a, e, o — NOT before u)
+      if (base[i] === 'i' && i + 1 < base.length && 'aeo'.includes(base[i + 1])) {
         continue // skip glide i
       }
       idx = i
@@ -466,6 +472,8 @@ function formatNoteText(text) {
   result += formatHakka(rest.slice(lastIdx))
   // Support **bold**
   result = result.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+  // Support `code` as crimson inline
+  result = result.replace(/`(.*?)`/g, '<span class="note-rom">$1</span>')
   return result
 }
 
@@ -1142,6 +1150,29 @@ onMounted(async () => {
   opacity: 1;
   color: var(--color-green);
 }
+.row-play-btn {
+  background: none;
+  border: none;
+  color: var(--color-muted);
+  padding: 0.1rem 0.3rem;
+  font-size: 0.7rem;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 150ms, color 150ms;
+  flex-shrink: 0;
+}
+.row-play-btn:hover {
+  opacity: 1;
+  color: var(--color-green);
+}
+.drill-row-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.drill-row-wrap .vocab-grid {
+  flex: 1;
+}
 
 /* ── Blocks ── */
 .blocks {
@@ -1350,6 +1381,9 @@ onMounted(async () => {
 }
 .prompt-list li {
   flex: 0 1 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
 }
 
 /* ── Practice drill table ── */
@@ -1458,6 +1492,11 @@ onMounted(async () => {
   vertical-align: middle;
   text-align: center;
   margin: 0 0.15rem;
+}
+:deep(.note-rom) {
+  color: var(--color-crimson);
+  font-family: var(--font-body);
+  font-weight: 500;
 }
 
 /* ── Sentence practice ── */
