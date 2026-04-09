@@ -1,21 +1,23 @@
 <template>
-  <div class="site-banner">⚠️ This site is under construction. Some content, audio, and features may be incomplete or inaccurate.</div>
-  <nav class="site-nav">
+  <nav ref="navEl" class="site-nav">
+    <button type="button" class="menu-btn" @click="sidebarOpen = !sidebarOpen">☰</button>
     <span class="site-brand" @click="navigateTo('textbook')">香港客家話入門</span>
     <div class="site-links">
       <button type="button" :class="['site-link', { active: page === 'textbook' }]" @click="navigateTo('textbook')">課本 Textbook</button>
-      <button type="button" :class="['site-link', { active: page === 'about' }]" @click="navigateTo('about')">About Us</button>
-      <button type="button" :class="['site-link', { active: page === 'acknowledgement' }]" @click="navigateTo('acknowledgement')">Acknowledgement</button>
+      <button type="button" :class="['site-link', { active: page === 'about' }]" @click="navigateTo('about')">關於 About</button>
+      <button type="button" :class="['site-link', { active: page === 'acknowledgement' }]" @click="navigateTo('acknowledgement')">鳴謝 Thanks</button>
     </div>
-    <div class="lang-toggle">
-      <button type="button" :class="['lang-btn', { active: displayLang === 'zh' }]" @click="displayLang = 'zh'">中文</button>
-      <button type="button" :class="['lang-btn', { active: displayLang === 'en' }]" @click="displayLang = 'en'">EN</button>
+    <div class="nav-controls">
+      <div class="control-group">
+        <button type="button" :class="['ctl-btn', { active: displayLang === 'zh' }]" @click="displayLang = 'zh'">中</button>
+        <button type="button" :class="['ctl-btn', { active: displayLang === 'en' }]" @click="displayLang = 'en'">EN</button>
+      </div>
+      <div class="control-group">
+        <button type="button" :class="['ctl-btn', { active: romMode === 'ruby' }]" @click="romMode = 'ruby'">Ruby</button>
+        <button type="button" :class="['ctl-btn', { active: romMode === 'bracket' }]" @click="romMode = 'bracket'">[Rom]</button>
+      </div>
+      <button type="button" :class="['ctl-btn ctl-slides', { active: slidesMode }]" @click="slidesMode = !slidesMode">Slides</button>
     </div>
-    <div class="lang-toggle">
-      <button type="button" :class="['lang-btn', { active: romMode === 'ruby' }]" @click="romMode = 'ruby'">Ruby</button>
-      <button type="button" :class="['lang-btn', { active: romMode === 'bracket' }]" @click="romMode = 'bracket'">[Rom]</button>
-    </div>
-    <button type="button" :class="['lang-btn slide-toggle', { active: slidesMode }]" @click="slidesMode = !slidesMode">Slides</button>
   </nav>
 
   <div v-if="page === 'textbook' && loading" class="loading-state">
@@ -33,7 +35,10 @@
           @click="selectLesson(lesson.id)"
         >
           <span class="lesson-num">{{ lesson.id }}</span>
-          <span class="lesson-label font-hakka" v-html="formatHakka(lesson.title.hak)"></span>
+          <div class="lesson-titles">
+            <span class="lesson-label font-hakka" v-html="formatHakka(lesson.title.hak)"></span>
+            <span class="lesson-label-en">{{ lesson.title.en }}</span>
+          </div>
         </button>
       </nav>
     </aside>
@@ -42,7 +47,6 @@
 
     <main class="main-stage">
       <header class="topbar" :class="{ hidden: heroVisible }">
-        <button type="button" class="menu-btn" @click="sidebarOpen = !sidebarOpen">☰</button>
         <button v-if="currentIndex > 0" type="button" class="topbar-nav" @click="selectLesson(lessons[currentIndex - 1].id)">‹</button>
         <span class="topbar-lesson">{{ currentLesson.id }}</span>
         <span class="topbar-title font-hakka" v-html="formatHakka(currentLesson.title.hak)"></span>
@@ -50,7 +54,7 @@
       </header>
 
       <div class="content" :class="{ 'slides-mode': slidesMode }">
-        <section ref="heroEl" class="hero" @click="playAudio(baseUrl + `audio/ch${currentLesson.id}-title.m4a`)">
+        <section ref="heroEl" class="hero" v-show="!slidesMode || currentSlide === 0" @click="audioSegmentText = ''; playAudio(baseUrl + `audio/ch${currentLesson.id}-title.m4a`)">
           <span class="kicker">第 {{ currentLesson.id }} 課 · Lesson {{ currentLesson.id }}</span>
           <h1 class="font-hakka" v-html="renderTitleRuby(currentLesson.title.hak)"></h1>
           <p class="hero-sub">{{ currentLesson.title.en }}</p>
@@ -61,6 +65,7 @@
             v-for="(block, bi) in currentLesson.blocks"
             :key="`${currentLesson.id}-${bi}`"
             class="block"
+            v-show="!slidesMode || slideBlockVisible(bi)"
           >
             <header class="block-hd">
               <div class="block-hd-text">
@@ -70,9 +75,9 @@
                   v-if="getBlockAudio(currentLesson.id, block, bi)"
                   type="button"
                   class="block-play-btn"
-                  @click="playAudio(getBlockAudio(currentLesson.id, block, bi))"
+                  @click="audioSegmentText = ''; playAudio(getBlockAudio(currentLesson.id, block, bi))"
                 >▶</button>
-                <span v-if="blockTimestampMismatch(currentLesson.id, block, bi)" class="ts-warn" title="Timestamp count mismatch">⚠️</span>
+
               </div>
             </header>
 
@@ -82,14 +87,14 @@
             </div>
 
             <div v-if="block.type === 'vocab'" class="vocab-grid">
-              <div v-for="(token, ti) in tokenize(block.items)" :key="token" class="vocab-card" @click="playTokenAudio(block, bi, ti)">
+              <div v-for="(token, ti) in tokenize(block.items)" :key="token" class="vocab-card" v-show="!slidesMode || slideItemVisible(bi, ti)" @click="playTokenAudio(block, bi, ti)">
                 <p class="vocab-hak font-hakka" v-html="renderTokenRuby(token)"></p>
                 <p class="vocab-mean">{{ getMeaning(token) || '—' }}</p>
               </div>
             </div>
 
             <div v-else-if="block.type === 'main' && typeof block.items === 'string'" class="vocab-grid vocab-sm">
-              <div v-for="(token, ti) in tokenize(block.items)" :key="token" class="vocab-card sm" @click="playTokenAudio(block, bi, ti)">
+              <div v-for="(token, ti) in tokenize(block.items)" :key="token" class="vocab-card sm" v-show="!slidesMode || slideItemVisible(bi, ti)" @click="playTokenAudio(block, bi, ti)">
                 <p class="vocab-hak font-hakka" v-html="renderTokenRuby(token)"></p>
               </div>
             </div>
@@ -99,6 +104,7 @@
                 v-for="(item, ii) in block.items"
                 :key="ii"
                 :class="['dia-bubble', { 'dia-right': item.sp === 'B' }]"
+                v-show="!slidesMode || slideItemVisible(bi, ii)"
                 @click="playBlockItem(currentLesson.id, block, bi, ii)"
               >
                 <img v-if="item.sp === 'A'" class="dia-avatar" :src="baseUrl + 'avatar/girl.png'" alt="A">
@@ -117,6 +123,7 @@
                 v-for="(item, ii) in block.items"
                 :key="ii"
                 class="sent-row"
+                v-show="!slidesMode || slideItemVisible(bi, ii)"
                 @click="playBlockItem(currentLesson.id, block, bi, ii)"
               >
                 <p class="sent-hak font-hakka" v-html="renderSentenceRuby(item.hak)"></p>
@@ -126,31 +133,21 @@
 
             <template v-else-if="block.type === 'practice' && Array.isArray(block.items)">
               <ol class="prompt-list">
-                <li v-for="(item, ii) in block.items" :key="ii" v-show="!slidesMode || ii === getSlideRow(bi, block.items.length)">
+                <li v-for="(item, ii) in block.items" :key="ii" v-show="!slidesMode || slideItemVisible(bi, ii)">
                   <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn" @click.stop="playBlockItem(currentLesson.id, block, bi, ii)">▶</button>
                   <span v-html="formatNoteText(item)"></span>
                 </li>
               </ol>
-              <div v-if="slidesMode && block.items.length > 1" class="slide-row-nav">
-                <button type="button" class="slide-row-btn" @click="advanceSlideRow(bi, block.items.length, -1)">‹</button>
-                <span class="slide-row-count">{{ getSlideRow(bi, block.items.length) + 1 }} / {{ block.items.length }}</span>
-                <button type="button" class="slide-row-btn" @click="advanceSlideRow(bi, block.items.length, 1)">›</button>
-              </div>
             </template>
 
             <div v-else-if="block.type === 'practice' && Array.isArray(block.rows)" class="drill-rows">
-              <div v-for="(row, ri) in block.rows" :key="ri" class="drill-row-wrap" v-show="!slidesMode || ri === getSlideRow(bi, block.rows.length)">
+              <div v-for="(row, ri) in block.rows" :key="ri" class="drill-row-wrap" v-show="!slidesMode || slideItemVisible(bi, ri)">
                 <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn" @click.stop="playBlockItem(currentLesson.id, block, bi, ri)">▶</button>
                 <div class="vocab-grid">
                   <div v-for="(cell, ci) in row" :key="ci" class="vocab-card sm">
                     <p class="vocab-hak font-hakka" v-html="renderTokenRuby(cell)"></p>
                   </div>
                 </div>
-              </div>
-              <div v-if="slidesMode && block.rows.length > 1" class="slide-row-nav">
-                <button type="button" class="slide-row-btn" @click="advanceSlideRow(bi, block.rows.length, -1)">‹</button>
-                <span class="slide-row-count">{{ getSlideRow(bi, block.rows.length) + 1 }} / {{ block.rows.length }}</span>
-                <button type="button" class="slide-row-btn" @click="advanceSlideRow(bi, block.rows.length, 1)">›</button>
               </div>
             </div>
 
@@ -170,13 +167,8 @@
 
             <template v-else-if="block.type === 'sentence_practice' || block.type === 'sentences'">
               <ol class="sp-list">
-                <li v-for="(item, ii) in block.items" :key="ii" class="sp-item" v-show="!slidesMode || ii === getSlideRow(bi, block.items.length)" v-html="formatPracticeItem(item)"></li>
+                <li v-for="(item, ii) in block.items" :key="ii" class="sp-item" v-show="!slidesMode || slideItemVisible(bi, ii)" v-html="formatPracticeItem(item)"></li>
               </ol>
-              <div v-if="slidesMode && block.items.length > 1" class="slide-row-nav">
-                <button type="button" class="slide-row-btn" @click="advanceSlideRow(bi, block.items.length, -1)">‹</button>
-                <span class="slide-row-count">{{ getSlideRow(bi, block.items.length) + 1 }} / {{ block.items.length }}</span>
-                <button type="button" class="slide-row-btn" @click="advanceSlideRow(bi, block.items.length, 1)">›</button>
-              </div>
             </template>
 
             <div v-else class="note-item fallback">
@@ -184,6 +176,12 @@
             </div>
           </article>
         </section>
+
+        <div v-if="slidesMode && slidePages.length > 1" class="slide-nav-global">
+          <button type="button" class="slide-nav-btn" :disabled="currentSlide <= 0" @click="currentSlide--">‹</button>
+          <span class="slide-nav-count">{{ currentSlide + 1 }} / {{ slidePages.length }}</span>
+          <button type="button" class="slide-nav-btn" :disabled="currentSlide >= slidePages.length - 1" @click="currentSlide++">›</button>
+        </div>
 
         <footer class="lesson-foot">
           <button v-if="currentIndex > 0" type="button" class="foot-btn" @click="selectLesson(lessons[currentIndex - 1].id)">← Previous</button>
@@ -214,17 +212,20 @@
     <p>To be added.</p>
   </div>
 
-  <div v-if="playingAudio" class="audio-bar">
-    <button type="button" class="audio-bar-btn" @click="stopAudio">⏹</button>
+  <div v-if="audioBarVisible" class="audio-bar">
+    <button type="button" class="audio-bar-btn" @click="togglePlayPause">{{ playingAudio ? '⏸' : '▶' }}</button>
     <div class="audio-bar-info">
       <span class="audio-bar-label">{{ audioLabel }}</span>
-      <span class="audio-bar-sub">Now Playing</span>
+      <span v-if="audioSegmentText" class="audio-bar-segment font-hakka">{{ audioSegmentText }}</span>
+      <span v-else class="audio-bar-sub">{{ playingAudio ? 'Now Playing' : 'Paused' }}</span>
     </div>
     <button type="button" class="audio-bar-btn" @click="replayAudio">⟲</button>
-    <button type="button" class="audio-bar-btn primary" @click="stopAudio">⏸</button>
+    <button type="button" class="audio-bar-btn close" @click="closeAudioBar">✕</button>
   </div>
 
-  <audio ref="audioEl" @ended="playingAudio = ''" @pause="onAudioPause" @timeupdate="onAudioTimeUpdate"></audio>
+  <div class="site-banner">⚠️ This site is under construction. Some content, audio, and features may be incomplete or inaccurate.</div>
+
+  <audio ref="audioEl" @ended="playingAudio = ''; audioSegmentText = ''" @pause="onAudioPause" @timeupdate="onAudioTimeUpdate"></audio>
 </template>
 
 <script setup>
@@ -238,18 +239,23 @@ const baseUrl = import.meta.env.BASE_URL
 const loading = ref(true)
 const lessons = ref([])
 const lexicon = ref(new Map())
-const displayLang = ref('zh')
-const romMode = ref('ruby')
+const displayLang = ref(route.query.lang === 'en' ? 'en' : 'zh')
+const romMode = ref(route.query.rom === 'bracket' ? 'bracket' : 'ruby')
 const slidesMode = ref(false)
-const slideRowIndex = ref({})
+const currentSlide = ref(0)
+let savedRomMode = null
 const sidebarOpen = ref(false)
 const audioEl = ref(null)
 const playingAudio = ref('')
+const audioBarVisible = ref(false)
+const audioSegmentText = ref('')
 const timestamps = ref({})
 let stopAtTime = null
 const heroEl = ref(null)
 const heroVisible = ref(true)
 let heroObserver = null
+const navEl = ref(null)
+let navResizeObserver = null
 
 const page = computed(() => {
   if (route.name === 'about') return 'about'
@@ -299,9 +305,9 @@ function escapeHtml(str) {
 const TONE_MARKS = {
   1: '\u0301', // acute ´
   2: '\u0304', // macron ¯
-  3: '\u030C', // caron ˇ
+  3: '\u0306', // breve ˘
   4: '\u0300', // grave `
-  5: '\u030C', // caron (entering)
+  5: '\u0306', // breve (entering)
   6: '\u0300', // grave (entering)
 }
 const VOWELS = 'aeiou'
@@ -718,7 +724,6 @@ function playAudio(src, startTime, endTime) {
   stopAtTime = endTime || null
   if (el.src && el.src.endsWith(src) && !el.paused && !startTime) {
     el.pause()
-    playingAudio.value = ''
     return
   }
   if (!el.src || !el.src.endsWith(src)) {
@@ -727,6 +732,27 @@ function playAudio(src, startTime, endTime) {
   if (startTime != null) el.currentTime = startTime
   el.play().catch(() => {})
   playingAudio.value = src
+  audioBarVisible.value = true
+}
+
+function togglePlayPause() {
+  const el = audioEl.value
+  if (!el || !el.src) return
+  if (el.paused) {
+    el.play().catch(() => {})
+    playingAudio.value = el.src
+  } else {
+    el.pause()
+  }
+}
+
+function closeAudioBar() {
+  const el = audioEl.value
+  if (el) { el.pause(); el.currentTime = 0 }
+  playingAudio.value = ''
+  audioBarVisible.value = false
+  audioSegmentText.value = ''
+  stopAtTime = null
 }
 
 function stopAudio() {
@@ -750,6 +776,7 @@ function onAudioPause() {
   if (el && el.currentTime >= el.duration) {
     playingAudio.value = ''
     stopAtTime = null
+    audioSegmentText.value = ''
   }
 }
 
@@ -771,9 +798,28 @@ function getBlockTimestamps(lessonId, block, blockIndex) {
   return timestamps.value[key] || null
 }
 
+function getSegmentText(block, itemIndex) {
+  if (block.type === 'vocab' || (block.type === 'main' && typeof block.items === 'string')) {
+    const tokens = block.items.split(/\s+/).filter(Boolean)
+    return tokens[itemIndex] || ''
+  }
+  if (block.type === 'practice' && Array.isArray(block.rows)) {
+    const row = block.rows[itemIndex]
+    return row ? row.join(' ') : ''
+  }
+  if (Array.isArray(block.items)) {
+    const item = block.items[itemIndex]
+    if (!item) return ''
+    if (typeof item === 'string') return item
+    return item.hak || ''
+  }
+  return ''
+}
+
 function playBlockItem(lessonId, block, blockIndex, itemIndex) {
   const src = getBlockAudio(lessonId, block, blockIndex)
   if (!src) return
+  audioSegmentText.value = getSegmentText(block, itemIndex)
   const ts = getBlockTimestamps(lessonId, block, blockIndex)
   if (ts && ts[itemIndex]) {
     playAudio(src, ts[itemIndex][0], ts[itemIndex][1])
@@ -790,20 +836,48 @@ function playTokenAudio(block, blockIndex, tokenIndex) {
 function selectLesson(id) {
   router.push({ name: 'chapter', params: { id } })
   sidebarOpen.value = false
-  slideRowIndex.value = {}
+  currentSlide.value = 0
 }
 
-function getSlideRow(blockIndex, total) {
-  const idx = slideRowIndex.value[blockIndex] ?? 0
-  return Math.max(0, Math.min(idx, total - 1))
-}
+const slidePages = computed(() => {
+  if (!currentLesson.value) return []
+  const pages = [{ type: 'hero', bi: -1, from: 0, to: 0 }]
+  currentLesson.value.blocks.forEach((block, bi) => {
+    if (block.type === 'vocab' || (block.type === 'main' && typeof block.items === 'string')) {
+      const tokens = tokenize(block.items)
+      for (let i = 0; i < tokens.length; i += 4) {
+        pages.push({ bi, from: i, to: Math.min(i + 4, tokens.length) })
+      }
+    } else if (block.type === 'main' && Array.isArray(block.items)) {
+      block.items.forEach((_, ii) => pages.push({ bi, from: ii, to: ii + 1 }))
+    } else if (block.type === 'practice' && Array.isArray(block.rows)) {
+      block.rows.forEach((_, ri) => pages.push({ bi, from: ri, to: ri + 1 }))
+    } else if (block.type === 'practice' && Array.isArray(block.items)) {
+      block.items.forEach((_, ii) => pages.push({ bi, from: ii, to: ii + 1 }))
+    } else if (block.type === 'sentence_practice' || block.type === 'sentences') {
+      const items = block.items || []
+      for (let i = 0; i < items.length; i += 4) {
+        pages.push({ bi, from: i, to: Math.min(i + 4, items.length) })
+      }
+    } else {
+      pages.push({ bi, from: 0, to: (block.items?.length || 1) })
+    }
+  })
+  return pages
+})
 
-function advanceSlideRow(blockIndex, total, delta) {
-  const cur = slideRowIndex.value[blockIndex] ?? 0
-  const next = cur + delta
-  if (next >= 0 && next < total) {
-    slideRowIndex.value = { ...slideRowIndex.value, [blockIndex]: next }
-  }
+function curPage() {
+  return slidePages.value[currentSlide.value] || null
+}
+function slideBlockVisible(bi) {
+  if (!slidesMode.value) return true
+  const pg = curPage()
+  return pg && pg.bi === bi
+}
+function slideItemVisible(bi, ii) {
+  if (!slidesMode.value) return true
+  const pg = curPage()
+  return pg && pg.bi === bi && ii >= pg.from && ii < pg.to
 }
 
 function navigateTo(p) {
@@ -815,6 +889,18 @@ function navigateTo(p) {
   }
   sidebarOpen.value = false
 }
+
+watch([displayLang, romMode], ([lang, rom]) => {
+  const q = { ...route.query }
+  if (lang === 'zh') delete q.lang; else q.lang = lang
+  if (rom === 'ruby') delete q.rom; else q.rom = rom
+  router.replace({ ...route, query: q })
+})
+
+watch(() => route.query, (q) => {
+  if (q.lang && q.lang !== displayLang.value) displayLang.value = q.lang === 'en' ? 'en' : 'zh'
+  if (q.rom && q.rom !== romMode.value) romMode.value = q.rom === 'bracket' ? 'bracket' : 'ruby'
+})
 
 watch(heroEl, (el) => {
   if (heroObserver) heroObserver.disconnect()
@@ -828,6 +914,29 @@ watch(heroEl, (el) => {
 
 onUnmounted(() => {
   if (heroObserver) heroObserver.disconnect()
+  if (navResizeObserver) navResizeObserver.disconnect()
+  document.removeEventListener('keydown', onSlideKeydown)
+})
+
+function onSlideKeydown(e) {
+  if (!slidesMode.value || !currentLesson.value) return
+  if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return
+  e.preventDefault()
+  const total = slidePages.value.length
+  if (e.key === 'ArrowRight' && currentSlide.value < total - 1) currentSlide.value++
+  if (e.key === 'ArrowLeft' && currentSlide.value > 0) currentSlide.value--
+}
+
+watch(slidesMode, (on) => {
+  if (on) {
+    savedRomMode = romMode.value
+    romMode.value = 'bracket'
+    document.addEventListener('keydown', onSlideKeydown)
+  } else {
+    if (savedRomMode) romMode.value = savedRomMode
+    savedRomMode = null
+    document.removeEventListener('keydown', onSlideKeydown)
+  }
 })
 
 onMounted(async () => {
@@ -861,6 +970,15 @@ onMounted(async () => {
   } finally {
     loading.value = false
   }
+
+  if (navEl.value) {
+    const updateNavH = () => {
+      document.documentElement.style.setProperty('--nav-h', navEl.value.offsetHeight + 'px')
+    }
+    navResizeObserver = new ResizeObserver(updateNavH)
+    navResizeObserver.observe(navEl.value)
+    updateNavH()
+  }
 })
 </script>
 
@@ -881,7 +999,7 @@ onMounted(async () => {
   z-index: 30;
   display: flex;
   align-items: center;
-  height: 2.6rem;
+  height: var(--nav-h, 2.6rem);
   padding: 0 0.8rem;
   background: var(--color-green);
   color: #fff;
@@ -914,24 +1032,45 @@ onMounted(async () => {
 .site-link.active {
   color: #fff;
 }
-.lang-toggle {
+.nav-controls {
   display: flex;
-  gap: 2px;
+  align-items: center;
+  gap: 0.35rem;
   flex-shrink: 0;
 }
-.lang-btn {
-  background: rgba(255, 255, 255, 0.12);
+.control-group {
+  display: flex;
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.ctl-btn {
+  background: transparent;
   border: none;
-  color: rgba(255, 255, 255, 0.6);
-  padding: 0.25rem 0.45rem;
-  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.55);
+  padding: 0.2rem 0.4rem;
+  font-size: 0.7rem;
   cursor: pointer;
   transition: background 150ms, color 150ms;
   white-space: nowrap;
+  line-height: 1.3;
 }
-.lang-btn.active {
-  background: rgba(255, 255, 255, 0.28);
+.ctl-btn.active {
+  background: rgba(255, 255, 255, 0.25);
   color: #fff;
+}
+.ctl-btn:hover {
+  color: #fff;
+}
+.ctl-slides {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.ctl-slides.active {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 /* ── Loading / empty ── */
@@ -946,16 +1085,18 @@ onMounted(async () => {
 .app-shell {
   display: grid;
   grid-template-columns: 15rem 1fr;
-  min-height: calc(100vh - 2.6rem);
+  min-height: calc(100vh - var(--nav-h, 2.6rem));
 }
 
 /* ── Sidebar ── */
 .sidebar {
   position: sticky;
-  top: 2.6rem;
-  height: calc(100vh - 2.6rem);
+  top: var(--nav-h, 2.6rem);
+  height: calc(100vh - var(--nav-h, 2.6rem));
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 0.6rem;
+  padding-right: 0.3rem;
   background: var(--color-surface);
   border-right: 1px solid var(--color-border);
   z-index: 20;
@@ -991,8 +1132,23 @@ onMounted(async () => {
   color: var(--color-green);
   min-width: 1.1rem;
 }
+.lesson-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  min-width: 0;
+}
 .lesson-label {
   line-height: 1.35;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.lesson-label-en {
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .scrim {
@@ -1006,7 +1162,7 @@ onMounted(async () => {
 }
 .topbar {
   position: sticky;
-  top: 2.6rem;
+  top: var(--nav-h, 2.6rem);
   z-index: 10;
   display: flex;
   align-items: center;
@@ -1025,10 +1181,11 @@ onMounted(async () => {
 .menu-btn {
   display: none;
   background: none;
-  border: 1px solid var(--color-border-strong);
-  padding: 0.3rem 0.55rem;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.2rem 0.4rem;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 .topbar-lesson {
   font-family: var(--font-mono);
@@ -1196,10 +1353,6 @@ onMounted(async () => {
   display: flex;
   align-items: baseline;
   gap: 0.5rem;
-}
-.ts-warn {
-  font-size: 1.3rem;
-  cursor: help;
 }
 .block-type {
   letter-spacing: 0.1em;
@@ -1600,6 +1753,13 @@ onMounted(async () => {
   color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.04em;
 }
+.audio-bar-segment {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.85);
+}
 .audio-bar-btn {
   background: rgba(255, 255, 255, 0.12);
   border: none;
@@ -1616,14 +1776,12 @@ onMounted(async () => {
 .audio-bar-btn:hover {
   background: rgba(255, 255, 255, 0.25);
 }
-.audio-bar-btn.primary {
-  background: var(--color-crimson);
-  width: 2.6rem;
-  height: 2.6rem;
-  font-size: 1.1rem;
+.audio-bar-btn.close {
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.06);
 }
-.audio-bar-btn.primary:hover {
-  background: #a52230;
+.audio-bar-btn.close:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* ── Footer ── */
@@ -1674,12 +1832,6 @@ onMounted(async () => {
   margin: 0 0 0.8rem;
 }
 
-/* ── Slide toggle ── */
-.slide-toggle {
-  margin-left: 0.3rem;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
 /* ── Slides mode ── */
 .slides-active {
   grid-template-columns: 1fr;
@@ -1721,36 +1873,93 @@ onMounted(async () => {
 .slides-mode .vocab-grid {
   justify-content: center;
 }
+.slides-mode .vocab-hak {
+  font-size: 2.8rem;
+}
+.slides-mode .vocab-card.sm .vocab-hak {
+  font-size: 2.4rem;
+}
+.slides-mode .vocab-mean {
+  font-size: 1.1rem;
+}
+.slides-mode .dia-hak {
+  font-size: 2.2rem;
+}
+.slides-mode .dia-tr {
+  font-size: 1rem;
+}
+.slides-mode .sent-hak {
+  font-size: 2.2rem;
+}
+.slides-mode .sent-tr {
+  font-size: 1rem;
+}
+.slides-mode .prompt-list {
+  font-size: 1.6rem;
+}
+.slides-mode .sp-item {
+  font-size: 1.4rem;
+}
+.slides-mode .note-item {
+  font-size: 1.3rem;
+}
+.slides-mode .block-type {
+  font-size: 1.3rem;
+}
+.slides-mode .block-type-en {
+  font-size: 0.85rem;
+}
+.slides-mode .hero h1 {
+  font-size: 3.2rem;
+}
+.slides-mode .hero-sub {
+  font-size: 1.2rem;
+}
+.slides-mode .kicker {
+  font-size: 1rem;
+}
 
-/* ── Slide row nav ── */
-.slide-row-nav {
+/* ── Global slide nav ── */
+.slide-nav-global {
+  position: fixed;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  margin-top: 0.8rem;
+  gap: 0.8rem;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  padding: 0.4rem 0.8rem;
+  border-radius: 2rem;
+  z-index: 35;
 }
-.slide-row-btn {
+.slide-nav-btn {
   background: none;
-  border: 1px solid var(--color-border-strong);
-  color: var(--color-green);
-  width: 2rem;
-  height: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  width: 2.2rem;
+  height: 2.2rem;
   border-radius: 50%;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   display: grid;
   place-items: center;
   transition: background 120ms;
 }
-.slide-row-btn:hover {
-  background: var(--color-green);
-  color: #fff;
+.slide-nav-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.2);
 }
-.slide-row-count {
-  font-size: 0.75rem;
-  color: var(--color-muted);
+.slide-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.slide-nav-count {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
   font-family: var(--font-mono);
+  min-width: 4rem;
+  text-align: center;
 }
 
 /* ── Mobile ── */
@@ -1760,10 +1969,10 @@ onMounted(async () => {
   }
   .sidebar {
     position: fixed;
-    top: 2.6rem;
+    top: var(--nav-h, 2.6rem);
     left: 0;
     width: min(18rem, 80vw);
-    height: calc(100vh - 2.6rem);
+    height: calc(100vh - var(--nav-h, 2.6rem));
     transform: translateX(-100%);
     transition: transform 200ms ease;
     box-shadow: 0.5rem 0 2rem rgba(0, 0, 0, 0.1);
@@ -1774,7 +1983,7 @@ onMounted(async () => {
   .scrim {
     display: block;
     position: fixed;
-    inset: 2.6rem 0 0;
+    inset: var(--nav-h, 2.6rem) 0 0;
     border: 0;
     background: rgba(17, 17, 17, 0.2);
     opacity: 0;
@@ -1790,12 +1999,7 @@ onMounted(async () => {
     display: block;
   }
   .topbar {
-    top: 2.6rem;
-  }
-  .topbar.hidden {
-    transform: none;
-    opacity: 1;
-    pointer-events: auto;
+    top: var(--nav-h, 2.6rem);
   }
   .site-brand {
     font-size: 0.85rem;
@@ -1878,7 +2082,7 @@ onMounted(async () => {
     flex-basis: 100%;
     justify-content: flex-start;
   }
-  .lang-toggle {
+  .nav-controls {
     margin-left: auto;
   }
 }
