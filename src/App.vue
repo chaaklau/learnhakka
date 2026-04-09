@@ -11,13 +11,18 @@
       <button type="button" :class="['lang-btn', { active: displayLang === 'zh' }]" @click="displayLang = 'zh'">中文</button>
       <button type="button" :class="['lang-btn', { active: displayLang === 'en' }]" @click="displayLang = 'en'">EN</button>
     </div>
+    <div class="lang-toggle">
+      <button type="button" :class="['lang-btn', { active: romMode === 'ruby' }]" @click="romMode = 'ruby'">Ruby</button>
+      <button type="button" :class="['lang-btn', { active: romMode === 'bracket' }]" @click="romMode = 'bracket'">[Rom]</button>
+    </div>
+    <button type="button" :class="['lang-btn slide-toggle', { active: slidesMode }]" @click="slidesMode = !slidesMode">Slides</button>
   </nav>
 
   <div v-if="page === 'textbook' && loading" class="loading-state">
     <p>Loading textbook…</p>
   </div>
 
-  <div v-else-if="page === 'textbook' && currentLesson" class="app-shell">
+  <div v-else-if="page === 'textbook' && currentLesson" class="app-shell" :class="{ 'slides-active': slidesMode }">
     <aside class="sidebar" :class="{ open: sidebarOpen }">
       <nav class="lesson-nav">
         <button
@@ -38,19 +43,17 @@
     <main class="main-stage">
       <header class="topbar" :class="{ hidden: heroVisible }">
         <button type="button" class="menu-btn" @click="sidebarOpen = !sidebarOpen">☰</button>
-        <div class="topbar-center">
-          <span class="topbar-kicker">第 {{ currentLesson.id }} 課</span>
-          <h2 class="font-hakka" v-html="renderTitleRuby(currentLesson.title.hak)"></h2>
-          <span class="topbar-en">{{ currentLesson.title.en }}</span>
-        </div>
+        <button v-if="currentIndex > 0" type="button" class="topbar-nav" @click="selectLesson(lessons[currentIndex - 1].id)">‹</button>
+        <span class="topbar-lesson">{{ currentLesson.id }}</span>
+        <span class="topbar-title font-hakka" v-html="formatHakka(currentLesson.title.hak)"></span>
+        <button v-if="currentIndex < lessons.length - 1" type="button" class="topbar-nav topbar-nav-next" @click="selectLesson(lessons[currentIndex + 1].id)">›</button>
       </header>
 
-      <div class="content">
-        <section ref="heroEl" class="hero">
-          <span class="kicker">Lesson {{ currentLesson.id }}</span>
+      <div class="content" :class="{ 'slides-mode': slidesMode }">
+        <section ref="heroEl" class="hero" @click="playAudio(baseUrl + `audio/ch${currentLesson.id}-title.m4a`)">
+          <span class="kicker">第 {{ currentLesson.id }} 課 · Lesson {{ currentLesson.id }}</span>
           <h1 class="font-hakka" v-html="renderTitleRuby(currentLesson.title.hak)"></h1>
           <p class="hero-sub">{{ currentLesson.title.en }}</p>
-          <button type="button" class="audio-btn" @click="playAudio(baseUrl + `audio/ch${currentLesson.id}-title.m4a`)">▶ Title</button>
         </section>
 
         <section class="blocks">
@@ -63,14 +66,14 @@
               <div class="block-hd-text">
                 <span class="block-type">{{ blockTitle(block.type) }}</span>
                 <span class="block-type-en">{{ blockTitlesEn[block.type] || '' }}</span>
+                <button
+                  v-if="getBlockAudio(currentLesson.id, block, bi)"
+                  type="button"
+                  class="block-play-btn"
+                  @click="playAudio(getBlockAudio(currentLesson.id, block, bi))"
+                >▶</button>
                 <span v-if="blockTimestampMismatch(currentLesson.id, block, bi)" class="ts-warn" title="Timestamp count mismatch">⚠️</span>
               </div>
-              <button
-                v-if="getBlockAudio(currentLesson.id, block, bi)"
-                type="button"
-                class="block-play-btn"
-                @click="playAudio(getBlockAudio(currentLesson.id, block, bi))"
-              >▶</button>
             </header>
 
             <div v-if="block.description" class="block-desc">
@@ -95,10 +98,13 @@
               <div
                 v-for="(item, ii) in block.items"
                 :key="ii"
-                class="dia-row"
+                :class="['dia-bubble', { 'dia-right': item.sp === 'B' }]"
                 @click="playBlockItem(currentLesson.id, block, bi, ii)"
               >
-                <span class="dia-sp">{{ item.sp || '例' }}</span>
+                <img v-if="item.sp === 'A'" class="dia-avatar" :src="baseUrl + 'avatar/girl.png'" alt="A">
+                <img v-else-if="item.sp === 'B'" class="dia-avatar" :src="baseUrl + 'avatar/boy.png'" alt="B">
+                <img v-else-if="item.sp === '老師' || item.sp === '先生'" class="dia-avatar" :src="baseUrl + 'avatar/man.png'" :alt="item.sp">
+                <span v-else class="dia-sp">{{ item.sp || '例' }}</span>
                 <div class="dia-body">
                   <p class="dia-hak font-hakka" v-html="renderSentenceRuby(item.hak)"></p>
                   <p v-if="getDisplayText(item)" class="dia-tr">{{ getDisplayText(item) }}</p>
@@ -118,20 +124,28 @@
               </div>
             </div>
 
-            <ol v-else-if="block.type === 'practice' && Array.isArray(block.items)" class="prompt-list">
-              <li v-for="(item, ii) in block.items" :key="ii" v-html="formatNoteText(item)"></li>
-            </ol>
+            <template v-else-if="block.type === 'practice' && Array.isArray(block.items)">
+              <ol class="prompt-list">
+                <li v-for="(item, ii) in block.items" :key="ii" v-show="!slidesMode || ii === getSlideRow(bi, block.items.length)" v-html="formatNoteText(item)"></li>
+              </ol>
+              <div v-if="slidesMode && block.items.length > 1" class="slide-row-nav">
+                <button type="button" class="slide-row-btn" @click="advanceSlideRow(bi, block.items.length, -1)">‹</button>
+                <span class="slide-row-count">{{ getSlideRow(bi, block.items.length) + 1 }} / {{ block.items.length }}</span>
+                <button type="button" class="slide-row-btn" @click="advanceSlideRow(bi, block.items.length, 1)">›</button>
+              </div>
+            </template>
 
-            <div v-else-if="block.type === 'practice' && Array.isArray(block.rows)" class="table-wrap">
-              <table class="drill-table">
-                <tbody>
-                  <tr v-for="(row, ri) in block.rows" :key="ri">
-                    <td v-for="(cell, ci) in row" :key="ci">
-                      <span class="font-hakka" v-html="renderTokenRuby(cell)"></span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <div v-else-if="block.type === 'practice' && Array.isArray(block.rows)" class="drill-rows">
+              <div v-for="(row, ri) in block.rows" :key="ri" class="vocab-grid" v-show="!slidesMode || ri === getSlideRow(bi, block.rows.length)">
+                <div v-for="(cell, ci) in row" :key="ci" class="vocab-card sm">
+                  <p class="vocab-hak font-hakka" v-html="renderTokenRuby(cell)"></p>
+                </div>
+              </div>
+              <div v-if="slidesMode && block.rows.length > 1" class="slide-row-nav">
+                <button type="button" class="slide-row-btn" @click="advanceSlideRow(bi, block.rows.length, -1)">‹</button>
+                <span class="slide-row-count">{{ getSlideRow(bi, block.rows.length) + 1 }} / {{ block.rows.length }}</span>
+                <button type="button" class="slide-row-btn" @click="advanceSlideRow(bi, block.rows.length, 1)">›</button>
+              </div>
             </div>
 
             <div v-else-if="block.type === 'idiom' || block.type === 'nursery'" class="sent-list">
@@ -148,9 +162,16 @@
               </div>
             </div>
 
-            <ol v-else-if="block.type === 'sentence_practice' || block.type === 'sentences'" class="sp-list">
-              <li v-for="(item, ii) in block.items" :key="ii" class="sp-item" v-html="formatPracticeItem(item)"></li>
-            </ol>
+            <template v-else-if="block.type === 'sentence_practice' || block.type === 'sentences'">
+              <ol class="sp-list">
+                <li v-for="(item, ii) in block.items" :key="ii" class="sp-item" v-show="!slidesMode || ii === getSlideRow(bi, block.items.length)" v-html="formatPracticeItem(item)"></li>
+              </ol>
+              <div v-if="slidesMode && block.items.length > 1" class="slide-row-nav">
+                <button type="button" class="slide-row-btn" @click="advanceSlideRow(bi, block.items.length, -1)">‹</button>
+                <span class="slide-row-count">{{ getSlideRow(bi, block.items.length) + 1 }} / {{ block.items.length }}</span>
+                <button type="button" class="slide-row-btn" @click="advanceSlideRow(bi, block.items.length, 1)">›</button>
+              </div>
+            </template>
 
             <div v-else class="note-item fallback">
               <p>Unsupported block: {{ block.type }}</p>
@@ -176,12 +197,23 @@
   </div>
 
   <div v-else-if="page === 'acknowledgement'" class="static-page">
-    <h1>Acknowledgement</h1>
+    <h1>Acknowledgement 鳴謝</h1>
+    <h2>Project Team 項目團隊</h2>
+    <p>To be added.</p>
+    <h2>Advisors 顧問</h2>
+    <p>To be added.</p>
+    <h2>Resources &amp; References 資源與參考</h2>
+    <p>To be added.</p>
+    <h2>Special Thanks 特別鳴謝</h2>
+    <p>To be added.</p>
   </div>
 
   <div v-if="playingAudio" class="audio-bar">
-    <button type="button" class="audio-bar-btn" @click="stopAudio">■</button>
-    <span class="audio-bar-label">{{ audioLabel }}</span>
+    <button type="button" class="audio-bar-btn" @click="stopAudio">⏹</button>
+    <div class="audio-bar-info">
+      <span class="audio-bar-label">{{ audioLabel }}</span>
+      <span class="audio-bar-sub">Now Playing</span>
+    </div>
     <button type="button" class="audio-bar-btn" @click="replayAudio">⟲</button>
     <button type="button" class="audio-bar-btn primary" @click="stopAudio">⏸</button>
   </div>
@@ -201,6 +233,9 @@ const loading = ref(true)
 const lessons = ref([])
 const lexicon = ref(new Map())
 const displayLang = ref('zh')
+const romMode = ref('ruby')
+const slidesMode = ref(false)
+const slideRowIndex = ref({})
 const sidebarOpen = ref(false)
 const audioEl = ref(null)
 const playingAudio = ref('')
@@ -258,9 +293,9 @@ function escapeHtml(str) {
 const TONE_MARKS = {
   1: '\u0301', // acute ´
   2: '\u0304', // macron ¯
-  3: '\u0306', // breve ˘
+  3: '\u030C', // caron ˇ
   4: '\u0300', // grave `
-  5: '\u0306', // breve (entering)
+  5: '\u030C', // caron (entering)
   6: '\u0300', // grave (entering)
 }
 const VOWELS = 'aeiou'
@@ -438,6 +473,10 @@ function renderWithRuby(text, rom) {
   if (!text) return ''
   if (!rom) return formatHakka(text)
 
+  if (romMode.value === 'bracket') {
+    return escapeHtml(text) + '<span class="rom-bracket">[' + escapeHtml(romToDiacritics(rom)) + ']</span>'
+  }
+
   const segments = []
   let rest = String(text)
   const re = /\(([^)]+)\)/
@@ -486,6 +525,7 @@ function renderTokenRuby(token) {
 
 function renderTitleRuby(text) {
   if (!text) return ''
+  if (romMode.value === 'bracket') return renderSentenceRuby(text)
   const segments = []
   let rest = String(text)
   const re = /\(([^)]+)\)/
@@ -654,7 +694,14 @@ const audioLabel = computed(() => {
   if (!playingAudio.value) return ''
   const m = playingAudio.value.match(/ch(\d+)-([\w-]+)\.m4a$/)
   if (!m) return 'Audio'
-  return 'Ch ' + m[1] + ' – ' + m[2].replace(/-/g, ' ')
+  const chNum = m[1]
+  const section = m[2].replace(/-/g, ' ')
+  const lesson = lessons.value.find(l => String(l.id) === chNum)
+  const sectionLabel = blockTitlesEn[section] || section.charAt(0).toUpperCase() + section.slice(1)
+  if (lesson) {
+    return '第 ' + chNum + ' 課 · ' + sectionLabel
+  }
+  return 'Ch ' + chNum + ' · ' + sectionLabel
 })
 
 function playAudio(src, startTime, endTime) {
@@ -735,6 +782,20 @@ function playTokenAudio(block, blockIndex, tokenIndex) {
 function selectLesson(id) {
   router.push({ name: 'chapter', params: { id } })
   sidebarOpen.value = false
+  slideRowIndex.value = {}
+}
+
+function getSlideRow(blockIndex, total) {
+  const idx = slideRowIndex.value[blockIndex] ?? 0
+  return Math.max(0, Math.min(idx, total - 1))
+}
+
+function advanceSlideRow(blockIndex, total, delta) {
+  const cur = slideRowIndex.value[blockIndex] ?? 0
+  const next = cur + delta
+  if (next >= 0 && next < total) {
+    slideRowIndex.value = { ...slideRowIndex.value, [blockIndex]: next }
+  }
 }
 
 function navigateTo(p) {
@@ -816,18 +877,20 @@ onMounted(async () => {
   padding: 0 0.8rem;
   background: var(--color-green);
   color: #fff;
-  gap: 0;
+  gap: 0.4rem;
 }
 .site-brand {
   font-family: var(--font-display);
   font-size: 1.1rem;
-  margin-right: 1rem;
   cursor: pointer;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 .site-links {
   display: flex;
   gap: 0;
+  flex: 1;
+  justify-content: center;
 }
 .site-link {
   background: none;
@@ -835,17 +898,18 @@ onMounted(async () => {
   color: rgba(255, 255, 255, 0.65);
   cursor: pointer;
   padding: 0.4rem 0.65rem;
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   transition: color 150ms;
+  white-space: nowrap;
 }
 .site-link:hover,
 .site-link.active {
   color: #fff;
 }
 .lang-toggle {
-  margin-left: auto;
   display: flex;
   gap: 2px;
+  flex-shrink: 0;
 }
 .lang-btn {
   background: rgba(255, 255, 255, 0.12);
@@ -855,6 +919,7 @@ onMounted(async () => {
   font-size: 0.72rem;
   cursor: pointer;
   transition: background 150ms, color 150ms;
+  white-space: nowrap;
 }
 .lang-btn.active {
   background: rgba(255, 255, 255, 0.28);
@@ -929,6 +994,7 @@ onMounted(async () => {
 /* ── Topbar ── */
 .main-stage {
   min-width: 0;
+  overflow-x: hidden;
 }
 .topbar {
   position: sticky;
@@ -956,28 +1022,50 @@ onMounted(async () => {
   cursor: pointer;
   font-size: 1rem;
 }
-.topbar-center h2 {
-  margin: 0;
-  font-size: clamp(1rem, 1.6vw, 1.3rem);
-  color: var(--color-text);
-}
-.topbar-en {
-  font-size: 0.72rem;
-  color: var(--color-muted);
-}
-.topbar-kicker {
-  display: block;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: 0.62rem;
+.topbar-lesson {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
   color: var(--color-green);
-  margin-bottom: 0.1rem;
+  min-width: 1.4rem;
+  text-align: center;
+  padding: 0.15rem 0.35rem;
+  border: 1px solid var(--color-border);
+}
+.topbar-title {
+  font-size: clamp(0.95rem, 1.5vw, 1.2rem);
+  color: var(--color-text);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.topbar-nav {
+  background: none;
+  border: 1px solid var(--color-border);
+  color: var(--color-green);
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition: background 120ms, color 120ms;
+}
+.topbar-nav:hover {
+  background: var(--color-green);
+  color: #fff;
+}
+.topbar-nav-next {
+  margin-left: auto;
 }
 
 /* ── Content ── */
 .content {
   padding: 1rem;
-  max-width: 52rem;
+  max-width: 72rem;
 }
 
 /* ── Hero ── */
@@ -985,19 +1073,21 @@ onMounted(async () => {
   padding: 1.2rem;
   margin-bottom: 1rem;
   background: radial-gradient(circle at top right, rgba(24, 60, 50, 0.08), transparent 14rem), var(--color-surface);
+  cursor: pointer;
 }
 .hero h1 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
   line-height: 1.7;
   color: var(--color-green);
 }
 .hero-sub {
-  margin: 0.4rem 0 0;
-  font-size: 0.8rem;
-  color: var(--color-border-strong);
+  margin: 0.15rem 0 0;
+  font-size: 0.92rem;
+  color: var(--color-text);
   letter-spacing: 0.02em;
+  opacity: 0.7;
 }
 :deep(.hero-gloss) {
   display: block;
@@ -1016,11 +1106,11 @@ onMounted(async () => {
 }
 .kicker {
   display: block;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  font-size: 0.82rem;
   color: var(--color-green);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
 }
 
 /* ── Audio button ── */
@@ -1043,9 +1133,9 @@ onMounted(async () => {
   border: none;
   color: var(--color-muted);
   padding: 0.15rem 0.4rem;
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.6;
   transition: opacity 150ms, color 150ms;
 }
 .block-play-btn:hover {
@@ -1056,19 +1146,18 @@ onMounted(async () => {
 /* ── Blocks ── */
 .blocks {
   display: grid;
-  gap: 0.8rem;
+  gap: 1.2rem;
 }
 .block {
-  padding: 0.9rem 0;
+  padding: 1rem 0;
 }
 .block + .block {
   border-top: 1px solid var(--color-border);
 }
 .block-hd {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
   padding-left: 0.6rem;
   border-left: 3px solid var(--color-green);
 }
@@ -1082,14 +1171,13 @@ onMounted(async () => {
   cursor: help;
 }
 .block-type {
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  font-size: 1.05rem;
   color: var(--color-green);
   font-weight: 600;
 }
 .block-type-en {
-  font-size: 0.68rem;
+  font-size: 0.82rem;
   color: var(--color-muted);
   letter-spacing: 0.02em;
 }
@@ -1107,17 +1195,16 @@ onMounted(async () => {
 
 /* ── Vocab grid ── */
 .vocab-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.45rem;
 }
-.vocab-sm {
-  grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
-}
 .vocab-card {
+  flex: 0 1 auto;
+  min-width: 5rem;
   padding: 0.35rem 0.45rem;
   border: 1px solid var(--color-border);
-  background: var(--color-surface-soft);
+  background: transparent;
   text-align: center;
   cursor: pointer;
   transition: background 120ms;
@@ -1148,47 +1235,73 @@ onMounted(async () => {
 
 /* ── Dialogue ── */
 .dialogue {
-  display: grid;
-  gap: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 40rem;
 }
-.dia-row {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.4rem;
-  padding: 0.2rem 0;
+.dia-bubble {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  max-width: 85%;
   cursor: pointer;
-  border-bottom: 1px solid var(--color-border);
-  transition: background 120ms;
 }
-.dia-row:hover {
-  background: var(--color-surface-soft);
+.dia-bubble.dia-right {
+  align-self: flex-end;
+  flex-direction: row-reverse;
 }
-.dia-row:last-child {
-  border-bottom: none;
+.dia-avatar {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  border: 2px solid var(--color-border);
+}
+.dia-right .dia-avatar {
+  border-color: rgba(140, 29, 39, 0.3);
 }
 .dia-sp {
-  min-width: 1.8rem;
-  padding: 0.25rem 0.4rem;
-  border: 1px solid var(--color-border-strong);
-  color: var(--color-green);
-  background: var(--color-surface-soft);
-  text-align: center;
+  min-width: 1.6rem;
+  height: 1.6rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--color-green);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  align-self: start;
+  font-size: 0.68rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-top: 0.3rem;
+}
+.dia-right .dia-sp {
+  background: var(--color-crimson);
+}
+.dia-body {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-border);
+}
+.dia-right .dia-body {
+  background: rgba(24, 60, 50, 0.04);
+  border-color: rgba(24, 60, 50, 0.12);
 }
 .dia-body p {
   margin: 0;
 }
 .dia-hak {
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   line-height: 1.8;
   color: var(--color-text);
 }
 .dia-tr {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   color: var(--color-muted);
-  margin-top: 0.1rem;
+  margin-top: 0;
 }
 
 /* ── Sentence list ── */
@@ -1213,9 +1326,9 @@ onMounted(async () => {
   color: var(--color-text);
 }
 .sent-tr {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   color: var(--color-muted);
-  margin-top: 0.1rem;
+  margin-top: 0;
 }
 .sent-note {
   font-size: 0.78rem;
@@ -1228,11 +1341,15 @@ onMounted(async () => {
 .prompt-list {
   margin: 0;
   padding-left: 1.1rem;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.4rem;
   font-size: 1.05rem;
   color: var(--color-muted);
   line-height: 1.5;
+}
+.prompt-list li {
+  flex: 0 1 auto;
 }
 
 /* ── Practice drill table ── */
@@ -1251,6 +1368,13 @@ onMounted(async () => {
   background: var(--color-surface-soft);
   font-size: 1.85rem;
   line-height: 1.8;
+}
+
+/* ── Practice drill rows ── */
+.drill-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
 /* ── Notes ── */
@@ -1277,13 +1401,25 @@ onMounted(async () => {
 /* ── Ruby ── */
 :deep(ruby) {
   ruby-position: over;
+  line-height: 1.4;
 }
 :deep(ruby rt) {
-  font-size: 0.5em;
+  font-size: 0.42em;
   font-family: var(--font-body);
   color: var(--color-crimson);
   font-weight: 400;
-  line-height: 1;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+.dia-hak :deep(ruby rt),
+.sent-hak :deep(ruby rt) {
+  font-size: 0.45em;
+  color: var(--color-crimson);
+}
+.dia-hak :deep(.rom-bracket),
+.sent-hak :deep(.rom-bracket) {
+  font-size: 0.85em;
+  color: var(--color-crimson);
 }
 :deep(.pending) {
   color: var(--color-crimson);
@@ -1301,6 +1437,13 @@ onMounted(async () => {
   vertical-align: super;
   color: var(--color-crimson);
   font-family: var(--font-body);
+}
+:deep(.rom-bracket) {
+  font-family: var(--font-body);
+  font-size: 0.65em;
+  color: var(--color-crimson);
+  font-weight: 400;
+  margin-left: 0.15em;
 }
 :deep(.iterm) {
   display: inline-block;
@@ -1391,18 +1534,32 @@ onMounted(async () => {
   z-index: 40;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.6rem 1rem;
+  gap: 0.8rem;
+  padding: 0.75rem 1.2rem;
   background: #111;
   color: #fff;
-  font-size: 0.82rem;
+  font-size: 0.92rem;
   box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.3);
+  min-height: 3.4rem;
+}
+.audio-bar-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  overflow: hidden;
 }
 .audio-bar-label {
-  flex: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.audio-bar-sub {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.04em;
 }
 .audio-bar-btn {
   background: rgba(255, 255, 255, 0.12);
@@ -1465,6 +1622,97 @@ onMounted(async () => {
   color: var(--color-green);
   margin: 0 0 1rem;
 }
+.static-page h2 {
+  font-family: var(--font-display);
+  color: var(--color-green);
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.3rem;
+}
+.static-page p {
+  color: var(--color-muted);
+  margin: 0 0 0.8rem;
+}
+
+/* ── Slide toggle ── */
+.slide-toggle {
+  margin-left: 0.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* ── Slides mode ── */
+.slides-active {
+  grid-template-columns: 1fr;
+}
+.slides-active .sidebar,
+.slides-active .topbar {
+  display: none;
+}
+.slides-mode .hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 2rem;
+}
+.slides-mode .hero .audio-btn,
+.slides-mode .block-play-btn,
+.slides-mode .lesson-foot {
+  display: none;
+}
+.slides-mode .block {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1rem;
+  border-top: none;
+  page-break-before: always;
+}
+.slides-mode .block + .block {
+  border-top: 2px solid var(--color-border);
+}
+.slides-mode .block-hd {
+  margin-bottom: 1.2rem;
+}
+.slides-mode .vocab-grid {
+  justify-content: center;
+}
+
+/* ── Slide row nav ── */
+.slide-row-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+.slide-row-btn {
+  background: none;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-green);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 120ms;
+}
+.slide-row-btn:hover {
+  background: var(--color-green);
+  color: #fff;
+}
+.slide-row-count {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+}
 
 /* ── Mobile ── */
 @media (max-width: 860px) {
@@ -1505,6 +1753,11 @@ onMounted(async () => {
   .topbar {
     top: 2.6rem;
   }
+  .topbar.hidden {
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
   .site-brand {
     font-size: 0.85rem;
     margin-right: 0.4rem;
@@ -1513,11 +1766,95 @@ onMounted(async () => {
     font-size: 0.72rem;
     padding: 0.3rem 0.4rem;
   }
-  .dia-row {
-    grid-template-columns: auto 1fr;
-  }
   .vocab-grid {
-    grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+    gap: 0.35rem;
+  }
+  .content {
+    padding: 0.5rem;
+    overflow-x: hidden;
+  }
+  .hero {
+    padding: 0.8rem;
+  }
+  .hero h1 {
+    font-size: clamp(1.3rem, 6vw, 2rem);
+  }
+  .dialogue {
+    max-width: 100%;
+  }
+  .dia-bubble {
+    max-width: 92%;
+  }
+  .dia-body {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  .dia-hak {
+    font-size: 1.15rem;
+  }
+  .sent-hak {
+    font-size: 1.2rem;
+  }
+  .drill-table td {
+    min-width: 3rem;
+    padding: 0.35rem;
+    font-size: 1.35rem;
+  }
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
+  .sp-item {
+    flex-wrap: wrap;
+  }
+  .note-item {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  .vocab-hak {
+    font-size: 1.5rem;
+  }
+  .vocab-card.sm .vocab-hak {
+    font-size: 1.5rem;
+  }
+  .block-type {
+    font-size: 0.92rem;
+  }
+  .block-type-en {
+    font-size: 0.72rem;
+  }
+  .kicker {
+    font-size: 0.72rem;
+  }
+  .site-nav {
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 2.6rem;
+    gap: 0.25rem;
+    padding: 0.35rem 0.6rem;
+  }
+  .site-links {
+    order: 10;
+    flex-basis: 100%;
+    justify-content: flex-start;
+  }
+  .lang-toggle {
+    margin-left: auto;
+  }
+}
+@media (max-width: 480px) {
+  .site-links {
+    display: none;
+  }
+  .dia-hak {
+    font-size: 1rem;
+  }
+  .sent-hak {
+    font-size: 1.05rem;
+  }
+  .hero h1 {
+    font-size: 1.3rem;
   }
 }
 </style>
