@@ -423,168 +423,190 @@ __,hot6,,,
 唉,ai4,,,1
 隻,zak5,,,1
 欸,e1,,,1
-巴,,,,1
-爸,,,,1
-爸呢,,,,1
-擺,,,,1
-表哥就住,,,,1
-嫦,,,,1
-潮州人,,,,1
-乘數表,,,,1
-尺長,,,,1
-打中,,,,1
-大,,,,1
-大明,tai4 min2,,,1
-但,tan4,,,1
-睡目,soi4 muk5,,,1
-點鐘久啦,,,,1
-點鐘睡目嘅,,,,1
-都有,,,,1
-鯉嫲,,,,1
-放學,,,,1
-感情,gam1 cin2,,,1
-咯,,,,1
-哥,,,,1
-公,,,,1
-觀塘,g=,,,1
-光,gong1,,,1
-歸,gui1,,,1
-過,go4,,,1
-過蓮塘,,,,1
-還,han2,,,1
-好,,,,1
-好大,,,,1
-好大間喔,,,,1
-好好食嘅呀,,,,1
-好開心喔,,,,1
-好舒服喔,,,,1
-好孝順嘅呀,,,,1
-何小安,,,,1
-橫台,,,,1
-花,,,,1
-火,,,,1
-家庭,,,,1
-嫁海豐,,,,1
-嫁老公,,,,1
-嫁去奈,,,,1
-間房,,,,1
-間屋,,,,1
-講,gong3,,,1
-普通話,pu3 tung1 va4,,,1
-結親家,,,,1
-今年,gim1 ngien2,,,1
-韭,,,,1
-就,,,,1
-舅仔嘅,,,,1
-嘅,e4,,,1
-花,fa1,,,1
-舊,kiu4,,,1
-嘅呢,,,,1
-全家,cien2 ga1,,,1
-看書嘅,,,,1
-科學家咯,,,,1
-客家話講得,,,,1
-麼,mo1,,,1
-口塘,,,,1
-啦,,,,1
-來打棍,,,,1
-來到,loi2 dau4,,,1
-來回咩,,,,1
-來香港噢,,,,1
-禮拜都去,,,,1
-連等,,,,1
-蓮塘背,,,,1
-兩,,,,1
-兩隻,liong1 zak3,,,1
-鐘頭,zung1 teu2,,,1
-流,,,,1
-囖,,,,1
-倫敦,,,,1
-倫敦外面,,,,1
-羅春蘭,lo2 cun1 lan2,,,1
-落大水,lok6 tai4 sui3,,,1
-馬來,,,,1
-冇看到,,,,1
-冇呀,,,,1
-麼,mo1,,,1
-玫瑰花,,,,1
-咩,me4,,,1
-好多人咯,,,,1
-明白,min2 pak6,,,1
-咯,lo1,,,1
-呢,le1,,,1
-喔,o1,,,1
-噢,o4,,,1
-背景,poi4 gin3,,,1
-婆,po2,,,1
-騎白馬,,,,1
-親家門前,,,,1
-親戚全部都,,,,1
-去,hi4,,,1
-荃灣,,,,1
-人嘅呀,,,,1
-如,yi2,,,1
-上路,,,,1
-筲箕灣,,,,1
-食,sit6,,,1
-食老蟹,,,,1
-識,sit5,,,1
-識呀,,,,1
-數,su4,,,1
-樹,su4,,,1
-鐵,tiet5,,,1
-同學,tung2 hok6,,,1
-哇,wa1,,,1
-外國,ngoi4 get5,,,1
-偉雄,,,,1
-位,vui4,,,1
-屋,vuk5,,,1
-蝦公,ha1 gung1,,,1
-下子,,,,1
-香港,hiong1 gong3,,,1
-客家人,hak5 ga1 ngin2,,,1
-曉講潮州話麼,,,,1
-曉,hiau3,,,1
-少少,sau3 sau3,,,1
-曉煮好多客家,,,,1
-姓,siang4,,,1
-休息,hiu1 sit5,,,1
-看書,kon4 su1,,,1
-秀才郎,siu4 coi2 long2,,,1
-繡球,siu4 kiu2,,,1
-呀,a1,,,1
-也,,,,1
-意思,yi4 su3,,,1
-英國,yin1 get5,,,1
-英國開,,,,1
-英國嘅麼,,,,1
-蘇格蘭,su1 gak5 lan2,,,1
-英文,yin1 mun2,,,1
-應該有,,,,1
-有,yiu1,,,1
-蘋果,pin2 go3,,,1
-棵,ko4,,,1
-有兩隻,,,,1
-有冇,yiu1 mau2,,,1
-有蘋果,,,,1
-有呀,,,,1
-張,,,,1
-這花,,,,1
-這間課室,,,,1
-這兩隻,,,,1
-這張,,,,1
-這隻,,,,1
-這隻外國人,,,,1
-隻,,,,1
-隻大花,,,,1
-隻花,,,,1
-隻人,,,,1
-直接,,,,1
-種韭,,,,1
-住,,,,1
-住得比較,,,,1
-轉,,,,1
-仔,,,,1
-仔添,,,,1
-鑽石,,,,1
-最,,,,1
+同學,tung2 hok6,同學,Classmate,
+你好,ngi2 hau3,你好,Hello,
+姓,siang4,姓,Surname,
+黃,vong2,黃,Huang (surname),
+陳大明,cin2 tai4 min2,陳大明,Chen Daming (name),
+陳大文,cin2 tai4 vun2,陳大文,Chen Dawen (name),
+何小安,ho2 siau3 on1,何小安,He Xiaoan (name),
+羅春蘭,lo2 cun1 lan2,羅春蘭,Luo Chunlan (name),
+客家人,hak5 ga1 ngin2,客家人,Hakka people,
+呢,ne1,呢,Question particle,
+乘數表,sin2 su4 biau3,乘數表,Multiplication table,
+如,yi2,等於,Equal to / As,
+歸,gui1,得,Yields (in math),
+倍數,pui1 su4,倍數,Multiple,
+唸出,ngiam4 cut5,唸出,Read out,
+其他,gi2 ta1,其他,Other,
+葉錦嫦,yap6 gim3 song2,葉錦嫦,Ye Jinchang (name),
+李偉雄,li3 vui3 hiung2,李偉雄,Li Weixiong (name),
+識,sit5,認識,Know / Recognize,
+呀,ya1,呀,Sentence particle,
+嘅,ge4,的,Possessive/Descriptive particle,
+麼,mo1,嗎,Question particle,
+爸,ba1,爸爸,Dad,
+意思,yi4 si1,意思,Meaning,
+囖,lo1,囖,Sentence particle,
+噢,o1,噢,Oh,
+明白,min2 pak6,明白,Understand,
+咯,lok5,了/咯,Sentence particle,
+今年,gim1 ngien2,今年,This year,
+有,yiu1,有,Have,
+哥,go1,哥哥,Older brother,
+表哥,biau3 go1,表哥,Cousin (older male),
+潮州人,cau2 ziu1 ngin2,潮州人,Teochew person,
+但,tan4,但,But,
+香港,hiong1 gong3,香港,Hong Kong,
+馬來西亞,ma1 loi2 si1 a4,馬來西亞,Malaysia,
+沙巴,sa1 ba1,沙巴,Sabah,
+來,loi2,來,Come,
+講,gong3,說,Speak,
+得,det5,得,Structural particle,
+流利,liu2 li4,流利,Fluent,
+英文,yin1 vun2,英文,English,
+少少,sau3 sau3,少少,A little,
+普通話,pu3 tung1 fa4,普通話,Mandarin,
+喔,o1,喔,Sentence particle,
+這,ngia3,這,This,
+間,gian1,間,Classifier for rooms/buildings,
+課室,ko4 sit5,課室,Classroom,
+冇,mau2,沒有,Not have,
+看,kon4,看,See / Look,
+到,dau3,到,Arrive / To,
+住,cu4,住,Live,
+比較,bi3 gau4,比較,Comparatively / More,
+遠,yen3,遠,Far,
+筲箕灣,sau1 gi1 van1,筲箕灣,Shau Kei Wan,
+荃灣,cyun2 van1,荃灣,Tsuen Wan,
+有冇,yiu1 mau2,有沒有,Have or not,
+就,ciu4,就,Then / Just,
+坐嗨,co3 hoi1,坐著,Sitting,
+沙田,sa1 tien2,沙田,Sha Tin,
+大埔,tai4 bu1,大埔,Tai Po,
+開,koi1,開,Open / Run (a business),
+倫敦,lun2 dun1,倫敦,London,
+外面,ngoi4 mien4,外面,Outside,
+也,ya3,也,Also,
+親戚,cin1 cit5,親戚,Relatives,
+全部,cyun2 bu4,全部,All,
+都,du1,都,All / Both,
+家庭,ga1 tang2,家庭,Family,
+多,do1,多,Many / Much,
+哇,va1,哇,Wow,
+開心,koi1 sim1,開心,Happy,
+煮,zu3,煮,Cook,
+菜,coi4,菜,Vegetables / Dishes,
+好食,hau3 sit6,好吃,Delicious,
+鑽石山,zon4 sak6 san1,鑽石山,Diamond Hill,
+觀塘,gon1 tong2,觀塘,Kwun Tong,
+放學,fong4 hok6,放學,Finish school,
+直接,cit6 ziep5,直接,Directly,
+地鐵,ti4 tiet5,地鐵,MTR / Subway,
+橫台山,vang2 toi2 san1,橫台山,Wang Toi Shan,
+火車,fo3 ca1,火車,Train,
+去,hi4,去,Go,
+錦上路,gim3 song4 lu4,錦上路,Kam Sheung Road,
+轉,zon3,轉,Transfer / Turn,
+連,lien2,連,Including / Even,
+等車,den3 ca1,等車,Wait for a car/bus,
+點鐘,diam3 zung1,點鐘,O'clock,
+久,giu3,久,Long (time),
+啦,la1,啦,Sentence particle,
+來回,loi2 fui2,來回,Round trip,
+鐘頭,zung1 teu2,鐘頭,Hour,
+睡目,soi4 muk5,睡覺,Sleep,
+點,diam3,點,O'clock / Point,
+十一點鐘,sip6 yit5 diam3 zung1,十一點鐘,Eleven o'clock,
+張,zong1,張,Classifier for flat objects,
+禮拜,li3 bai4,禮拜,Week,
+感情,gam3 ciang2,感情,Relationship / Feelings,
+孝順,hau4 sun4,孝順,Filial piety,
+全家福,cyun2 ga1 fuk5,全家福,Family portrait,
+最,zui4,最,Most,
+中間,zung1 gian1,中間,Middle,
+外國人,ngoi4 get5 ngin2,外國人,Foreigner,
+女朋友,ngi3 pun2 yiu1,女朋友,Girlfriend,
+舅仔,kiu1 zai3,小舅,Younger uncle (Maternal),
+背景,boi4 giang3,背景,Background,
+外國,ngoi4 get5,外國,Foreign country,
+公,gung1,爺爺/外公,Grandpa,
+婆,po2,奶奶/外婆,Grandma,
+蘇格蘭,su1 gak5 lan2,蘇格蘭,Scotland,
+屋,vuk5,屋/房子,House,
+大,tai4,大,Big,
+房,fong2,房間,Room,
+花園仔,fa1 yen2 zai3,小花園,Small garden,
+添,tiem1,添,Also / In addition,
+繡球,siu4 kiu2,繡球花,Hydrangea,
+玫瑰花,moi2 gui4 fa1,玫瑰花,Rose,
+應該,yin1 goi1,應該,Should,
+花園,fa1 yen2,花園,Garden,
+棵,ko1,棵,Classifier for trees,
+蘋果樹,pin2 go3 su4,蘋果樹,Apple tree,
+樹,su4,樹,Tree,
+蘋果,pin2 go3,蘋果,Apple,
+休息,hiu1 sit5,休息,Rest,
+看書,kon4 su1,看書,Read a book,
+舒服,su1 fuk6,舒服,Comfortable,
+打中,da3 zung4,打中,Hit,
+科學家,fo1 hok6 ga1,科學家,Scientist,
+表妹,biau3 moi4,表妹,Cousin (younger female),
+阿蘭,a1 lan2,阿蘭,Alan (name),
+大樹,tai4 su4,大樹,Big tree,
+菜園,coi4 yen2,菜園,Vegetable garden,
+青菜,ciang1 coi4,青菜,Green vegetables,
+白貓,pak6 miau1,白貓,White cat,
+想,siong3,想,Want / Think,
+德文,det5 vun2,德文,German (language),
+月光光,ngiet6 gong1 gong1,月光光,Bright moon,
+秀才郎,siu4 coi2 long2,秀才郎,Scholar,
+騎,ki2,騎,Ride,
+白馬,pak6 ma1,白馬,White horse,
+過,go4,過,Cross / Pass,
+蓮塘,lien2 tong2,蓮塘,Lotus pond,
+背,boi4,後面,Behind,
+種,zung4,種,Plant,
+韭菜,giu3 coi4,韭菜,Chives,
+韭菜花,giu3 coi4 fa1,韭菜花,Chive flowers,
+結親家,giet5 cin1 ga1,結親家,Form a marital alliance,
+門前,mun2 cien2,門前,In front of the door,
+一口,yit5 heu3,一口,A (classifier for pond),
+塘,tong2,池塘,Pond,
+放,fong4,放,Place / Release,
+條,tiau2,條,Classifier for long objects,
+鯉嫲,li3 ma2,母鯉魚,Female carp,
+八尺,bat5 cak5,八尺,Eight feet,
+長,cong2,長,Long,
+長,zong3,長,Grow,
+落大水,lok6 tai4 sui3,下大雨,Rain heavily,
+發大風,bot5 tai4 fung1,颳大風,Blow strong wind,
+嫁,ga4,嫁,Marry (for women),
+老公,lau3 gung1,老公,Husband,
+海豐,hoi3 fung1,海豐,Haifeng (place),
+食,sit6,吃,Eat,
+老蟹,lau3 hai1,螃蟹,Crab,
+蝦公,ha1 gung1,公蝦/蝦子,Male shrimp / Shrimp,
+蛇過正來打棍,sa2 go4 zang4 loi2 da3 gun4,蛇過正來打棍,Hitting with a stick after the snake has passed,
+貓公,miau1 gung1,公貓,Male cat,
+幾十歲,gi3 sip6 soi4,幾十歲,Tens of years old,
+幾百年,gi3 bat5 ngien2,幾百年,Hundreds of years,
+第幾,ti4 gi3,第幾,Which number,
+厲害,li4 hoi4,厲害,Terrible / Great,
+老,lau3,老,Old,
+爺娘,ya2 ngiong2,父母,Parents,
+爺娭,ya2 oi1,父母,Parents,
+阿爸,a1 ba1,爸爸,Dad,
+孔子,kung3 zi3,孔子,Confucius,
+子午,zi3 ng3,子午,Midnight and noon,
+老鼠,lau3 su3,老鼠,Rat,
+餅,biang3,餅,Cake,
+茄,kio2,茄子,Eggplant,
+向,hiong4,向,Direction,
+惠陽腔,fui4 yong2 kiong1,惠陽腔,Huiyang accent,
+廣州話,gong3 ziu1 fa4,廣州話,Cantonese,
+口語,heu3 ngi1,口語,Spoken language,
+讀書音,tuk6 su1 yim1,讀書音,Literary pronunciation,
+兩十一,liong3 sip6 yit5,二十一,Twenty-one,
+自在,cu4 coi4,自在,Comfortable / Free,
+在意,coi4 yi4,在意,Care about,
