@@ -1,6 +1,7 @@
 :root {
   --font-display: "Songti TC", "Songti SC", "STSong", "LiSong Pro", "SimSun", "Noto Serif TC", "Iowan Old Style", serif;
   --font-body: "Avenir Next", "PingFang TC", "Noto Sans TC", sans-serif;
+  --font-rom: "Noto Sans", "Lucida Grande", "Helvetica Neue", sans-serif;
   --font-mono: "SFMono-Regular", "Menlo", monospace;
 
   --color-bg: #ffffff;

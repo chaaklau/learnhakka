@@ -29,8 +29,8 @@
         "type": "notes",
         "items": [
           {
-            "zh": "客家話的**聲母**連零聲母在內有17個，符號是 `b`, `p`, `m`, `f`, `v`, `d`, `t`, `l`, `z`, `c`, `s`, `g`, `k`, `ng`, `h`, `y`。**零聲母**就是不帶上述聲母符號，直接用 `a`, `e`, `i`, `o` 開頭的音節。",
-            "en": "Hakka has 17 **initials** (including the zero initial): `b`, `p`, `m`, `f`, `v`, `d`, `t`, `l`, `z`, `c`, `s`, `g`, `k`, `ng`, `h`, `y`. The **zero initial** refers to syllables beginning directly with `a`, `e`, `i`, `o` without any of the above initial consonants."
+            "zh": "客家話的**聲母**連零聲母在內有17個，符號是 `b`, `p`, `m`, `f`, `v`, `d`, `t`, `l`, `z`, `c`, `s`, `g`, `k`, `ng`, `h`, `y`。**零聲母**就是不帶上述聲母符號，直接用 `a`, `e`, `o` 開頭的音節。",
+            "en": "Hakka has 17 **initials** (including the zero initial): `b`, `p`, `m`, `f`, `v`, `d`, `t`, `l`, `z`, `c`, `s`, `g`, `k`, `ng`, `h`, `y`. The **zero initial** refers to syllables beginning directly with `a`, `e`, `o` without any of the above initial consonants."
           },
           {
             "zh": "客家話的**韻母**由介音、元音、韻尾組成。介音只有 `i`，元音只有 `a`, `i`, `u`, `e`, `o` 五個（跟日語相同）。",

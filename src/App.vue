@@ -369,6 +369,11 @@ function romToDiacritics(rom) {
   }).join('')
 }
 
+/* Wrap n/N + combining diacritics in a <span> so CSS can fix vertical positioning */
+function fixNDiac(html) {
+  return html.replace(/([nN])([\u0300-\u036f]+)/g, '<span class="diac-n">$1$2</span>')
+}
+
 function parseCsvLine(line) {
   const fields = []
   let cur = ''
@@ -1838,6 +1843,11 @@ onMounted(async () => {
 }
 .audio-bar-btn.close:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+/* ── Romanisation font for diacritics ── */
+rt, .rom-bracket {
+  font-family: var(--font-rom);
 }
 
 /* ── Footer ── */
