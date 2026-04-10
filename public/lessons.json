@@ -202,20 +202,20 @@
       {
         "type": "main",
         "items": [
-          {"hak":"你係客家人麼？","sp":"A","zh":"你是客家人嗎？","en":"Are you Hakka?"},
+          {"hak":"你係客家人麼？","sp":"B","zh":"你是客家人嗎？","en":"Are you Hakka?"},
           {
             "hak": "厓係半隻客家人，吾爸係潮州人，但吾㜆係新界客家人。你呢？",
-            "sp": "B",
+            "sp": "A",
             "zh": "我是半個客家人，我爸是潮州人，但我媽是新界客家人。你呢？",
             "en": "I am half Hakka, my dad is Teochew, but my mom is New Territories Hakka. And you?"
           },
-          {"hak":"厓係馬來西亞客家人， 吾屋卡在沙巴。","sp":"A","zh":"我是馬來西亞客家人， 我家在沙巴。","en":"I am a Malaysian Hakka, my home is in Sabah."},
-          {"hak":"你係唔係第一擺來香港噢？","sp":"B","zh":"你是不是第一次來香港呢？","en":"Is this your first time coming to Hong Kong?"},
-          {"hak":"係呀。做乜介惹客家話講得恁流利嘅？","sp":"A","zh":"是呀。爲什麼你客家話說得那麼流利的？","en":"Yes. Why do you speak Hakka so fluently?"},
-          {"hak":"因爲吾㜆在屋卡長日摎厓講囉。","sp":"B","zh":"因爲我媽在家裏經常跟我說。","en":"Because my mom often speaks it to me at home."},
-          {"hak":"你曉講潮州話麼？","sp":"A","zh":"你會說潮州話嗎？","en":"Do you know how to speak Teochew?"},
-          {"hak":"曉少少。厓還曉講普通話摎英文。","sp":"B","zh":"懂一點。我還會講普通話和英文。","en":"A little bit. I also speak Mandarin and English."},
-          {"hak":"你好能替喔。","sp":"A","zh":"你好棒耶。","en":"You are awesome."}
+          {"hak":"厓係馬來西亞客家人， 吾屋卡在沙巴。","sp":"B","zh":"我是馬來西亞客家人， 我家在沙巴。","en":"I am a Malaysian Hakka, my home is in Sabah."},
+          {"hak":"你係唔係第一擺來香港噢？","sp":"A","zh":"你是不是第一次來香港呢？","en":"Is this your first time coming to Hong Kong?"},
+          {"hak":"係呀。做乜介惹客家話講得恁流利嘅？","sp":"B","zh":"是呀。爲什麼你客家話說得那麼流利的？","en":"Yes. Why do you speak Hakka so fluently?"},
+          {"hak":"因爲吾㜆在屋卡長日摎厓講囉。","sp":"A","zh":"因爲我媽在家裏經常跟我說。","en":"Because my mom often speaks it to me at home."},
+          {"hak":"你曉講潮州話麼？","sp":"B","zh":"你會說潮州話嗎？","en":"Do you know how to speak Teochew?"},
+          {"hak":"曉少少。厓還曉講普通話摎英文。","sp":"A","zh":"懂一點。我還會講普通話和英文。","en":"A little bit. I also speak Mandarin and English."},
+          {"hak":"你好能替喔。","sp":"B","zh":"你好棒耶。","en":"You are awesome."}
         ]
       },
       {
@@ -283,21 +283,21 @@
       {
         "type": "main",
         "items": [
-          {"hak":"這間課室裏背有幾多隻人？","sp":"A","zh":"這間課室裏面有多少人？","en":"How many people are inside this classroom?"},
+          {"hak":"這間課室裏背有幾多隻人？","sp":"B","zh":"這間課室裏面有多少人？","en":"How many people are inside this classroom?"},
           {
             "hak": "這裏有四隻人，唉裏有五隻人，共總九隻人。",
-            "sp": "B",
+            "sp": "A",
             "zh": "這裏有四個人，那裏有五個人，總共九個人。",
             "en": "There are four people here, five people there, nine people in total."
           },
-          {"hak":"冇看到先生喔，佢在奈埞呢？","sp":"A","zh":"沒看到老師耶，他在哪裏呢？","en":"I don't see the teacher, where is he?"},
-          {"hak":"先生還吂來到。佢住得比較遠。","sp":"B","zh":"老師還沒來到。他住得比較遠。","en":"The teacher hasn't arrived yet. He lives quite far away."},
-          {"hak":"先生住在奈裏呢？","sp":"A","zh":"老師住在哪裏呢？","en":"Where does the teacher live?"},
-          {"hak":"佢住在筲箕灣。","sp":"B","zh":"他住在筲箕灣。","en":"He lives in Shau Kei Wan."},
-          {"hak":"你住在奈裏呢？","sp":"A","zh":"你住在哪裏呢？","en":"Where do you live?"},
-          {"hak":"厓住在荃灣。","sp":"B","zh":"我住在荃灣。","en":"I live in Tsuen Wan."},
-          {"hak":"有冇哪人住在學校附近嘅呢？","sp":"A","zh":"有沒有誰住在學校附近的呢？","en":"Does anyone live near the school?"},
-          {"hak":"有呀，吾表哥就住在學校附近。","sp":"B","zh":"有呀，我表哥就住在學校附近。","en":"Yes, my cousin lives near the school."}
+          {"hak":"冇看到先生喔，佢在奈埞呢？","sp":"B","zh":"沒看到老師耶，他在哪裏呢？","en":"I don't see the teacher, where is he?"},
+          {"hak":"先生還吂來到。佢住得比較遠。","sp":"A","zh":"老師還沒來到。他住得比較遠。","en":"The teacher hasn't arrived yet. He lives quite far away."},
+          {"hak":"先生住在奈裏呢？","sp":"B","zh":"老師住在哪裏呢？","en":"Where does the teacher live?"},
+          {"hak":"佢住在筲箕灣。","sp":"A","zh":"他住在筲箕灣。","en":"He lives in Shau Kei Wan."},
+          {"hak":"你住在奈裏呢？","sp":"B","zh":"你住在哪裏呢？","en":"Where do you live?"},
+          {"hak":"厓住在荃灣。","sp":"A","zh":"我住在荃灣。","en":"I live in Tsuen Wan."},
+          {"hak":"有冇哪人住在學校附近嘅呢？","sp":"B","zh":"有沒有誰住在學校附近的呢？","en":"Does anyone live near the school?"},
+          {"hak":"有呀，吾表哥就住在學校附近。","sp":"A","zh":"有呀，我表哥就住在學校附近。","en":"Yes, my cousin lives near the school."}
         ]
       },
       {
@@ -477,30 +477,30 @@
             "zh": "你們的學校在鑽石山，你們怎樣回家的呢？",
             "en": "Our school is in Diamond Hill, how do you go home?"
           },
-          {"hak":"你住在奈裏呢？","sp":"A","zh":"你住在哪裏呢？","en":"Where do you live?"},
-          {"hak":"厓住在觀塘。","sp":"B","zh":"我住在觀塘。","en":"I live in Kwun Tong."},
-          {"hak":"你放學之後仰邊轉屋卡呢？","sp":"A","zh":"你放學之後怎樣回家的呢？","en":"How do you go home after school?"},
-          {"hak":"厓直接坐地鐵轉去。你呢？","sp":"B","zh":"我直接坐地鐵回去。你呢？","en":"I take the MTR directly back. And you?"},
+          {"hak":"你住在奈裏呢？","sp":"B","zh":"你住在哪裏呢？","en":"Where do you live?"},
+          {"hak":"厓住在觀塘。","sp":"A","zh":"我住在觀塘。","en":"I live in Kwun Tong."},
+          {"hak":"你放學之後仰邊轉屋卡呢？","sp":"B","zh":"你放學之後怎樣回家的呢？","en":"How do you go home after school?"},
+          {"hak":"厓直接坐地鐵轉去。你呢？","sp":"A","zh":"我直接坐地鐵回去。你呢？","en":"I take the MTR directly back. And you?"},
           {
             "hak": "厓住在橫台山，愛坐火車去錦上路，黏等愛轉小巴或者巴士。",
-            "sp": "A",
+            "sp": "B",
             "zh": "我住在橫台山，要坐火車去錦上路，然後要轉小巴或者巴士。",
             "en": "I live in Wang Toi Shan, need to take the train to Kam Sheung Road, then transfer to minibus or bus."
           },
           {
             "hak": "哇，好像好遠欸。轉到屋愛幾久噢？",
-            "sp": "B",
+            "sp": "A",
             "zh": "哇，好像好遠欸。回到家要多幾久呢？",
             "en": "Wow, seems very far. How long does it take to get home?"
           },
-          {"hak":"連等車渾點鐘久啦。","sp":"A","zh":"連等車大概一個小時吧。","en":"Including waiting for the car, about an hour."},
+          {"hak":"連等車渾點鐘久啦。","sp":"B","zh":"連等車大概一個小時吧。","en":"Including waiting for the car, about an hour."},
           {
             "hak": "恁樣來回咩愛兩隻鐘頭？你幾多點睡目嘅呢？",
-            "sp": "B",
+            "sp": "A",
             "zh": "這樣來回不就要兩個小時嗎？你幾點睡覺呢？",
             "en": "Doesn't that mean two hours back and forth? What time do you sleep?"
           },
-          {"hak":"厓十一點鐘睡目喔。","sp":"A","zh":"我十一點鐘睡覺。","en":"I sleep at eleven o'clock."}
+          {"hak":"厓十一點鐘睡目喔。","sp":"B","zh":"我十一點鐘睡覺。","en":"I sleep at eleven o'clock."}
         ]
       },
       {
@@ -749,60 +749,60 @@
         "items": [
           {
             "hak": "這隻係吾表弟阿傑，係吾舅仔嘅賴子。",
-            "sp": "A",
+            "sp": "B",
             "zh": "這個是我表弟阿傑，是我小舅舅的兒子。",
             "en": "This is my cousin A-kiet, he is my younger uncle's son."
           },
           {
             "hak": "相片嘅背景好像在外國，係麼？",
-            "sp": "B",
+            "sp": "A",
             "zh": "相片的背景好像在外國，是嗎？",
             "en": "The background of the photo seems to be in a foreign country, doesn't it?"
           },
           {
             "hak": "係呀，佢摎其公其婆同下住在英國蘇格蘭。",
-            "sp": "A",
+            "sp": "B",
             "zh": "是呀，他跟他爺爺奶奶一起住在英國蘇格蘭。",
             "en": "Yes, he lives in Scotland, UK with his grandparents."
           },
-          {"hak":"其公其婆就係吾嘅姐公姐婆。","sp":"A","zh":"他爺爺奶奶就是我的外公外婆。","en":"His grandparents are my maternal grandparents."},
-          {"hak":"其間屋好像好大間喔。","sp":"B","zh":"他的房子好像很大呀。","en":"His house seems very big."},
-          {"hak":"係呀，其間屋共總有六間房。","sp":"A","zh":"是呀，他的房子總共有六間臥室。","en":"Yes, his house has six bedrooms in total."},
-          {"hak":"屋臉前還有隻花園仔添。","sp":"B","zh":"房子前面還有個小花園。","en":"There is also a small garden in front of the house."},
+          {"hak":"其公其婆就係吾嘅姐公姐婆。","sp":"B","zh":"他爺爺奶奶就是我的外公外婆。","en":"His grandparents are my maternal grandparents."},
+          {"hak":"其間屋好像好大間喔。","sp":"A","zh":"他的房子好像很大呀。","en":"His house seems very big."},
+          {"hak":"係呀，其間屋共總有六間房。","sp":"B","zh":"是呀，他的房子總共有六間臥室。","en":"Yes, his house has six bedrooms in total."},
+          {"hak":"屋臉前還有隻花園仔添。","sp":"A","zh":"房子前面還有個小花園。","en":"There is also a small garden in front of the house."},
           {
             "hak": "其兜在這花園仔，種嗨兜繡球摎玫瑰花。",
-            "sp": "A",
+            "sp": "B",
             "zh": "他們在這個小花園裏種了一些繡球花和玫瑰花。",
             "en": "They planted some hydrangeas and roses in this small garden."
           },
           {
             "hak": "其兜屋背戶應該有一隻大花園係麼？",
-            "sp": "B",
+            "sp": "A",
             "zh": "他的房子後面應該有個大花園吧？",
             "en": "There should be a large garden behind his house, right?"
           },
           {
             "hak": "係呀，屋背戶嘅花園好大，棟心有棵大蘋果樹。",
-            "sp": "A",
+            "sp": "B",
             "zh": "是呀，房子後面的花園很大，中心有棵大蘋果樹。",
             "en": "Yes, the garden behind the house is very large, with a big apple tree in the center."
           },
           {"hak":"樹頂高有好多蘋果。","sp":"A","zh":"樹上面有好多蘋果。","en":"There are many apples on the tree."},
           {
             "hak": "坐在花園休息看書，真係好舒服喔。",
-            "sp": "B",
+            "sp": "A",
             "zh": "坐在花園裏休息看書，真的好舒服呀。",
             "en": "It's really comfortable to sit in the garden and read."
           },
           {
             "hak": "蘋果樹腳下有一張長凳，阿傑好中意坐在唉裏看書嘅。",
-            "sp": "A",
+            "sp": "B",
             "zh": "蘋果樹下面有一張長凳，阿傑很喜歡坐在那裏看書。",
             "en": "There is a bench under the apple tree, Ajie likes to sit there and read."
           },
           {
             "hak": "係講有蘋果跌下來打中佢，佢大來就係隻科學家咯。",
-            "sp": "B",
+            "sp": "A",
             "zh": "如果有蘋果掉下來打中他，他長大以後就是科學家了。",
             "en": "If an apple would fall down and hit him, he would grow up and become a scientist!"
           }
