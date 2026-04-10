@@ -153,7 +153,7 @@
         "description": {"en":"Tone 5 & 6 (Entering Tones `-p`, `-t`, `-k`, `-m`, `-n`, `-ng`)"},
         "rows": [
           ["金","＿.gim2","錦","禁","急","＿.gip6"],
-          ["番","繁","反","飯","發","活"],
+          ["番","繁","反","飯","發.fat5","活"],
           ["淵","園","遠","縣","乙","越"],
           ["旱","寒","罕","汗","喝","＿.hot6"],
           ["閹","鹽","掩","豔","醃","葉"],
@@ -204,10 +204,10 @@
         "items": [
           {"hak":"你係客家人麼？","sp":"A","zh":"你是客家人嗎？","en":"Are you Hakka?"},
           {
-            "hak": "厓係半隻客家人，吾爸係潮州人，但吾㜆係香港客家人。你呢？",
+            "hak": "厓係半隻客家人，吾爸係潮州人，但吾㜆係新界客家人。你呢？",
             "sp": "B",
-            "zh": "我是半個客家人，我爸是潮州人，但我媽是香港客家人。你呢？",
-            "en": "I am half Hakka, my dad is Teochew, but my mom is Hong Kong Hakka. And you?"
+            "zh": "我是半個客家人，我爸是潮州人，但我媽是新界客家人。你呢？",
+            "en": "I am half Hakka, my dad is Teochew, but my mom is New Territories Hakka. And you?"
           },
           {"hak":"厓係馬來西亞客家人， 吾屋卡在沙巴。","sp":"A","zh":"我是馬來西亞客家人， 我家在沙巴。","en":"I am a Malaysian Hakka, my home is in Sabah."},
           {"hak":"你係唔係第一擺來香港噢？","sp":"B","zh":"你是不是第一次來香港呢？","en":"Is this your first time coming to Hong Kong?"},
@@ -375,29 +375,29 @@
         "items": [
           {
             "hak": "這兩隻係吾㜆吾爸，其兜係在英國開餐館嘅。",
-            "sp": "A",
+            "sp": "B",
             "zh": "這兩個是我父母，他們是在英國開餐館的。",
             "en": "These two are my parents, they run a restaurant in the UK."
           },
-          {"hak":"惹兜在英國奈裏嘅呢？","sp":"B","zh":"你們在英國哪裏的呢？","en":"Where in the UK are you?"},
+          {"hak":"惹兜在英國奈裏嘅呢？","sp":"A","zh":"你們在英國哪裏的呢？","en":"Where in the UK are you?"},
           {
             "hak": "吾兜住在倫敦外面。但吾兜嘅餐館在倫敦。",
-            "sp": "A",
+            "sp": "B",
             "zh": "我們住在倫敦外面。但我們的餐館在倫敦。",
             "en": "We live outside London. But our restaurant is in London."
           },
-          {"hak":"其兜兩公婆嘅兄弟姊妹也係在英國嘅麼？","sp":"B","zh":"他們兩夫妻的兄弟姊妹也是在英國的嗎？","en":"Are both their siblings also in the UK?"},
-          {"hak":"係呀，吾兜嘅親戚全部都在倫敦附近。","sp":"A","zh":"是呀，我們的親戚全部都在倫敦附近。","en":"Yes, all our relatives are near London."},
-          {"hak":"惹兜嘅家庭聚會咩好多人咯？","sp":"B","zh":"你們的家庭聚會不就很多人嗎？","en":"Isn't your family gathering very large then?"},
-          {"hak":"係呀，擺擺都有兩十幾人嘅呀。","sp":"A","zh":"是呀，每次都有二十幾人的。","en":"Yes, every time there are twenty-something people."},
-          {"hak":"哇，好鬧熱噢。惹兜好開心喔。","sp":"B","zh":"哇，好熱鬧耶。你們好開心啊。","en":"Wow, so lively. You must be very happy."},
+          {"hak":"其兜兩公婆嘅兄弟姊妹也係在英國嘅麼？","sp":"A","zh":"他們兩夫妻的兄弟姊妹也是在英國的嗎？","en":"Are both their siblings also in the UK?"},
+          {"hak":"係呀，吾兜嘅親戚全部都在倫敦附近。","sp":"B","zh":"是呀，我們的親戚全部都在倫敦附近。","en":"Yes, all our relatives are near London."},
+          {"hak":"惹兜嘅家庭聚會咩好多人咯？","sp":"A","zh":"你們的家庭聚會不就很多人嗎？","en":"Isn't your family gathering very large then?"},
+          {"hak":"係呀，擺擺都有兩十幾人嘅呀。","sp":"B","zh":"是呀，每次都有二十幾人的。","en":"Yes, every time there are twenty-something people."},
+          {"hak":"哇，好鬧熱噢。惹兜好開心喔。","sp":"A","zh":"哇，好熱鬧耶。你們好開心啊。","en":"Wow, so lively. You must be very happy."},
           {
             "hak": "係呀，吾㜆曉煮好多客家菜， 好好食嘅呀。",
-            "sp": "A",
+            "sp": "B",
             "zh": "是呀，我媽媽會做很多客家菜， 很好吃的呀",
             "en": "Yes, my mom cooks a lot of Hakka dishes, they are delicious."
           },
-          {"hak":"惹兜真係好食祿咯。","sp":"B","zh":"你們真好口福氣呀","en":"You really have good luck with food."}
+          {"hak":"惹兜真係好食祿咯。","sp":"A","zh":"你們真好口福氣呀","en":"You really have good luck with food."}
         ]
       },
       {
@@ -493,14 +493,14 @@
             "zh": "哇，好像好遠欸。回到家要多幾久呢？",
             "en": "Wow, seems very far. How long does it take to get home?"
           },
-          {"hak":"連等車渾點鐘久啦（lá）。","sp":"A","zh":"連等車大概一個小時吧。","en":"Including waiting for the car, about an hour."},
+          {"hak":"連等車渾點鐘久啦。","sp":"A","zh":"連等車大概一個小時吧。","en":"Including waiting for the car, about an hour."},
           {
             "hak": "恁樣來回咩愛兩隻鐘頭？你幾多點睡目嘅呢？",
             "sp": "B",
             "zh": "這樣來回不就要兩個小時嗎？你幾點睡覺呢？",
             "en": "Doesn't that mean two hours back and forth? What time do you sleep?"
           },
-          {"hak":"厓十一點鐘睡目嘅。","sp":"A","zh":"我十一點鐘睡覺。","en":"I sleep at eleven o'clock."}
+          {"hak":"厓十一點鐘睡目喔。","sp":"A","zh":"我十一點鐘睡覺。","en":"I sleep at eleven o'clock."}
         ]
       },
       {
@@ -632,12 +632,12 @@
             "en": "Some characters with **closed-mouth endings** `am`/`ap` are quite special and require attention."
           },
           {
-            "zh": "{賴子}、 {妹子}的{子}唸**第一聲** `zú`，相當於普通話**輕聲**的用法。但{子女}、{孔子}的{子}唸**第三聲**。",
-            "en": "The {子} in 'son' ({賴子}) and 'daughter' ({妹子}) is pronounced with the **first tone** `zú`, similar to the **neutral tone** in Mandarin. However, {子} in 'children' ({子女}) and 'Confucius' ({孔子}) is pronounced with the **third tone**."
+            "zh": "{賴子}、 {妹子}的「子」唸**第一聲** `zú`，相當於普通話**輕聲**的用法。但{子女}、{孔子}的{子}唸**第三聲** `zŭ`。",
+            "en": "The 子 in 'son' ({賴子}) and 'daughter' ({妹子}) is pronounced with the **first tone** `zú`, similar to the **neutral tone** in Mandarin. However, {子} in 'children' ({子女}) and 'Confucius' ({孔子}) is pronounced with the **third tone** `zŭ`."
           },
           {
-            "zh": "注意{女}在{子女}的發音是 `n̆g` ，是比較**文言**的發音，來自**梅縣話**，{子女}跟{子午}同音。其他{女}發音是 `ngĭ`。",
-            "en": "Note that {女} in 'children' ({子女}) is pronounced `n̆g`. This is a more **formal/literary** pronunciation from **Moiyen**; {子女} and {子午} ('midnight/noon') are homophones. In other cases, {女} is pronounced `ngĭ`."
+            "zh": "注意「女」在{子女}的發音是 `n̆g`，是比較**文言**的發音，來自**梅縣話**，{子女}跟{子午}同音。其他{女}發音是 `ngĭ`。",
+            "en": "Note that 女 in 'children' ({子女}) is pronounced `n̆g`. This is a more **formal/literary** pronunciation from **Moiyen**; {子女} and {子午} ('midnight/noon') are homophones. In other cases, {女} is pronounced `ngĭ`."
           },
           {
             "zh": "{子}在**口語**不能單獨使用，只有在諺語或文言文才用作兒子的意思。兒子口語要說成{賴子}",
@@ -714,7 +714,7 @@
           ["嫌疑","遺產","魏國","藝術"],
           ["梅縣","出現","柴犬","明顯"],
           ["賢才","姓丘","莧菜","自然"],
-          ["決定","結果","構造","購買"],
+          ["決定","結果","構造","做工"],
           ["魚鈎","斑鳩","視頻","食品"]
         ]
       },
@@ -801,7 +801,7 @@
             "en": "There is a bench under the apple tree, Ajie likes to sit there and read."
           },
           {
-            "hak": "係講有蘋果跌下來打中佢，佢大來就係科學家咯。",
+            "hak": "係講有蘋果跌下來打中佢，佢大來就係隻科學家咯。",
             "sp": "B",
             "zh": "如果有蘋果掉下來打中他，他長大以後就是科學家了。",
             "en": "If an apple would fall down and hit him, he would grow up and become a scientist!"
@@ -813,17 +813,16 @@
         "items": [
           "這隻係吾表妹阿蘭，係吾姑仔嘅妹子。",
           "佢摎其公其婆同下住在...",
-          "其間屋臉前有棵大樹/… 。",
-          "屋背戶有隻菜園，種嗨兜好多青菜/…。",
-          "樹頂高有好多樹葉/…。",
-          "樹腳下/…有一條白貓/…。",
-          "阿傑好中意來吾屋卡/…。",
-          "佢長日想做科學家/…。",
-          "厓大來想做...",
+          "其間屋臉前有 + 棵大樹/… 。",
+          "屋背戶有隻菜園，種嗨兜好多 + 青菜/… 。",
+          "樹頂高有好多 + 樹葉/… 。",
+          "樹腳下/… + 有一條 + 白貓/… 。",
+          "阿傑好中意來 + 吾屋卡/… 。",
+          "佢長日想做 + 科學家/… 。",
+          "厓大來想做 ...",
           "你大來想做乜介？",
           "係講厓住在英國，吾英文就曉好流利咯 。",
-          "係講你住在德國，惹德文就曉好流利咯。",
-          "係講你住在...，惹...就曉好流利咯"
+          "係講你住在 + 德國/... + ，惹 + 德文/... + 就曉好流利咯"
         ]
       },
       {
@@ -838,7 +837,7 @@
           ["鳳凰","皇室","或者","宏偉"]
         ]
       },
-      {"type":"nursery","items":[{"hak":"落大水，發大風，阿姨仔，嫁老公。"},{"hak":"嫁去奈？嫁海豐。食乜介，食老蟹摎蝦公。"},{}]},
+      {"type":"nursery","items":[{"hak":"落大水，發大風，阿姨仔，嫁老公。"},{"hak":"嫁去奈？嫁海豐。食乜介，食老蟹摎蝦公。"}]},
       {
         "type": "notes",
         "items": [

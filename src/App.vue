@@ -153,7 +153,10 @@
 
             <div v-else-if="block.type === 'idiom' || block.type === 'nursery'" class="sent-list">
               <div v-for="(item, ii) in block.items" :key="ii" class="sent-row">
-                <p class="sent-hak font-hakka" v-html="renderSentenceRuby(item.hak)"></p>
+                <div class="sent-hak-row">
+                  <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn" @click.stop="playBlockItem(currentLesson.id, block, bi, ii)">▶</button>
+                  <p class="sent-hak font-hakka" v-html="renderSentenceRuby(item.hak)"></p>
+                </div>
                 <p v-if="getDisplayText(item)" class="sent-tr">{{ getDisplayText(item) }}</p>
                 <p v-if="item.note" class="sent-note">{{ item.note }}</p>
               </div>
@@ -213,12 +216,16 @@
   </div>
 
   <div v-if="audioBarVisible" class="audio-bar">
+    <div class="audio-bar-progress" @click="seekAudio($event)">
+      <div class="audio-bar-progress-fill" :style="{ width: audioDuration ? (audioCurrentTime / audioDuration * 100) + '%' : '0%' }"></div>
+    </div>
     <button type="button" class="audio-bar-btn" @click="togglePlayPause">{{ playingAudio ? '⏸' : '▶' }}</button>
     <div class="audio-bar-info">
       <span class="audio-bar-label">{{ audioLabel }}</span>
       <span v-if="audioSegmentText" class="audio-bar-segment font-hakka">{{ audioSegmentText }}</span>
       <span v-else class="audio-bar-sub">{{ playingAudio ? 'Now Playing' : 'Paused' }}</span>
     </div>
+    <span class="audio-bar-time">{{ formatTime(audioCurrentTime) }} / {{ formatTime(audioDuration) }}</span>
     <button type="button" class="audio-bar-btn" @click="replayAudio">⟲</button>
     <button type="button" class="audio-bar-btn close" @click="closeAudioBar">✕</button>
   </div>
@@ -249,6 +256,8 @@ const audioEl = ref(null)
 const playingAudio = ref('')
 const audioBarVisible = ref(false)
 const audioSegmentText = ref('')
+const audioCurrentTime = ref(0)
+const audioDuration = ref(0)
 const timestamps = ref({})
 let stopAtTime = null
 const heroEl = ref(null)
@@ -781,14 +790,34 @@ function onAudioPause() {
 }
 
 function onAudioTimeUpdate() {
+  const el = audioEl.value
+  if (el) {
+    audioCurrentTime.value = el.currentTime
+    audioDuration.value = el.duration || 0
+  }
   if (stopAtTime != null) {
-    const el = audioEl.value
     if (el && el.currentTime >= stopAtTime) {
       el.pause()
       playingAudio.value = ''
       stopAtTime = null
     }
   }
+}
+
+function formatTime(s) {
+  if (!s || !isFinite(s)) return '0:00.000'
+  const m = Math.floor(s / 60)
+  const sec = Math.floor(s % 60)
+  const ms = Math.floor((s % 1) * 1000)
+  return m + ':' + (sec < 10 ? '0' : '') + sec + '.' + String(ms).padStart(3, '0')
+}
+
+function seekAudio(e) {
+  const el = audioEl.value
+  if (!el || !el.duration) return
+  const rect = e.currentTarget.getBoundingClientRect()
+  const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width))
+  el.currentTime = ratio * el.duration
 }
 
 function getBlockTimestamps(lessonId, block, blockIndex) {
@@ -1504,6 +1533,11 @@ onMounted(async () => {
 .sent-row p {
   margin: 0;
 }
+.sent-hak-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
 .sent-hak {
   font-size: 1.45rem;
   line-height: 1.8;
@@ -1726,13 +1760,35 @@ onMounted(async () => {
   z-index: 40;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  padding: 0.75rem 1.2rem;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.8rem;
+  padding: 0 1.2rem 0.6rem;
   background: #111;
   color: #fff;
   font-size: 0.92rem;
   box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.3);
   min-height: 3.4rem;
+}
+.audio-bar-progress {
+  flex-basis: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  margin-top: -0px;
+}
+.audio-bar-progress-fill {
+  height: 100%;
+  background: var(--color-crimson);
+  border-radius: 2px;
+  transition: width 150ms linear;
+}
+.audio-bar-time {
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  color: rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
 }
 .audio-bar-info {
   flex: 1;

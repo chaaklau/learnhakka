@@ -82,7 +82,7 @@ hak,rom,zh,en,unproofread
 仰邊,ngiong4 bien1,怎樣,How,
 轉屋卡,zon3 vuk5 ka1,回家,Go home,
 轉去,zon3 hi4,回去,Go back,
-黏等,ngiem4 den3,跟着,Then / Following,1
+黏等,ngiem2 den3,跟着,Then / Following,1
 愛,oi4,要,Need / Want,
 好像,hau3 ciong4,好像,Seem like,
 渾,von2,大概,Approximately / About,
@@ -128,11 +128,11 @@ hak,rom,zh,en,unproofread
 屋背戶,vuk5 boi4 fu1,房子後面,Behind the house,
 棟心,dung4 sim1,中心,Center / Middle,
 頂高,dang3 gau1,上面,Above / On top,
-腳下,giok5 ha4,下面,Below / Under,1
+腳下,giok5 ha1,下面,Below / Under,1
 長凳,cong2 den4,長凳,Bench,1
 中意,zung4 yi4,喜歡,Like,1
 係講,he4 gong3,如果,If,1
-跌下來,diet5 ha4 loi2,掉下來,Fall down,1
+跌下來,diet5 ha1 loi2,掉下來,Fall down,1
 大來,tai4 loi2,長大後,Grow up,1
 包,bau1,,,
 潘,pan1,,,
@@ -413,9 +413,9 @@ hak,rom,zh,en,unproofread
 先生教厓讀書，厓教先生打山豬。,"sin1 sang1 gau4 ngai2 tuk6 su1, ngai2 gau4 sin1 sang1 da3 san1 zu1",,,
 山豬飆過河，嚇到先生兩公婆。,"san1 zu1 biau1 go4 ho2, hak5 dau3 sin1 sang1 liong3 gung1 po2",,,
 一夜冇睡目，十夜補唔足。,"yit5 ya4 mau2 soi4 muk5, sip6 ya4 bu3 m1 zuk5",,,
-老虎都曉啄目睡。,lau3 fu3 du1 hiau3 duk5 muk5 soi4,,,
-爺娘記子長江水，子記爺娘冇擔竿長。,"ya2 ngiong2 gi4 zu3 cong2 gong1 sui3, zu3 gi4 ya2 ngiong2 mau2 dam1 gon1 cong2",,,
-早死爺娘冇教招。,zau3 si3 ya2 ngiong2 mau2 gau4 zau1,,,
+老虎都曉啄目睡。,lau4 fu3 du1 hiau3 duk5 muk5 soi4,,,
+爺娘記子長江水，子記爺娘冇擔竿長。,"ya2 ngiong2 gi4 zu3 cong2 gong1 sui3, zu3 gi4 ya2 ngiong2 mau2 dam4 gon1 cong2",,,
+早死爺娘冇教招。,zau3 si3 ya2 ngiong2 mau2 gau1 zau1,,,
 養子唔知娘辛苦，養女正曉謝娘恩。,"yong3 zu3 m1 di1 ngiong2 sin1 ku3, yong3 ng3 zang4 hiau3 cia4 ngiong2 en1",,,
 親屬關係,cin1 suk6 gan1 he4,,,
 阿傑,a1 kiet6,,,1
@@ -448,14 +448,14 @@ hak,rom,zh,en,unproofread
 李偉雄,li3 vui3 hiung2,李偉雄,Li Vui-hiung (name),
 識,sit5,認識,Know / Recognize,
 呀,a1,呀,Sentence particle,
-嘅,ge4,的,Possessive/Descriptive particle,
+嘅,e4,的,Possessive/Descriptive particle,
 麼,mo1,嗎,Question particle,
 爸,ba1,爸爸,Dad,
 意思,yi4 su1,意思,Meaning,
 囖,lo1,囖,Sentence particle,
 噢,o1,噢,Oh,
 明白,min2 pak6,明白,Understand,
-咯,lok5,了/咯,Sentence particle,
+咯,lo1,了/咯,Sentence particle,
 今年,gim1 ngien2,今年,This year,
 有,yiu1,有,Have,
 哥,go1,哥哥,Older brother,
@@ -634,3 +634,20 @@ hak,rom,zh,en,unproofread
 正確,zin4 kok6,正確,,
 正能量,zin4 len2 liong4,正能量,,
 兜,deu1,,,
+兩,liong3,,,
+析,sak5,,,
+右手,yiu4 siu3,,,
+西瓜,si1 ga1,,,
+切做,ciet6 zo4,,,
+幾時,git5 si2,,,
+幾多,git5 do1,,,
+幾好看,git5 hau3 kon4,,,
+客家,hak5 ga1,,,
+唔,m1,,,
+卡,ka1,,,
+今晚,gim1 man1,,,
+來到,loi2 dau4,,,
+高,gau1,,,
+老虎,lau4 fu3,,,
+做工,zo4 gung1,,,
+做,zo4,,,
