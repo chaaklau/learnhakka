@@ -311,62 +311,18 @@ function escapeHtml(str) {
 }
 
 // Numerical tone → diacritic conversion
-const TONE_MARKS = {
-  1: '\u0301', // acute ´
-  2: '\u0304', // macron ¯
-  3: '\u0306', // breve ˘
-  4: '\u0300', // grave `
-  5: '\u0306', // breve (entering)
-  6: '\u0300', // grave (entering)
-}
-const VOWELS = 'aeiou'
-const SEMIVOWEL = 'y'
+const TONE_DIACRITICS = " \u0301\u0304\u0306\u0300\u0306\u0300" // index 1–6
 
-function numeralToDiacritic(syl) {
-  if (!syl) return syl
-  const toneMatch = syl.match(/^(.+?)(\d)$/)
-  if (!toneMatch) {
-    // bare "m" or "ng" → default tone 1
-    if (syl === 'm' || syl === 'ng') {
-      const mark = TONE_MARKS[1]
-      return (syl[0] + mark + syl.slice(1)).normalize('NFC')
-    }
-    return syl
-  }
-  const base = toneMatch[1]
-  const tone = parseInt(toneMatch[2])
-  const mark = TONE_MARKS[tone]
-  if (!mark) return syl
-
-  // Find the vowel to place the diacritic on
-  // 'i' before a/e/o or before u+consonant is a glide — skip to next vowel
-  // 'y' is only used as fallback when no real vowel exists
-  let idx = -1
-  for (let i = 0; i < base.length; i++) {
-    if (VOWELS.includes(base[i])) {
-      // Check if this 'i' is a glide (before a, e, o — NOT before u)
-      if (base[i] === 'i' && i + 1 < base.length && 'aeo'.includes(base[i + 1])) {
-        continue // skip glide i
-      }
-      idx = i
-      break
-    }
-  }
-  if (idx === -1) {
-    // No real vowel — try y
-    const yi = base.indexOf('y')
-    idx = yi !== -1 ? yi : 0
-  }
-  const result = base.slice(0, idx) + base[idx] + mark + base.slice(idx + 1)
-  return result.normalize('NFC')
+function numeralToDiacritic(pron) {
+  if (!pron) return pron
+  return pron.replace(/(\D*[aeo]|\D*[iu](?!\d)|\D*[iumn])(\D*)(\d)/g,
+    (_, $1, $2, $3) => $1 + TONE_DIACRITICS[+$3] + $2
+  ).normalize('NFC')
 }
 
 function romToDiacritics(rom) {
   if (!rom) return ''
-  return rom.split(/(\s+|,\s*)/).map(part => {
-    if (/^\s+$/.test(part) || /^,/.test(part)) return part
-    return numeralToDiacritic(part)
-  }).join('')
+  return numeralToDiacritic(rom)
 }
 
 /* Wrap n/N + combining diacritics in a <span> so CSS can fix vertical positioning */
@@ -528,7 +484,7 @@ function renderWithRuby(text, rom) {
         if (/[\p{P}\p{S}\p{Z}\s]/u.test(ch)) {
           out += escapeHtml(ch)
         } else if (si < syls.length) {
-          out += '<ruby>' + escapeHtml(ch) + '<rp>(</rp><rt>' + escapeHtml(numeralToDiacritic(syls[si])) + '</rt><rp>)</rp></ruby>'
+          out += '<span class="ruby"><span class="rb">' + escapeHtml(ch) + '</span><span class="rt">' + escapeHtml(numeralToDiacritic(syls[si])) + '</span></span>'
           si++
         } else {
           out += escapeHtml(ch)
@@ -602,7 +558,7 @@ function renderTitleRuby(text) {
           out += '<span class="title-word">'
           for (const c of word) {
             if (si < roms.length) {
-              out += '<ruby>' + escapeHtml(c) + '<rp>(</rp><rt>' + escapeHtml(numeralToDiacritic(roms[si])) + '</rt><rp>)</rp></ruby>'
+              out += '<span class="ruby"><span class="rb">' + escapeHtml(c) + '</span><span class="rt">' + escapeHtml(numeralToDiacritic(roms[si])) + '</span></span>'
               si++
             } else {
               out += escapeHtml(c)
@@ -1624,22 +1580,31 @@ onMounted(async () => {
   color: var(--color-crimson);
 }
 
-/* ── Ruby ── */
-:deep(ruby) {
-  ruby-position: over;
+/* ── Ruby (span-based) ── */
+:deep(.ruby) {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: bottom;
+  margin: 0 0.08em;
+}
+:deep(.ruby .rb) {
   line-height: 1.4;
 }
-:deep(ruby rt) {
-  font-size: 0.42em;
+:deep(.ruby .rt) {
+  display: block;
+  font-size: 0.5em;
   font-family: var(--font-body);
   color: var(--color-crimson);
   font-weight: 400;
-  line-height: 0.9;
+  line-height: 1;
   letter-spacing: -0.02em;
+  white-space: nowrap;
+  order: -1;
 }
-.dia-hak :deep(ruby rt),
-.sent-hak :deep(ruby rt) {
-  font-size: 0.45em;
+.dia-hak :deep(.ruby .rt),
+.sent-hak :deep(.ruby .rt) {
+  font-size: 0.52em;
   color: var(--color-crimson);
 }
 .dia-hak :deep(.rom-bracket),
