@@ -117,16 +117,16 @@
         "type": "main",
         "items": [
           {"hak":"同學你好。你安做乜介名？","sp":"B","zh":"同學你好。你叫什麼名字？","en":"Hello. What is your name?"},
-          {"hak":"厓安做葉錦嫦。","sp":"A","zh":"我叫葉錦嫦。","en":"My name is Ye Jinchang."},
+          {"hak":"厓安做葉錦嫦。","sp":"A","zh":"我叫葉錦嫦。","en":"My name is Yap Gim-song."},
           {"hak":"你識惹左手析嘅同學麼？","sp":"B","zh":"你認識你左邊的同學嗎？","en":"Do you know the student on your left?"},
           {
             "hak": "識呀，佢係李偉雄。佢係吾表弟。其爸係吾大舅。",
             "sp": "A",
             "zh": "認識呀，他是李偉雄。他是我表弟。他爸是我的大舅舅。",
-            "en": "Yes, he is Li Weixiong. He is my cousin. His dad is my eldest uncle."
+            "en": "Yes, he is Li Vui-hiong. He is my cousin. His dad is my eldest uncle."
           },
-          {"hak":"大舅係乜介意思？","sp":"B","zh":"大舅舅是什麼意思？","en":"What does 'Dajiu' mean?"},
-          {"hak":"大舅咩係阿㜆嘅阿哥囖。","sp":"A","zh":"大舅舅就是媽媽的哥哥嘛。","en":"'Dajiu' just means mom's older brother."},
+          {"hak":"大舅係乜介意思？","sp":"B","zh":"大舅舅是什麼意思？","en":"What does 'Tai-kiu' mean?"},
+          {"hak":"大舅咩係阿㜆嘅阿哥囖。","sp":"A","zh":"大舅舅就是媽媽的哥哥嘛。","en":"'Tai-kiu' just means mom's older brother."},
           {"hak":"噢，厓明白咯。","sp":"B","zh":"噢，我明白了。","en":"Oh, I understand now."},
           {"hak":"你今年幾多歲？","sp":"A","zh":"你今年幾歲？","en":"How old are you this year?"},
           {"hak":"厓今年兩十二歲。","sp":"B","zh":"我今年二十二歲。","en":"I am twenty-two years old."},
@@ -798,7 +798,7 @@
             "hak": "蘋果樹腳下有一張長凳，阿傑好中意坐在唉裏看書嘅。",
             "sp": "B",
             "zh": "蘋果樹下面有一張長凳，阿傑很喜歡坐在那裏看書。",
-            "en": "There is a bench under the apple tree, Ajie likes to sit there and read."
+            "en": "There is a bench under the apple tree, A-kiet likes to sit there and read."
           },
           {
             "hak": "係講有蘋果跌下來打中佢，佢大來就係隻科學家咯。",
