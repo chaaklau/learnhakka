@@ -4,8 +4,7 @@
     <span class="site-brand" @click="navigateTo('textbook')">香港客家話入門</span>
     <div class="site-links">
       <button type="button" :class="['site-link', { active: page === 'textbook' }]" @click="navigateTo('textbook')">課本 Textbook</button>
-      <button type="button" :class="['site-link', { active: page === 'about' }]" @click="navigateTo('about')">關於 About</button>
-      <button type="button" :class="['site-link', { active: page === 'acknowledgement' }]" @click="navigateTo('acknowledgement')">鳴謝 Thanks</button>
+      <button type="button" :class="['site-link', { active: page === 'about' }]" @click="navigateTo('about')">關於計劃 About the Project</button>
     </div>
     <div class="nav-controls">
       <div class="control-group">
@@ -958,9 +957,8 @@ onMounted(async () => {
     lexicon.value = map
     site.value = siteData
 
-    // Load the current lesson immediately
-    const id = currentLessonId.value
-    if (id != null) await loadLesson(id)
+    // Preload all lessons in parallel
+    await Promise.all(indexData.map(entry => loadLesson(entry.id)))
   } catch (e) {
     console.error(e)
   } finally {
