@@ -1,0 +1,111 @@
+{
+  "id": 2,
+  "title": {"hak":"數數","en":"Counting"},
+  "blocks": [
+    {
+      "type": "main",
+      "items": "零 一 二 三 四 五 六 七 八 九 十 百 千 萬 億",
+      "audio": "audio/ch2-main-1.m4a",
+      "timestamps": [
+        [3.43, 4.92],
+        [4.92, 6.25],
+        [6.25, 7.72],
+        [7.72, 9.15],
+        [9.15, 10.51],
+        [10.51, 11.85],
+        [11.85, 13.03],
+        [13.03, 14.37],
+        [14.37, 15.67],
+        [15.67, 17],
+        [17, 18.21],
+        [18.21, 19.42],
+        [19.42, 20.6],
+        [20.6, 21.96],
+        [21.96, 23.3]
+      ]
+    },
+    {
+      "type": "main",
+      "items": [
+        {"hak":"58","zh":"五十八","en":"58"},
+        {"hak":"246","zh":"二百四十六","en":"246"},
+        {"hak":"3407","zh":"三千四百零七","en":"3407"},
+        {"hak":"42 348","zh":"四萬二千三百四十八","en":"42,348"},
+        {"hak":"789 306","zh":"七十八萬九千三百零六","en":"789,306"}
+      ],
+      "audio": "audio/ch2-main-2.m4a",
+      "timestamps": [[0.5, 2.23], [2.23, 4.61], [4.61, 7.59], [7.59, 11.64], [11.64, 15.72]]
+    },
+    {
+      "type": "main",
+      "items": [
+        {"hak":"乘數表","en":"Multiplication Table"},
+        {"hak":"三一如三，三二如六，三三歸九，三四一十二","en":"3x1=3, 3x2=6, 3x3=9, 3x4=12"},
+        {"hak":"三五一十五，三六一十八，三七二十一，三八二十四","en":"3x5=15, 3x6=18, 3x7=21, 3x8=24"}
+      ],
+      "audio": "audio/ch2-main-3.m4a",
+      "timestamps": [[0.5, 2.76], [2.76, 12.2], [12.2, 24.01]]
+    },
+    {
+      "type": "sentence_practice",
+      "items": ["109，4567，789 000", "一億三千萬、十四億", "唸出其他倍數的乘數表"]
+    },
+    {
+      "type": "practice",
+      "description": {"en":"Tones and Initials"},
+      "rows": [
+        ["沙", "蛇", "灑", "射"],
+        ["車", "茶", "扯", "岔"],
+        ["西", "時", "死", "四"],
+        ["居", "佢", "幾", "記"],
+        ["夫", "胡", "府", "婦"],
+        ["亨", "恆", "肯", "幸"],
+        ["坐", "鋤", "楚", "挫"],
+        ["買", "埋", "嘪", "賣"],
+        ["拋", "袍", "跑", "炮"]
+      ],
+      "audio": "audio/ch2-practice.m4a",
+      "timestamps": [
+        [3.69, 7.27],
+        [7.4, 10.5],
+        [11.4, 14.7],
+        [15.67, 19.11],
+        [19.57, 22.68],
+        [23.5, 26.3],
+        [27, 30.5],
+        [31.8, 34.8],
+        [35.5, 39.5]
+      ]
+    },
+    {
+      "type": "idiom",
+      "items": [
+        {"hak":"一代親，二代表，三代閒了了。"},
+        {"hak":"人冇千日好，花冇百日紅。"}
+      ],
+      "audio": "audio/ch2-idiom.m4a",
+      "timestamps": [[1.83, 8.09], [8.09, 13.74]]
+    },
+    {
+      "type": "notes",
+      "items": [
+        {
+          "zh": "客家話有六個**聲調**，其中兩個是**入聲**。以上是一至四調的符號示範。",
+          "en": "Hakka has six **tones**, two of which are **Entering Tones**. The above are examples of the symbols for tones 1 to 4."
+        },
+        {
+          "zh": "「你」在客家話有**口語音**和**讀書音**的不同。惠陽腔客家話中，**口語音**是 `ngī`，**讀書音**為 `lí`。",
+          "en": "The character 你 (you) in Hakka has both **colloquial** and **literary** pronunciations. In Fuiyong Hakka, the **colloquial** pronunciation is `ngī`, while the **literary** pronunciation is `lí`."
+        },
+        {
+          "zh": "「數」的發音只有一個 `sù`，沒有其他發音。",
+          "en": "The character 數 ('number', 'count') has only one pronunciation: `sù`. There are no other pronunciations."
+        },
+        {
+          "zh": "客家話 21～29，**口語**可以說 {兩十一}、{兩十二}、... {兩十九}，廣州話、普通話不能這樣說。",
+          "en": "In Hakka **colloquial** language, numbers 21-29 can be said as {兩十一}, {兩十二}, ... {兩十九}. This is not done in Cantonese or Mandarin."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "id": 7,
+  "title": {"hak":"恁樣、仰邊、黏等、下子、愛","en":"Like this, How, Then, A moment, Want"},
+  "blocks": [
+    {
+      "type": "vocab",
+      "items": "恁樣 仰邊 轉屋卡 轉去 黏等 愛 好像 渾 轉到屋 幾久 小巴 巴士 或者 之後",
+      "audio": "audio/ch7-vocab.m4a",
+      "timestamps": [
+        [2.43, 4.14],
+        [4.14, 5.94],
+        [5.94, 7.84],
+        [7.84, 9.4],
+        [9.4, 11.25],
+        [11.25, 12.58],
+        [12.58, 14.32],
+        [14.32, 15.78],
+        [15.78, 17.73],
+        [17.73, 19.43],
+        [19.43, 21.12],
+        [21.12, 22.68],
+        [22.68, 24.2],
+        [24.3, 25.6]
+      ]
+    },
+    {
+      "type": "main",
+      "items": [
+        {"hak":"吾兜嘅學校在鑽石山， 惹兜仰邊轉屋卡嘅呢？","sp":"先生","zh":"你們的學校在鑽石山，你們怎樣回家的呢？","en":"Our school is in Diamond Hill, how do you go home?"},
+        {"hak":"你住在奈裏呢？","sp":"B","zh":"你住在哪裏呢？","en":"Where do you live?"},
+        {"hak":"厓住在觀塘。","sp":"A","zh":"我住在觀塘。","en":"I live in Kwun Tong."},
+        {"hak":"你放學之後仰邊轉屋卡呢？","sp":"B","zh":"你放學之後怎樣回家的呢？","en":"How do you go home after school?"},
+        {"hak":"厓直接坐地鐵轉去。你呢？","sp":"A","zh":"我直接坐地鐵回去。你呢？","en":"I take the MTR directly back. And you?"},
+        {"hak":"厓住在橫台山，愛坐火車去錦上路，黏等愛轉小巴或者巴士。","sp":"B","zh":"我住在橫台山，要坐火車去錦上路，然後要轉小巴或者巴士。","en":"I live in Wang Toi Shan, need to take the train to Kam Sheung Road, then transfer to minibus or bus."},
+        {"hak":"哇，好像好遠欸。轉到屋愛幾久噢？","sp":"A","zh":"哇，好像好遠欸。回到家要多幾久呢？","en":"Wow, seems very far. How long does it take to get home?"},
+        {"hak":"連等車渾點鐘久啦。","sp":"B","zh":"連等車大概一個小時吧。","en":"Including waiting for the car, about an hour."},
+        {"hak":"恁樣來回咩愛兩隻鐘頭？你幾多點睡目嘅呢？","sp":"A","zh":"這樣來回不就要兩個小時嗎？你幾點睡覺呢？","en":"Doesn't that mean two hours back and forth? What time do you sleep?"},
+        {"hak":"厓十一點鐘睡目喔。","sp":"B","zh":"我十一點鐘睡覺。","en":"I sleep at eleven o'clock."}
+      ],
+      "audio": "audio/ch7-main.m4a",
+      "timestamps": [
+        [3.4, 8.7],
+        [9, 11.2],
+        [11.2, 13.2],
+        [13.5, 16.6],
+        [16.9, 20.4],
+        [21.5, 29.9],
+        [30.5, 35.1],
+        [35.3, 38.3],
+        [38.5, 43.8],
+        [44.5, 47.3]
+      ]
+    },
+    {
+      "type": "sentence_practice",
+      "items": [
+        "你住在奈裏？",
+        "厓住在...",
+        "你放學之後仰邊轉屋卡？",
+        "厓坐火車去....，黏等就轉巴士。// 厓直接坐地鐵/巴士。",
+        "你轉到屋卡愛幾久？",
+        "厓轉到去愛一點鐘久。",
+        "恁樣你幾多點睡目？",
+        "厓 + 十一點/十一點半/… + 睡目。",
+        "你睡目愛睡幾久？",
+        "厓愛睡八隻鐘頭。"
+      ]
+    },
+    {
+      "type": "practice",
+      "description": {"en":"Two-Character Combinations"},
+      "rows": [
+        ["童年", "銀行", "意義", "語言"],
+        ["耳環", "遇到", "責任", "讓座"],
+        ["日頭", "月光", "過年", "元旦"],
+        ["原來", "水源", "圓規", "願望"],
+        ["軟弱", "韌帶", "艾草", "攰死"],
+        ["嚴格", "鹽田", "乳牛", "濃密"]
+      ],
+      "audio": "audio/ch7-practice.m4a",
+      "timestamps": [[5.9, 14.6], [14.9, 23.2], [24, 32], [32.5, 41.1], [42.1, 50.6], [51.4, 59.4]]
+    },
+    {
+      "type": "idiom",
+      "items": [
+        {"hak":"一夜冇睡目，十夜補唔足。"},
+        {"hak":"老虎都曉啄目睡。","note":"啄目睡： 打瞌睡"}
+      ],
+      "audio": "audio/ch7-idiom.m4a",
+      "timestamps": [[2.63, 11.65], [11.65, 12.43]]
+    },
+    {
+      "type": "notes",
+      "items": [
+        {"zh":"{恁樣}代表「這樣」、「這樣子的」意思。","en":"{恁樣} means 'this way' or 'like this'."},
+        {"zh":"{恁}代表「那麼」的意思。例如{恁高}、{恁大}、{恁厲害}。","en":"{恁} means 'so' or 'that'. For example, {恁高} ('so tall'), {恁大} ('so big'), {恁厲害} ('so great/terrible')."},
+        {"zh":"{仰邊}是疑問詞，香港傳統發音是 `ngiòng bién`。","en":"{仰邊} is the question word 'how'. The traditional Hong Kong pronunciation is `ngiòng bién`."},
+        {"zh":"傳統客家話說{好像} ，不說「好似」。","en":"Traditional Hakka says {好像} ('seem'), not 「好似」."},
+        {"zh":"{渾}有「差不多」、「大概」、「整整」的意思，相當於廣州話的「成」。（注意傳統客家話不說「成」。）","en":"{渾} means 'almost', 'approximately', or 'whole'. It is equivalent to Cantonese's 「成」. (Note: Traditional Hakka does not use 「成」)."},
+        {"zh":"注意「巴」在{小巴}、{巴士}的發音不一樣。","en":"Note that 巴 is pronounced differently in 'minibus' ({小巴}) and 'bus' ({巴士})."},
+        {"zh":"注意「老」在{老虎}的發音是 `làu`。","en":"Note that 老 in 'tiger' ({老虎}) is pronounced `làu`."}
+      ]
+    }
+  ]
+}

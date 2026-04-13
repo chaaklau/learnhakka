@@ -1,0 +1,124 @@
+{
+  "id": 5,
+  "title": {"hak":"裏背、這裏、唉裏、奈裏","en":"Inside, Here, There, Where"},
+  "blocks": [
+    {
+      "type": "vocab",
+      "items": "裏背 這裏 唉裏 共總 先生 奈埞 奈裏 還吂 學校 附近",
+      "audio": "audio/ch5-vocab.m4a",
+      "timestamps": [
+        [2.28, 4.09],
+        [4.09, 5.84],
+        [5.84, 7.43],
+        [7.43, 9.16],
+        [9.16, 10.96],
+        [10.96, 12.64],
+        [12.64, 13.86],
+        [13.86, 15.86],
+        [15.86, 17.45],
+        [17.45, 19.14]
+      ]
+    },
+    {
+      "type": "main",
+      "items": [
+        {"hak":"這間課室裏背有幾多隻人？","sp":"B","zh":"這間課室裏面有多少人？","en":"How many people are inside this classroom?"},
+        {"hak":"這裏有四隻人，唉裏有五隻人，共總九隻人。","sp":"A","zh":"這裏有四個人，那裏有五個人，總共九個人。","en":"There are four people here, five people there, nine people in total."},
+        {"hak":"冇看到先生喔，佢在奈埞呢？","sp":"B","zh":"沒看到老師耶，他在哪裏呢？","en":"I don't see the teacher, where is he?"},
+        {"hak":"先生還吂來到。佢住得比較遠。","sp":"A","zh":"老師還沒來到。他住得比較遠。","en":"The teacher hasn't arrived yet. He lives quite far away."},
+        {"hak":"先生住在奈裏呢？","sp":"B","zh":"老師住在哪裏呢？","en":"Where does the teacher live?"},
+        {"hak":"佢住在筲箕灣。","sp":"A","zh":"他住在筲箕灣。","en":"He lives in Shau Kei Wan."},
+        {"hak":"你住在奈裏呢？","sp":"B","zh":"你住在哪裏呢？","en":"Where do you live?"},
+        {"hak":"厓住在荃灣。","sp":"A","zh":"我住在荃灣。","en":"I live in Tsuen Wan."},
+        {"hak":"有冇哪人住在學校附近嘅呢？","sp":"B","zh":"有沒有誰住在學校附近的呢？","en":"Does anyone live near the school?"},
+        {"hak":"有呀，吾表哥就住在學校附近。","sp":"A","zh":"有呀，我表哥就住在學校附近。","en":"Yes, my cousin lives near the school."}
+      ],
+      "audio": "audio/ch5-main.m4a",
+      "timestamps": [
+        [3.4, 6.5],
+        [7, 13.8],
+        [14.2, 17.6],
+        [17.9, 23],
+        [23.9, 25.9],
+        [26.1, 28.1],
+        [28.6, 30.1],
+        [30.6, 32.3],
+        [33.2, 36.3],
+        [37.3, 41.5]
+      ]
+    },
+    {
+      "type": "sentence_practice",
+      "items": [
+        "這裏/唉裏 + 坐嗨幾多隻人？",
+        "這裏/唉裏 + 坐嗨六隻人。",
+        "唉裏/唉埞 + 坐嗨幾多隻人？",
+        "唉裏/唉埞 + 坐嗨七隻人。",
+        "這間課室裏背有幾多隻人？",
+        "課室裏背有十三隻人。",
+        "這間課室共總有幾多隻人？",
+        "這裏共總十三隻人。",
+        "先生坐在奈裏？",
+        "先生還吂來。",
+        "陳大文/何小安/… + 還吂來。",
+        "你住在奈裏？",
+        "厓住在 + 沙田/大埔/...",
+        "哪人住在學校附近嘅呢？",
+        "…住在學校附近。"
+      ]
+    },
+    {
+      "type": "practice",
+      "description": {"en":"Two-Character Combinations"},
+      "rows": [
+        ["姓名", "性別", "旺盛", "聲音"],
+        ["兄弟", "空地", "年輕", "年青"],
+        ["天公", "天宮", "山谷", "山菊"],
+        ["工時", "恭喜", "攻佔", "弓箭"],
+        ["嶺崗", "另外", "禾庭", "客廳"],
+        ["紅帽", "熊貓", "英雄", "洪水"],
+        ["涼爽", "遐想", "常識", "顔色"]
+      ],
+      "audio": "audio/ch5-practice.m4a",
+      "timestamps": [[5.3, 13.6], [13.4, 21.7], [22.1, 30.5], [31.1, 40.2], [41, 49.9], [50.4, 59.6], [59.9, 68.4]]
+    },
+    {
+      "type": "nursery",
+      "items": [
+        {"hak":"先生教厓讀書，厓教先生打山豬。"},
+        {"hak":"山豬飆過河，嚇到先生兩公婆。"}
+      ],
+      "audio": "audio/ch5-nursery.m4a",
+      "timestamps": [[2.18, 7.49], [7.49, 13.05]]
+    },
+    {
+      "type": "notes",
+      "items": [
+        {
+          "zh": "客家話有**介音** `i`，是廣州話沒有的，要注意發音。例如{餅} `biăng`、{茄} `kiō`、{向} `hiòng`、{腳} `giŏk`、{銀} `ngiūn`、{艾} `ngiòi`。",
+          "en": "Hakka has the **i-medial**, which Cantonese lacks. Pay attention to the pronunciation. E.g., 'cake' ({餅} `biăng`), 'eggplant' ({茄} `kiō`), 'direction' ({向} `hiòng`), 'leg' ({腳} `giŏk`), 'silver' ({銀} `ngiūn`), 'mugwort' ({艾} `ngiòi`)."
+        },
+        {
+          "zh": "客家話有 `ung` / `iung` 的對立，例如{公工攻} / {弓宮恭}。要注意發音。",
+          "en": "Hakka distinguishes between `ung` and `iung`. For example: 'public/work/attack' ({公工攻}) vs. 'bow/palace/respect' ({弓宮恭}). Pay attention to the pronunciation."
+        },
+        {
+          "zh": "{先生}有兩個發音：(a) `sín sáng` 意思為老師。(b) `sien sáng` 是對成年男性的禮貌稱呼。",
+          "en": "{先生} has two pronunciations: (a) `sín sáng` means teacher. (b) `sien sáng` is a polite title for an adult male (Mr.)."
+        },
+        {
+          "zh": "普通話的疑問詞「哪」，客家話發音是 `lài`（中文字寫作{奈}）。",
+          "en": "The Mandarin question word 「哪」 is pronounced `lài` in Hakka (written as {奈})."
+        },
+        {
+          "zh": "「哪裏」有三個說法：{奈埞}、{奈裏}、{奈}。其中{奈埞}是惠陽腔特有**口語詞**。",
+          "en": "There are three ways to say 'where': {奈埞}, {奈裏}, {奈}. Among them, {奈埞} is a colloquial term specific to the **Fuiyong accent**."
+        },
+        {
+          "zh": "{吂}是客家話常用詞，惠陽腔包括香港的發音是 `mān`。代表「尚未」發生的動作（沒、沒有）。",
+          "en": "{吂} is a common Hakka word, pronounced `mān` in the **Fuiyong accent** (including Hong Kong). It indicates an action that has 'not yet' happened."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "id": 4,
+  "title": {"hak":"做乜介、恁、摎、還、在、擺","en":"Why, So, And, Still, At, Time"},
+  "blocks": [
+    {
+      "type": "vocab",
+      "items": "半隻 吾爸 吾㜆 做乜介 恁 因爲 在 屋卡 長日 摎 囉 還曉 第一擺 能替",
+      "audio": "audio/ch4-vocab.m4a",
+      "timestamps": [
+        [2.2, 3.7],
+        [3.7, 5.1],
+        [5.2, 6.7],
+        [6.89, 8.5],
+        [8.65, 9.9],
+        [9.9, 11.41],
+        [11.41, 12.5],
+        [12.6, 13.9],
+        [14, 15.62],
+        [15.62, 17.01],
+        [17.01, 18.38],
+        [18.38, 19.93],
+        [19.93, 21.5],
+        [21.5, 23.3]
+      ]
+    },
+    {
+      "type": "main",
+      "items": [
+        {"hak":"你係客家人麼？","sp":"B","zh":"你是客家人嗎？","en":"Are you Hakka?"},
+        {"hak":"厓係半隻客家人，吾爸係潮州人，但吾㜆係新界客家人。你呢？","sp":"A","zh":"我是半個客家人，我爸是潮州人，但我媽是新界客家人。你呢？","en":"I am half Hakka, my dad is Teochew, but my mom is New Territories Hakka. And you?"},
+        {"hak":"厓係馬來西亞客家人， 吾屋卡在沙巴。","sp":"B","zh":"我是馬來西亞客家人， 我家在沙巴。","en":"I am a Malaysian Hakka, my home is in Sabah."},
+        {"hak":"你係唔係第一擺來香港噢？","sp":"A","zh":"你是不是第一次來香港呢？","en":"Is this your first time coming to Hong Kong?"},
+        {"hak":"係呀。做乜介惹客家話講得恁流利嘅？","sp":"B","zh":"是呀。爲什麼你客家話說得那麼流利的？","en":"Yes. Why do you speak Hakka so fluently?"},
+        {"hak":"因爲吾㜆在屋卡長日摎厓講囉。","sp":"A","zh":"因爲我媽在家裏經常跟我說。","en":"Because my mom often speaks it to me at home."},
+        {"hak":"你曉講潮州話麼？","sp":"B","zh":"你會說潮州話嗎？","en":"Do you know how to speak Teochew?"},
+        {"hak":"曉少少。厓還曉講普通話摎英文。","sp":"A","zh":"懂一點。我還會講普通話和英文。","en":"A little bit. I also speak Mandarin and English."},
+        {"hak":"你好能替喔。","sp":"B","zh":"你好棒耶。","en":"You are awesome."}
+      ],
+      "audio": "audio/ch4-main.m4a",
+      "timestamps": [
+        [2.11, 4],
+        [4, 13],
+        [13, 17.55],
+        [17.55, 20.6],
+        [20.6, 25.32],
+        [25.32, 29.2],
+        [29.2, 31.7],
+        [31.7, 35.8],
+        [35.8, 38.3]
+      ]
+    },
+    {
+      "type": "sentence_practice",
+      "items": [
+        "惹爸係唔係客家人？",
+        "吾爸係客家人/吾爸唔係客家人，佢係...人。",
+        "惹㜆係唔係客家人？",
+        "吾㜆係客家人/吾㜆唔係客家人，佢係...人。",
+        "厓係香港人， 你呢？",
+        "厓係...人。",
+        "吾屋卡在...",
+        "你曉講乜介話？",
+        "厓曉講...話摎...。",
+        "做乜介你曉講...話？",
+        "吾爸摎厓講...話",
+        "你係咩第一擺來香港？",
+        "係/ 唔係，厓第...擺來香港。"
+      ]
+    },
+    {
+      "type": "practice",
+      "description": {"en":"Tone Drills (Phrases)"},
+      "rows": [
+        ["三", "零", "五", "二"],
+        ["專", "題", "訪", "問"],
+        ["精", "神", "爽", "利"],
+        ["妖", "魔", "鬼", "怪"],
+        ["山", "神", "土", "地"],
+        ["鮮", "魚", "酒", "菜"]
+      ],
+      "audio": "audio/ch4-practice.m4a",
+      "timestamps": [[5.1, 7.6], [8.5, 10.9], [11.9, 14.3], [15.2, 17.6], [18.4, 20.6], [21.6, 24.7]]
+    },
+    {
+      "type": "notes",
+      "items": [
+        {
+          "zh": "{在}有兩個發音: (a) **口語音**是 `cói` ({在唔在}、{在卡}); (b) **書面語**唸 `cài` ({自在}、{在意})。",
+          "en": "{在} has two pronunciations: (a) **Spoken**: `cói` ({在唔在}, {在卡}); (b) **Written/Formal**: `cài` ({自在}, {在意})."
+        },
+        {
+          "zh": "{屋}的聲母是 `v`，不是**零聲母**。",
+          "en": "The initial consonant of {屋} is `v`, not a **zero initial**."
+        },
+        {
+          "zh": "客家話的{曉}有兩個意思: (a) 表示能力 (「我會游泳」 - {厓曉游水}); (b) 表示可能性 (「今晚可能會下雨」 - {今晚曉落水})。",
+          "en": "In Hakka, {曉} has two meanings: (a) Indicating ability ('I can swim' - {厓曉游水}); (b) Indicating possibility ('It might rain tonight' - {今晚曉落水})."
+        },
+        {
+          "zh": "連接詞{摎}，用法相當於廣州話的「同」。",
+          "en": "The conjunction {摎} is used like 「同」 in Cantonese (meaning 'and' or 'with')."
+        },
+        {
+          "zh": "客家話的{恁}相當於廣州話的「咁」。",
+          "en": "Hakka's {恁} is equivalent to Cantonese's 「咁」 (meaning 'so' or 'this')."
+        },
+        {
+          "zh": "{做乜介}有兩個意思，通常是「為什麼」，但也可以是「做什麼」。",
+          "en": "{做乜介} has two meanings: usually 'why', but it can also mean 'what are you doing'."
+        },
+        {
+          "zh": "媽媽有兩個稱呼：{阿媽}是**面稱**，{阿㜆}是**背稱**。",
+          "en": "There are two terms for mother: {阿媽} is used when addressing her directly, {阿㜆} is used when referring to her indirectly."
+        },
+        {
+          "zh": "{屋卡}本來是{屋下}的變音，但為免引起誤會，寫作{屋卡}。",
+          "en": "{屋卡} is originally a sound change from {屋下}, but it is written as {屋卡} to avoid misunderstanding."
+        },
+        {
+          "zh": "{曉多少}是比較傳統的說法，也可以說{曉少少}。",
+          "en": "{曉多少} is a more traditional way of saying 'know a little', but {曉少少} is also used."
+        }
+      ]
+    }
+  ]
+}

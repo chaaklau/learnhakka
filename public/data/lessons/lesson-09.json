@@ -1,0 +1,118 @@
+{
+  "id": 9,
+  "title": {"hak":"親屬關係（二）","en":"Kinship Terms (2)"},
+  "blocks": [
+    {
+      "type": "vocab",
+      "items": "屋卡人 相 心臼 婿郎 正 還有 英國人 孫女 孫子 塞子",
+      "audio": "audio/ch9-vocab.m4a",
+      "timestamps": [
+        [1.75, 3.51],
+        [3.51, 4.85],
+        [4.85, 6.5],
+        [6.5, 8.09],
+        [8.09, 9.5],
+        [9.5, 11.14],
+        [11.14, 12.86],
+        [12.86, 14.49],
+        [14.49, 15.8],
+        [16, 17.8]
+      ]
+    },
+    {
+      "type": "main",
+      "items": [
+        {"hak":"阿張伯你今年幾多歲咯？","sp":"A","zh":"張伯你今年幾歲了？","en":"Uncle Zhang, how old are you this year?"},
+        {"hak":"厓今年九十二歲啦。","sp":"B","zh":"我今年九十二歲啦。","en":"I am ninety-two years old."},
+        {"hak":"你有屋卡人麼？","sp":"A","zh":"你有家人嗎？","en":"Do you have family?"},
+        {"hak":"有呀，這張係吾嘅全家福相。","sp":"B","zh":"有呀，這張是我的全家福照片。","en":"Yes, this is my family portrait."},
+        {"hak":"這隻係咩惹妹子呢？","sp":"A","zh":"這隻是咩惹妹子呢？","en":"Is this your daughter?"},
+        {"hak":"唔係，佢係吾心臼。最左手析唉隻正係吾妹子。","sp":"B","zh":"不是，她是我兒媳。最左邊那個才是我女兒。","en":"No, she is my daughter-in-law. The one on the far left is my daughter."},
+        {"hak":"這隻外國人係哪人呢？","sp":"A","zh":"這個外國人是誰呢？","en":"Who is this foreigner?"},
+        {"hak":"佢係吾婿郎，佢係英國人。","sp":"B","zh":"佢是我女婿，他是英國人。","en":"He is my son-in-law, he is British."},
+        {"hak":"你有幾多隻孫子呢？","sp":"A","zh":"你有幾個孫子呢？","en":"How many grandsons do you have?"},
+        {"hak":"厓有四隻孫子，四隻孫女。","sp":"B","zh":"我有四個孫子，四個孫女。","en":"I have four grandsons and four granddaughters."},
+        {"hak":"有冇塞子呢？","sp":"A","zh":"有沒有曾孫呢？","en":"Any great-grandchildren?"},
+        {"hak":"有呀，有兩隻塞子。","sp":"B","zh":"有呀，有兩個曾孫。","en":"Yes, two great-grandchildren."}
+      ],
+      "audio": "audio/ch9-main.m4a",
+      "timestamps": [
+        [2.3, 5],
+        [5.2, 8],
+        [8.2, 9.9],
+        [10.1, 14],
+        [14.3, 16.8],
+        [16.9, 23.9],
+        [23.9, 26.8],
+        [26.8, 30],
+        [30.2, 32.6],
+        [33.6, 37.3],
+        [37.4, 39.6],
+        [40.7, 43.3]
+      ]
+    },
+    {
+      "type": "sentences",
+      "items": [
+        "這隻係咩惹妹子呢？",
+        "唔係，佢係吾心臼。中間唉隻正係吾妹子。",
+        "這隻係咩惹賴子呢？",
+        "唔係，佢係吾婿郎。右手析唉隻正係吾賴子。",
+        "最左手析唉隻係哪人呢？",
+        "佢係吾老弟。",
+        "這隻外國女人係哪人呢？",
+        "佢係吾老弟嘅女朋友。",
+        "佢係奈裏人呢？",
+        "佢係 + 英國人/…。",
+        "惹爸有幾多隻孫子？",
+        "吾爸有...隻孫子。",
+        "塞子係乜介意思呢？",
+        "塞子係孫子嘅賴子。"
+      ]
+    },
+    {
+      "type": "practice",
+      "description": {"en":"Two-Character Combinations"},
+      "rows": [
+        ["欠款", "勸解", "牽掛", "禁忌"],
+        ["嫌疑", "遺產", "魏國", "藝術"],
+        ["梅縣", "出現", "柴犬", "明顯"],
+        ["賢才", "姓丘", "莧菜", "自然"],
+        ["決定", "結果", "構造", "做工"],
+        ["魚鈎", "斑鳩", "視頻", "食品"]
+      ],
+      "audio": "audio/ch9-practice.m4a",
+      "timestamps": [[4.7, 13], [13.6, 21.6], [22.2, 30], [30.5, 38.6], [39.4, 46.9], [47.6, 54.7]]
+    },
+    {
+      "type": "idiom",
+      "items": [
+        {"hak":"養子唔知娘辛苦，養女正曉謝娘恩。"},
+        {"hak":"蛇過正來打棍。"}
+      ],
+      "audio": "audio/ch9-idiom.m4a",
+      "timestamps": [[2.6, 10.64], [10.64, 14.67]]
+    },
+    {
+      "type": "notes",
+      "items": [
+        {
+          "zh": "客家話的「兒子」、「女兒」、「兒媳」和「女婿」的說法，都跟廣州話和普通話不同。",
+          "en": "The Hakka terms for 'son', 'daughter', 'daughter-in-law', and 'son-in-law' are all different from Cantonese and Mandarin."
+        },
+        {
+          "zh": "{賴子}、{妹子}、{孫子}、{塞子}的「子」唸**第一聲** `zú`。",
+          "en": "The 子 in {賴子}, {妹子}, {孫子}, {塞子} is pronounced with the **first tone** `zú`."
+        },
+        {
+          "zh": "「正」在客家話有三個發音： `záng` {正月}、`zàng` 「才/剛才」、`zìn` {正確}、{正能量}。",
+          "en": "正 has three pronunciations in Hakka: `záng` 'First Month' - {正月}; `zàng` 'just/only then'; `zìn` 'correct/positive' - {正確}, {正能量}."
+        },
+        {
+          "zh": "客家話的「恩」讀 `én`，不讀 `yín`。",
+          "en": "Hakka's {恩} ('grace') is pronounced `én`, not `yín`."
+        }
+      ]
+    }
+  ]
+}

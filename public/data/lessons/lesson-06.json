@@ -1,0 +1,126 @@
+{
+  "id": 6,
+  "title": {"hak":"吾兜嘅、惹兜嘅、其兜嘅","en":"Ours, Yours, Theirs"},
+  "blocks": [
+    {
+      "type": "vocab",
+      "items": "吾兜 惹兜 其兜 吾兜嘅 惹兜嘅 其兜嘅 兩公婆 擺擺 兩十幾 鬧熱 真係 好食祿 餐館 聚會",
+      "audio": "audio/ch6-vocab.m4a",
+      "timestamps": [
+        [2.51, 3.6],
+        [3.6, 4.9],
+        [5, 6.2],
+        [6.32, 7.8],
+        [7.8, 9.2],
+        [9.2, 10.5],
+        [10.6, 12.2],
+        [12.3, 13.3],
+        [13.7, 15.1],
+        [15.3, 16.7],
+        [16.84, 18.1],
+        [18.33, 19.5],
+        [19.79, 21.41],
+        [21.41, 23.14]
+      ]
+    },
+    {
+      "type": "main",
+      "items": [
+        {"hak":"這兩隻係吾㜆吾爸，其兜係在英國開餐館嘅。","sp":"B","zh":"這兩個是我父母，他們是在英國開餐館的。","en":"These two are my parents, they run a restaurant in the UK."},
+        {"hak":"惹兜在英國奈裏嘅呢？","sp":"A","zh":"你們在英國哪裏的呢？","en":"Where in the UK are you?"},
+        {"hak":"吾兜住在倫敦外面。但吾兜嘅餐館在倫敦。","sp":"B","zh":"我們住在倫敦外面。但我們的餐館在倫敦。","en":"We live outside London. But our restaurant is in London."},
+        {"hak":"其兜兩公婆嘅兄弟姊妹也係在英國嘅麼？","sp":"A","zh":"他們兩夫妻的兄弟姊妹也是在英國的嗎？","en":"Are both their siblings also in the UK?"},
+        {"hak":"係呀，吾兜嘅親戚全部都在倫敦附近。","sp":"B","zh":"是呀，我們的親戚全部都在倫敦附近。","en":"Yes, all our relatives are near London."},
+        {"hak":"惹兜嘅家庭聚會咩好多人咯？","sp":"A","zh":"你們的家庭聚會不就很多人嗎？","en":"Isn't your family gathering very large then?"},
+        {"hak":"係呀，擺擺都有兩十幾人嘅呀。","sp":"B","zh":"是呀，每次都有二十幾人的。","en":"Yes, every time there are twenty-something people."},
+        {"hak":"哇，好鬧熱噢。惹兜好開心喔。","sp":"A","zh":"哇，好熱鬧耶。你們好開心啊。","en":"Wow, so lively. You must be very happy."},
+        {"hak":"係呀，吾㜆曉煮好多客家菜， 好好食嘅呀。","sp":"B","zh":"是呀，我媽媽會做很多客家菜， 很好吃的呀","en":"Yes, my mom cooks a lot of Hakka dishes, they are delicious."},
+        {"hak":"惹兜真係好食祿咯。","sp":"A","zh":"你們真好口福氣呀","en":"You really have good luck with food."}
+      ],
+      "audio": "audio/ch6-main.m4a",
+      "timestamps": [
+        [2.4, 8],
+        [8.5, 11.9],
+        [12.3, 17.3],
+        [17.7, 22.9],
+        [22.8, 28.2],
+        [28.5, 31.9],
+        [32.3, 35.8],
+        [35.9, 40.2],
+        [41.3, 46.4],
+        [46.4, 48.7]
+      ]
+    },
+    {
+      "type": "sentence_practice",
+      "items": [
+        "惹㜆惹爸住在奈裏呢？",
+        "吾㜆吾爸住在 …",
+        "其兜在...做乜介 ？",
+        "其兜係做... 嘅",
+        "其兜有冇兄弟姊妹？有幾多隻？",
+        "吾㜆 + 有/冇 + ...姊妹。吾爸 + 有/冇... 姊妹。",
+        "其兜住在奈埞呢？",
+        "其兜住在...",
+        "惹兜嘅親戚多唔多家庭聚會？",
+        "多，吾兜長日見面。",
+        "惹㜆曉唔曉煮客家菜？",
+        "曉， 佢曉煮客家菜。",
+        "惹㜆煮菜好唔好食？",
+        "吾㜆煮菜好好食。吾兜擺擺都好開心。"
+      ]
+    },
+    {
+      "type": "practice",
+      "description": {"en":"Two-Character Combinations"},
+      "rows": [
+        ["機關", "金山", "西方", "新衫"],
+        ["銅錢", "龍船", "雲南", "廚房"],
+        ["校長", "米酒", "喜粄", "水桶"],
+        ["半路", "見面", "富貴", "運氣"],
+        ["木屋", "腳骨", "八百", "德國"],
+        ["特別", "復活", "獨立", "學習"]
+      ],
+      "audio": "audio/ch6-practice.m4a",
+      "timestamps": [[4.8, 12.8], [13.4, 21.9], [22.6, 30.5], [31.5, 38.8], [39.5, 47.2], [48.2, 54.9]]
+    },
+    {
+      "type": "nursery",
+      "items": [
+        {"hak":"月光光，秀才郎，騎白馬，過蓮塘，蓮塘背，種韭菜，韭菜花，結親家，"},
+        {"hak":"親家門前一口塘，放條鯉嫲八尺長。"}
+      ],
+      "audio": "audio/ch6-nursery.m4a",
+      "timestamps": [[2.03, 17.49], [17.49, 24.11]]
+    },
+    {
+      "type": "notes",
+      "items": [
+        {
+          "zh": "香港客家話屬於**惠陽腔**，沒有介音 `u`，所以 「廣/港」`gong3`、「關/間」`gan1`、「過/個」`go4`、「郭/角」`gok5` 同音。",
+          "en": "Hong Kong Hakka belongs to the **Fuiyong accent** and lacks the `u`-medial. Therefore, 廣/港 `gong3`、 關/間 `gan1`、 過/個 `go4`、 郭/角 `gok5` are homophones."
+        },
+        {
+          "zh": "「國」傳統發音是 `gĕt`，近似英語的「get」，不唸 `gŏk`。",
+          "en": "The traditional pronunciation of 國 is `gĕt`, similar to the English 'get', not `gŏk`."
+        },
+        {
+          "zh": "客家話有 `m` **收音**，除了幾個字以外，絕大部分和廣州話相同。",
+          "en": "Hakka has the **m-ending**. Except for a few characters, it is largely the same as in Cantonese."
+        },
+        {
+          "zh": "**人稱代名詞複數**是**屬格**加詞綴{兜} ({吾兜} = 'we')。複數的**屬格**只需要加{嘅} ({吾兜嘅} = 'our')。",
+          "en": "**Plural personal pronouns** are formed by adding the suffix {兜} to the **genitive** form ({吾兜} = 'we'). The **plural genitive** only requires adding {嘅} ({吾兜嘅} = 'our')."
+        },
+        {
+          "zh": "客家話的**量詞**：一般用{隻}代替廣州話的「個」（{一隻人}），而四條腿的動物是{條}（{一條貓公}）。",
+          "en": "Hakka **classifiers**: {隻} is generally used instead of Cantonese's 「個」 (e.g., 'one person' - {一隻人}). For four-legged animals, {條} is used (e.g., 'one male cat' - {一條貓公})."
+        },
+        {
+          "zh": "「幾」在發問，或者意思為「甚為」的時候，發音是 `gĭt`。另外也有 `gĭ` 的發音，例如{幾十歲}、{幾百年}、{第幾}。",
+          "en": "When 幾 is used in questions or means 'what/why', it is pronounced `gĭt`. There is also the pronunciation `gĭ`, used in e.g., 'tens of years old' ({幾十歲}), 'hundreds of years' ({幾百年}), 'which one (ordinal)' ({第幾})."
+        }
+      ]
+    }
+  ]
+}

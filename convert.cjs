@@ -11,7 +11,8 @@ const path = require('path');
 const lexiconPath  = path.join(__dirname, 'public/lexicon.json');
 const lessonsPath  = path.join(__dirname, 'public/lessons.json');
 const csvOutPath   = path.join(__dirname, 'public/lexicon.csv');
-const jsonOutPath  = path.join(__dirname, 'public/lessons.json');
+const lessonsDir   = path.join(__dirname, 'public/data/lessons');
+const indexOutPath = path.join(__dirname, 'public/data/index.json');
 
 const lexiconRaw = JSON.parse(fs.readFileSync(lexiconPath, 'utf-8'));
 const lessonsRaw = JSON.parse(fs.readFileSync(lessonsPath, 'utf-8'));
@@ -238,13 +239,34 @@ function compactBlock(lessonId, block) {
 }
 
 const compactLessons = lessonsRaw.map(compact);
-fs.writeFileSync(
-  jsonOutPath,
-  JSON.stringify(compactLessons, null, 2),
-  'utf-8'
-);
 
-console.log(`✓ lessons.json written (${compactLessons.length} lessons)`);
+// Write per-lesson files + index
+fs.mkdirSync(lessonsDir, { recursive: true });
+const index = [];
+for (const lesson of compactLessons) {
+  const filename = `lesson-${String(lesson.id).padStart(2, '0')}.json`;
+  const filePath = path.join(lessonsDir, filename);
+
+  // Preserve existing audio/timestamps fields from current per-lesson file
+  const existingPath = filePath;
+  let existingBlocks = [];
+  if (fs.existsSync(existingPath)) {
+    try {
+      existingBlocks = JSON.parse(fs.readFileSync(existingPath, 'utf-8')).blocks || [];
+    } catch (_) {}
+  }
+  for (let i = 0; i < lesson.blocks.length; i++) {
+    const eb = existingBlocks[i];
+    if (eb && eb.audio) lesson.blocks[i].audio = eb.audio;
+    if (eb && eb.timestamps) lesson.blocks[i].timestamps = eb.timestamps;
+  }
+
+  fs.writeFileSync(filePath, JSON.stringify(lesson, null, 2) + '\n', 'utf-8');
+  index.push({ id: lesson.id, file: `lessons/${filename}`, title: lesson.title });
+  console.log(`  ✓ ${filename}`);
+}
+fs.writeFileSync(indexOutPath, JSON.stringify(index, null, 2) + '\n', 'utf-8');
+console.log(`✓ index.json + ${compactLessons.length} lesson files written`);
 
 if (missingEntries.size > 0) {
   console.warn('\n⚠  Words used in vocab but missing from lexicon:');

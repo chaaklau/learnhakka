@@ -54,7 +54,7 @@
       </header>
 
       <div class="content" :class="{ 'slides-mode': slidesMode }">
-        <section ref="heroEl" class="hero" v-show="!slidesMode || currentSlide === 0" @click="audioSegmentText = ''; playAudio(baseUrl + `audio/ch${currentLesson.id}-title.m4a`)">
+        <section ref="heroEl" class="hero" v-show="!slidesMode || currentSlide === 0" @click="audioSegmentText = ''; playAudio(baseUrl + `data/audio/ch${currentLesson.id}-title.m4a`)">
           <span class="kicker">第 {{ currentLesson.id }} 課 · Lesson {{ currentLesson.id }}</span>
           <h1 class="font-hakka" v-html="renderTitleRuby(currentLesson.title.hak)"></h1>
           <p class="hero-sub">{{ currentLesson.title.en }}</p>
@@ -70,7 +70,7 @@
             <header class="block-hd">
               <div class="block-hd-text">
                 <span class="block-type">{{ blockTitle(block.type) }}</span>
-                <span class="block-type-en">{{ blockTitlesEn[block.type] || '' }}</span>
+                <span class="block-type-en">{{ (blockTitlesEn[block.type]) || '' }}</span>
                 <button
                   v-if="getBlockAudio(currentLesson.id, block, bi)"
                   type="button"
@@ -107,9 +107,7 @@
                 v-show="!slidesMode || slideItemVisible(bi, ii)"
                 @click="playBlockItem(currentLesson.id, block, bi, ii)"
               >
-                <img v-if="item.sp === 'A'" class="dia-avatar" :src="baseUrl + 'avatar/girl.png'" alt="A">
-                <img v-else-if="item.sp === 'B'" class="dia-avatar" :src="baseUrl + 'avatar/boy.png'" alt="B">
-                <img v-else-if="item.sp === '老師' || item.sp === '先生'" class="dia-avatar" :src="baseUrl + 'avatar/man.png'" :alt="item.sp">
+                <img v-if="speakerInfo(item.sp)" class="dia-avatar" :src="baseUrl + speakerInfo(item.sp).avatar" :alt="item.sp">
                 <span v-else class="dia-sp">{{ item.sp || '例' }}</span>
                 <div class="dia-body">
                   <p class="dia-hak font-hakka" v-html="renderSentenceRuby(item.hak)"></p>
@@ -199,20 +197,16 @@
     <p>No lessons found.</p>
   </div>
 
-  <div v-else-if="page === 'about'" class="static-page">
-    <h1>About Us</h1>
-  </div>
-
-  <div v-else-if="page === 'acknowledgement'" class="static-page">
-    <h1>Acknowledgement 鳴謝</h1>
-    <h2>Project Team 項目團隊</h2>
-    <p>To be added.</p>
-    <h2>Advisors 顧問</h2>
-    <p>To be added.</p>
-    <h2>Resources &amp; References 資源與參考</h2>
-    <p>To be added.</p>
-    <h2>Special Thanks 特別鳴謝</h2>
-    <p>To be added.</p>
+  <div v-else-if="page === 'about' && aboutPage" class="static-page">
+    <h1>{{ aboutPage.title.zh }} {{ aboutPage.title.en }}</h1>
+    <template v-for="(section, si) in aboutPage.sections" :key="si">
+      <h2>{{ section.heading.zh }} {{ section.heading.en }}</h2>
+      <div v-for="(item, ii) in section.items" :key="ii" class="about-item">
+        <p v-if="item.label"><strong>{{ displayLang === 'en' ? item.label.en : item.label.zh }}:</strong> {{ item.text || '' }}</p>
+        <p v-if="item.zh && !item.label">{{ displayLang === 'en' ? (item.en || item.zh) : item.zh }}</p>
+        <p v-if="item.zh && item.label">{{ displayLang === 'en' ? (item.en || item.zh) : item.zh }}</p>
+      </div>
+    </template>
   </div>
 
   <div v-if="audioBarVisible" class="audio-bar">
@@ -245,7 +239,9 @@ const baseUrl = import.meta.env.BASE_URL
 
 const loading = ref(true)
 const lessons = ref([])
+const lessonCache = ref({})
 const lexicon = ref(new Map())
+const site = ref({})
 const displayLang = ref(route.query.lang === 'en' ? 'en' : 'zh')
 const romMode = ref(route.query.rom === 'bracket' ? 'bracket' : 'ruby')
 const slidesMode = ref(false)
@@ -258,7 +254,6 @@ const audioBarVisible = ref(false)
 const audioSegmentText = ref('')
 const audioCurrentTime = ref(0)
 const audioDuration = ref(0)
-const timestamps = ref({})
 let stopAtTime = null
 const heroEl = ref(null)
 const heroVisible = ref(true)
@@ -277,34 +272,35 @@ const currentLessonId = computed(() => {
   return null
 })
 
-const blockTitlesEn = {
-  vocab: 'Vocabulary',
-  main: 'Dialogue',
-  practice: 'Practice',
-  sentence_practice: 'Sentence Practice',
-  sentences: 'Sentence Practice',
-  notes: 'Language Notes',
-  idiom: 'Proverbs',
-  nursery: 'Nursery Rhyme'
-}
+const blockTitlesEn = computed(() => {
+  const bt = site.value.blockTypes || {}
+  const out = {}
+  for (const [k, v] of Object.entries(bt)) out[k] = v.en || ''
+  return out
+})
 
-const blockTitles = {
-  vocab: '生字',
-  main: '課文',
-  practice: '練習',
-  sentence_practice: '造句練習',
-  sentences: '造句練習',
-  notes: '語言筆記',
-  idiom: '諺語',
-  nursery: '童謠'
-}
+const blockTitles = computed(() => {
+  const bt = site.value.blockTypes || {}
+  const out = {}
+  for (const [k, v] of Object.entries(bt)) out[k] = v.zh || ''
+  return out
+})
 
-const currentLesson = computed(() =>
-  lessons.value.find((l) => l.id === currentLessonId.value) || null
-)
+const currentLesson = computed(() => {
+  const id = currentLessonId.value
+  if (id == null) return null
+  return lessonCache.value[id] || null
+})
 const currentIndex = computed(() =>
   lessons.value.findIndex((l) => l.id === currentLessonId.value)
 )
+
+function speakerInfo(sp) {
+  const speakers = site.value.speakers || {}
+  return speakers[sp] || null
+}
+
+const aboutPage = computed(() => site.value.pages?.about || null)
 
 function escapeHtml(str) {
   return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
@@ -391,7 +387,7 @@ function getDisplayText(item) {
 }
 
 function blockTitle(type) {
-  return blockTitles[type] || type
+  return blockTitles.value[type] || type
 }
 
 function countBlockItems(block) {
@@ -661,17 +657,8 @@ function renderSentenceRuby(text) {
 }
 
 function getBlockAudio(lessonId, block, blockIndex) {
-  if (block.type === 'notes') return null
-  const blocks = currentLesson.value.blocks
-  const sameType = []
-  for (let i = 0; i < blocks.length; i++) {
-    if (blocks[i].type === block.type) sameType.push(i)
-  }
-  if (sameType.length > 1 && block.type === 'main') {
-    const typeIdx = sameType.indexOf(blockIndex) + 1
-    return baseUrl + 'audio/ch' + lessonId + '-main-' + typeIdx + '.m4a'
-  }
-  return baseUrl + 'audio/ch' + lessonId + '-' + block.type + '.m4a'
+  if (!block.audio) return null
+  return baseUrl + 'data/' + block.audio
 }
 
 const audioLabel = computed(() => {
@@ -681,7 +668,7 @@ const audioLabel = computed(() => {
   const chNum = m[1]
   const section = m[2].replace(/-/g, ' ')
   const lesson = lessons.value.find(l => String(l.id) === chNum)
-  const sectionLabel = blockTitlesEn[section] || section.charAt(0).toUpperCase() + section.slice(1)
+  const sectionLabel = blockTitlesEn.value[section] || section.charAt(0).toUpperCase() + section.slice(1)
   if (lesson) {
     return '第 ' + chNum + ' 課 · ' + sectionLabel
   }
@@ -782,10 +769,7 @@ function seekAudio(e) {
 }
 
 function getBlockTimestamps(lessonId, block, blockIndex) {
-  const src = getBlockAudio(lessonId, block, blockIndex)
-  if (!src) return null
-  const key = src.replace(/^.*\/audio\//, '').replace('.m4a', '')
-  return timestamps.value[key] || null
+  return block.timestamps || null
 }
 
 function getSegmentText(block, itemIndex) {
@@ -929,18 +913,35 @@ watch(slidesMode, (on) => {
   }
 })
 
+async function loadLesson(id) {
+  if (lessonCache.value[id]) return lessonCache.value[id]
+  const entry = lessons.value.find(l => l.id === id)
+  if (!entry) return null
+  const res = await fetch(baseUrl + 'data/' + entry.file)
+  if (!res.ok) return null
+  const data = await res.json()
+  lessonCache.value = { ...lessonCache.value, [id]: data }
+  return data
+}
+
+watch(currentLessonId, async (id) => {
+  if (id != null && !lessonCache.value[id]) {
+    await loadLesson(id)
+  }
+})
+
 onMounted(async () => {
   try {
-    const [lr, cr, tr] = await Promise.all([
-      fetch(baseUrl + 'lessons.json'),
+    const [ir, cr, sr] = await Promise.all([
+      fetch(baseUrl + 'data/index.json'),
       fetch(baseUrl + 'lexicon.csv'),
-      fetch(baseUrl + 'timestamps.json').catch(() => null)
+      fetch(baseUrl + 'data/site.json'),
     ])
-    if (!lr.ok || !cr.ok) throw new Error('Failed to load assets.')
+    if (!ir.ok || !cr.ok || !sr.ok) throw new Error('Failed to load assets.')
 
-    const lessonsData = await lr.json()
+    const indexData = await ir.json()
     const csvText = await cr.text()
-    if (tr && tr.ok) timestamps.value = await tr.json()
+    const siteData = await sr.json()
     const map = new Map()
     const lines = csvText.replace(/^\uFEFF/, '').split(/\r?\n/)
 
@@ -953,8 +954,13 @@ onMounted(async () => {
       map.get(hak).push({ hak, rom: rom || '', zh: zh || '', en: en || '', unproofread: unproofread === '1' })
     }
 
-    lessons.value = lessonsData
+    lessons.value = indexData
     lexicon.value = map
+    site.value = siteData
+
+    // Load the current lesson immediately
+    const id = currentLessonId.value
+    if (id != null) await loadLesson(id)
   } catch (e) {
     console.error(e)
   } finally {

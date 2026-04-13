@@ -1,0 +1,122 @@
+{
+  "id": 10,
+  "title": {"hak":"方位（一）","en":"Positions (1)"},
+  "blocks": [
+    {
+      "type": "vocab",
+      "items": "同下 臉前 種嗨兜 屋背戶 棟心 頂高 腳下 長凳 中意 係講 跌下來 大來",
+      "audio": "audio/ch10-vocab.m4a",
+      "timestamps": [
+        [1.75, 3.7],
+        [3.7, 5.44],
+        [5.44, 7.4],
+        [7.4, 9.69],
+        [9.69, 11.7],
+        [11.7, 13.48],
+        [13.48, 15.53],
+        [15.53, 17.28],
+        [17.28, 19],
+        [19, 20.81],
+        [20.81, 22.76],
+        [22.76, 24.38]
+      ]
+    },
+    {
+      "type": "main",
+      "items": [
+        {"hak":"這隻係吾表弟阿傑，係吾舅仔嘅賴子。","sp":"B","zh":"這個是我表弟阿傑，是我小舅舅的兒子。","en":"This is my cousin A-kiet, he is my younger uncle's son."},
+        {"hak":"相片嘅背景好像在外國，係麼？","sp":"A","zh":"相片的背景好像在外國，是嗎？","en":"The background of the photo seems to be in a foreign country, doesn't it?"},
+        {"hak":"係呀，佢摎其公其婆同下住在英國蘇格蘭。","sp":"B","zh":"是呀，他跟他爺爺奶奶一起住在英國蘇格蘭。","en":"Yes, he lives in Scotland, UK with his grandparents."},
+        {"hak":"其公其婆就係吾嘅姐公姐婆。","sp":"B","zh":"他爺爺奶奶就是我的外公外婆。","en":"His grandparents are my maternal grandparents."},
+        {"hak":"其間屋好像好大間喔。","sp":"A","zh":"他的房子好像很大呀。","en":"His house seems very big."},
+        {"hak":"係呀，其間屋共總有六間房。","sp":"B","zh":"是呀，他的房子總共有六間臥室。","en":"Yes, his house has six bedrooms in total."},
+        {"hak":"屋臉前還有隻花園仔添。","sp":"A","zh":"房子前面還有個小花園。","en":"There is also a small garden in front of the house."},
+        {"hak":"其兜在這花園仔，種嗨兜繡球摎玫瑰花。","sp":"B","zh":"他們在這個小花園裏種了一些繡球花和玫瑰花。","en":"They planted some hydrangeas and roses in this small garden."},
+        {"hak":"其兜屋背戶應該有一隻大花園係麼？","sp":"A","zh":"他的房子後面應該有個大花園吧？","en":"There should be a large garden behind his house, right?"},
+        {"hak":"係呀，屋背戶嘅花園好大，棟心有棵大蘋果樹。","sp":"B","zh":"是呀，房子後面的花園很大，中心有棵大蘋果樹。","en":"Yes, the garden behind the house is very large, with a big apple tree in the center."},
+        {"hak":"樹頂高有好多蘋果。","sp":"A","zh":"樹上面有好多蘋果。","en":"There are many apples on the tree."},
+        {"hak":"坐在花園休息看書，真係好舒服喔。","sp":"A","zh":"坐在花園裏休息看書，真的好舒服呀。","en":"It's really comfortable to sit in the garden and read."},
+        {"hak":"蘋果樹腳下有一張長凳，阿傑好中意坐在唉裏看書嘅。","sp":"B","zh":"蘋果樹下面有一張長凳，阿傑很喜歡坐在那裏看書。","en":"There is a bench under the apple tree, A-kiet likes to sit there and read."},
+        {"hak":"係講有蘋果跌下來打中佢，佢大來就係隻科學家咯。","sp":"A","zh":"如果有蘋果掉下來打中他，他長大以後就是科學家了。","en":"If an apple would fall down and hit him, he would grow up and become a scientist!"}
+      ],
+      "audio": "audio/ch10-main.m4a",
+      "timestamps": [
+        [3, 8],
+        [8.4, 12.4],
+        [12.3, 17.3],
+        [17.7, 20.7],
+        [22, 24.7],
+        [25, 28.4],
+        [28.9, 31.9],
+        [33.4, 37.9],
+        [39.4, 43.3],
+        [43.6, 49.6],
+        [50, 52.3],
+        [52.9, 57],
+        [57.5, 64.4],
+        [65.8, 72.5]
+      ]
+    },
+    {
+      "type": "sentence_practice",
+      "items": [
+        "這隻係吾表妹阿蘭，係吾姑仔嘅妹子。",
+        "佢摎其公其婆同下住在...",
+        "其間屋臉前有 + 棵大樹/… 。",
+        "屋背戶有隻菜園，種嗨兜好多 + 青菜/… 。",
+        "樹頂高有好多 + 樹葉/… 。",
+        "樹腳下/… + 有一條 + 白貓/… 。",
+        "阿傑好中意來 + 吾屋卡/… 。",
+        "佢長日想做 + 科學家/… 。",
+        "厓大來想做 ...",
+        "你大來想做乜介？",
+        "係講厓住在英國，吾英文就曉好流利咯 。",
+        "係講你住在 + 德國/... + ，惹 + 德文/... + 就曉好流利咯"
+      ]
+    },
+    {
+      "type": "practice",
+      "description": {"en":"Two-Character Combinations"},
+      "rows": [
+        ["肥佬", "淋肥", "廢水", "沸水"],
+        ["豬肺", "充沛", "斧頭", "符水"],
+        ["文字", "無力", "物理", "房屋"],
+        ["扶穩", "糞缸", "發冷", "剝皮"],
+        ["婦娘", "寬闊", "西湖", "華南"],
+        ["鳳凰", "皇室", "或者", "宏偉"]
+      ],
+      "audio": "audio/ch10-practice.m4a",
+      "timestamps": [[4.5, 12.6], [13.3, 20.4], [20.9, 28.2], [28.8, 36], [36.8, 44.6], [45.1, 52.6]]
+    },
+    {
+      "type": "nursery",
+      "items": [
+        {"hak":"落大水，發大風，阿姨仔，嫁老公。"},
+        {"hak":"嫁去奈？嫁海豐。食乜介，食老蟹摎蝦公。"}
+      ],
+      "audio": "audio/ch10-nursery.m4a",
+      "timestamps": [[2, 16.38], [16.38, 17.02]]
+    },
+    {
+      "type": "notes",
+      "items": [
+        {
+          "zh": "客家話有少部分字的聲母跟廣州話不同，要注意發音。",
+          "en": "A small number of Hakka characters have different initial consonants compared to Cantonese. Pay attention to pronunciation."
+        },
+        {
+          "zh": "「老」在{老虎}、{老蟹}、{老鼠}中唸**第四聲** `làu` ，比較特別。其他情況唸**第三聲** `lău`。",
+          "en": "老 is pronounced with the **fourth tone** `làu` in 'tiger' ({老虎}), 'crab' ({老蟹}), and 'rat' ({老鼠}), which is quite special. In other cases, it is pronounced with the **third tone** `lău`."
+        },
+        {
+          "zh": "「發」在跟身體的病理或生理現象有關，或跟天氣現象有關時唸 `bŏt`。其他情況尤其是來自北方話的詞彙唸 `făt`。",
+          "en": "「發」 is pronounced `bŏt` when related to pathological/physiological phenomena or weather. In other cases, especially in vocabulary from Mandarin, it is pronounced `făt`."
+        },
+        {
+          "zh": "{兜}是「一些」的意思。例如{菜園種嗨兜青菜}",
+          "en": "{兜} means 'some'. For example: {菜園種嗨兜青菜} (The vegetable garden has planted some vegetables)."
+        }
+      ]
+    }
+  ]
+}

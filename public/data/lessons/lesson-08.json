@@ -1,0 +1,144 @@
+{
+  "id": 8,
+  "title": {"hak":"親屬關係（一）","en":"Kinship Terms (1)"},
+  "blocks": [
+    {
+      "type": "vocab",
+      "items": "吾公 舊相片 吾伯 吾婆 吂曾 大姑 共總 出世 老妹 老弟 姑仔 吾叔 賴子 妹子 姐公 姐婆 隻隻 邏 子女",
+      "audio": "audio/ch8-vocab.m4a",
+      "timestamps": [
+        [2.06, 3.85],
+        [3.85, 5.82],
+        [5.82, 7.29],
+        [7.29, 8.83],
+        [8.83, 10.44],
+        [10.44, 11.99],
+        [11.99, 13.53],
+        [13.53, 15.11],
+        [15.11, 16.64],
+        [16.64, 18.4],
+        [18.4, 19.89],
+        [19.89, 21.37],
+        [21.37, 22.8],
+        [22.9, 24.55],
+        [24.55, 25.8],
+        [25.8, 27.33],
+        [27.33, 28.81],
+        [28.81, 30.06],
+        [30.06, 31.72],
+        [31.72, 32.19]
+      ]
+    },
+    {
+      "type": "main",
+      "items": [
+        {"hak":"這張係吾公嘅舊相片。這隻係吾公，這隻係吾婆。","sp":"B","zh":"這張是我爺爺的舊相片。這個我爺爺，這個是我奶奶。","en":"This is an old photo of my grandpa. This is my grandpa, this is my grandma."},
+        {"hak":"這兩隻係吾爸嘅阿哥摎阿姐。其兜係吾伯摎大姑。","sp":"B","zh":"這兩個是我爸的哥哥和姐姐。他們是我伯父和姑媽。","en":"These two are my dad's brother and sister. They are my uncle and aunt."},
+        {"hak":"惹爸呢？","sp":"A","zh":"你爸呢？","en":"What about your dad?"},
+        {"hak":"吾爸還吂曾出世。","sp":"B","zh":"我爸還沒出生。","en":"My dad wasn't born yet."},
+        {"hak":"惹公共總有幾多隻子女噢？","sp":"A","zh":"你爺爺總共有幾個子女？","en":"How many children did your grandpa have in total?"},
+        {"hak":"五隻，三隻賴子，兩隻妹子。","sp":"B","zh":"五個，三個兒子，兩個女兒。","en":"Five. Three sons, two daughters."},
+        {"hak":"吾爸還有一隻老妹摎一隻老弟。其兜係吾叔摎姑仔。","sp":"B","zh":"我爸還有一個妹妹和一個弟弟。他們是我的叔叔和姑姑。","en":"My dad also has a younger sister and a younger brother. They are my uncle and aunt."},
+        {"hak":"你有冇惹姐公姐婆嘅舊相呢 ？","sp":"A","zh":"你有沒有你外公外婆的舊相片呢 ？","en":"Do you have old photos of your maternal grandparents?"},
+        {"hak":"冇呀，但係厓隻隻禮拜都去邏其兜嘅。","sp":"B","zh":"沒有呀，但是我每個星期都去探望他們的。","en":"No, but I visit them every week."},
+        {"hak":"哇， 惹兜感情好好喔。","sp":"A","zh":"噢， 你們感情很好耶。","en":"Oh, your relationship is very good."},
+        {"hak":"係呀，吾兜好孝順嘅呀。","sp":"B","zh":"是呀，我們很孝順的呢。","en":"Yes, we are very filial."}
+      ],
+      "audio": "audio/ch8-main.m4a",
+      "timestamps": [
+        [1.78, 8.58],
+        [8.58, 15.08],
+        [15.08, 16.86],
+        [16.86, 19.91],
+        [19.91, 23],
+        [23.2, 27.86],
+        [27.86, 34.34],
+        [34.34, 37.8],
+        [38, 42.58],
+        [42.58, 45.4],
+        [45.4, 49.01]
+      ]
+    },
+    {
+      "type": "sentence_practice",
+      "items": [
+        "惹公摎惹婆有幾多隻子女？",
+        "吾公摎吾婆有...隻子女。",
+        "惹姐公摎惹姐婆有幾多隻子女？",
+        "吾姐公摎吾姐婆有...隻子女。",
+        "吾爸有...隻阿哥摎...隻阿姐。",
+        "吾爸冇阿哥阿姐。",
+        "吾爸有...隻老弟摎...隻老妹。",
+        "吾爸冇老弟老妹。",
+        "吾㜆有...隻阿哥摎...隻阿姐。",
+        "吾㜆冇阿哥阿姐。",
+        "吾㜆有...隻老弟摎...隻老妹。",
+        "厓有...隻阿哥摎...隻阿姐。",
+        "厓冇阿哥阿姐。",
+        "厓有...隻老弟摎...隻老妹。",
+        "你有冇去邏惹姐公姐婆？",
+        "厓隻隻禮拜都去邏其兜。"
+      ]
+    },
+    {
+      "type": "practice",
+      "description": {"en":"Two-Character Combinations"},
+      "rows": [
+        ["內在", "軍隊", "謹慎", "屈服"],
+        ["曬穀", "鞠躬", "浴缸", "玉器"],
+        ["酷熱", "郵局", "訓練", "奮鬥"],
+        ["勳章", "分贓", "祖墳", "餐廳"],
+        ["模範", "辦法", "帆船", "壓力"],
+        ["活動", "滿足", "永遠", "榮幸"]
+      ],
+      "audio": "audio/ch8-practice.m4a",
+      "timestamps": [[5.1, 12.2], [12.6, 20.7], [21.1, 29.7], [30.8, 40.5], [40.7, 49.9], [50.1, 58.6]]
+    },
+    {
+      "type": "idiom",
+      "items": [
+        {"hak":"爺娘記子長江水，子記爺娘冇擔竿長。"},
+        {"hak":"早死爺娘冇教招。"}
+      ],
+      "audio": "audio/ch8-idiom.m4a",
+      "timestamps": [[2.5, 8.9], [8.9, 12.56]]
+    },
+    {
+      "type": "notes",
+      "items": [
+        {
+          "zh": "有部分字**合口韻尾** `am`/`ap` 比較特別，要特別留意。",
+          "en": "Some characters with **closed-mouth endings** `am`/`ap` are quite special and require attention."
+        },
+        {
+          "zh": "{賴子}、 {妹子}的「子」唸**第一聲** `zú`，相當於普通話**輕聲**的用法。但{子女}、{孔子}的{子}唸**第三聲** `zŭ`。",
+          "en": "The 子 in 'son' ({賴子}) and 'daughter' ({妹子}) is pronounced with the **first tone** `zú`, similar to the **neutral tone** in Mandarin. However, {子} in 'children' ({子女}) and 'Confucius' ({孔子}) is pronounced with the **third tone** `zŭ`."
+        },
+        {
+          "zh": "注意「女」在{子女}的發音是 `n̆g`，是比較**文言**的發音，來自**梅縣話**，{子女}跟{子午}同音。其他{女}發音是 `ngĭ`。",
+          "en": "Note that 女 in 'children' ({子女}) is pronounced `n̆g`. This is a more **formal/literary** pronunciation from **Moiyen**; {子女} and {子午} ('midnight/noon') are homophones. In other cases, {女} is pronounced `ngĭ`."
+        },
+        {
+          "zh": "{子}在**口語**不能單獨使用，只有在諺語或文言文才用作兒子的意思。兒子口語要說成{賴子}",
+          "en": "{子} cannot be used alone in **colloquial** language; it means 'son' only in idiom or classical texts. In spoken language, 'son' is {賴子}."
+        },
+        {
+          "zh": "「祖父母」、「外祖父母」的稱呼跟廣州話、普通話都不一樣。",
+          "en": "The terms for **paternal grandparents** and **maternal grandparents** are different from Cantonese and Mandarin."
+        },
+        {
+          "zh": "「弟弟」、「妹妹」都帶個 {老} 字前綴。",
+          "en": "'Younger brother' and 'younger sister' both take the prefix {老}."
+        },
+        {
+          "zh": "客家話區別爸爸的姐妹。姐姐是{大姑}，妹妹是{姑仔}。",
+          "en": "Hakka distinguishes between father's sisters. The older sister is {大姑}, and the younger sister is {姑仔}."
+        },
+        {
+          "zh": "父母文雅的說法是{爺娘}、{爺娭}，口語是{阿㜆}、{阿爸}。",
+          "en": "Formal terms for parents are {爺娘} or {爺娭}; colloquial terms are {阿㜆} and {阿爸}."
+        }
+      ]
+    }
+  ]
+}

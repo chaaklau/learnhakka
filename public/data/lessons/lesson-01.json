@@ -1,0 +1,87 @@
+{
+  "id": 1,
+  "title": {"hak":"厓、你、佢","en":"I, You, He/She"},
+  "blocks": [
+    {
+      "type": "vocab",
+      "items": "厓 你 佢 係 安做 乜介 名 貴姓 哪人 唔係",
+      "audio": "audio/ch1-vocab.m4a",
+      "timestamps": [
+        [2.22, 3.6],
+        [3.6, 4.95],
+        [4.95, 6.24],
+        [6.24, 7.55],
+        [7.55, 9.07],
+        [9.07, 11],
+        [11, 12.25],
+        [12.25, 13.97],
+        [13.97, 15.5],
+        [15.5, 16.99]
+      ]
+    },
+    {
+      "type": "main",
+      "items": [
+        {"hak":"同學你好。你貴姓？","sp":"A","zh":"同學你好。你貴姓？","en":"Hello, classmate. What is your surname?"},
+        {"hak":"厓姓陳。","sp":"B","zh":"我姓陳。","en":"My surname is Cin."},
+        {"hak":"你安做乜介名？","sp":"A","zh":"你叫什麼名字？","en":"What is your name?"},
+        {"hak":"厓安做陳大明。你呢？","sp":"B","zh":"我叫陳大明。你呢？","en":"My name is Cin Tai-min. And you?"},
+        {"hak":"厓係羅春蘭。佢係哪人？","sp":"A","zh":"我是羅春蘭。他是誰？","en":"I am Lo Cun-lan. Who is he?"},
+        {"hak":"佢係何小安。","sp":"B","zh":"他是何小安。","en":"He is Ho siau-an."},
+        {"hak":"你係唔係客家人？","sp":"A","zh":"你是不是客家人？","en":"Are you Hakka?"},
+        {"hak":"係，厓係客家人。","sp":"B","zh":"是，我是客家人。","en":"Yes, I am Hakka."},
+        {"hak":"佢呢, 佢係唔係客家人？","sp":"A","zh":"他呢, 他是不是客家人？","en":"What about him, is he Hakka?"},
+        {"hak":"唔係，佢唔係客家人。","sp":"B","zh":"不是，他不是客家人。","en":"No, he is not Hakka."}
+      ],
+      "audio": "audio/ch1-main.m4a",
+      "timestamps": [
+        [2.06, 5.17],
+        [5.17, 6.78],
+        [6.78, 9.05],
+        [9.05, 12.15],
+        [12.15, 16.16],
+        [16.16, 18.22],
+        [18.22, 20.56],
+        [20.56, 22.47],
+        [22.47, 25.3],
+        [25.6, 28.95]
+      ]
+    },
+    {
+      "type": "sentence_practice",
+      "items": ["厓/你/佢 + 姓 + 陳/李/黃", "厓/你/佢 + 安做 + ….", "厓/你/佢 + 係 + …", "你/佢 + 安做 乜介名?", "你/佢 + 係唔係 + 何小安/客家人"]
+    },
+    {
+      "type": "practice",
+      "description": {"hak":"姓","en":"Surnames"},
+      "rows": [
+        ["包", "潘", "梅", "方", "溫", "戴", "田", "廖"],
+        ["曾", "陳", "沈", "郭", "柯", "魏", "韓", "袁", "歐"],
+        ["趙", "錢", "孫", "李", "周", "吳", "鄭", "王"]
+      ],
+      "audio": "audio/ch1-practice.m4a",
+      "timestamps": [[3.89, 17], [17, 34], [34, 49]]
+    },
+    {
+      "type": "notes",
+      "items": [
+        {
+          "zh": "客家話的**聲母**連零聲母在內有17個，符號是 `b`, `p`, `m`, `f`, `v`, `d`, `t`, `l`, `z`, `c`, `s`, `g`, `k`, `ng`, `h`, `y`。**零聲母**就是不帶上述聲母符號，直接用 `a`, `e`, `o` 開頭的音節。",
+          "en": "Hakka has 17 **initials** (including the zero initial): `b`, `p`, `m`, `f`, `v`, `d`, `t`, `l`, `z`, `c`, `s`, `g`, `k`, `ng`, `h`, `y`. The **zero initial** refers to syllables beginning directly with `a`, `e`, `o` without any of the above initial consonants."
+        },
+        {
+          "zh": "客家話的**韻母**由介音、元音、韻尾組成。介音只有 `i`，元音只有 `a`, `i`, `u`, `e`, `o` 五個（跟日語相同）。",
+          "en": "A Hakka rhyme is made up of a medial, a vowel, and a coda. There is an optional `i` medial, and only five vowels: `a`, `i`, `u`, `e`, `o` (same as Japanese)."
+        },
+        {
+          "zh": "客家話的韻尾有六個：`m`, `n`, `ng`, `p`, `t`, `k`。",
+          "en": "Hakka has six syllable codas: `m`, `n`, `ng`, `p`, `t`, `k`."
+        },
+        {
+          "zh": "客家話的疑問詞「誰」是{哪人}，發音是 `là ngīn`。客家話區別「哪個」和「誰」，分別是{奈隻}和{哪人}。",
+          "en": "The Hakka question word for 'who' is {哪人} (`là ngīn`). Hakka distinguishes between 'which one' and 'who': {奈隻} and {哪人}."
+        }
+      ]
+    }
+  ]
+}

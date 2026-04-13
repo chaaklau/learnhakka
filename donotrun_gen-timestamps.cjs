@@ -3,8 +3,15 @@ const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 
-const audioDir = path.join(__dirname, 'public/audio')
-const lessons = JSON.parse(fs.readFileSync(path.join(__dirname, 'public/lessons.json'), 'utf8'))
+const audioDir = path.join(__dirname, 'public/data/audio')
+const lessonsDir = path.join(__dirname, 'public/data/lessons')
+const indexPath = path.join(__dirname, 'public/data/index.json')
+
+const index = JSON.parse(fs.readFileSync(indexPath, 'utf8'))
+const lessonFiles = index.map(entry => ({
+  ...entry,
+  data: JSON.parse(fs.readFileSync(path.join(__dirname, 'public/data', entry.file), 'utf8'))
+}))
 
 function getDuration(file) {
   return parseFloat(execSync(
@@ -102,41 +109,27 @@ function countBlockItems(block) {
   return 0
 }
 
-function getBlockAudioFile(lessonId, block, blockIndex, blocks) {
-  if (block.type === 'notes' || block.type === 'sentence_practice' || block.type === 'sentences') return null
-  const sameType = []
-  for (let i = 0; i < blocks.length; i++) {
-    if (blocks[i].type === block.type) sameType.push(i)
-  }
-  if (sameType.length > 1 && block.type === 'main') {
-    const typeIdx = sameType.indexOf(blockIndex) + 1
-    return `ch${lessonId}-main-${typeIdx}.m4a`
-  }
-  return `ch${lessonId}-${block.type}.m4a`
-}
-
-const timestamps = {}
-
-for (const lesson of lessons) {
+for (const entry of lessonFiles) {
+  const lesson = entry.data
   const ch = lesson.id
+  let modified = false
   for (let bi = 0; bi < lesson.blocks.length; bi++) {
     const block = lesson.blocks[bi]
-    const audioFile = getBlockAudioFile(ch, block, bi, lesson.blocks)
-    if (!audioFile) continue
-    const fullPath = path.join(audioDir, audioFile)
+    if (!block.audio) continue
+    const fullPath = path.join(__dirname, 'public/data', block.audio)
     if (!fs.existsSync(fullPath)) {
-      console.log(`  SKIP ${audioFile} (not found)`)
+      console.log(`  SKIP ${block.audio} (not found)`)
       continue
     }
 
     const itemCount = countBlockItems(block)
     if (itemCount === 0) continue
 
-    console.log(`Processing ${audioFile} (${itemCount} items, skipping intro)...`)
+    console.log(`Processing ${block.audio} (${itemCount} items, skipping intro)...`)
     const itemSegments = getItemSegments(fullPath, itemCount)
 
-    const key = audioFile.replace('.m4a', '')
-    timestamps[key] = itemSegments
+    block.timestamps = itemSegments
+    modified = true
 
     if (itemSegments.length !== itemCount) {
       console.log(`  WARNING: got ${itemSegments.length} segments, expected ${itemCount}`)
@@ -144,15 +137,12 @@ for (const lesson of lessons) {
       console.log(`  OK: ${itemSegments.length} segments`)
     }
   }
+
+  if (modified) {
+    const outPath = path.join(__dirname, 'public/data', entry.file)
+    fs.writeFileSync(outPath, JSON.stringify(lesson, null, 2) + '\n')
+    console.log(`  ✓ Updated ${entry.file}`)
+  }
 }
 
-let out = '{\n'
-const keys = Object.keys(timestamps)
-keys.forEach((k, i) => {
-  const arr = timestamps[k].map(a => '[' + a.join(',') + ']')
-  out += '  "' + k + '": [' + arr.join(', ') + ']' + (i < keys.length - 1 ? ',' : '') + '\n'
-})
-out += '}\n'
-
-fs.writeFileSync(path.join(__dirname, 'public/timestamps.json'), out)
-console.log('\nWrote public/timestamps.json')
+console.log('\nDone. Timestamps written into per-lesson files.')
