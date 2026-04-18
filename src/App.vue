@@ -201,7 +201,8 @@
     <template v-for="(section, si) in aboutPage.sections" :key="si">
       <h2>{{ section.heading.zh }} {{ section.heading.en }}</h2>
       <div v-for="(item, ii) in section.items" :key="ii" class="about-item">
-        <p v-if="item.label"><strong>{{ displayLang === 'en' ? item.label.en : item.label.zh }}:</strong> {{ item.text || '' }}</p>
+        <p v-if="item.url"><a :href="item.url" target="_blank" rel="noopener noreferrer">{{ displayLang === 'en' ? item.label.en : item.label.zh }}</a></p>
+        <p v-else-if="item.label"><strong>{{ displayLang === 'en' ? item.label.en : item.label.zh }}:</strong> {{ item.text || '' }}</p>
         <p v-if="item.zh && !item.label">{{ displayLang === 'en' ? (item.en || item.zh) : item.zh }}</p>
         <p v-if="item.zh && item.label">{{ displayLang === 'en' ? (item.en || item.zh) : item.zh }}</p>
       </div>
