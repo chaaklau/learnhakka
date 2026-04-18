@@ -22,34 +22,37 @@
       "title": {"zh": "關於我們及鳴謝", "en": "About Us & Acknowledgement"},
       "sections": [
         {
+          "heading": {"zh": "項目簡介", "en": "About This Project"},
+          "items": [
+            {
+              "zh": "（請補充簡單介紹）",
+              "en": "(To be added)"
+            },
+            {
+              "zh": "想了解及學習更多客家話，請瀏覽「客家大學堂」YouTube 頻道及報讀其開設的客家話課程。",
+              "en": "To learn more Hakka, please visit the Hakka Studies YouTube channel and enroll in their Hakka classes."
+            }
+          ]
+        },
+        {
           "heading": {"zh": "項目團隊", "en": "Project Team"},
           "items": [
-            {"label": {"zh": "內容準備", "en": "Content Preparation"}, "text": "客家大學堂 劉鎮發教授 Prof. Lau Chun Fat"},
-            {"label": {"zh": "錄音", "en": "Recording"}, "text": "Cheung, Chi-hung, Maurice; Nata Lam"},
-            {"label": {"zh": "程式編程及排版", "en": "Coding & Layout"}, "text": "劉擇明博士 Dr. Lau Chaak Ming (CRLLS, EdUHK)"}
+            {"label": {"zh": "內容準備", "en": "Content Preparation"}, "text": "劉鎮發教授 Prof. Lau Chun Fat"},
+            {"label": {"zh": "錄音", "en": "Recording"}, "text": "張志雄 Cheung Chi Hung Maurice；林山宜 Nata Lam"},
+            {"label": {"zh": "編程及排版", "en": "Coding & Layout"}, "text": "劉擇明博士 (香港教育大學語言學及語言研究中心） Dr. Lau Chaak Ming (CRLLS, EdUHK)"}
           ]
         },
         {
           "heading": {"zh": "資源與參考", "en": "Resources & References"},
           "items": [
-            {"label": {"zh": "參考書籍", "en": "Reference"}, "text": "劉鎮發，2021，《香港客家話研究》。香港：中華教育出版社。"},
-            {
-              "label": {"zh": "延伸學習", "en": "Further Learning"},
-              "zh": "想了解及學習更多客家話，請瀏覽「客家大學堂」YouTube 頻道及報讀其開設的客家話課程。",
-              "en": "To learn more Hakka, please visit the '客家大學堂' YouTube channel and enroll in their Hakka classes."
-            }
+            {"label": {"zh": "參考書籍", "en": "Reference"}, "text": "劉鎮發，2021，《香港客家話研究》。香港：中華書局。"}
           ]
         },
         {
-          "heading": {"zh": "顧問", "en": "Advisors"},
+          "heading": {"zh": "相關連結", "en": "Links"},
           "items": [
-            {"zh": "待定（如適用，請提供顧問名單及頭銜）", "en": "To be added (provide names and titles of advisors if applicable)"}
-          ]
-        },
-        {
-          "heading": {"zh": "特別鳴謝", "en": "Special Thanks"},
-          "items": [
-            {"zh": "待定（如適用，請提供鳴謝名單及機構）", "en": "To be added (provide names and organizations to thank if applicable)"}
+            {"label": {"zh": "客家大學堂網站", "en": "Hakka Studies Website"}, "url": "https://www.hakkastudies.org/"},
+            {"label": {"zh": "客家大學堂 YouTube 頻道", "en": "Hakka Studies YouTube Channel"}, "url": "https://www.youtube.com/channel/UC8YqMfgildEZ6epQ1tScGSg"}
           ]
         }
       ]
