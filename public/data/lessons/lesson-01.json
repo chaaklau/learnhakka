@@ -27,10 +27,10 @@
         {"hak":"你安做乜介名？","sp":"A","zh":"你叫什麼名字？","en":"What is your name?"},
         {"hak":"厓安做陳大明。你呢？","sp":"B","zh":"我叫陳大明。你呢？","en":"My name is Cin Tai-min. And you?"},
         {"hak":"厓係羅春蘭。佢係哪人？","sp":"A","zh":"我是羅春蘭。他是誰？","en":"I am Lo Cun-lan. Who is he?"},
-        {"hak":"佢係何小安。","sp":"B","zh":"他是何小安。","en":"He is Ho siau-an."},
+        {"hak":"佢係何小安。","sp":"B","zh":"他是何小安。","en":"He is Ho Siau-on."},
         {"hak":"你係唔係客家人？","sp":"A","zh":"你是不是客家人？","en":"Are you Hakka?"},
         {"hak":"係，厓係客家人。","sp":"B","zh":"是，我是客家人。","en":"Yes, I am Hakka."},
-        {"hak":"佢呢, 佢係唔係客家人？","sp":"A","zh":"他呢, 他是不是客家人？","en":"What about him, is he Hakka?"},
+        {"hak":"佢呢，佢係唔係客家人？","sp":"A","zh":"他呢，他是不是客家人？","en":"What about him, is he Hakka?"},
         {"hak":"唔係，佢唔係客家人。","sp":"B","zh":"不是，他不是客家人。","en":"No, he is not Hakka."}
       ],
       "audio": "audio/ch1-main.m4a",

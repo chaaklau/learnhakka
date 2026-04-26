@@ -28,7 +28,7 @@
       "items": [
         {"hak":"你係客家人麼？","sp":"B","zh":"你是客家人嗎？","en":"Are you Hakka?"},
         {"hak":"厓係半隻客家人，吾爸係潮州人，但吾㜆係新界客家人。你呢？","sp":"A","zh":"我是半個客家人，我爸是潮州人，但我媽是新界客家人。你呢？","en":"I am half Hakka, my dad is Teochew, but my mom is New Territories Hakka. And you?"},
-        {"hak":"厓係馬來西亞客家人， 吾屋卡在沙巴。","sp":"B","zh":"我是馬來西亞客家人， 我家在沙巴。","en":"I am a Malaysian Hakka, my home is in Sabah."},
+        {"hak":"厓係馬來西亞客家人，吾屋卡在沙巴。","sp":"B","zh":"我是馬來西亞客家人，我家在沙巴。","en":"I am a Malaysian Hakka, my home is in Sabah."},
         {"hak":"你係唔係第一擺來香港噢？","sp":"A","zh":"你是不是第一次來香港呢？","en":"Is this your first time coming to Hong Kong?"},
         {"hak":"係呀。做乜介惹客家話講得恁流利嘅？","sp":"B","zh":"是呀。爲什麼你客家話說得那麼流利的？","en":"Yes. Why do you speak Hakka so fluently?"},
         {"hak":"因爲吾㜆在屋卡長日摎厓講囉。","sp":"A","zh":"因爲我媽在家裏經常跟我說。","en":"Because my mom often speaks it to me at home."},
@@ -56,7 +56,7 @@
         "吾爸係客家人/吾爸唔係客家人，佢係...人。",
         "惹㜆係唔係客家人？",
         "吾㜆係客家人/吾㜆唔係客家人，佢係...人。",
-        "厓係香港人， 你呢？",
+        "厓係香港人，你呢？",
         "厓係...人。",
         "吾屋卡在...",
         "你曉講乜介話？",
