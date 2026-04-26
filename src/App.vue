@@ -1427,6 +1427,10 @@ onMounted(async () => {
   align-self: flex-end;
   flex-direction: row-reverse;
 }
+.dia-bubble:not(.dia-right) + .dia-bubble:not(.dia-right) .dia-avatar,
+.dia-bubble.dia-right + .dia-bubble.dia-right .dia-avatar {
+  visibility: hidden;
+}
 .dia-avatar {
   width: 2.2rem;
   height: 2.2rem;
