@@ -1625,8 +1625,7 @@ onMounted(async () => {
   font-size: 0.85em;
 }
 :deep(.anno) {
-  margin-left: 0.08rem;
-  font-size: 0.55em;
+  font-size: 0.75em;
   vertical-align: super;
   color: var(--color-crimson);
   font-family: var(--font-body);
