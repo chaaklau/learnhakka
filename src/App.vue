@@ -500,7 +500,6 @@ function renderTokenRuby(token) {
 
 function renderTitleRuby(text) {
   if (!text) return ''
-  if (romMode.value === 'bracket') return renderSentenceRuby(text)
   const segments = []
   let rest = String(text)
   const re = /\(([^)]+)\)/
@@ -544,15 +543,19 @@ function renderTitleRuby(text) {
             ? (bestEntry.en || bestEntry.zh || '')
             : (bestEntry.zh || bestEntry.en || '')
           const showMeaning = meaning && meaning !== word
-          // Render each character with its rom syllable
-          let si = 0
           out += '<span class="title-word">'
-          for (const c of word) {
-            if (si < roms.length) {
-              out += '<span class="ruby"><span class="rb">' + escapeHtml(c) + '</span><span class="rt">' + escapeHtml(romToDiacritics(roms[si])) + '</span></span>'
-              si++
-            } else {
-              out += escapeHtml(c)
+          if (romMode.value === 'bracket') {
+            out += escapeHtml(word) + '<span class="rom-bracket">[' + escapeHtml(romToDiacritics(roms.join(' '))) + ']</span>'
+          } else {
+            // Render each character with its rom syllable
+            let si = 0
+            for (const c of word) {
+              if (si < roms.length) {
+                out += '<span class="ruby"><span class="rb">' + escapeHtml(c) + '</span><span class="rt">' + escapeHtml(romToDiacritics(roms[si])) + '</span></span>'
+                si++
+              } else {
+                out += escapeHtml(c)
+              }
             }
           }
           if (showMeaning) {
@@ -1106,6 +1109,7 @@ onMounted(async () => {
   text-align: left;
   cursor: pointer;
   font-size: 0.95rem;
+  color: var(--color-text);
   transition: border-color 150ms, background 150ms;
 }
 .lesson-link:hover,
@@ -1137,8 +1141,6 @@ onMounted(async () => {
   font-size: 0.72rem;
   color: var(--color-muted);
   line-height: 1.2;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .scrim {
