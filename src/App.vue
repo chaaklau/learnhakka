@@ -102,7 +102,7 @@
               <div
                 v-for="(item, ii) in block.items"
                 :key="ii"
-                :class="['dia-bubble', { 'dia-right': item.sp === 'B' }]"
+                :class="['dia-bubble', { 'dia-right': block.items[0].sp === '先生' ? item.sp === 'B' : item.sp !== block.items[0].sp }]"
                 v-show="!slidesMode || slideItemVisible(bi, ii)"
                 @click="playBlockItem(currentLesson.id, block, bi, ii)"
               >
