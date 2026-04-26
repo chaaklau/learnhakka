@@ -309,16 +309,11 @@ function escapeHtml(str) {
 // Numerical tone → diacritic conversion
 const TONE_DIACRITICS = " \u0301\u0304\u0306\u0300\u0306\u0300" // index 1–6
 
-function numeralToDiacritic(pron) {
+function romToDiacritics(pron) {
   if (!pron) return pron
   return pron.replace(/(\D*[aeo]|\D*[iu](?!\d)|\D*[iumn])(\D*)(\d)/g,
     (_, $1, $2, $3) => $1 + TONE_DIACRITICS[+$3] + $2
   ).normalize('NFC')
-}
-
-function romToDiacritics(rom) {
-  if (!rom) return ''
-  return numeralToDiacritic(rom)
 }
 
 /* Wrap n/N + combining diacritics in a <span> so CSS can fix vertical positioning */
@@ -480,7 +475,7 @@ function renderWithRuby(text, rom) {
         if (/[\p{P}\p{S}\p{Z}\s]/u.test(ch)) {
           out += escapeHtml(ch)
         } else if (si < syls.length) {
-          out += '<span class="ruby"><span class="rb">' + escapeHtml(ch) + '</span><span class="rt">' + escapeHtml(numeralToDiacritic(syls[si])) + '</span></span>'
+          out += '<span class="ruby"><span class="rb">' + escapeHtml(ch) + '</span><span class="rt">' + escapeHtml(romToDiacritics(syls[si])) + '</span></span>'
           si++
         } else {
           out += escapeHtml(ch)
@@ -554,7 +549,7 @@ function renderTitleRuby(text) {
           out += '<span class="title-word">'
           for (const c of word) {
             if (si < roms.length) {
-              out += '<span class="ruby"><span class="rb">' + escapeHtml(c) + '</span><span class="rt">' + escapeHtml(numeralToDiacritic(roms[si])) + '</span></span>'
+              out += '<span class="ruby"><span class="rb">' + escapeHtml(c) + '</span><span class="rt">' + escapeHtml(romToDiacritics(roms[si])) + '</span></span>'
               si++
             } else {
               out += escapeHtml(c)
@@ -1236,7 +1231,7 @@ onMounted(async () => {
   cursor: pointer;
 }
 .hero h1 {
-  margin: 0;
+  margin: 0.75rem 0;
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 3.5vw, 2.6rem);
   line-height: 1.7;
@@ -1252,7 +1247,7 @@ onMounted(async () => {
 :deep(.hero-gloss) {
   display: block;
   font-size: 0.3em;
-  color: var(--color-border-strong);
+  color: var(--color-muted);
   font-family: var(--font-body);
   font-weight: 300;
   line-height: 1.3;
@@ -1406,7 +1401,7 @@ onMounted(async () => {
   font-weight: 400;
 }
 .vocab-mean {
-  margin: 0.15rem 0 0;
+  margin: 0;
   font-size: 0.78rem;
   color: var(--color-muted);
   line-height: 1.4;
@@ -1586,18 +1581,20 @@ onMounted(async () => {
 }
 
 /* ── Ruby (span-based) ── */
+:deep(.font-hakka:has(.ruby)) {
+  padding-top: 0.25em;
+}
 :deep(.ruby) {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   vertical-align: bottom;
   margin: 0 0.08em;
-}
-:deep(.ruby .rb) {
-  line-height: 1.4;
+  line-height: 1;
+  position: relative;
+  bottom: 0.333em;
 }
 :deep(.ruby .rt) {
-  display: block;
   font-size: 0.5em;
   font-family: var(--font-body);
   color: var(--color-crimson);
@@ -1606,11 +1603,9 @@ onMounted(async () => {
   letter-spacing: -0.02em;
   white-space: nowrap;
   order: -1;
-}
-.dia-hak :deep(.ruby .rt),
-.sent-hak :deep(.ruby .rt) {
-  font-size: 0.52em;
-  color: var(--color-crimson);
+  height: 0;
+  position: relative;
+  bottom: 1.333em;
 }
 .dia-hak :deep(.rom-bracket),
 .sent-hak :deep(.rom-bracket) {
@@ -1641,6 +1636,9 @@ onMounted(async () => {
   font-weight: 400;
   margin-left: 0.15em;
 }
+:deep(.iterm:has(.ruby)) {
+  padding-top: 0.35em;
+}
 :deep(.iterm) {
   display: inline-block;
   font-family: var(--font-display);
@@ -1651,7 +1649,6 @@ onMounted(async () => {
   padding: 0.1rem 0.3rem;
   border: 1px solid var(--color-border);
   background: var(--color-surface-soft);
-  vertical-align: middle;
   text-align: center;
   margin: 0 0.15rem;
 }
@@ -1813,11 +1810,6 @@ onMounted(async () => {
 }
 .audio-bar-btn.close:hover {
   background: rgba(255, 255, 255, 0.2);
-}
-
-/* ── Romanisation font for diacritics ── */
-rt, .rom-bracket {
-  font-family: var(--font-rom);
 }
 
 /* ── Footer ── */

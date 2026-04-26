@@ -1,8 +1,7 @@
 :root {
-  --font-display: "Songti TC", "Songti SC", "STSong", "LiSong Pro", "SimSun", "Noto Serif TC", "Iowan Old Style", serif;
-  --font-body: "Avenir Next", "PingFang TC", "Noto Sans TC", sans-serif;
-  --font-rom: "Noto Sans", "Lucida Grande", "Helvetica Neue", sans-serif;
-  --font-mono: "SFMono-Regular", "Menlo", monospace;
+  --font-display: "Chiron Sung HK", "Times New Roman", "Times", "Georgia", "Cambria", "Noto Serif", "MingLiU_HKSCS", "MingLiU_HKSCS-ExtB", "MingLiU", "MingLiU-ExtB", "PMingLiU", "PMingLiU-ExtB", "Noto Serif HK", "Noto Serif CJK HK", serif;
+  --font-body: "Chiron Hei HK", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Ubuntu", "Helvetica Neue", "Noto Sans", "Liberation Sans", "Arial", "Microsoft JhengHei", "Microsoft JhengHei UI", "Noto Sans HK", "Noto Sans CJK HK", sans-serif;
+  --font-mono: "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "DejaVu Sans Mono", "Ubuntu Mono", "Noto Mono", "Courier New", monospace;
 
   --color-bg: #ffffff;
   --color-surface: #ffffff;
@@ -63,10 +62,4 @@ select {
 
 .font-hakka {
   font-family: var(--font-display);
-}
-
-.font-rom {
-  font-family: var(--font-mono);
-  letter-spacing: 0.03em;
-  color: var(--color-green);
 }
