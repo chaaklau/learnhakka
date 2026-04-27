@@ -82,7 +82,7 @@
     },
     {
       "type": "practice",
-      "description": {"en":"Two-Character Combinations"},
+      "description": {"hak":"兩字詞組合","en":"Two-Character Combinations"},
       "rows": [
         ["內在", "軍隊", "謹慎", "屈服"],
         ["曬穀", "鞠躬", "浴缸", "玉器"],

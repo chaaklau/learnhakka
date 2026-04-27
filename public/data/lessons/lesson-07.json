@@ -68,7 +68,7 @@
     },
     {
       "type": "practice",
-      "description": {"en":"Two-Character Combinations"},
+      "description": {"hak":"兩字詞組合","en":"Two-Character Combinations"},
       "rows": [
         ["童年", "銀行", "意義", "語言"],
         ["耳環", "遇到", "責任", "讓座"],

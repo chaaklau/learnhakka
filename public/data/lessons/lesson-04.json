@@ -69,7 +69,7 @@
     },
     {
       "type": "practice",
-      "description": {"en":"Tone Drills (Phrases)"},
+      "description": {"hak":"聲調練習（詞組）","en":"Tone Drills (Phrases)"},
       "rows": [
         ["三", "零", "五", "二"],
         ["專", "題", "訪", "問"],

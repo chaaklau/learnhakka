@@ -71,7 +71,7 @@
     },
     {
       "type": "practice",
-      "description": {"en":"Tone 5 & 6 (Entering Tones `-p`, `-t`, `-k`, `-m`, `-n`, `-ng`)"},
+      "description": {"hak":"第五聲摎第六聲（入聲 `-p`、`-t`、`-k`、`-m`、`-n`、`-ng`）","en":"Tone 5 & 6 (Entering Tones `-p`, `-t`, `-k`, `-m`, `-n`, `-ng`)"},
       "rows": [
         ["金", "＿.gim2", "錦", "禁", "急", "＿.gip6"],
         ["番", "繁", "反", "飯", "發.fat5", "活"],

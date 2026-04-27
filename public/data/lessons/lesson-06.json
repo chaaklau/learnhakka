@@ -72,7 +72,7 @@
     },
     {
       "type": "practice",
-      "description": {"en":"Two-Character Combinations"},
+      "description": {"hak":"兩字詞組合","en":"Two-Character Combinations"},
       "rows": [
         ["機關", "金山", "西方", "新衫"],
         ["銅錢", "龍船", "雲南", "廚房"],

@@ -72,7 +72,7 @@
     },
     {
       "type": "practice",
-      "description": {"en":"Two-Character Combinations"},
+      "description": {"hak":"兩字詞組合","en":"Two-Character Combinations"},
       "rows": [
         ["欠款", "勸解", "牽掛", "禁忌"],
         ["嫌疑", "遺產", "魏國", "藝術"],

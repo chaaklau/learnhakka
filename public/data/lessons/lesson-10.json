@@ -76,7 +76,7 @@
     },
     {
       "type": "practice",
-      "description": {"en":"Two-Character Combinations"},
+      "description": {"hak":"兩字詞組合","en":"Two-Character Combinations"},
       "rows": [
         ["肥佬", "淋肥", "廢水", "沸水"],
         ["豬肺", "充沛", "斧頭", "符水"],

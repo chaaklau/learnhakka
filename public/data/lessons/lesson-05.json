@@ -69,7 +69,7 @@
     },
     {
       "type": "practice",
-      "description": {"en":"Two-Character Combinations"},
+      "description": {"hak":"兩字詞組合","en":"Two-Character Combinations"},
       "rows": [
         ["姓名", "性別", "旺盛", "聲音"],
         ["兄弟", "空地", "年輕", "年青"],

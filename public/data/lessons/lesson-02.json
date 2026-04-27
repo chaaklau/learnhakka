@@ -52,7 +52,7 @@
     },
     {
       "type": "practice",
-      "description": {"en":"Tones and Initials"},
+      "description": {"hak":"聲調摎聲母","en":"Tones and Initials"},
       "rows": [
         ["沙", "蛇", "灑", "射"],
         ["車", "茶", "扯", "岔"],
