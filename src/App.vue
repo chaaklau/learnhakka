@@ -80,99 +80,101 @@
               </div>
             </header>
 
-            <div v-if="block.description" class="block-desc">
-              <p v-if="block.description.hak" class="font-hakka" v-html="formatHakka(block.description.hak)"></p>
-              <p v-if="block.description.en" class="desc-copy">{{ block.description.en }}</p>
-            </div>
-
-            <div v-if="block.type === 'vocab'" class="vocab-grid">
-              <div v-for="(token, ti) in tokenize(block.items)" :key="token" class="vocab-card" v-show="!slidesMode || slideItemVisible(bi, ti)" @click="playTokenAudio(block, bi, ti)">
-                <p class="vocab-hak font-hakka" v-html="renderTokenRuby(token)"></p>
-                <p class="vocab-mean">{{ getMeaning(token) || '—' }}</p>
+            <div class="block-content">
+              <div v-if="block.description" class="block-desc">
+                <p v-if="block.description.hak" class="font-hakka" v-html="formatHakka(block.description.hak)"></p>
+                <p v-if="block.description.en" class="block-desc-en">{{ block.description.en }}</p>
               </div>
-            </div>
 
-            <div v-else-if="block.type === 'main' && typeof block.items === 'string'" class="vocab-grid vocab-sm">
-              <div v-for="(token, ti) in tokenize(block.items)" :key="token" class="vocab-card sm" v-show="!slidesMode || slideItemVisible(bi, ti)" @click="playTokenAudio(block, bi, ti)">
-                <p class="vocab-hak font-hakka" v-html="renderTokenRuby(token)"></p>
-              </div>
-            </div>
-
-            <div v-else-if="block.type === 'main' && hasSpeakers(block.items)" class="dialogue">
-              <div
-                v-for="(item, ii) in block.items"
-                :key="ii"
-                :class="['dia-bubble', { 'dia-right': block.items[0].sp === '先生' ? item.sp === 'B' : item.sp !== block.items[0].sp }]"
-                v-show="!slidesMode || slideItemVisible(bi, ii)"
-                @click="playBlockItem(currentLesson.id, block, bi, ii)"
-              >
-                <img v-if="speakerInfo(item.sp)" class="dia-avatar" :src="baseUrl + speakerInfo(item.sp).avatar" :alt="item.sp">
-                <span v-else class="dia-sp">{{ item.sp || '例' }}</span>
-                <div class="dia-body">
-                  <p class="dia-hak font-hakka" v-html="renderSentenceRuby(item.hak)"></p>
-                  <p v-if="getDisplayText(item)" class="dia-tr">{{ getDisplayText(item) }}</p>
+              <div v-if="block.type === 'vocab'" class="vocab-grid">
+                <div v-for="(token, ti) in tokenize(block.items)" :key="token" class="vocab-card" v-show="!slidesMode || slideItemVisible(bi, ti)" @click="playTokenAudio(block, bi, ti)">
+                  <p class="vocab-hak font-hakka" v-html="renderTokenRuby(token)"></p>
+                  <p class="vocab-mean">{{ getMeaning(token) || '—' }}</p>
                 </div>
               </div>
-            </div>
 
-            <div v-else-if="block.type === 'main'" class="sent-list">
-              <div
-                v-for="(item, ii) in block.items"
-                :key="ii"
-                class="sent-row"
-                v-show="!slidesMode || slideItemVisible(bi, ii)"
-                @click="playBlockItem(currentLesson.id, block, bi, ii)"
-              >
-                <p class="sent-hak font-hakka" v-html="renderSentenceRuby(item.hak)"></p>
-                <p v-if="getDisplayText(item)" class="sent-tr">{{ getDisplayText(item) }}</p>
+              <div v-else-if="block.type === 'main' && typeof block.items === 'string'" class="vocab-grid vocab-sm">
+                <div v-for="(token, ti) in tokenize(block.items)" :key="token" class="vocab-card sm" v-show="!slidesMode || slideItemVisible(bi, ti)" @click="playTokenAudio(block, bi, ti)">
+                  <p class="vocab-hak font-hakka" v-html="renderTokenRuby(token)"></p>
+                </div>
               </div>
-            </div>
 
-            <template v-else-if="block.type === 'practice' && Array.isArray(block.items)">
-              <ol class="prompt-list">
-                <li v-for="(item, ii) in block.items" :key="ii" v-show="!slidesMode || slideItemVisible(bi, ii)">
-                  <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn" @click.stop="playBlockItem(currentLesson.id, block, bi, ii)">▶</button>
-                  <span v-html="formatNoteText(item)"></span>
-                </li>
-              </ol>
-            </template>
-
-            <div v-else-if="block.type === 'practice' && Array.isArray(block.rows)" class="drill-rows">
-              <div v-for="(row, ri) in block.rows" :key="ri" class="drill-row-wrap" v-show="!slidesMode || slideItemVisible(bi, ri)">
-                <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn" @click.stop="playBlockItem(currentLesson.id, block, bi, ri)">▶</button>
-                <div class="vocab-grid">
-                  <div v-for="(cell, ci) in row" :key="ci" class="vocab-card sm">
-                    <p class="vocab-hak font-hakka" v-html="renderTokenRuby(cell)"></p>
+              <div v-else-if="block.type === 'main' && hasSpeakers(block.items)" class="dialogue">
+                <div
+                  v-for="(item, ii) in block.items"
+                  :key="ii"
+                  :class="['dia-bubble', { 'dia-right': block.items[0].sp === '先生' ? item.sp === 'B' : item.sp !== block.items[0].sp }]"
+                  v-show="!slidesMode || slideItemVisible(bi, ii)"
+                  @click="playBlockItem(currentLesson.id, block, bi, ii)"
+                >
+                  <img v-if="speakerInfo(item.sp)" class="dia-avatar" :src="baseUrl + speakerInfo(item.sp).avatar" :alt="item.sp">
+                  <span v-else class="dia-sp">{{ item.sp || '例' }}</span>
+                  <div class="dia-body">
+                    <p class="dia-hak font-hakka" v-html="renderSentenceRuby(item.hak)"></p>
+                    <p v-if="getDisplayText(item)" class="dia-tr">{{ getDisplayText(item) }}</p>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div v-else-if="block.type === 'idiom' || block.type === 'nursery'" class="sent-list">
-              <div v-for="(item, ii) in block.items" :key="ii" class="sent-row">
-                <div class="sent-hak-row">
-                  <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn" @click.stop="playBlockItem(currentLesson.id, block, bi, ii)">▶</button>
+              <div v-else-if="block.type === 'main'" class="sent-list">
+                <div
+                  v-for="(item, ii) in block.items"
+                  :key="ii"
+                  class="sent-row"
+                  v-show="!slidesMode || slideItemVisible(bi, ii)"
+                  @click="playBlockItem(currentLesson.id, block, bi, ii)"
+                >
                   <p class="sent-hak font-hakka" v-html="renderSentenceRuby(item.hak)"></p>
+                  <p v-if="getDisplayText(item)" class="sent-tr">{{ getDisplayText(item) }}</p>
                 </div>
-                <p v-if="getDisplayText(item)" class="sent-tr">{{ getDisplayText(item) }}</p>
-                <p v-if="item.note" class="sent-note">{{ item.note }}</p>
               </div>
-            </div>
 
-            <div v-else-if="block.type === 'notes'" class="notes">
-              <div v-for="(item, ii) in block.items" :key="ii" class="note-item">
-                <p v-html="formatNoteText(getDisplayText(item))"></p>
+              <template v-else-if="block.type === 'practice' && Array.isArray(block.items)">
+                <ol class="prompt-list">
+                  <li v-for="(item, ii) in block.items" :key="ii" v-show="!slidesMode || slideItemVisible(bi, ii)">
+                    <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn" @click.stop="playBlockItem(currentLesson.id, block, bi, ii)">▶</button>
+                    <span v-html="formatNoteText(item)"></span>
+                  </li>
+                </ol>
+              </template>
+
+              <div v-else-if="block.type === 'practice' && Array.isArray(block.rows)" class="drill-rows">
+                <div v-for="(row, ri) in block.rows" :key="ri" class="drill-row-wrap" v-show="!slidesMode || slideItemVisible(bi, ri)">
+                  <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn" @click.stop="playBlockItem(currentLesson.id, block, bi, ri)">▶</button>
+                  <div class="vocab-grid">
+                    <div v-for="(cell, ci) in row" :key="ci" class="vocab-card sm">
+                      <p class="vocab-hak font-hakka" v-html="renderTokenRuby(cell)"></p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
 
-            <template v-else-if="block.type === 'sentence_practice' || block.type === 'sentences'">
-              <ol class="sp-list">
-                <li v-for="(item, ii) in block.items" :key="ii" class="sp-item" v-show="!slidesMode || slideItemVisible(bi, ii)" v-html="formatPracticeItem(item)"></li>
-              </ol>
-            </template>
+              <div v-else-if="block.type === 'idiom' || block.type === 'nursery'" class="sent-list">
+                <div v-for="(item, ii) in block.items" :key="ii" class="sent-row">
+                  <div class="sent-hak-row">
+                    <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn" @click.stop="playBlockItem(currentLesson.id, block, bi, ii)">▶</button>
+                    <p class="sent-hak font-hakka" v-html="renderSentenceRuby(item.hak)"></p>
+                  </div>
+                  <p v-if="getDisplayText(item)" class="sent-tr">{{ getDisplayText(item) }}</p>
+                  <p v-if="item.note" class="sent-note">{{ item.note }}</p>
+                </div>
+              </div>
 
-            <div v-else class="note-item fallback">
-              <p>Unsupported block: {{ block.type }}</p>
+              <div v-else-if="block.type === 'notes'" class="notes">
+                <div v-for="(item, ii) in block.items" :key="ii" class="note-item">
+                  <p v-html="formatNoteText(getDisplayText(item))"></p>
+                </div>
+              </div>
+
+              <template v-else-if="block.type === 'sentence_practice' || block.type === 'sentences'">
+                <ol class="sp-list">
+                  <li v-for="(item, ii) in block.items" :key="ii" class="sp-item" v-show="!slidesMode || slideItemVisible(bi, ii)" v-html="formatPracticeItem(item)"></li>
+                </ol>
+              </template>
+
+              <div v-else class="note-item fallback">
+                <p>Unsupported block: {{ block.type }}</p>
+              </div>
             </div>
           </article>
         </section>
@@ -1169,6 +1171,7 @@ onMounted(async () => {
   transform: translateY(-100%);
   opacity: 0;
   pointer-events: none;
+  height: 0;
 }
 .menu-btn {
   display: none;
@@ -1363,9 +1366,9 @@ onMounted(async () => {
 .block-desc p {
   margin: 0;
 }
-.desc-copy {
+.block-desc-en {
   color: var(--color-muted);
-  font-size: 0.88rem;
+  font-size: 0.88em;
   margin-top: 0.15rem;
 }
 
@@ -1416,11 +1419,14 @@ onMounted(async () => {
   gap: 0.5rem;
   max-width: 40rem;
 }
+.dialogue:has(.rom-bracket) {
+  max-width: 52rem;
+}
 .dia-bubble {
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
-  max-width: 85%;
+  max-width: 80%;
   cursor: pointer;
 }
 .dia-bubble.dia-right {
@@ -1868,20 +1874,31 @@ onMounted(async () => {
 /* ── Slides mode ── */
 .slides-active {
   grid-template-columns: 1fr;
+  background: var(--color-border);
 }
 .slides-active .sidebar,
 .slides-active .topbar {
   display: none;
 }
+.slides-active .main-stage {
+  display: grid;
+}
+.slides-mode {
+  display: grid;
+  background: var(--color-bg);
+  margin: 0 auto;
+  width: min((100vh - var(--nav-h, 2.6rem)) / 0.5625, 100%);
+  max-width: unset;
+}
 .slides-mode .hero {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin-bottom: 0;
-  padding: 2rem;
+  margin: -1rem;
+  padding: 3rem;
 }
 .slides-mode .hero .audio-btn,
 .slides-mode .block-play-btn,
@@ -1889,22 +1906,28 @@ onMounted(async () => {
   display: none;
 }
 .slides-mode .block {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem 1rem;
+  padding: 1rem;
   border-top: none;
   page-break-before: always;
 }
 .slides-mode .block + .block {
-  border-top: 2px solid var(--color-border);
+  border-top: none;
 }
 .slides-mode .block-hd {
   margin-bottom: 1.2rem;
 }
+.slides-mode .block-content {
+  flex: 1;
+  align-content: center;
+}
 .slides-mode .vocab-grid {
   justify-content: center;
+}
+.slides-mode .dialogue {
+  max-width: unset;
 }
 .slides-mode .vocab-hak {
   font-size: 2.8rem;
@@ -1937,10 +1960,10 @@ onMounted(async () => {
   font-size: 1.3rem;
 }
 .slides-mode .block-type {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
 }
 .slides-mode .block-type-en {
-  font-size: 0.85rem;
+  font-size: 1.2rem;
 }
 .slides-mode .hero h1 {
   font-size: 3.2rem;
@@ -1950,6 +1973,9 @@ onMounted(async () => {
 }
 .slides-mode .kicker {
   font-size: 1rem;
+}
+.slides-mode .block-desc {
+  font-size: 1.3rem;
 }
 
 /* ── Global slide nav ── */
