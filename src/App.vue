@@ -379,8 +379,8 @@ function getMeaning(raw) {
 function getDisplayText(item) {
   if (!item || typeof item !== 'object') return ''
   return displayLang.value === 'en'
-    ? (item.en || item.zh || item.note || '')
-    : (item.zh || item.en || item.note || '')
+    ? (item.en || item.zh || '')
+    : (item.zh || item.en || '')
 }
 
 function blockTitle(type) {
@@ -1524,7 +1524,6 @@ onMounted(async () => {
 .sent-note {
   font-size: 0.78rem;
   color: var(--color-muted);
-  font-style: italic;
   margin-top: 0.2rem;
 }
 
