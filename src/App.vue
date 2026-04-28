@@ -53,7 +53,7 @@
       </header>
 
       <div class="content" :class="{ 'slides-mode': slidesMode }">
-        <section ref="heroEl" class="hero" v-show="!slidesMode || currentSlide === 0" @click="audioSegmentText = ''; playAudio(baseUrl + `data/audio/ch${currentLesson.id}-title.m4a`)">
+        <section ref="heroEl" class="hero" v-show="!slidesMode || currentSlide === 0" @click="playHeroAudio(currentLesson.id)">
           <span class="kicker">第 {{ currentLesson.id }} 課 · Lesson {{ currentLesson.id }}</span>
           <h1 class="font-hakka" v-html="renderTitleRuby(currentLesson.title.hak)"></h1>
           <p class="hero-sub">{{ currentLesson.title.en }}</p>
@@ -74,7 +74,7 @@
                   v-if="getBlockAudio(currentLesson.id, block, bi)"
                   type="button"
                   class="block-play-btn"
-                  @click="audioSegmentText = ''; playAudio(getBlockAudio(currentLesson.id, block, bi))"
+                  @click="playBlockAudio(currentLesson.id, block, bi)"
                 >▶</button>
 
               </div>
@@ -179,7 +179,7 @@
           </article>
         </section>
 
-        <div v-if="slidesMode && slidePages.length > 1" class="slide-nav-global">
+        <div v-if="slidesMode && slidePages.length > 1" class="slide-nav-global" :style="audioBarVisible ? { bottom: 'calc(var(--audio-bar-h) + 1.2rem)' } : {}">
           <button type="button" class="slide-nav-btn" :disabled="currentSlide <= 0" @click="currentSlide--">‹</button>
           <span class="slide-nav-count">{{ currentSlide + 1 }} / {{ slidePages.length }}</span>
           <button type="button" class="slide-nav-btn" :disabled="currentSlide >= slidePages.length - 1" @click="currentSlide++">›</button>
@@ -211,7 +211,7 @@
     </template>
   </div>
 
-  <div v-if="audioBarVisible" class="audio-bar">
+  <div v-if="audioBarVisible" ref="audioBarEl" class="audio-bar">
     <div class="audio-bar-progress" @click="seekAudio($event)">
       <div class="audio-bar-progress-fill" :style="{ width: audioDuration ? (audioCurrentTime / audioDuration * 100) + '%' : '0%' }"></div>
     </div>
@@ -228,7 +228,7 @@
 
   <div class="site-banner">⚠️ This site is under construction. Some content, audio, and features may be incomplete or inaccurate.</div>
 
-  <audio ref="audioEl" @ended="playingAudio = ''; audioSegmentText = ''" @pause="onAudioPause" @timeupdate="onAudioTimeUpdate"></audio>
+  <audio ref="audioEl" @ended="onAudioEnded" @pause="onAudioPause"></audio>
 </template>
 
 <script setup>
@@ -256,12 +256,17 @@ const audioBarVisible = ref(false)
 const audioSegmentText = ref('')
 const audioCurrentTime = ref(0)
 const audioDuration = ref(0)
+const lastPlayedSrc = ref('')
 let stopAtTime = null
+let rafId = null
+let activeSegments = null // { timestamps: [[s,e],...], texts: [str,...] } | null
 const heroEl = ref(null)
 const heroVisible = ref(true)
 let heroObserver = null
 const navEl = ref(null)
 let navResizeObserver = null
+const audioBarEl = ref(null)
+let audioBarResizeObserver = null
 
 const page = computed(() => {
   if (route.name === 'about') return 'about'
@@ -662,8 +667,9 @@ function getBlockAudio(lessonId, block, blockIndex) {
 }
 
 const audioLabel = computed(() => {
-  if (!playingAudio.value) return ''
-  const m = playingAudio.value.match(/ch(\d+)-([\w-]+)\.m4a$/)
+  const src = lastPlayedSrc.value
+  if (!src) return ''
+  const m = src.match(/ch(\d+)-([\w-]+)\.m4a$/)
   if (!m) return 'Audio'
   const chNum = m[1]
   const section = m[2].replace(/-/g, ' ')
@@ -674,6 +680,74 @@ const audioLabel = computed(() => {
   }
   return 'Ch ' + chNum + ' · ' + sectionLabel
 })
+
+function startRaf() {
+  if (rafId) cancelAnimationFrame(rafId)
+  rafId = requestAnimationFrame(rafLoop)
+}
+
+function stopRaf() {
+  if (rafId) { cancelAnimationFrame(rafId); rafId = null }
+}
+
+function rafLoop() {
+  const el = audioEl.value
+  if (el) {
+    audioCurrentTime.value = el.currentTime
+    audioDuration.value = el.duration || 0
+    if (activeSegments) {
+      const t = el.currentTime
+      const idx = activeSegments.timestamps.findIndex(([s, e]) => t >= s && t < e)
+      audioSegmentText.value = idx >= 0 ? (activeSegments.texts[idx] || '') : ''
+    }
+    if (stopAtTime != null && el.currentTime >= stopAtTime) {
+      el.pause()
+      playingAudio.value = ''
+      stopAtTime = null
+    }
+  }
+  if (!el || el.paused || el.ended) {
+    rafId = null
+    return
+  }
+  rafId = requestAnimationFrame(rafLoop)
+}
+
+function onAudioEnded() {
+  playingAudio.value = ''
+  audioSegmentText.value = ''
+  stopAtTime = null
+  stopRaf()
+}
+
+function onAudioPause() {
+  // Only sync state for external pauses (e.g. another tab, OS media controls)
+  // Ignore pauses triggered by our own code (togglePlayPause sets playingAudio directly)
+  const el = audioEl.value
+  if (!el || el.ended) return
+  if (playingAudio.value) {
+    playingAudio.value = ''
+  }
+}
+
+function playHeroAudio(lessonId) {
+  activeSegments = null
+  audioSegmentText.value = ''
+  playAudio(baseUrl + `data/audio/ch${lessonId}-title.m4a`)
+}
+
+function playBlockAudio(lessonId, block, bi) {
+  const src = getBlockAudio(lessonId, block, bi)
+  if (!src) return
+  const ts = getBlockTimestamps(lessonId, block, bi)
+  if (ts) {
+    activeSegments = { timestamps: ts, texts: ts.map((_, i) => getSegmentText(block, i)) }
+  } else {
+    activeSegments = null
+    audioSegmentText.value = ''
+  }
+  playAudio(src)
+}
 
 function playAudio(src, startTime, endTime) {
   const el = audioEl.value
@@ -689,7 +763,9 @@ function playAudio(src, startTime, endTime) {
   if (startTime != null) el.currentTime = startTime
   el.play().catch(() => {})
   playingAudio.value = src
+  lastPlayedSrc.value = src
   audioBarVisible.value = true
+  startRaf()
 }
 
 function togglePlayPause() {
@@ -698,8 +774,10 @@ function togglePlayPause() {
   if (el.paused) {
     el.play().catch(() => {})
     playingAudio.value = el.src
+    startRaf()
   } else {
     el.pause()
+    playingAudio.value = ''
   }
 }
 
@@ -707,9 +785,12 @@ function closeAudioBar() {
   const el = audioEl.value
   if (el) { el.pause(); el.currentTime = 0 }
   playingAudio.value = ''
+  lastPlayedSrc.value = ''
   audioBarVisible.value = false
   audioSegmentText.value = ''
+  activeSegments = null
   stopAtTime = null
+  stopRaf()
 }
 
 function stopAudio() {
@@ -718,7 +799,9 @@ function stopAudio() {
   el.pause()
   el.currentTime = 0
   playingAudio.value = ''
+  activeSegments = null
   stopAtTime = null
+  stopRaf()
 }
 
 function replayAudio() {
@@ -728,29 +811,7 @@ function replayAudio() {
   el.play().catch(() => {})
 }
 
-function onAudioPause() {
-  const el = audioEl.value
-  if (el && el.currentTime >= el.duration) {
-    playingAudio.value = ''
-    stopAtTime = null
-    audioSegmentText.value = ''
-  }
-}
 
-function onAudioTimeUpdate() {
-  const el = audioEl.value
-  if (el) {
-    audioCurrentTime.value = el.currentTime
-    audioDuration.value = el.duration || 0
-  }
-  if (stopAtTime != null) {
-    if (el && el.currentTime >= stopAtTime) {
-      el.pause()
-      playingAudio.value = ''
-      stopAtTime = null
-    }
-  }
-}
 
 function formatTime(s) {
   if (!s || !isFinite(s)) return '0:00.000'
@@ -765,7 +826,15 @@ function seekAudio(e) {
   if (!el || !el.duration) return
   const rect = e.currentTarget.getBoundingClientRect()
   const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width))
+  stopAtTime = null  // cancel any segment endpoint restriction
   el.currentTime = ratio * el.duration
+  audioCurrentTime.value = el.currentTime
+  // Update segment text immediately; rafLoop will keep it live if playing
+  if (activeSegments) {
+    const t = el.currentTime
+    const idx = activeSegments.timestamps.findIndex(([s, end]) => t >= s && t < end)
+    audioSegmentText.value = idx >= 0 ? (activeSegments.texts[idx] || '') : ''
+  }
 }
 
 function getBlockTimestamps(lessonId, block, blockIndex) {
@@ -793,8 +862,13 @@ function getSegmentText(block, itemIndex) {
 function playBlockItem(lessonId, block, blockIndex, itemIndex) {
   const src = getBlockAudio(lessonId, block, blockIndex)
   if (!src) return
-  audioSegmentText.value = getSegmentText(block, itemIndex)
   const ts = getBlockTimestamps(lessonId, block, blockIndex)
+  if (ts) {
+    activeSegments = { timestamps: ts, texts: ts.map((_, i) => getSegmentText(block, i)) }
+  } else {
+    activeSegments = null
+    audioSegmentText.value = getSegmentText(block, itemIndex)
+  }
   if (ts && ts[itemIndex]) {
     playAudio(src, ts[itemIndex][0], ts[itemIndex][1])
   } else {
@@ -889,7 +963,9 @@ watch(heroEl, (el) => {
 onUnmounted(() => {
   if (heroObserver) heroObserver.disconnect()
   if (navResizeObserver) navResizeObserver.disconnect()
+  if (audioBarResizeObserver) audioBarResizeObserver.disconnect()
   document.removeEventListener('keydown', onSlideKeydown)
+  stopRaf()
 })
 
 function onSlideKeydown(e) {
@@ -974,6 +1050,15 @@ onMounted(async () => {
     navResizeObserver.observe(navEl.value)
     updateNavH()
   }
+})
+
+watch(audioBarEl, (el) => {
+  if (audioBarResizeObserver) audioBarResizeObserver.disconnect()
+  if (!el) return
+  const update = () => document.documentElement.style.setProperty('--audio-bar-h', el.offsetHeight + 'px')
+  audioBarResizeObserver = new ResizeObserver(update)
+  audioBarResizeObserver.observe(el)
+  update()
 })
 </script>
 
@@ -1569,6 +1654,13 @@ onMounted(async () => {
   flex-direction: column;
   gap: 0.35rem;
 }
+/* Drill rows' vocab cards can't be individually clicked */
+.drill-rows .vocab-card {
+  cursor: unset;
+}
+.drill-rows .vocab-card:hover {
+  background: unset;
+}
 
 /* ── Notes ── */
 .notes {
@@ -1744,7 +1836,7 @@ onMounted(async () => {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem 0.8rem;
-  padding: 0 1.2rem 0.6rem;
+  padding: 1rem 1.2rem 0.6rem;
   background: #111;
   color: #fff;
   font-size: 0.92rem;
@@ -1752,19 +1844,17 @@ onMounted(async () => {
   min-height: 3.4rem;
 }
 .audio-bar-progress {
-  flex-basis: 100%;
-  height: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.4rem;
   background: rgba(255, 255, 255, 0.15);
-  border-radius: 2px;
   cursor: pointer;
-  position: relative;
-  margin-top: -0px;
 }
 .audio-bar-progress-fill {
   height: 100%;
   background: var(--color-crimson);
-  border-radius: 2px;
-  transition: width 150ms linear;
 }
 .audio-bar-time {
   font-size: 0.7rem;
@@ -1787,7 +1877,7 @@ onMounted(async () => {
   font-size: 0.95rem;
 }
 .audio-bar-sub {
-  font-size: 0.7rem;
+  font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.04em;
 }
@@ -1795,7 +1885,7 @@ onMounted(async () => {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.85);
 }
 .audio-bar-btn {
