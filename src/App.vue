@@ -52,7 +52,7 @@
         <button v-if="currentIndex < lessons.length - 1" type="button" class="topbar-nav topbar-nav-next" @click="selectLesson(lessons[currentIndex + 1].id)">›</button>
       </header>
 
-      <div class="content" :class="{ 'slides-mode': slidesMode }">
+      <div class="content" :class="{ 'slides-mode': slidesMode }" @mousemove="slidesMode && resetSlideNavTimer()">
         <section ref="heroEl" class="hero" v-show="!slidesMode || currentSlide === 0" @click="playHeroAudio(currentLesson.id)">
           <span class="kicker">第 {{ currentLesson.id }} 課 · Lesson {{ currentLesson.id }}</span>
           <h1 class="font-hakka" v-html="renderTitleRuby(currentLesson.title.hak)"></h1>
@@ -172,7 +172,7 @@
           </article>
         </section>
 
-        <div v-if="slidesMode && slidePages.length > 1" class="slide-nav-global" :style="audioBarVisible ? { bottom: 'calc(var(--audio-bar-h) + 1.2rem)' } : {}">
+        <div v-if="slidesMode && slidePages.length > 1" class="slide-nav-global" :class="{ hidden: !slideNavVisible }" :style="audioBarVisible ? { bottom: 'calc(var(--audio-bar-h) + 1.2rem)' } : {}">
           <button type="button" class="slide-nav-btn" :disabled="currentSlide <= 0" @click="currentSlide--">‹</button>
           <span class="slide-nav-count">{{ currentSlide + 1 }} / {{ slidePages.length }}</span>
           <button type="button" class="slide-nav-btn" :disabled="currentSlide >= slidePages.length - 1" @click="currentSlide++">›</button>
@@ -240,6 +240,8 @@ const site = ref({})
 const displayLang = ref(route.query.lang === 'en' ? 'en' : 'zh')
 const romMode = ref(route.query.rom === 'bracket' ? 'bracket' : 'ruby')
 const slidesMode = ref(false)
+const slideNavVisible = ref(true)
+let slideNavTimer = null
 const currentSlide = ref(0)
 let savedRomMode = null
 const sidebarOpen = ref(false)
@@ -907,6 +909,12 @@ const slidePages = computed(() => {
   return pages
 })
 
+function resetSlideNavTimer() {
+  slideNavVisible.value = true
+  clearTimeout(slideNavTimer)
+  slideNavTimer = setTimeout(() => { slideNavVisible.value = false }, 5000)
+}
+
 function curPage() {
   return slidePages.value[currentSlide.value] || null
 }
@@ -972,10 +980,13 @@ function onSlideKeydown(e) {
 
 watch(slidesMode, (on) => {
   if (on) {
+    resetSlideNavTimer()
     savedRomMode = romMode.value
     romMode.value = 'bracket'
     document.addEventListener('keydown', onSlideKeydown)
   } else {
+    clearTimeout(slideNavTimer)
+    slideNavVisible.value = true
     if (savedRomMode) romMode.value = savedRomMode
     savedRomMode = null
     document.removeEventListener('keydown', onSlideKeydown)
@@ -2075,6 +2086,12 @@ watch(audioBarEl, (el) => {
   padding: 0.5rem;
   border-radius: 2rem;
   z-index: 35;
+  transition: opacity 400ms ease, visibility 400ms ease;
+}
+.slide-nav-global.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 .slide-nav-btn {
   background: none;
