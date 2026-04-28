@@ -2022,19 +2022,22 @@ watch(audioBarEl, (el) => {
   font-size: 2.2rem;
 }
 .slides-mode .dia-tr {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 .slides-mode .sent-hak {
   font-size: 2.2rem;
 }
 .slides-mode .sent-tr {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 .slides-mode .prompt-list {
   font-size: 1.6rem;
 }
 .slides-mode .sp-item {
   font-size: 1.4rem;
+}
+.slides-mode .sp-item::before {
+  font-size: 1.1rem;
 }
 .slides-mode .note-item {
   font-size: 1.3rem;
@@ -2052,7 +2055,7 @@ watch(audioBarEl, (el) => {
   font-size: 1.2rem;
 }
 .slides-mode .kicker {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 .slides-mode .block-desc {
   font-size: 1.3rem;
