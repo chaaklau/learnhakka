@@ -167,7 +167,7 @@
               </div>
 
               <template v-else-if="block.type === 'sentence_practice' || block.type === 'sentences'">
-                <ol class="sp-list">
+                <ol class="sp-list" :style="slidesMode && curPage()?.bi === bi ? { counterReset: 'sp-counter ' + curPage().from } : {}">
                   <li v-for="(item, ii) in block.items" :key="ii" class="sp-item" v-show="!slidesMode || slideItemVisible(bi, ii)" v-html="formatPracticeItem(item)"></li>
                 </ol>
               </template>
