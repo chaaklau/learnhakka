@@ -1241,7 +1241,7 @@ watch(audioBarEl, (el) => {
 /* ── Topbar ── */
 .main-stage {
   min-width: 0;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 .topbar {
   position: sticky;
