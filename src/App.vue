@@ -116,7 +116,7 @@
                 </div>
               </div>
 
-              <div v-else-if="block.type === 'main'" class="sent-list">
+              <div v-else-if="block.type === 'main' || block.type === 'idiom' || block.type === 'nursery'" class="sent-list">
                 <div
                   v-for="(item, ii) in block.items"
                   :key="ii"
@@ -124,8 +124,12 @@
                   v-show="!slidesMode || slideItemVisible(bi, ii)"
                   @click="playBlockItem(currentLesson.id, block, bi, ii)"
                 >
-                  <p class="sent-hak font-hakka" v-html="renderSentenceRuby(item.hak)"></p>
-                  <p v-if="getDisplayText(item)" class="sent-tr">{{ getDisplayText(item) }}</p>
+                  <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn">▶</button>
+                  <div class="sent-text">
+                    <p class="sent-hak font-hakka" v-html="renderSentenceRuby(item.hak)"></p>
+                    <p v-if="getDisplayText(item)" class="sent-tr">{{ getDisplayText(item) }}</p>
+                    <p v-if="item.note" class="sent-note">{{ item.note }}</p>
+                  </div>
                 </div>
               </div>
 
@@ -146,17 +150,6 @@
                       <p class="vocab-hak font-hakka" v-html="renderTokenRuby(cell)"></p>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              <div v-else-if="block.type === 'idiom' || block.type === 'nursery'" class="sent-list">
-                <div v-for="(item, ii) in block.items" :key="ii" class="sent-row">
-                  <div class="sent-hak-row">
-                    <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn" @click.stop="playBlockItem(currentLesson.id, block, bi, ii)">▶</button>
-                    <p class="sent-hak font-hakka" v-html="renderSentenceRuby(item.hak)"></p>
-                  </div>
-                  <p v-if="getDisplayText(item)" class="sent-tr">{{ getDisplayText(item) }}</p>
-                  <p v-if="item.note" class="sent-note">{{ item.note }}</p>
                 </div>
               </div>
 
@@ -1584,17 +1577,15 @@ watch(audioBarEl, (el) => {
   padding: 0.35rem 0.5rem;
   cursor: pointer;
   transition: background 120ms;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 .sent-row:hover {
   background: var(--color-surface-soft);
 }
 .sent-row p {
   margin: 0;
-}
-.sent-hak-row {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
 }
 .sent-hak {
   font-size: 1.45rem;
