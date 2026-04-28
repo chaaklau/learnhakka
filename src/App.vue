@@ -2078,7 +2078,7 @@ watch(audioBarEl, (el) => {
   gap: 0.8rem;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
-  padding: 0.4rem 0.8rem;
+  padding: 0.5rem;
   border-radius: 2rem;
   z-index: 35;
 }
@@ -2089,7 +2089,8 @@ watch(audioBarEl, (el) => {
   width: 2.2rem;
   height: 2.2rem;
   border-radius: 50%;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  line-height: 1;
   cursor: pointer;
   display: grid;
   place-items: center;
@@ -2103,11 +2104,13 @@ watch(audioBarEl, (el) => {
   cursor: default;
 }
 .slide-nav-count {
-  font-size: 0.8rem;
+  font-size: 0.88rem;
+  line-height: 2.2rem;
   color: rgba(255, 255, 255, 0.7);
   font-family: var(--font-mono);
   min-width: 4rem;
   text-align: center;
+  align-self: stretch;
 }
 
 /* ── Mobile ── */
