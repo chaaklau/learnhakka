@@ -496,10 +496,10 @@ function renderWithRuby(text, rom) {
 function renderTokenRuby(token) {
   const { hak } = parseToken(token)
   const entry = getLexiconEntry(token)
-  if (hak === '__') {
+  if (hak === '＿') {
     return entry.rom
       ? '<span class="drill-blank">' + escapeHtml(romToDiacritics(entry.rom)) + '</span>'
-      : '___'
+      : '＿'
   }
   if (entry.rom) return renderWithRuby(hak, entry.rom)
   return '<span class="pending">' + escapeHtml(hak) + '</span>'
@@ -1721,8 +1721,8 @@ watch(audioBarEl, (el) => {
   text-underline-offset: 0.15rem;
 }
 :deep(.drill-blank) {
-  font-family: var(--font-mono);
-  color: var(--color-green);
+  font-family: var(--font-body);
+  color: var(--color-crimson);
   font-size: 0.85em;
 }
 :deep(.anno) {
