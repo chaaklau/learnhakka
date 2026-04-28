@@ -2041,6 +2041,9 @@ watch(audioBarEl, (el) => {
 .slides-mode .sent-tr {
   font-size: 1.1rem;
 }
+.slides-mode .sent-note {
+  font-size: 1.1rem;
+}
 .slides-mode .prompt-list {
   font-size: 1.6rem;
 }
@@ -2065,11 +2068,17 @@ watch(audioBarEl, (el) => {
 .slides-mode .hero-sub {
   font-size: 1.2rem;
 }
+:deep(.slides-mode .hero-gloss) {
+  font-size: 1.1rem;
+}
 .slides-mode .kicker {
   font-size: 1.1rem;
 }
 .slides-mode .block-desc {
   font-size: 1.3rem;
+}
+.slides-mode .row-play-btn {
+  font-size: 1.1rem;
 }
 
 /* ── Global slide nav ── */
