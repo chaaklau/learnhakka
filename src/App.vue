@@ -1990,6 +1990,7 @@ watch(audioBarEl, (el) => {
   margin-bottom: 0;
   margin: -1rem;
   padding: 3rem;
+  background: radial-gradient(circle at top right, rgba(24, 60, 50, 0.1), transparent 22rem), var(--color-surface);
 }
 .slides-mode .hero .audio-btn,
 .slides-mode .block-play-btn,
