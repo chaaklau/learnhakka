@@ -1,5 +1,5 @@
 <template>
-  <nav ref="navEl" class="site-nav">
+  <nav v-if="!exportMode" ref="navEl" class="site-nav">
     <button type="button" class="menu-btn" @click="sidebarOpen = !sidebarOpen">☰</button>
     <span class="site-brand" @click="navigateTo('textbook')">香港客家話入門</span>
     <div class="site-links">
@@ -15,7 +15,12 @@
         <button type="button" :class="['ctl-btn', { active: romMode === 'ruby' }]" @click="romMode = 'ruby'">Ruby</button>
         <button type="button" :class="['ctl-btn', { active: romMode === 'bracket' }]" @click="romMode = 'bracket'">[Rom]</button>
       </div>
-      <button type="button" :class="['ctl-btn ctl-slides', { active: slidesMode }]" @click="slidesMode = !slidesMode">Slides</button>
+      <div class="control-group mode-controls">
+        <button type="button" :class="['ctl-btn', { active: viewMode === 'textbook' }]" @click="setMode('textbook')">Text</button>
+        <button type="button" :class="['ctl-btn', { active: paperMode }]" @click="setMode('paper')">Paper</button>
+        <button type="button" :class="['ctl-btn', { active: slidesMode }]" @click="setMode('slides')">Slides</button>
+      </div>
+      <button type="button" class="ctl-btn ctl-print" @click="downloadPdf">PDF</button>
     </div>
   </nav>
 
@@ -23,7 +28,7 @@
     <p>Loading textbook…</p>
   </div>
 
-  <div v-else-if="page === 'textbook' && currentLesson" class="app-shell" :class="{ 'slides-active': slidesMode }">
+  <div v-else-if="page === 'textbook' && currentLesson" class="app-shell" :class="{ 'slides-active': slidesMode, 'paper-active': paperMode, 'export-active': exportMode }">
     <aside class="sidebar" :class="{ open: sidebarOpen }">
       <nav class="lesson-nav">
         <button
@@ -52,7 +57,7 @@
         <button v-if="currentIndex < lessons.length - 1" type="button" class="topbar-nav topbar-nav-next" @click="selectLesson(lessons[currentIndex + 1].id)">›</button>
       </header>
 
-      <div class="content" :class="{ 'slides-mode': slidesMode }" @mousemove="slidesMode && resetSlideNavTimer()">
+      <div class="content" :class="{ 'slides-mode': slidesMode, 'paper-mode': paperMode, 'export-mode': exportMode }" @mousemove="slidesMode && resetSlideNavTimer()">
         <section ref="heroEl" class="hero" v-show="!slidesMode || currentSlide === 0" @click="playHeroAudio(currentLesson.id)">
           <span class="kicker">第 {{ currentLesson.id }} 課 · Lesson {{ currentLesson.id }}</span>
           <h1 class="font-hakka" v-html="renderTitleRuby(currentLesson.title.hak)"></h1>
@@ -88,6 +93,7 @@
 
               <div v-if="block.type === 'vocab'" class="vocab-grid">
                 <div v-for="(token, ti) in tokenize(block.items)" :key="token" class="vocab-card" v-show="!slidesMode || slideItemVisible(bi, ti)" @click="playTokenAudio(block, bi, ti)">
+                  <p v-if="slidesMode" class="slide-context">{{ currentLesson.title.en }} · {{ blockTitle(block.type) }} {{ ti + 1 }} / {{ tokenize(block.items).length }}</p>
                   <p class="vocab-hak font-hakka" v-html="renderTokenRuby(token)"></p>
                   <p class="vocab-mean">{{ getMeaning(token) || '—' }}</p>
                 </div>
@@ -154,7 +160,7 @@
               </div>
 
               <div v-else-if="block.type === 'notes'" class="notes">
-                <div v-for="(item, ii) in block.items" :key="ii" class="note-item">
+                <div v-for="(item, ii) in block.items" :key="ii" class="note-item" v-show="!slidesMode || slideItemVisible(bi, ii)">
                   <p v-html="formatNoteText(getDisplayText(item))"></p>
                 </div>
               </div>
@@ -204,7 +210,7 @@
     </template>
   </div>
 
-  <div v-if="audioBarVisible" ref="audioBarEl" class="audio-bar">
+  <div v-if="audioBarVisible && !exportMode" ref="audioBarEl" class="audio-bar">
     <div class="audio-bar-progress" @click="seekAudio($event)">
       <div class="audio-bar-progress-fill" :style="{ width: audioDuration ? (audioCurrentTime / audioDuration * 100) + '%' : '0%' }"></div>
     </div>
@@ -219,13 +225,13 @@
     <button type="button" class="audio-bar-btn close" @click="closeAudioBar">✕</button>
   </div>
 
-  <div class="site-banner">⚠️ This site is under construction. Some content, audio, and features may be incomplete or inaccurate.</div>
+  <div v-if="!exportMode" class="site-banner">⚠️ This site is under construction. Some content, audio, and features may be incomplete or inaccurate.</div>
 
   <audio ref="audioEl" @ended="onAudioEnded" @pause="onAudioPause"></audio>
 </template>
 
 <script setup>
-import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
+import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
@@ -235,11 +241,11 @@ const baseUrl = import.meta.env.BASE_URL
 const loading = ref(true)
 const lessons = ref([])
 const lessonCache = ref({})
+const mediaCache = ref({})
 const lexicon = ref(new Map())
 const site = ref({})
 const displayLang = ref(route.query.lang === 'en' ? 'en' : 'zh')
 const romMode = ref(route.query.rom === 'bracket' ? 'bracket' : 'ruby')
-const slidesMode = ref(false)
 const slideNavVisible = ref(true)
 let slideNavTimer = null
 const currentSlide = ref(0)
@@ -269,6 +275,15 @@ const page = computed(() => {
   return 'textbook'
 })
 
+const viewMode = computed(() => {
+  const mode = String(route.query.mode || 'textbook')
+  return ['textbook', 'paper', 'slides'].includes(mode) ? mode : 'textbook'
+})
+
+const slidesMode = computed(() => viewMode.value === 'slides')
+const paperMode = computed(() => viewMode.value === 'paper')
+const exportMode = computed(() => route.query.export === '1')
+
 const currentLessonId = computed(() => {
   if (route.name === 'chapter' && route.params.id) return parseInt(route.params.id)
   return null
@@ -292,6 +307,12 @@ const currentLesson = computed(() => {
   const id = currentLessonId.value
   if (id == null) return null
   return lessonCache.value[id] || null
+})
+
+const currentMedia = computed(() => {
+  const id = currentLessonId.value
+  if (id == null) return null
+  return mediaCache.value[id] || null
 })
 const currentIndex = computed(() =>
   lessons.value.findIndex((l) => l.id === currentLessonId.value)
@@ -395,7 +416,7 @@ function countBlockItems(block) {
     return block.items.filter(item => typeof item === 'string' || (item && item.hak != null)).length
   }
   if (Array.isArray(block.rows)) {
-    return block.rows.reduce((sum, row) => sum + row.length, 0)
+    return block.rows.length
   }
   return 0
 }
@@ -656,9 +677,28 @@ function renderSentenceRuby(text) {
   return out
 }
 
+function getLessonMedia(id) {
+  return mediaCache.value[id] || null
+}
+
+function getBlockMedia(lessonId, block) {
+  return getLessonMedia(lessonId)?.blocks?.[block.id] || null
+}
+
 function getBlockAudio(lessonId, block, blockIndex) {
-  if (!block.audio) return null
-  return baseUrl + 'data/' + block.audio
+  const media = getBlockMedia(lessonId, block)
+  if (!media?.audio) return null
+  return baseUrl + 'data/' + media.audio
+}
+
+function normalizeSegments(segments) {
+  if (!Array.isArray(segments)) return null
+  return segments
+    .map((segment) => {
+      if (Array.isArray(segment)) return [segment[0], segment[1]]
+      return [segment.start, segment.end]
+    })
+    .filter(([start, end]) => Number.isFinite(start) && Number.isFinite(end) && end > start)
 }
 
 const audioLabel = computed(() => {
@@ -726,9 +766,11 @@ function onAudioPause() {
 }
 
 function playHeroAudio(lessonId) {
+  const titleAudio = getLessonMedia(lessonId)?.titleAudio
+  if (!titleAudio) return
   activeSegments = null
   audioSegmentText.value = ''
-  playAudio(baseUrl + `data/audio/ch${lessonId}-title.m4a`)
+  playAudio(baseUrl + 'data/' + titleAudio)
 }
 
 function playBlockAudio(lessonId, block, bi) {
@@ -833,7 +875,7 @@ function seekAudio(e) {
 }
 
 function getBlockTimestamps(lessonId, block, blockIndex) {
-  return block.timestamps || null
+  return normalizeSegments(getBlockMedia(lessonId, block)?.segments)
 }
 
 function getSegmentText(block, itemIndex) {
@@ -877,9 +919,24 @@ function playTokenAudio(block, blockIndex, tokenIndex) {
 }
 
 function selectLesson(id) {
-  router.push({ name: 'chapter', params: { id } })
+  router.push({ name: 'chapter', params: { id }, query: route.query })
   sidebarOpen.value = false
   currentSlide.value = 0
+}
+
+function setMode(mode) {
+  const nextMode = ['paper', 'slides'].includes(mode) ? mode : 'textbook'
+  const q = { ...route.query }
+  if (nextMode === 'textbook') delete q.mode
+  else q.mode = nextMode
+  router.replace({ ...route, query: q })
+  if (nextMode !== 'slides') currentSlide.value = 0
+}
+
+async function downloadPdf() {
+  setMode('paper')
+  await nextTick()
+  window.setTimeout(() => window.print(), 80)
 }
 
 const slidePages = computed(() => {
@@ -888,22 +945,24 @@ const slidePages = computed(() => {
   currentLesson.value.blocks.forEach((block, bi) => {
     if (block.type === 'vocab' || (block.type === 'main' && typeof block.items === 'string')) {
       const tokens = tokenize(block.items)
-      for (let i = 0; i < tokens.length; i += 4) {
-        pages.push({ bi, from: i, to: Math.min(i + 4, tokens.length) })
+      for (let i = 0; i < tokens.length; i++) {
+        pages.push({ type: block.type === 'vocab' ? 'vocab' : 'token-list', bi, from: i, to: i + 1 })
       }
     } else if (block.type === 'main' && Array.isArray(block.items)) {
-      block.items.forEach((_, ii) => pages.push({ bi, from: ii, to: ii + 1 }))
+      block.items.forEach((_, ii) => pages.push({ type: 'main', bi, from: ii, to: ii + 1 }))
     } else if (block.type === 'practice' && Array.isArray(block.rows)) {
-      block.rows.forEach((_, ri) => pages.push({ bi, from: ri, to: ri + 1 }))
+      block.rows.forEach((_, ri) => pages.push({ type: 'practice-row', bi, from: ri, to: ri + 1 }))
     } else if (block.type === 'practice' && Array.isArray(block.items)) {
-      block.items.forEach((_, ii) => pages.push({ bi, from: ii, to: ii + 1 }))
+      block.items.forEach((_, ii) => pages.push({ type: 'practice-item', bi, from: ii, to: ii + 1 }))
     } else if (block.type === 'sentence_practice' || block.type === 'sentences') {
       const items = block.items || []
-      for (let i = 0; i < items.length; i += 4) {
-        pages.push({ bi, from: i, to: Math.min(i + 4, items.length) })
+      for (let i = 0; i < items.length; i++) {
+        pages.push({ type: 'sentence-practice', bi, from: i, to: i + 1 })
       }
+    } else if (block.type === 'notes' && Array.isArray(block.items)) {
+      block.items.forEach((_, ii) => pages.push({ type: 'note', bi, from: ii, to: ii + 1 }))
     } else {
-      pages.push({ bi, from: 0, to: (block.items?.length || 1) })
+      pages.push({ type: block.type, bi, from: 0, to: (block.items?.length || 1) })
     }
   })
   return pages
@@ -929,10 +988,54 @@ function slideItemVisible(bi, ii) {
   return pg && pg.bi === bi && ii >= pg.from && ii < pg.to
 }
 
+function getSlideAudio(page) {
+  if (!currentLesson.value || !page) return null
+  if (page.type === 'hero') {
+    const titleAudio = currentMedia.value?.titleAudio
+    return titleAudio ? { src: baseUrl + 'data/' + titleAudio, start: null, end: null, text: currentLesson.value.title.hak } : null
+  }
+  const block = currentLesson.value.blocks[page.bi]
+  const media = block ? getBlockMedia(currentLesson.value.id, block) : null
+  if (!block || !media?.audio) return null
+  const segments = normalizeSegments(media.segments)
+  const segment = segments?.[page.from]
+  return {
+    src: baseUrl + 'data/' + media.audio,
+    start: segment?.[0] ?? null,
+    end: segment?.[1] ?? null,
+    text: getSegmentText(block, page.from)
+  }
+}
+
+function getExportState() {
+  const page = curPage()
+  return {
+    lessonId: currentLesson.value?.id || null,
+    slideIndex: currentSlide.value,
+    slideCount: slidePages.value.length,
+    page,
+    audio: getSlideAudio(page)
+  }
+}
+
+function installExportApi() {
+  if (typeof window === 'undefined') return
+  window.__LESSON_EXPORT__ = {
+    getState: getExportState,
+    getSlideCount: () => slidePages.value.length,
+    getSlides: () => slidePages.value.map((page, slideIndex) => ({ slideIndex, page, audio: getSlideAudio(page) })),
+    setSlide: async (slideIndex) => {
+      currentSlide.value = Math.max(0, Math.min(slideIndex, slidePages.value.length - 1))
+      await nextTick()
+      return getExportState()
+    }
+  }
+}
+
 function navigateTo(p) {
   if (p === 'textbook') {
     const id = currentLessonId.value || lessons.value[0]?.id || 1
-    router.push({ name: 'chapter', params: { id } })
+    router.push({ name: 'chapter', params: { id }, query: route.query })
   } else {
     router.push({ name: p })
   }
@@ -966,6 +1069,7 @@ onUnmounted(() => {
   if (navResizeObserver) navResizeObserver.disconnect()
   if (audioBarResizeObserver) audioBarResizeObserver.disconnect()
   document.removeEventListener('keydown', onSlideKeydown)
+  if (typeof window !== 'undefined') delete window.__LESSON_EXPORT__
   stopRaf()
 })
 
@@ -993,6 +1097,8 @@ watch(slidesMode, (on) => {
   }
 })
 
+watch([currentLesson, currentMedia, slidePages, currentSlide], () => installExportApi(), { immediate: true })
+
 async function loadLesson(id) {
   if (lessonCache.value[id]) return lessonCache.value[id]
   const entry = lessons.value.find(l => l.id === id)
@@ -1004,9 +1110,33 @@ async function loadLesson(id) {
   return data
 }
 
+async function loadMedia(id) {
+  if (mediaCache.value[id]) return mediaCache.value[id]
+  const entry = lessons.value.find(l => l.id === id)
+  if (!entry?.media) return null
+  const res = await fetch(baseUrl + 'data/' + entry.media)
+  if (!res.ok) return null
+  const data = await res.json()
+  mediaCache.value = { ...mediaCache.value, [id]: data }
+  return data
+}
+
+async function loadLessonBundle(id) {
+  if (id == null) return
+  await Promise.all([loadLesson(id), loadMedia(id)])
+}
+
+function prefetchNeighborLessons(id) {
+  const idx = lessons.value.findIndex(l => l.id === id)
+  for (const neighbor of [lessons.value[idx - 1], lessons.value[idx + 1]]) {
+    if (neighbor) loadLessonBundle(neighbor.id)
+  }
+}
+
 watch(currentLessonId, async (id) => {
-  if (id != null && !lessonCache.value[id]) {
-    await loadLesson(id)
+  if (id != null) {
+    await loadLessonBundle(id)
+    prefetchNeighborLessons(id)
   }
 })
 
@@ -1038,8 +1168,8 @@ onMounted(async () => {
     lexicon.value = map
     site.value = siteData
 
-    // Preload all lessons in parallel
-    await Promise.all(indexData.map(entry => loadLesson(entry.id)))
+    await loadLessonBundle(currentLessonId.value || indexData[0]?.id)
+    prefetchNeighborLessons(currentLessonId.value || indexData[0]?.id)
   } catch (e) {
     console.error(e)
   } finally {
@@ -1048,7 +1178,9 @@ onMounted(async () => {
 
   if (navEl.value) {
     const updateNavH = () => {
-      document.documentElement.style.setProperty('--nav-h', navEl.value.offsetHeight + 'px')
+      if (navEl.value) {
+        document.documentElement.style.setProperty('--nav-h', navEl.value.offsetHeight + 'px')
+      }
     }
     navResizeObserver = new ResizeObserver(updateNavH)
     navResizeObserver.observe(navEl.value)
@@ -1155,6 +1287,14 @@ watch(audioBarEl, (el) => {
 .ctl-slides.active {
   background: rgba(255, 255, 255, 0.25);
   border-color: rgba(255, 255, 255, 0.4);
+}
+.mode-controls .ctl-btn {
+  min-width: 3rem;
+}
+.ctl-print {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
 }
 
 /* ── Loading / empty ── */
@@ -1962,6 +2102,126 @@ watch(audioBarEl, (el) => {
   margin: 0 0 0.8rem;
 }
 
+/* ── Paper mode ── */
+.paper-active {
+  display: block;
+  background: #d8d7d2;
+  padding: 1rem;
+}
+.paper-active .sidebar,
+.paper-active .topbar {
+  display: none;
+}
+.paper-mode {
+  width: min(100%, 210mm);
+  min-height: 297mm;
+  margin: 0 auto;
+  padding: 12mm;
+  background: #fff;
+  box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.18);
+  color: #111;
+}
+.paper-mode .hero {
+  padding: 0 0 0.7rem;
+  margin-bottom: 0.8rem;
+  background: none;
+  border-bottom: 1px solid var(--color-border);
+  cursor: default;
+}
+.paper-mode .hero h1 {
+  font-size: 2rem;
+  line-height: 1.55;
+  margin: 0.45rem 0;
+}
+.paper-mode .blocks {
+  gap: 0.55rem;
+}
+.paper-mode .block {
+  padding: 0.45rem 0;
+  break-inside: avoid;
+}
+.paper-mode .block-hd {
+  margin-bottom: 0.4rem;
+}
+.paper-mode .vocab-grid {
+  gap: 0.28rem;
+}
+.paper-mode .vocab-card {
+  min-width: 4.5rem;
+  padding: 0.22rem 0.3rem;
+  cursor: default;
+}
+.paper-mode .vocab-hak,
+.paper-mode .vocab-card.sm .vocab-hak {
+  font-size: 1.35rem;
+  line-height: 1.75;
+}
+.paper-mode .dia-hak,
+.paper-mode .sent-hak {
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+.paper-mode .note-item,
+.paper-mode .sp-item,
+.paper-mode .prompt-list {
+  font-size: 0.9rem;
+}
+.paper-mode .block-play-btn,
+.paper-mode .row-play-btn,
+.paper-mode .lesson-foot {
+  display: none;
+}
+
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+@media print {
+  :global(body) {
+    background: #fff !important;
+  }
+  .site-nav,
+  .site-banner,
+  .sidebar,
+  .topbar,
+  .audio-bar,
+  .slide-nav-global,
+  .lesson-foot,
+  .block-play-btn,
+  .row-play-btn {
+    display: none !important;
+  }
+  .app-shell,
+  .paper-active {
+    display: block !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+  .main-stage {
+    overflow: visible !important;
+  }
+  .content,
+  .paper-mode {
+    width: auto !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    background: #fff !important;
+  }
+  .hero,
+  .block,
+  .note-item,
+  .dia-bubble,
+  .sent-row,
+  .drill-row-wrap {
+    break-inside: avoid;
+  }
+}
+
 /* ── Slides mode ── */
 .slides-active {
   grid-template-columns: 1fr;
@@ -1980,6 +2240,10 @@ watch(audioBarEl, (el) => {
   margin: 0 auto;
   width: min((100vh - var(--nav-h, 2.6rem)) / 0.5625, 100%);
   max-width: unset;
+}
+.export-active .slides-mode {
+  width: min(100vh / 0.5625, 100vw);
+  min-height: 100vh;
 }
 .slides-mode .hero {
   display: flex;
@@ -2018,6 +2282,22 @@ watch(audioBarEl, (el) => {
 .slides-mode .vocab-grid {
   justify-content: center;
 }
+.slides-mode .block-content > .vocab-grid > .vocab-card {
+  width: min(42rem, 92%);
+  min-height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  background: transparent;
+}
+.slides-mode .slide-context {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 .slides-mode .dialogue {
   max-width: unset;
 }
@@ -2046,16 +2326,26 @@ watch(audioBarEl, (el) => {
   font-size: 1.1rem;
 }
 .slides-mode .prompt-list {
-  font-size: 1.6rem;
+  justify-content: center;
+  padding-left: 0;
+  font-size: 1.9rem;
 }
 .slides-mode .sp-item {
-  font-size: 1.4rem;
+  justify-content: center;
+  min-height: 14rem;
+  font-size: 2rem;
+  text-align: center;
+  background: transparent;
 }
 .slides-mode .sp-item::before {
+  align-self: center;
   font-size: 1.1rem;
 }
 .slides-mode .note-item {
-  font-size: 1.3rem;
+  width: min(48rem, 92%);
+  margin: 0 auto;
+  font-size: 1.45rem;
+  color: var(--color-text);
 }
 .slides-mode .block-type {
   font-size: 1.8rem;

@@ -5,23 +5,7 @@
     {
       "type": "vocab",
       "items": "吾兜 惹兜 其兜 吾兜嘅 惹兜嘅 其兜嘅 兩公婆 擺擺 兩十幾 鬧熱 真係 好食祿 餐館 聚會",
-      "audio": "audio/ch6-vocab.m4a",
-      "timestamps": [
-        [2.51, 3.6],
-        [3.6, 4.9],
-        [5, 6.2],
-        [6.32, 7.8],
-        [7.8, 9.2],
-        [9.2, 10.5],
-        [10.6, 12.2],
-        [12.3, 13.3],
-        [13.7, 15.1],
-        [15.3, 16.7],
-        [16.84, 18.1],
-        [18.33, 19.5],
-        [19.79, 21.41],
-        [21.41, 23.14]
-      ]
+      "id": "vocab-1"
     },
     {
       "type": "main",
@@ -37,19 +21,7 @@
         {"hak":"係呀，吾㜆曉煮好多客家菜，好好食嘅呀。","sp":"B","zh":"是呀，我媽媽會做很多客家菜，很好吃的呀","en":"Yes, my mom cooks a lot of Hakka dishes, they are delicious."},
         {"hak":"惹兜真係好食祿咯。","sp":"A","zh":"你們真好口福氣呀","en":"You really have good luck with food."}
       ],
-      "audio": "audio/ch6-main.m4a",
-      "timestamps": [
-        [2.4, 8],
-        [8.5, 11.9],
-        [12.3, 17.3],
-        [17.7, 22.9],
-        [22.8, 28.2],
-        [28.5, 31.9],
-        [32.3, 35.8],
-        [35.9, 40.2],
-        [41.3, 46.4],
-        [46.4, 48.7]
-      ]
+      "id": "main-1"
     },
     {
       "type": "sentence_practice",
@@ -68,7 +40,8 @@
         "曉，佢曉煮客家菜。",
         "惹㜆煮菜好唔好食？",
         "吾㜆煮菜好好食。吾兜擺擺都好開心。"
-      ]
+      ],
+      "id": "sentence_practice-1"
     },
     {
       "type": "practice",
@@ -81,8 +54,7 @@
         ["木屋", "腳骨", "八百", "德國"],
         ["特別", "復活", "獨立", "學習"]
       ],
-      "audio": "audio/ch6-practice.m4a",
-      "timestamps": [[4.8, 12.8], [13.4, 21.9], [22.6, 30.5], [31.5, 38.8], [39.5, 47.2], [48.2, 54.9]]
+      "id": "practice-1"
     },
     {
       "type": "nursery",
@@ -90,8 +62,7 @@
         {"hak":"月光光，秀才郎，騎白馬，過蓮塘，蓮塘背，種韭菜，韭菜花，結親家，"},
         {"hak":"親家門前一口塘，放條鯉嫲八尺長。"}
       ],
-      "audio": "audio/ch6-nursery.m4a",
-      "timestamps": [[2.03, 17.49], [17.49, 24.11]]
+      "id": "nursery-1"
     },
     {
       "type": "notes",
@@ -120,7 +91,8 @@
           "zh": "「幾」在發問，或者意思為「甚為」的時候，發音是 `gĭt`。另外也有 `gĭ` 的發音，例如{幾十歲}、{幾百年}、{第幾}。",
           "en": "When 幾 is used in questions or means 'what/why', it is pronounced `gĭt`. There is also the pronunciation `gĭ`, used in e.g., 'tens of years old' ({幾十歲}), 'hundreds of years' ({幾百年}), 'which one (ordinal)' ({第幾})."
         }
-      ]
+      ],
+      "id": "notes-1"
     }
   ]
 }

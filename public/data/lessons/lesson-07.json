@@ -5,23 +5,7 @@
     {
       "type": "vocab",
       "items": "恁樣 仰邊 轉屋卡 轉去 黏等 愛 好像 渾 轉到屋 幾久 小巴 巴士 或者 之後",
-      "audio": "audio/ch7-vocab.m4a",
-      "timestamps": [
-        [2.43, 4.14],
-        [4.14, 5.94],
-        [5.94, 7.84],
-        [7.84, 9.4],
-        [9.4, 11.25],
-        [11.25, 12.58],
-        [12.58, 14.32],
-        [14.32, 15.78],
-        [15.78, 17.73],
-        [17.73, 19.43],
-        [19.43, 21.12],
-        [21.12, 22.68],
-        [22.68, 24.2],
-        [24.3, 25.6]
-      ]
+      "id": "vocab-1"
     },
     {
       "type": "main",
@@ -37,19 +21,7 @@
         {"hak":"恁樣來回咩愛兩隻鐘頭？你幾多點睡目嘅呢？","sp":"A","zh":"這樣來回不就要兩個小時嗎？你幾點睡覺呢？","en":"Doesn't that mean two hours back and forth? What time do you sleep?"},
         {"hak":"厓十一點鐘睡目喔。","sp":"B","zh":"我十一點鐘睡覺。","en":"I sleep at eleven o'clock."}
       ],
-      "audio": "audio/ch7-main.m4a",
-      "timestamps": [
-        [3.4, 8.7],
-        [9, 11.2],
-        [11.2, 13.2],
-        [13.5, 16.6],
-        [16.9, 20.4],
-        [21.5, 29.9],
-        [30.5, 35.1],
-        [35.3, 38.3],
-        [38.5, 43.8],
-        [44.5, 47.3]
-      ]
+      "id": "main-1"
     },
     {
       "type": "sentence_practice",
@@ -64,7 +36,8 @@
         "厓 + 十一點/十一點半/… + 睡目。",
         "你睡目愛睡幾久？",
         "厓愛睡八隻鐘頭。"
-      ]
+      ],
+      "id": "sentence_practice-1"
     },
     {
       "type": "practice",
@@ -77,8 +50,7 @@
         ["軟弱", "韌帶", "艾草", "攰死"],
         ["嚴格", "鹽田", "乳牛", "濃密"]
       ],
-      "audio": "audio/ch7-practice.m4a",
-      "timestamps": [[5.9, 14.6], [14.9, 23.2], [24, 32], [32.5, 41.1], [42.1, 50.6], [51.4, 59.4]]
+      "id": "practice-1"
     },
     {
       "type": "idiom",
@@ -86,8 +58,7 @@
         {"hak":"一夜冇睡目，十夜補唔足。"},
         {"hak":"老虎都曉啄目睡。","note":"啄目睡：打瞌睡"}
       ],
-      "audio": "audio/ch7-idiom.m4a",
-      "timestamps": [[2.63, 8], [8, 12.43]]
+      "id": "idiom-1"
     },
     {
       "type": "notes",
@@ -99,7 +70,8 @@
         {"zh":"{渾}有「差不多」、「大概」、「整整」的意思，相當於廣州話的「成」。（注意傳統客家話不說「成」。）","en":"{渾} means 'almost', 'approximately', or 'whole'. It is equivalent to Cantonese's 「成」. (Note: Traditional Hakka does not use 「成」)."},
         {"zh":"注意「巴」在{小巴}、{巴士}的發音不一樣。","en":"Note that 巴 is pronounced differently in 'minibus' ({小巴}) and 'bus' ({巴士})."},
         {"zh":"注意「老」在{老虎}的發音是 `làu`。","en":"Note that 老 in 'tiger' ({老虎}) is pronounced `làu`."}
-      ]
+      ],
+      "id": "notes-1"
     }
   ]
 }

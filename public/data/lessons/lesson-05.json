@@ -2,23 +2,7 @@
   "id": 5,
   "title": {"hak":"裏背、這裏、唉裏、奈裏","en":"Inside, Here, There, Where"},
   "blocks": [
-    {
-      "type": "vocab",
-      "items": "裏背 這裏 唉裏 共總 先生 奈埞 奈裏 還吂 學校 附近",
-      "audio": "audio/ch5-vocab.m4a",
-      "timestamps": [
-        [2.28, 4.09],
-        [4.09, 5.84],
-        [5.84, 7.43],
-        [7.43, 9.16],
-        [9.16, 10.96],
-        [10.96, 12.64],
-        [12.64, 13.86],
-        [13.86, 15.86],
-        [15.86, 17.45],
-        [17.45, 19.14]
-      ]
-    },
+    {"type":"vocab","items":"裏背 這裏 唉裏 共總 先生 奈埞 奈裏 還吂 學校 附近","id":"vocab-1"},
     {
       "type": "main",
       "items": [
@@ -33,19 +17,7 @@
         {"hak":"有冇哪人住在學校附近嘅呢？","sp":"B","zh":"有沒有誰住在學校附近的呢？","en":"Does anyone live near the school?"},
         {"hak":"有呀，吾表哥就住在學校附近。","sp":"A","zh":"有呀，我表哥就住在學校附近。","en":"Yes, my cousin lives near the school."}
       ],
-      "audio": "audio/ch5-main.m4a",
-      "timestamps": [
-        [3.4, 6.5],
-        [7, 13.8],
-        [14.2, 17.6],
-        [17.9, 23],
-        [23.9, 25.9],
-        [26.1, 28.1],
-        [28.6, 30.1],
-        [30.6, 32.3],
-        [33.2, 36.3],
-        [37.3, 41.5]
-      ]
+      "id": "main-1"
     },
     {
       "type": "sentence_practice",
@@ -65,7 +37,8 @@
         "厓住在 + 沙田/大埔/...",
         "哪人住在學校附近嘅呢？",
         "…住在學校附近。"
-      ]
+      ],
+      "id": "sentence_practice-1"
     },
     {
       "type": "practice",
@@ -79,8 +52,7 @@
         ["紅帽", "熊貓", "英雄", "洪水"],
         ["涼爽", "遐想", "常識", "顔色"]
       ],
-      "audio": "audio/ch5-practice.m4a",
-      "timestamps": [[5.3, 13.6], [13.4, 21.7], [22.1, 30.5], [31.1, 40.2], [41, 49.9], [50.4, 59.6], [59.9, 68.4]]
+      "id": "practice-1"
     },
     {
       "type": "nursery",
@@ -88,8 +60,7 @@
         {"hak":"先生教厓讀書，厓教先生打山豬。"},
         {"hak":"山豬飆過河，嚇到先生兩公婆。"}
       ],
-      "audio": "audio/ch5-nursery.m4a",
-      "timestamps": [[2.18, 7.49], [7.49, 13.05]]
+      "id": "nursery-1"
     },
     {
       "type": "notes",
@@ -118,7 +89,8 @@
           "zh": "{吂}是客家話常用詞，惠陽腔包括香港的發音是 `mān`。代表「尚未」發生的動作（沒、沒有）。",
           "en": "{吂} is a common Hakka word, pronounced `mān` in the **Fuiyong accent** (including Hong Kong). It indicates an action that has 'not yet' happened."
         }
-      ]
+      ],
+      "id": "notes-1"
     }
   ]
 }

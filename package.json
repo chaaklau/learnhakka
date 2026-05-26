@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "validate:data": "node scripts/validate-data.cjs",
+    "export:video": "node scripts/export-video.cjs"
   },
   "dependencies": {
     "vue": "^3.3.4",
@@ -14,6 +16,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
+    "playwright": "^1.56.1",
     "vite": "^4.4.5"
   }
 }

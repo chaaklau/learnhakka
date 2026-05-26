@@ -1,0 +1,167 @@
+{
+  "lessonId": 2,
+  "titleAudio": "audio/ch2-title.m4a",
+  "blocks": {
+    "main-1": {
+      "audio": "audio/ch2-main-1.m4a",
+      "segments": [
+        {
+          "start": 3.43,
+          "end": 4.92
+        },
+        {
+          "start": 4.92,
+          "end": 6.25
+        },
+        {
+          "start": 6.25,
+          "end": 7.72
+        },
+        {
+          "start": 7.72,
+          "end": 9.15
+        },
+        {
+          "start": 9.15,
+          "end": 10.51
+        },
+        {
+          "start": 10.51,
+          "end": 11.85
+        },
+        {
+          "start": 11.85,
+          "end": 13.03
+        },
+        {
+          "start": 13.03,
+          "end": 14.37
+        },
+        {
+          "start": 14.37,
+          "end": 15.67
+        },
+        {
+          "start": 15.67,
+          "end": 17
+        },
+        {
+          "start": 17,
+          "end": 18.21
+        },
+        {
+          "start": 18.21,
+          "end": 19.42
+        },
+        {
+          "start": 19.42,
+          "end": 20.6
+        },
+        {
+          "start": 20.6,
+          "end": 21.96
+        },
+        {
+          "start": 21.96,
+          "end": 23.3
+        }
+      ]
+    },
+    "main-2": {
+      "audio": "audio/ch2-main-2.m4a",
+      "segments": [
+        {
+          "start": 0.5,
+          "end": 2.23
+        },
+        {
+          "start": 2.23,
+          "end": 4.61
+        },
+        {
+          "start": 4.61,
+          "end": 7.59
+        },
+        {
+          "start": 7.59,
+          "end": 11.64
+        },
+        {
+          "start": 11.64,
+          "end": 15.72
+        }
+      ]
+    },
+    "main-3": {
+      "audio": "audio/ch2-main-3.m4a",
+      "segments": [
+        {
+          "start": 0.5,
+          "end": 2.76
+        },
+        {
+          "start": 2.76,
+          "end": 12.2
+        },
+        {
+          "start": 12.2,
+          "end": 24.01
+        }
+      ]
+    },
+    "practice-1": {
+      "audio": "audio/ch2-practice.m4a",
+      "segments": [
+        {
+          "start": 3.69,
+          "end": 7.27
+        },
+        {
+          "start": 7.4,
+          "end": 10.5
+        },
+        {
+          "start": 11.4,
+          "end": 14.7
+        },
+        {
+          "start": 15.67,
+          "end": 19.11
+        },
+        {
+          "start": 19.57,
+          "end": 22.68
+        },
+        {
+          "start": 23.5,
+          "end": 26.3
+        },
+        {
+          "start": 27,
+          "end": 30.5
+        },
+        {
+          "start": 31.8,
+          "end": 34.8
+        },
+        {
+          "start": 35.5,
+          "end": 39.5
+        }
+      ]
+    },
+    "idiom-1": {
+      "audio": "audio/ch2-idiom.m4a",
+      "segments": [
+        {
+          "start": 1.83,
+          "end": 8.09
+        },
+        {
+          "start": 8.09,
+          "end": 13.74
+        }
+      ]
+    }
+  }
+}

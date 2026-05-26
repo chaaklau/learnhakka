@@ -5,23 +5,7 @@
     {
       "type": "vocab",
       "items": "吾 惹 其 表弟 大舅 姊妹 咩係 阿㜆 阿哥 幾多 兩十二 左手析 三隻 歲",
-      "audio": "audio/ch3-vocab.m4a",
-      "timestamps": [
-        [2.8, 3.91],
-        [4.2, 5.56],
-        [5.76, 6.5],
-        [7.2, 8.5],
-        [8.94, 10.5],
-        [10.9, 12.52],
-        [12.52, 14.42],
-        [14.42, 16.15],
-        [16.15, 17.77],
-        [17.77, 19.4],
-        [19.4, 21.34],
-        [21.34, 23.16],
-        [23.16, 24.5],
-        [25, 26]
-      ]
+      "id": "vocab-1"
     },
     {
       "type": "main",
@@ -40,22 +24,7 @@
         {"hak":"惹哥幾多歲？","sp":"A","zh":"你哥哥幾歲？","en":"How old is your brother?"},
         {"hak":"佢兩十九歲。","sp":"B","zh":"他二十九歲。","en":"He is twenty-nine years old."}
       ],
-      "audio": "audio/ch3-main.m4a",
-      "timestamps": [
-        [2, 5.4],
-        [5.4, 7.8],
-        [8, 10.3],
-        [10.7, 17.5],
-        [17.9, 20.7],
-        [21.3, 23.7],
-        [24.16, 26.3],
-        [27.22, 29.3],
-        [29.5, 32.7],
-        [32.7, 34],
-        [34.2, 36.09],
-        [36.09, 38],
-        [38, 40.7]
-      ]
+      "id": "main-1"
     },
     {
       "type": "sentence_practice",
@@ -67,11 +36,15 @@
         "厓有...隻 + 阿哥/表哥/表弟/大舅",
         "惹 + 哥/表哥/表弟/大舅 幾多歲？",
         "吾 + 哥/表哥/表弟/大舅...歲"
-      ]
+      ],
+      "id": "sentence_practice-1"
     },
     {
       "type": "practice",
-      "description": {"hak":"第五聲摎第六聲（入聲 `-p`、`-t`、`-k`、`-m`、`-n`、`-ng`）","en":"Tone 5 & 6 (Entering Tones `-p`, `-t`, `-k`, `-m`, `-n`, `-ng`)"},
+      "description": {
+        "hak": "第五聲摎第六聲（入聲 `-p`、`-t`、`-k`、`-m`、`-n`、`-ng`）",
+        "en": "Tone 5 & 6 (Entering Tones `-p`, `-t`, `-k`, `-m`, `-n`, `-ng`)"
+      },
       "rows": [
         ["金", "＿.gim2", "錦", "禁", "急", "＿.gip6"],
         ["番", "繁", "反", "飯", "發.fat5", "活"],
@@ -82,16 +55,14 @@
         ["冷", "零", "㘄", "另", "壢", "曆"],
         ["風", "馮", "哄", "鳳", "福", "伏"]
       ],
-      "audio": "audio/ch3-practice.m4a",
-      "timestamps": [[5, 11.3], [11.5, 16.4], [17.5, 23.5], [23.5, 29], [29.5, 34.8], [35, 41], [41, 46.5], [47, 52]]
+      "id": "practice-1"
     },
     {
       "type": "idiom",
       "items": [
         {"hak":"瓠打瓠，瓜打瓜，唔係像阿㜆就像阿爸。","note":"打：結果子/開花的動作"}
       ],
-      "audio": "audio/ch3-idiom.m4a",
-      "timestamps": [[2.07, 8.56]]
+      "id": "idiom-1"
     },
     {
       "type": "notes",
@@ -120,7 +91,8 @@
           "zh": "{你幾多姊妹}是連同自己計算的，是你父母有多少個孩子的意思。傳統客家話不說「兄弟姊妹」，只說{姊妹}。",
           "en": "'{你幾多姊妹}' ('How many siblings do you have?') includes yourself in the count; it asks how many children your parents have. Traditional Hakka says {姊妹} ('sisters/siblings') instead of 「兄弟姊妹」 ('brothers and sisters')."
         }
-      ]
+      ],
+      "id": "notes-1"
     }
   ]
 }

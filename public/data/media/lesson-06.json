@@ -1,0 +1,154 @@
+{
+  "lessonId": 6,
+  "titleAudio": "audio/ch6-title.m4a",
+  "blocks": {
+    "vocab-1": {
+      "audio": "audio/ch6-vocab.m4a",
+      "segments": [
+        {
+          "start": 2.51,
+          "end": 3.6
+        },
+        {
+          "start": 3.6,
+          "end": 4.9
+        },
+        {
+          "start": 5,
+          "end": 6.2
+        },
+        {
+          "start": 6.32,
+          "end": 7.8
+        },
+        {
+          "start": 7.8,
+          "end": 9.2
+        },
+        {
+          "start": 9.2,
+          "end": 10.5
+        },
+        {
+          "start": 10.6,
+          "end": 12.2
+        },
+        {
+          "start": 12.3,
+          "end": 13.3
+        },
+        {
+          "start": 13.7,
+          "end": 15.1
+        },
+        {
+          "start": 15.3,
+          "end": 16.7
+        },
+        {
+          "start": 16.84,
+          "end": 18.1
+        },
+        {
+          "start": 18.33,
+          "end": 19.5
+        },
+        {
+          "start": 19.79,
+          "end": 21.41
+        },
+        {
+          "start": 21.41,
+          "end": 23.14
+        }
+      ]
+    },
+    "main-1": {
+      "audio": "audio/ch6-main.m4a",
+      "segments": [
+        {
+          "start": 2.4,
+          "end": 8
+        },
+        {
+          "start": 8.5,
+          "end": 11.9
+        },
+        {
+          "start": 12.3,
+          "end": 17.3
+        },
+        {
+          "start": 17.7,
+          "end": 22.9
+        },
+        {
+          "start": 22.9,
+          "end": 28.2
+        },
+        {
+          "start": 28.5,
+          "end": 31.9
+        },
+        {
+          "start": 32.3,
+          "end": 35.8
+        },
+        {
+          "start": 35.9,
+          "end": 40.2
+        },
+        {
+          "start": 41.3,
+          "end": 46.4
+        },
+        {
+          "start": 46.4,
+          "end": 48.7
+        }
+      ]
+    },
+    "practice-1": {
+      "audio": "audio/ch6-practice.m4a",
+      "segments": [
+        {
+          "start": 4.8,
+          "end": 12.8
+        },
+        {
+          "start": 13.4,
+          "end": 21.9
+        },
+        {
+          "start": 22.6,
+          "end": 30.5
+        },
+        {
+          "start": 31.5,
+          "end": 38.8
+        },
+        {
+          "start": 39.5,
+          "end": 47.2
+        },
+        {
+          "start": 48.2,
+          "end": 54.9
+        }
+      ]
+    },
+    "nursery-1": {
+      "audio": "audio/ch6-nursery.m4a",
+      "segments": [
+        {
+          "start": 2.03,
+          "end": 17.49
+        },
+        {
+          "start": 17.49,
+          "end": 24.11
+        }
+      ]
+    }
+  }
+}

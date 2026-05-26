@@ -1,0 +1,137 @@
+{
+  "lessonId": 4,
+  "titleAudio": "audio/ch4-title.m4a",
+  "blocks": {
+    "vocab-1": {
+      "audio": "audio/ch4-vocab.m4a",
+      "segments": [
+        {
+          "start": 2.2,
+          "end": 3.7
+        },
+        {
+          "start": 3.7,
+          "end": 5.1
+        },
+        {
+          "start": 5.2,
+          "end": 6.7
+        },
+        {
+          "start": 6.89,
+          "end": 8.5
+        },
+        {
+          "start": 8.65,
+          "end": 9.9
+        },
+        {
+          "start": 9.9,
+          "end": 11.41
+        },
+        {
+          "start": 11.41,
+          "end": 12.5
+        },
+        {
+          "start": 12.6,
+          "end": 13.9
+        },
+        {
+          "start": 14,
+          "end": 15.62
+        },
+        {
+          "start": 15.62,
+          "end": 17.01
+        },
+        {
+          "start": 17.01,
+          "end": 18.38
+        },
+        {
+          "start": 18.38,
+          "end": 19.93
+        },
+        {
+          "start": 19.93,
+          "end": 21.5
+        },
+        {
+          "start": 21.5,
+          "end": 23.3
+        }
+      ]
+    },
+    "main-1": {
+      "audio": "audio/ch4-main.m4a",
+      "segments": [
+        {
+          "start": 2.11,
+          "end": 4
+        },
+        {
+          "start": 4,
+          "end": 13
+        },
+        {
+          "start": 13,
+          "end": 17.55
+        },
+        {
+          "start": 17.55,
+          "end": 20.6
+        },
+        {
+          "start": 20.6,
+          "end": 25.32
+        },
+        {
+          "start": 25.32,
+          "end": 29.2
+        },
+        {
+          "start": 29.2,
+          "end": 31.7
+        },
+        {
+          "start": 31.7,
+          "end": 35.8
+        },
+        {
+          "start": 35.8,
+          "end": 38.3
+        }
+      ]
+    },
+    "practice-1": {
+      "audio": "audio/ch4-practice.m4a",
+      "segments": [
+        {
+          "start": 5.1,
+          "end": 7.6
+        },
+        {
+          "start": 8.5,
+          "end": 10.9
+        },
+        {
+          "start": 11.9,
+          "end": 14.3
+        },
+        {
+          "start": 15.2,
+          "end": 17.6
+        },
+        {
+          "start": 18.4,
+          "end": 20.6
+        },
+        {
+          "start": 21.6,
+          "end": 24.7
+        }
+      ]
+    }
+  }
+}
