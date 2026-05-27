@@ -310,10 +310,15 @@
 <script setup>
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import _indexJson from '../public/data/index.json'
+import _siteJson from '../public/data/site.json'
+import _csvRaw from '../public/lexicon.csv?raw'
+const _lessonModules = import.meta.glob('../public/data/lessons/*.json', { eager: true })
+const _mediaModules = import.meta.glob('../public/data/media/*.json', { eager: true })
 
 const route = useRoute()
 const router = useRouter()
-const baseUrl = import.meta.env.BASE_URL
+const baseUrl = '../'
 
 const isA2 = window.location.pathname.includes('/a2/')
 const loading = ref(true)
@@ -1231,9 +1236,8 @@ async function loadLesson(id) {
   if (lessonCache.value[id]) return lessonCache.value[id]
   const entry = lessons.value.find(l => l.id === id)
   if (!entry) return null
-  const res = await fetch(baseUrl + 'data/' + entry.file)
-  if (!res.ok) return null
-  const data = await res.json()
+  const data = _lessonModules[`../public/data/${entry.file}`]?.default
+  if (!data) return null
   lessonCache.value = { ...lessonCache.value, [id]: data }
   return data
 }
@@ -1242,9 +1246,8 @@ async function loadMedia(id) {
   if (mediaCache.value[id]) return mediaCache.value[id]
   const entry = lessons.value.find(l => l.id === id)
   if (!entry?.media) return null
-  const res = await fetch(baseUrl + 'data/' + entry.media)
-  if (!res.ok) return null
-  const data = await res.json()
+  const data = _mediaModules[`../public/data/${entry.media}`]?.default
+  if (!data) return null
   mediaCache.value = { ...mediaCache.value, [id]: data }
   return data
 }
@@ -1270,16 +1273,9 @@ watch(currentLessonId, async (id) => {
 
 onMounted(async () => {
   try {
-    const [ir, cr, sr] = await Promise.all([
-      fetch(baseUrl + 'data/index.json'),
-      fetch(baseUrl + 'lexicon.csv'),
-      fetch(baseUrl + 'data/site.json'),
-    ])
-    if (!ir.ok || !cr.ok || !sr.ok) throw new Error('Failed to load assets.')
-
-    const indexData = await ir.json()
-    const csvText = await cr.text()
-    const siteData = await sr.json()
+    const indexData = _indexJson
+    const csvText = _csvRaw
+    const siteData = _siteJson
     const map = new Map()
     const lines = csvText.replace(/^\uFEFF/, '').split(/\r?\n/)
 
