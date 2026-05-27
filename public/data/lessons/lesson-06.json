@@ -18,8 +18,8 @@
         {"hak":"惹兜嘅家庭聚會咩好多人咯？","sp":"A","zh":"你們的家庭聚會不就很多人嗎？","en":"Isn't your family gathering very large then?"},
         {"hak":"係呀，擺擺都有兩十幾人嘅呀。","sp":"B","zh":"是呀，每次都有二十幾人的。","en":"Yes, every time there are twenty-something people."},
         {"hak":"哇，好鬧熱噢。惹兜好開心喔。","sp":"A","zh":"哇，好熱鬧耶。你們好開心啊。","en":"Wow, so lively. You must be very happy."},
-        {"hak":"係呀，吾㜆曉煮好多客家菜，好好食嘅呀。","sp":"B","zh":"是呀，我媽媽會做很多客家菜，很好吃的呀","en":"Yes, my mom cooks a lot of Hakka dishes, they are delicious."},
-        {"hak":"惹兜真係好食祿咯。","sp":"A","zh":"你們真好口福氣呀","en":"You really have good luck with food."}
+        {"hak":"係呀，吾㜆曉煮好多客家菜，好好食嘅呀。","sp":"B","zh":"是呀，我媽媽會做很多客家菜，很好吃的呀。","en":"Yes, my mom cooks a lot of Hakka dishes, they are delicious."},
+        {"hak":"惹兜真係好食祿咯。","sp":"A","zh":"你們真好口福氣呀。","en":"You really have good luck with food."}
       ],
       "id": "main-1"
     },
@@ -31,7 +31,7 @@
         "其兜在...做乜介 ？",
         "其兜係做... 嘅",
         "其兜有冇兄弟姊妹？有幾多隻？",
-        "吾㜆 + 有/冇 + ...姊妹。吾爸 + 有/冇... 姊妹。",
+        "吾㜆 + 有/冇 + ...姊妹。吾爸 + 有/冇 ... 姊妹。",
         "其兜住在奈埞呢？",
         "其兜住在...",
         "惹兜嘅親戚多唔多家庭聚會？",
@@ -68,8 +68,8 @@
       "type": "notes",
       "items": [
         {
-          "zh": "香港客家話屬於**惠陽腔**，沒有介音 `u`，所以 「廣/港」`gong3`、「關/間」`gan1`、「過/個」`go4`、「郭/角」`gok5` 同音。",
-          "en": "Hong Kong Hakka belongs to the **Fuiyong accent** and lacks the `u`-medial. Therefore, 廣/港 `gong3`、 關/間 `gan1`、 過/個 `go4`、 郭/角 `gok5` are homophones."
+          "zh": "香港客家話屬於**惠陽腔**，沒有介音 `u`，所以 「廣/港」`gŏng`、「關/間」`gán`、「過/個」`gò`、「郭/角」`gŏk` 同音。",
+          "en": "Hong Kong Hakka belongs to the **Fuiyong accent** and lacks the `u`-medial. Therefore, 廣/港 `gŏng`、 關/間 `gán`、 過/個 `gò`、 郭/角 `gŏk` are homophones."
         },
         {
           "zh": "「國」傳統發音是 `gĕt`，近似英語的「get」，不唸 `gŏk`。",
