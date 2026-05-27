@@ -1,20 +1,20 @@
 <template>
   <nav v-if="!exportMode && !slidesMode" ref="navEl" class="site-nav">
     <button type="button" class="menu-btn" @click="sidebarOpen = !sidebarOpen">☰</button>
-    <span class="site-brand" @click="navigateTo('textbook')">香港客家話入門</span>
+    <span class="site-brand" @click="navigateTo('textbook')">{{ isA2 ? '香港客家話初級' : '香港客家話入門' }}<span class="site-brand-level">Hong Kong Hakka · {{ isA2 ? 'Elementary (A2)' : 'Beginner (A1)' }}</span></span>
     <div class="site-links">
       <button type="button" :class="['site-link', { active: page === 'textbook' }]" @click="navigateTo('textbook')">課本 Textbook</button>
       <button type="button" :class="['site-link', { active: page === 'about' }]" @click="navigateTo('about')">關於計劃 About the Project</button>
     </div>
       <div class="nav-controls" aria-label="顯示設定 Display controls">
-      <details class="view-menu">
-        <summary :class="['ctl-btn', 'view-menu-summary', { active: paperMode || displayLang !== 'zh' || romMode !== 'ruby' }]" title="顯示設定 Display settings">
+      <div class="view-menu">
+        <div :class="['ctl-btn', 'view-menu-summary', { active: paperMode || displayLang !== 'zh' || romMode !== 'ruby' }]" title="顯示設定 Display settings">
           <svg class="ctl-icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 7h4"></path><path d="M12 7h8"></path><circle cx="10" cy="7" r="2"></circle>
             <path d="M4 17h8"></path><path d="M16 17h4"></path><circle cx="14" cy="17" r="2"></circle>
           </svg>
           <span>顯示 Display</span>
-        </summary>
+        </div>
         <div class="view-menu-panel">
           <div class="view-menu-section">
             <span class="view-menu-label">譯文 Translation</span>
@@ -42,7 +42,7 @@
             </div>
           </div>
         </div>
-      </details>
+      </div>
       <button type="button" :class="['ctl-btn', 'ctl-slides-main', { active: slidesMode }]" :aria-pressed="slidesMode" title="投影片模式 Slide view" @click="setMode('slides')">
         <svg class="ctl-icon" viewBox="0 0 24 24" aria-hidden="true">
           <rect x="4" y="5" width="16" height="11" rx="1.5"></rect>
@@ -98,14 +98,14 @@
           <span class="slide-lesson">第 {{ currentLesson.id }} 課 · <span class="font-hakka" v-html="formatHakka(currentLesson.title.hak)"></span></span>
         </div>
         <div v-if="slidesMode && !exportMode" class="slide-tool-bar">
-          <details class="slide-display-menu">
-            <summary class="slide-tool-btn slide-display-summary" title="顯示設定 Display settings">
+          <div class="slide-display-menu">
+            <div class="slide-tool-btn slide-display-summary" title="顯示設定 Display settings">
               <svg class="ctl-icon" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M4 7h4"></path><path d="M12 7h8"></path><circle cx="10" cy="7" r="2"></circle>
                 <path d="M4 17h8"></path><path d="M16 17h4"></path><circle cx="14" cy="17" r="2"></circle>
               </svg>
               <span>顯示 Display</span>
-            </summary>
+            </div>
             <div class="slide-display-panel">
               <div class="view-menu-section">
                 <span class="view-menu-label">譯文 Translation</span>
@@ -126,7 +126,7 @@
                 </div>
               </div>
             </div>
-          </details>
+          </div>
           <button type="button" class="slide-tool-btn slide-exit-btn" title="離開投影片 Exit slide mode" aria-label="離開投影片 Exit slide mode" @click="setMode('textbook')">
             <svg class="ctl-icon" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M6 6l12 12"></path><path d="M18 6L6 18"></path>
@@ -302,7 +302,7 @@
     <button type="button" class="audio-bar-btn close" @click="closeAudioBar">✕</button>
   </div>
 
-  <div v-if="!exportMode && !slidesMode" class="site-banner">⚠️ This site is under construction. Some content, audio, and features may be incomplete or inaccurate.</div>
+  <div v-if="!exportMode && !slidesMode && isA2" class="site-banner">⚠️ This site is under construction. Some content, audio, and features may be incomplete or inaccurate.</div>
 
   <audio ref="audioEl" @ended="onAudioEnded" @pause="onAudioPause"></audio>
 </template>
@@ -315,6 +315,7 @@ const route = useRoute()
 const router = useRouter()
 const baseUrl = import.meta.env.BASE_URL
 
+const isA2 = window.location.pathname.includes('/a2/')
 const loading = ref(true)
 const lessons = ref([])
 const lessonCache = ref({})
@@ -1291,7 +1292,9 @@ onMounted(async () => {
       map.get(hak).push({ hak, rom: rom || '', zh: zh || '', en: en || '', unproofread: unproofread === '1' })
     }
 
-    lessons.value = indexData
+    lessons.value = isA2
+      ? indexData.filter((l) => l.id >= 11 && l.id <= 20)
+      : indexData.filter((l) => l.id >= 1 && l.id <= 10)
     lexicon.value = map
     site.value = siteData
 
@@ -1353,6 +1356,15 @@ watch(audioBarEl, (el) => {
   cursor: pointer;
   white-space: nowrap;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.site-brand-level {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  opacity: 0.72;
+  letter-spacing: 0.02em;
 }
 .site-links {
   display: flex;
@@ -1428,17 +1440,13 @@ watch(audioBarEl, (el) => {
 .view-menu {
   position: relative;
 }
-.view-menu[open] {
+.view-menu:hover {
   z-index: 40;
 }
 .view-menu-summary {
-  list-style: none;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: rgba(255, 255, 255, 0.78);
-}
-.view-menu-summary::-webkit-details-marker {
-  display: none;
 }
 .view-menu-panel {
   position: absolute;
@@ -1454,6 +1462,24 @@ watch(audioBarEl, (el) => {
   background: rgba(255, 255, 255, 0.98);
   color: var(--color-text);
   box-shadow: 0 1rem 2.5rem rgba(17, 17, 17, 0.16);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms 80ms, visibility 0s 260ms;
+}
+.view-menu-panel::before {
+  content: '';
+  position: absolute;
+  top: -0.6rem;
+  left: 0;
+  right: 0;
+  height: 0.6rem;
+}
+.view-menu:hover .view-menu-panel {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 150ms, visibility 0s;
 }
 .view-menu-section {
   display: grid;
@@ -2526,14 +2552,8 @@ watch(audioBarEl, (el) => {
 .slide-display-menu {
   position: relative;
 }
-.slide-display-menu[open] {
+.slide-display-menu:hover {
   z-index: 25;
-}
-.slide-display-summary {
-  list-style: none;
-}
-.slide-display-summary::-webkit-details-marker {
-  display: none;
 }
 .slide-display-panel {
   position: absolute;
@@ -2549,6 +2569,24 @@ watch(audioBarEl, (el) => {
   background: rgba(255, 255, 255, 0.98);
   color: var(--color-text);
   box-shadow: 0 1rem 2.5rem rgba(17, 17, 17, 0.16);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms 80ms, visibility 0s 260ms;
+}
+.slide-display-panel::before {
+  content: '';
+  position: absolute;
+  top: -0.6rem;
+  left: 0;
+  right: 0;
+  height: 0.6rem;
+}
+.slide-display-menu:hover .slide-display-panel {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 150ms, visibility 0s;
 }
 .slide-display-panel .control-group {
   justify-content: flex-start;
