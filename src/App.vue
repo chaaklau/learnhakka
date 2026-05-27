@@ -1,26 +1,61 @@
 <template>
-  <nav v-if="!exportMode" ref="navEl" class="site-nav">
+  <nav v-if="!exportMode && !slidesMode" ref="navEl" class="site-nav">
     <button type="button" class="menu-btn" @click="sidebarOpen = !sidebarOpen">☰</button>
     <span class="site-brand" @click="navigateTo('textbook')">香港客家話入門</span>
     <div class="site-links">
       <button type="button" :class="['site-link', { active: page === 'textbook' }]" @click="navigateTo('textbook')">課本 Textbook</button>
       <button type="button" :class="['site-link', { active: page === 'about' }]" @click="navigateTo('about')">關於計劃 About the Project</button>
     </div>
-    <div class="nav-controls">
-      <div class="control-group">
-        <button type="button" :class="['ctl-btn', { active: displayLang === 'zh' }]" @click="displayLang = 'zh'">中</button>
-        <button type="button" :class="['ctl-btn', { active: displayLang === 'en' }]" @click="displayLang = 'en'">EN</button>
-      </div>
-      <div class="control-group">
-        <button type="button" :class="['ctl-btn', { active: romMode === 'ruby' }]" @click="romMode = 'ruby'">Ruby</button>
-        <button type="button" :class="['ctl-btn', { active: romMode === 'bracket' }]" @click="romMode = 'bracket'">[Rom]</button>
-      </div>
-      <div class="control-group mode-controls">
-        <button type="button" :class="['ctl-btn', { active: viewMode === 'textbook' }]" @click="setMode('textbook')">Text</button>
-        <button type="button" :class="['ctl-btn', { active: paperMode }]" @click="setMode('paper')">Paper</button>
-        <button type="button" :class="['ctl-btn', { active: slidesMode }]" @click="setMode('slides')">Slides</button>
-      </div>
-      <button type="button" class="ctl-btn ctl-print" @click="downloadPdf">PDF</button>
+      <div class="nav-controls" aria-label="顯示設定 Display controls">
+      <details class="view-menu">
+        <summary :class="['ctl-btn', 'view-menu-summary', { active: paperMode || displayLang !== 'zh' || romMode !== 'ruby' }]" title="顯示設定 Display settings">
+          <svg class="ctl-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h4"></path><path d="M12 7h8"></path><circle cx="10" cy="7" r="2"></circle>
+            <path d="M4 17h8"></path><path d="M16 17h4"></path><circle cx="14" cy="17" r="2"></circle>
+          </svg>
+          <span>顯示 Display</span>
+        </summary>
+        <div class="view-menu-panel">
+          <div class="view-menu-section">
+            <span class="view-menu-label">譯文 Translation</span>
+            <div class="control-group lang-controls" role="group" aria-label="譯文語言 Translation language">
+              <button type="button" :class="['ctl-btn', { active: displayLang === 'zh' }]" :aria-pressed="displayLang === 'zh'" title="中文譯文 Chinese translation" @click="displayLang = 'zh'">中文</button>
+              <button type="button" :class="['ctl-btn', { active: displayLang === 'en' }]" :aria-pressed="displayLang === 'en'" title="英文譯文 English translation" @click="displayLang = 'en'">英文</button>
+            </div>
+          </div>
+          <div class="view-menu-section">
+            <span class="view-menu-label">讀音 Pronunciation</span>
+            <div class="control-group rom-controls" role="group" aria-label="讀音顯示 Pronunciation display">
+              <button type="button" :class="['ctl-btn', 'rom-choice', { active: romMode === 'ruby' }]" :aria-pressed="romMode === 'ruby'" title="讀音在字上 Pronunciation above the word" @click="romMode = 'ruby'">
+                <ruby class="ctl-example">厓<rt>ngai</rt></ruby>
+              </button>
+              <button type="button" :class="['ctl-btn', 'rom-choice', { active: romMode === 'bracket' }]" :aria-pressed="romMode === 'bracket'" title="讀音在字後 Pronunciation after the word" @click="romMode = 'bracket'">
+                <span class="ctl-example">厓<span class="ctl-rom">[ngai]</span></span>
+              </button>
+            </div>
+          </div>
+          <div class="view-menu-section">
+            <span class="view-menu-label">版面 Layout</span>
+            <div class="control-group mode-controls" role="group" aria-label="版面模式 View mode">
+              <button type="button" :class="['ctl-btn', { active: viewMode === 'textbook' }]" :aria-pressed="viewMode === 'textbook'" title="課本模式 Textbook view" @click="setMode('textbook')"><span class="ctl-symbol">T</span><span>課本 Text</span></button>
+              <button type="button" :class="['ctl-btn', { active: paperMode }]" :aria-pressed="paperMode" title="紙本模式 Paper view" @click="setMode('paper')"><span class="ctl-symbol">□</span><span>紙本 Paper</span></button>
+            </div>
+          </div>
+        </div>
+      </details>
+      <button type="button" :class="['ctl-btn', 'ctl-slides-main', { active: slidesMode }]" :aria-pressed="slidesMode" title="投影片模式 Slide view" @click="setMode('slides')">
+        <svg class="ctl-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="4" y="5" width="16" height="11" rx="1.5"></rect>
+          <path d="M12 16v4"></path><path d="M8.5 20h7"></path>
+        </svg>
+        <span>投影片 Slides</span>
+      </button>
+      <button type="button" class="ctl-btn ctl-print" @click="downloadPdf">
+        <svg class="ctl-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 3h7l4 4v14H7z"></path><path d="M14 3v5h5"></path>
+        </svg>
+        <span>列印/PDF</span>
+      </button>
     </div>
   </nav>
 
@@ -58,6 +93,47 @@
       </header>
 
       <div class="content" :class="{ 'slides-mode': slidesMode, 'paper-mode': paperMode, 'export-mode': exportMode }" @mousemove="slidesMode && resetSlideNavTimer()">
+        <div v-if="slidesMode" class="slide-meta-bar">
+          <span class="slide-project">香港客家話入門</span>
+          <span class="slide-lesson">第 {{ currentLesson.id }} 課 · <span class="font-hakka" v-html="formatHakka(currentLesson.title.hak)"></span></span>
+        </div>
+        <div v-if="slidesMode && !exportMode" class="slide-tool-bar">
+          <details class="slide-display-menu">
+            <summary class="slide-tool-btn slide-display-summary" title="顯示設定 Display settings">
+              <svg class="ctl-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 7h4"></path><path d="M12 7h8"></path><circle cx="10" cy="7" r="2"></circle>
+                <path d="M4 17h8"></path><path d="M16 17h4"></path><circle cx="14" cy="17" r="2"></circle>
+              </svg>
+              <span>顯示 Display</span>
+            </summary>
+            <div class="slide-display-panel">
+              <div class="view-menu-section">
+                <span class="view-menu-label">譯文 Translation</span>
+                <div class="control-group lang-controls" role="group" aria-label="譯文語言 Translation language">
+                  <button type="button" :class="['ctl-btn', { active: displayLang === 'zh' }]" :aria-pressed="displayLang === 'zh'" title="中文譯文 Chinese translation" @click="displayLang = 'zh'">中文</button>
+                  <button type="button" :class="['ctl-btn', { active: displayLang === 'en' }]" :aria-pressed="displayLang === 'en'" title="英文譯文 English translation" @click="displayLang = 'en'">英文</button>
+                </div>
+              </div>
+              <div class="view-menu-section">
+                <span class="view-menu-label">讀音 Pronunciation</span>
+                <div class="control-group rom-controls" role="group" aria-label="讀音顯示 Pronunciation display">
+                  <button type="button" :class="['ctl-btn', 'rom-choice', { active: romMode === 'ruby' }]" :aria-pressed="romMode === 'ruby'" title="讀音在字上 Pronunciation above the word" @click="romMode = 'ruby'">
+                    <ruby class="ctl-example">厓<rt>ngai</rt></ruby>
+                  </button>
+                  <button type="button" :class="['ctl-btn', 'rom-choice', { active: romMode === 'bracket' }]" :aria-pressed="romMode === 'bracket'" title="讀音在字後 Pronunciation after the word" @click="romMode = 'bracket'">
+                    <span class="ctl-example">厓<span class="ctl-rom">[ngai]</span></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </details>
+          <button type="button" class="slide-tool-btn slide-exit-btn" title="離開投影片 Exit slide mode" aria-label="離開投影片 Exit slide mode" @click="setMode('textbook')">
+            <svg class="ctl-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6l12 12"></path><path d="M18 6L6 18"></path>
+            </svg>
+            <span>離開 Exit</span>
+          </button>
+        </div>
         <section ref="heroEl" class="hero" v-show="!slidesMode || currentSlide === 0" @click="playHeroAudio(currentLesson.id)">
           <span class="kicker">第 {{ currentLesson.id }} 課 · Lesson {{ currentLesson.id }}</span>
           <h1 class="font-hakka" v-html="renderTitleRuby(currentLesson.title.hak)"></h1>
@@ -93,7 +169,7 @@
 
               <div v-if="block.type === 'vocab'" class="vocab-grid">
                 <div v-for="(token, ti) in tokenize(block.items)" :key="token" class="vocab-card" v-show="!slidesMode || slideItemVisible(bi, ti)" @click="playTokenAudio(block, bi, ti)">
-                  <p v-if="slidesMode" class="slide-context">{{ currentLesson.title.en }} · {{ blockTitle(block.type) }} {{ ti + 1 }} / {{ tokenize(block.items).length }}</p>
+                  <p v-if="slidesMode" class="slide-context">{{ ti + 1 }} / {{ tokenize(block.items).length }}</p>
                   <p class="vocab-hak font-hakka" v-html="renderTokenRuby(token)"></p>
                   <p class="vocab-mean">{{ getMeaning(token) || '—' }}</p>
                 </div>
@@ -109,8 +185,8 @@
                 <div
                   v-for="(item, ii) in block.items"
                   :key="ii"
-                  :class="['dia-bubble', { 'dia-right': block.items[0].sp === '先生' ? item.sp === 'B' : item.sp !== block.items[0].sp }]"
-                  v-show="!slidesMode || slideItemVisible(bi, ii)"
+                  :class="dialogueBubbleClasses(block, item, bi, ii)"
+                  v-show="dialogueItemVisible(bi, ii)"
                   @click="playBlockItem(currentLesson.id, block, bi, ii)"
                 >
                   <img v-if="speakerInfo(item.sp)" class="dia-avatar" :src="baseUrl + speakerInfo(item.sp).avatar" :alt="item.sp">
@@ -175,6 +251,7 @@
                 <p>Unsupported block: {{ block.type }}</p>
               </div>
             </div>
+            <div v-if="slidesMode && slideSectionEndVisible(bi)" class="section-end-mark" aria-hidden="true">◆</div>
           </article>
         </section>
 
@@ -225,7 +302,7 @@
     <button type="button" class="audio-bar-btn close" @click="closeAudioBar">✕</button>
   </div>
 
-  <div v-if="!exportMode" class="site-banner">⚠️ This site is under construction. Some content, audio, and features may be incomplete or inaccurate.</div>
+  <div v-if="!exportMode && !slidesMode" class="site-banner">⚠️ This site is under construction. Some content, audio, and features may be incomplete or inaccurate.</div>
 
   <audio ref="audioEl" @ended="onAudioEnded" @pause="onAudioPause"></audio>
 </template>
@@ -430,6 +507,45 @@ function blockTimestampMismatch(lessonId, block, blockIndex) {
 
 function hasSpeakers(items) {
   return Array.isArray(items) && items.some((i) => i?.sp)
+}
+
+function dialogueItemOnRight(block, item) {
+  const firstSpeaker = block?.items?.[0]?.sp
+  return firstSpeaker === '先生' ? item.sp === 'B' : item.sp !== firstSpeaker
+}
+
+function dialogueItemIsPreviousContext(bi, ii) {
+  if (!slidesMode.value) return false
+  const pg = curPage()
+  return Boolean(pg && pg.bi === bi && ii === pg.from - 1)
+}
+
+function dialogueItemIsNextContext(bi, ii) {
+  if (!slidesMode.value) return false
+  const pg = curPage()
+  return Boolean(pg && pg.bi === bi && ii === pg.to)
+}
+
+function dialogueItemVisible(bi, ii) {
+  if (!slidesMode.value) return true
+  const pg = curPage()
+  if (!pg || pg.bi !== bi) return false
+  return ii >= Math.max(0, pg.from - 1) && ii <= pg.to
+}
+
+function dialogueBubbleClasses(block, item, bi, ii) {
+  const isPreviousContext = dialogueItemIsPreviousContext(bi, ii)
+  const isNextContext = dialogueItemIsNextContext(bi, ii)
+  return [
+    'dia-bubble',
+    {
+      'dia-right': dialogueItemOnRight(block, item),
+      'dia-context': isPreviousContext || isNextContext,
+      'dia-context-prev': isPreviousContext,
+      'dia-context-next': isNextContext,
+      'dia-current': slidesMode.value && slideItemVisible(bi, ii)
+    }
+  ]
 }
 
 function formatHakka(text) {
@@ -943,6 +1059,7 @@ const slidePages = computed(() => {
   if (!currentLesson.value) return []
   const pages = [{ type: 'hero', bi: -1, from: 0, to: 0 }]
   currentLesson.value.blocks.forEach((block, bi) => {
+    const sectionStart = pages.length
     if (block.type === 'vocab' || (block.type === 'main' && typeof block.items === 'string')) {
       const tokens = tokenize(block.items)
       for (let i = 0; i < tokens.length; i++) {
@@ -964,6 +1081,7 @@ const slidePages = computed(() => {
     } else {
       pages.push({ type: block.type, bi, from: 0, to: (block.items?.length || 1) })
     }
+    if (pages.length > sectionStart) pages[pages.length - 1].sectionEnd = true
   })
   return pages
 })
@@ -986,6 +1104,10 @@ function slideItemVisible(bi, ii) {
   if (!slidesMode.value) return true
   const pg = curPage()
   return pg && pg.bi === bi && ii >= pg.from && ii < pg.to
+}
+function slideSectionEndVisible(bi) {
+  const pg = curPage()
+  return Boolean(pg && pg.bi === bi && pg.sectionEnd)
 }
 
 function getSlideAudio(page) {
@@ -1075,6 +1197,11 @@ onUnmounted(() => {
 
 function onSlideKeydown(e) {
   if (!slidesMode.value || !currentLesson.value) return
+  if (e.key === 'Escape') {
+    e.preventDefault()
+    setMode('textbook')
+    return
+  }
   if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return
   e.preventDefault()
   const total = slidePages.value.length
@@ -1176,17 +1303,16 @@ onMounted(async () => {
     loading.value = false
   }
 
-  if (navEl.value) {
-    const updateNavH = () => {
-      if (navEl.value) {
-        document.documentElement.style.setProperty('--nav-h', navEl.value.offsetHeight + 'px')
-      }
-    }
-    navResizeObserver = new ResizeObserver(updateNavH)
-    navResizeObserver.observe(navEl.value)
-    updateNavH()
-  }
 })
+
+watch(navEl, (el) => {
+  if (navResizeObserver) navResizeObserver.disconnect()
+  if (!el) return
+  const update = () => document.documentElement.style.setProperty('--nav-h', el.offsetHeight + 'px')
+  navResizeObserver = new ResizeObserver(update)
+  navResizeObserver.observe(el)
+  update()
+}, { flush: 'post' })
 
 watch(audioBarEl, (el) => {
   if (audioBarResizeObserver) audioBarResizeObserver.disconnect()
@@ -1215,15 +1341,15 @@ watch(audioBarEl, (el) => {
   z-index: 30;
   display: flex;
   align-items: center;
-  height: var(--nav-h, 2.6rem);
-  padding: 0 0.8rem;
+  min-height: var(--nav-h, 3rem);
+  padding: 0.32rem 0.9rem;
   background: var(--color-green);
   color: #fff;
-  gap: 0.4rem;
+  gap: 0.55rem;
 }
 .site-brand {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.18rem;
   cursor: pointer;
   white-space: nowrap;
   flex-shrink: 0;
@@ -1239,8 +1365,8 @@ watch(audioBarEl, (el) => {
   border: none;
   color: rgba(255, 255, 255, 0.65);
   cursor: pointer;
-  padding: 0.4rem 0.65rem;
-  font-size: 0.82rem;
+  padding: 0.45rem 0.7rem;
+  font-size: 0.86rem;
   transition: color 150ms;
   white-space: nowrap;
 }
@@ -1249,47 +1375,158 @@ watch(audioBarEl, (el) => {
   color: #fff;
 }
 .nav-controls {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.45rem;
   flex-shrink: 0;
 }
 .control-group {
   display: flex;
-  gap: 1px;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 4px;
-  overflow: hidden;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  background: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 6px;
 }
 .ctl-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.32rem;
+  min-height: 2.2rem;
   background: transparent;
   border: none;
   color: rgba(255, 255, 255, 0.55);
-  padding: 0.2rem 0.4rem;
-  font-size: 0.7rem;
+  padding: 0.28rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
   cursor: pointer;
   transition: background 150ms, color 150ms;
   white-space: nowrap;
-  line-height: 1.3;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+.ctl-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 .ctl-btn.active {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.22);
   color: #fff;
 }
 .ctl-btn:hover {
   color: #fff;
 }
-.ctl-slides {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+.view-menu {
+  position: relative;
 }
-.ctl-slides.active {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.4);
+.view-menu[open] {
+  z-index: 40;
+}
+.view-menu-summary {
+  list-style: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.78);
+}
+.view-menu-summary::-webkit-details-marker {
+  display: none;
+}
+.view-menu-panel {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  right: 0;
+  display: grid;
+  gap: 0.65rem;
+  width: max-content;
+  min-width: 20rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(24, 60, 50, 0.16);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.98);
+  color: var(--color-text);
+  box-shadow: 0 1rem 2.5rem rgba(17, 17, 17, 0.16);
+}
+.view-menu-section {
+  display: grid;
+  gap: 0.3rem;
+}
+.view-menu-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-muted);
+}
+.view-menu-panel .control-group {
+  justify-content: flex-start;
+  background: var(--color-surface-soft);
+  border-color: var(--color-border);
+}
+.view-menu-panel .ctl-btn {
+  color: var(--color-muted);
+}
+.view-menu-panel .ctl-btn.active {
+  background: var(--color-green);
+  color: #fff;
+}
+.view-menu-panel .ctl-btn:hover {
+  color: var(--color-green);
+}
+.view-menu-panel .ctl-btn.active:hover {
+  color: #fff;
+}
+.lang-controls .ctl-btn {
+  min-width: 3rem;
+}
+.rom-choice {
+  min-width: 4.7rem;
+  min-height: 2.55rem;
+}
+.ctl-example {
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  line-height: 1;
+  color: currentColor;
+}
+.ctl-example rt {
+  font-family: var(--font-body);
+  font-size: 0.54rem;
+  line-height: 1;
+  color: currentColor;
+  opacity: 0.76;
+}
+.ctl-rom {
+  margin-left: 0.12rem;
+  font-family: var(--font-body);
+  font-size: 0.72em;
+  color: currentColor;
+  opacity: 0.82;
+}
+.ctl-symbol {
+  width: 1rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  opacity: 0.86;
 }
 .mode-controls .ctl-btn {
-  min-width: 3rem;
+  min-width: 5.4rem;
+}
+.ctl-slides-main {
+  min-width: 7.4rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+.ctl-slides-main.active {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
 }
 .ctl-print {
   background: rgba(255, 255, 255, 0.08);
@@ -2225,6 +2462,7 @@ watch(audioBarEl, (el) => {
 /* ── Slides mode ── */
 .slides-active {
   grid-template-columns: 1fr;
+  min-height: 100vh;
   background: var(--color-border);
 }
 .slides-active .sidebar,
@@ -2233,13 +2471,121 @@ watch(audioBarEl, (el) => {
 }
 .slides-active .main-stage {
   display: grid;
+  min-height: 100vh;
 }
 .slides-mode {
+  position: relative;
   display: grid;
   background: var(--color-bg);
   margin: 0 auto;
-  width: min((100vh - var(--nav-h, 2.6rem)) / 0.5625, 100%);
+  width: min(100vh / 0.5625, 100%);
+  min-height: 100vh;
   max-width: unset;
+}
+.slide-meta-bar {
+  display: none;
+}
+.slides-mode .slide-meta-bar {
+  position: absolute;
+  top: 1.15rem;
+  right: 1.6rem;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.85rem;
+  max-width: 68%;
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.35;
+  text-align: right;
+  white-space: nowrap;
+}
+.slide-project {
+  font-size: 1.06rem;
+  font-weight: 700;
+  color: var(--color-green);
+}
+.slide-lesson {
+  font-size: 0.96rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.slide-lesson .font-hakka {
+  color: var(--color-text);
+}
+.slide-tool-bar {
+  position: absolute;
+  top: 3.25rem;
+  right: 1.6rem;
+  z-index: 20;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.slide-display-menu {
+  position: relative;
+}
+.slide-display-menu[open] {
+  z-index: 25;
+}
+.slide-display-summary {
+  list-style: none;
+}
+.slide-display-summary::-webkit-details-marker {
+  display: none;
+}
+.slide-display-panel {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  right: 0;
+  display: grid;
+  gap: 0.65rem;
+  width: max-content;
+  min-width: 19rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(24, 60, 50, 0.16);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.98);
+  color: var(--color-text);
+  box-shadow: 0 1rem 2.5rem rgba(17, 17, 17, 0.16);
+}
+.slide-display-panel .control-group {
+  justify-content: flex-start;
+  background: var(--color-surface-soft);
+  border-color: var(--color-border);
+}
+.slide-display-panel .ctl-btn {
+  color: var(--color-muted);
+}
+.slide-display-panel .ctl-btn.active {
+  background: var(--color-green);
+  color: #fff;
+}
+.slide-display-panel .ctl-btn:hover {
+  color: var(--color-green);
+}
+.slide-display-panel .ctl-btn.active:hover {
+  color: #fff;
+}
+.slide-tool-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  min-height: 2.35rem;
+  padding: 0.42rem 0.85rem;
+  border: 1px solid rgba(24, 60, 50, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--color-green);
+  box-shadow: 0 0.6rem 1.7rem rgba(17, 17, 17, 0.08);
+  cursor: pointer;
+  font-size: 0.92rem;
+  line-height: 1;
+}
+.slide-tool-btn:hover {
+  background: var(--color-green);
+  color: #fff;
 }
 .export-active .slides-mode {
   width: min(100vh / 0.5625, 100vw);
@@ -2262,10 +2608,11 @@ watch(audioBarEl, (el) => {
   display: none;
 }
 .slides-mode .block {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1rem;
+  padding: 1.2rem 1.6rem;
   border-top: none;
   page-break-before: always;
 }
@@ -2273,7 +2620,7 @@ watch(audioBarEl, (el) => {
   border-top: none;
 }
 .slides-mode .block-hd {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
 }
 .slides-mode .block-content {
   flex: 1;
@@ -2283,8 +2630,8 @@ watch(audioBarEl, (el) => {
   justify-content: center;
 }
 .slides-mode .block-content > .vocab-grid > .vocab-card {
-  width: min(42rem, 92%);
-  min-height: 18rem;
+  width: min(48rem, 94%);
+  min-height: 20rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2292,84 +2639,178 @@ watch(audioBarEl, (el) => {
   background: transparent;
 }
 .slides-mode .slide-context {
-  margin: 0 0 1rem;
-  font-size: 0.95rem;
+  margin: 0 0 1.1rem;
+  font-size: 1.05rem;
   color: var(--color-muted);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 .slides-mode .dialogue {
   max-width: unset;
+  width: min(64rem, 100%);
+  margin: 0 auto;
+  gap: 1rem;
+  justify-content: center;
+}
+.slides-mode .dia-bubble {
+  max-width: 92%;
+  gap: 1rem;
+  align-items: center;
+}
+.slides-mode .dia-avatar {
+  width: 5.4rem;
+  height: 5.4rem;
+  border-width: 3px;
+}
+.slides-mode .dia-sp {
+  min-width: 5rem;
+  height: 5rem;
+  font-size: 1.35rem;
+}
+.slides-mode .dia-body {
+  padding: 0.85rem 1.15rem;
+  border-radius: 0.5rem;
+}
+.slides-mode .dia-current .dia-body {
+  border-color: rgba(24, 60, 50, 0.28);
+  box-shadow: 0 0.5rem 1.5rem rgba(24, 60, 50, 0.08);
+}
+.slides-mode .dia-context {
+  opacity: 0.48;
+  pointer-events: none;
+}
+.slides-mode .dia-context-next {
+  opacity: 0.32;
+}
+.slides-mode .dia-context-next .dia-body {
+  border-style: dashed;
+}
+.slides-mode .dia-context .dia-avatar {
+  width: 3.4rem;
+  height: 3.4rem;
+  border-width: 2px;
+}
+.slides-mode .dia-context .dia-sp {
+  min-width: 3.1rem;
+  height: 3.1rem;
+  font-size: 1rem;
+}
+.slides-mode .dia-context .dia-body {
+  padding: 0.58rem 0.85rem;
+}
+.slides-mode .dia-context .dia-hak {
+  font-size: 1.65rem;
+}
+.slides-mode .dia-context .dia-tr {
+  font-size: 0.95rem;
 }
 .slides-mode .vocab-hak {
-  font-size: 2.8rem;
+  font-size: 3.4rem;
 }
 .slides-mode .vocab-card.sm .vocab-hak {
-  font-size: 2.4rem;
+  font-size: 3rem;
 }
 .slides-mode .vocab-mean {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 .slides-mode .dia-hak {
-  font-size: 2.2rem;
+  font-size: 2.7rem;
 }
 .slides-mode .dia-tr {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 .slides-mode .sent-hak {
-  font-size: 2.2rem;
+  font-size: 2.8rem;
 }
 .slides-mode .sent-tr {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 .slides-mode .sent-note {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 .slides-mode .prompt-list {
   justify-content: center;
   padding-left: 0;
-  font-size: 1.9rem;
+  font-size: 2.2rem;
 }
 .slides-mode .sp-item {
   justify-content: center;
   min-height: 14rem;
-  font-size: 2rem;
+  font-size: 2.35rem;
   text-align: center;
   background: transparent;
 }
 .slides-mode .sp-item::before {
   align-self: center;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 .slides-mode .note-item {
-  width: min(48rem, 92%);
+  width: min(54rem, 94%);
   margin: 0 auto;
-  font-size: 1.45rem;
+  font-size: 1.75rem;
   color: var(--color-text);
 }
+.slides-mode :deep(.iterm) {
+  font-size: 2.35rem;
+  line-height: 1.65;
+  padding: 0.15rem 0.45rem;
+}
+.slides-mode :deep(.iterm:has(.ruby)) {
+  padding-top: 0.5em;
+}
 .slides-mode .block-type {
-  font-size: 1.8rem;
+  font-size: 2.1rem;
 }
 .slides-mode .block-type-en {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
 }
 .slides-mode .hero h1 {
-  font-size: 3.2rem;
+  font-size: 3.7rem;
 }
 .slides-mode .hero-sub {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
 }
 :deep(.slides-mode .hero-gloss) {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 .slides-mode .kicker {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 .slides-mode .block-desc {
-  font-size: 1.3rem;
+  font-size: 1.55rem;
 }
 .slides-mode .row-play-btn {
   font-size: 1.1rem;
+}
+.section-end-mark {
+  display: none;
+}
+.slides-mode .section-end-mark {
+  position: absolute;
+  left: 50%;
+  bottom: 5.3rem;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: min(12rem, 45%);
+  margin: 0;
+  color: rgba(24, 60, 50, 0.48);
+  font-size: 1.45rem;
+  line-height: 1;
+}
+.export-active .slides-mode .section-end-mark {
+  bottom: 3.2rem;
+}
+.slides-mode .section-end-mark::before,
+.slides-mode .section-end-mark::after {
+  content: "";
+  display: block;
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.55;
 }
 
 /* ── Global slide nav ── */
@@ -2535,7 +2976,7 @@ watch(audioBarEl, (el) => {
   .site-nav {
     flex-wrap: wrap;
     height: auto;
-    min-height: 2.6rem;
+    min-height: 2.9rem;
     gap: 0.25rem;
     padding: 0.35rem 0.6rem;
   }
@@ -2546,6 +2987,56 @@ watch(audioBarEl, (el) => {
   }
   .nav-controls {
     margin-left: auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.25rem;
+  }
+  .ctl-btn {
+    min-height: 2rem;
+    padding: 0.22rem 0.46rem;
+    font-size: 0.72rem;
+  }
+  .rom-choice {
+    min-width: 4rem;
+    min-height: 2.15rem;
+  }
+  .mode-controls .ctl-btn {
+    min-width: 3.45rem;
+  }
+  .view-menu-panel {
+    right: -4.5rem;
+  }
+  .slides-mode .slide-meta-bar {
+    top: 0.85rem;
+    right: 1rem;
+    left: 1rem;
+    justify-content: center;
+    gap: 0.55rem;
+    max-width: none;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  .slide-project {
+    font-size: 1rem;
+  }
+  .slide-lesson {
+    font-size: 0.9rem;
+  }
+  .slide-tool-bar {
+    top: 3.25rem;
+    left: 1rem;
+    right: 1rem;
+    justify-content: space-between;
+  }
+  .slide-tool-btn {
+    min-height: 2.4rem;
+    padding: 0.45rem 0.8rem;
+    font-size: 0.95rem;
+  }
+  .slide-display-panel {
+    left: 0;
+    right: auto;
+    min-width: min(19rem, calc(100vw - 2rem));
   }
 }
 @media (max-width: 480px) {
@@ -2560,6 +3051,18 @@ watch(audioBarEl, (el) => {
   }
   .hero h1 {
     font-size: 1.3rem;
+  }
+  .ctl-slides-main span,
+  .ctl-print span,
+  .ctl-print {
+    display: none;
+  }
+  .ctl-slides-main {
+    min-width: 2rem;
+  }
+  .view-menu-panel {
+    right: -2.8rem;
+    min-width: min(18rem, calc(100vw - 1rem));
   }
 }
 </style>

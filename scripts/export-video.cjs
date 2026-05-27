@@ -87,9 +87,11 @@ function makeAudioClip(audio, duration, file, pause) {
     run('ffmpeg', [
       '-y',
       '-f', 'lavfi',
-      '-i', 'anullsrc=channel_layout=stereo:sample_rate=44100',
+      '-i', 'anullsrc=channel_layout=stereo:sample_rate=48000',
       '-t', String(duration),
-      '-c:a', 'aac',
+      '-ac', '2',
+      '-ar', '48000',
+      '-c:a', 'pcm_s16le',
       file
     ])
     return
@@ -99,15 +101,26 @@ function makeAudioClip(audio, duration, file, pause) {
   if (!audioPath || !fs.existsSync(audioPath)) {
     throw new Error(`Cannot resolve audio source ${audio.src}`)
   }
-  const inputArgs = audio.start != null && audio.end != null
-    ? ['-ss', String(audio.start), '-to', String(audio.end), '-i', audioPath]
-    : ['-i', audioPath]
+  const hasRange = audio.start != null && audio.end != null
+  const sourceDuration = hasRange ? Math.max(0.2, audio.end - audio.start) : Math.max(0.2, duration - pause)
+  const fadeOutStart = Math.max(0, sourceDuration - 0.025)
+  const filters = [
+    hasRange ? `atrim=start=${audio.start}:end=${audio.end}` : null,
+    'asetpts=PTS-STARTPTS',
+    'afade=t=in:st=0:d=0.012',
+    `afade=t=out:st=${fadeOutStart}:d=0.025`,
+    `apad=pad_dur=${pause}`,
+    'aresample=async=1:first_pts=0'
+  ].filter(Boolean).join(',')
+
   run('ffmpeg', [
     '-y',
-    ...inputArgs,
-    '-af', `apad=pad_dur=${pause}`,
+    '-i', audioPath,
+    '-af', filters,
     '-t', String(duration),
-    '-c:a', 'aac',
+    '-ac', '2',
+    '-ar', '48000',
+    '-c:a', 'pcm_s16le',
     file
   ])
 }
@@ -123,6 +136,8 @@ function makeVideoClip(image, audio, duration, file, args) {
     '-r', String(args.fps),
     '-c:v', 'libx264',
     '-c:a', 'aac',
+    '-ar', '48000',
+    '-ac', '2',
     '-shortest',
     file
   ])
@@ -169,7 +184,7 @@ async function main() {
       const state = await page.evaluate(slideIndex => window.__LESSON_EXPORT__.setSlide(slideIndex), i)
       await page.waitForTimeout(150)
       const image = path.join(workDir, `slide-${String(i).padStart(4, '0')}.png`)
-      const audio = path.join(workDir, `slide-${String(i).padStart(4, '0')}.m4a`)
+      const audio = path.join(workDir, `slide-${String(i).padStart(4, '0')}.wav`)
       const clip = path.join(workDir, `clip-${String(i).padStart(4, '0')}.mp4`)
       await page.screenshot({ path: image })
       const duration = slideDuration(state, args)
