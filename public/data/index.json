@@ -8,5 +8,15 @@
   {"id":7,"file":"lessons/lesson-07.json","title":{"hak":"恁樣、仰邊、黏等、愛","en":"Like this, How, Then, Want"},"media":"media/lesson-07.json"},
   {"id":8,"file":"lessons/lesson-08.json","title":{"hak":"親屬關係（一）","en":"Kinship Terms (1)"},"media":"media/lesson-08.json"},
   {"id":9,"file":"lessons/lesson-09.json","title":{"hak":"親屬關係（二）","en":"Kinship Terms (2)"},"media":"media/lesson-09.json"},
-  {"id":10,"file":"lessons/lesson-10.json","title":{"hak":"方位（一）","en":"Positions (1)"},"media":"media/lesson-10.json"}
+  {"id":10,"file":"lessons/lesson-10.json","title":{"hak":"方位（一）","en":"Positions (1)"},"media":"media/lesson-10.json"},
+  {"id":11,"file":"lessons/lesson-11.json","title":{"hak":"廚房摎方位","en":"Kitchen and Positions"},"media":"media/lesson-11.json"},
+  {"id":12,"file":"lessons/lesson-12.json","title":{"hak":"時間副詞（一）","en":"Time Adverbs (1)"},"media":"media/lesson-12.json"},
+  {"id":13,"file":"lessons/lesson-13.json","title":{"hak":"賣生果（一）","en":"Selling Fruit (1)"},"media":"media/lesson-13.json"},
+  {"id":14,"file":"lessons/lesson-14.json","title":{"hak":"買菜","en":"Buying Vegetables"},"media":"media/lesson-14.json"},
+  {"id":15,"file":"lessons/lesson-15.json","title":{"hak":"時間段（一）","en":"Time Periods (1)"},"media":"media/lesson-15.json"},
+  {"id":16,"file":"lessons/lesson-16.json","title":{"hak":"時間段（二）","en":"Time Periods (2)"},"media":"media/lesson-16.json"},
+  {"id":17,"file":"lessons/lesson-17.json","title":{"hak":"看醫生（一）","en":"Seeing a Doctor (1)"},"media":"media/lesson-17.json"},
+  {"id":18,"file":"lessons/lesson-18.json","title":{"hak":"阿公嘅童年","en":"Grandpa's Childhood"},"media":"media/lesson-18.json"},
+  {"id":19,"file":"lessons/lesson-19.json","title":{"hak":"過年（一）","en":"Lunar New Year (1)"},"media":"media/lesson-19.json"},
+  {"id":20,"file":"lessons/lesson-20.json","title":{"hak":"過年（二）","en":"Lunar New Year (2)"},"media":"media/lesson-20.json"}
 ]
