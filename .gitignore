@@ -118,3 +118,6 @@ dist
 
 # macOS
 .DS_Store
+
+# Generated videos
+exports/videos/
