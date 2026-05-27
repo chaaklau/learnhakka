@@ -16,6 +16,22 @@
   --shadow-card: 0 16px 40px rgba(24, 60, 50, 0.08);
 }
 
+[data-level="a2"] {
+  --color-green: #1d3a5c;
+  --color-surface-soft: #f5f7fb;
+  --color-muted: #4d6282;
+  --color-border: #d0d9e8;
+  --color-border-strong: #8aa0be;
+  --shadow-card: 0 16px 40px rgba(29, 58, 92, 0.08);
+}
+
+[data-level="a2"] body {
+  background:
+    radial-gradient(circle at top left, rgba(29, 58, 92, 0.08), transparent 18rem),
+    radial-gradient(circle at bottom right, rgba(140, 29, 39, 0.06), transparent 22rem),
+    var(--color-bg);
+}
+
 * {
   box-sizing: border-box;
 }

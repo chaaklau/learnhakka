@@ -80,6 +80,19 @@
           </div>
         </button>
       </nav>
+      <div class="level-switcher">
+        <component
+          v-for="lvl in LEVELS"
+          :key="lvl.id"
+          :is="lvl.unavailable ? 'span' : 'a'"
+          :href="lvl.unavailable ? undefined : getLevelHref(lvl.id)"
+          :class="['level-btn', { active: lvl.id === currentLevel, disabled: lvl.unavailable }]"
+          :title="lvl.en"
+        >
+          <span class="level-zh">{{ lvl.zh }}</span>
+          <span class="level-tag">{{ lvl.id.toUpperCase() }}</span>
+        </component>
+      </div>
     </aside>
 
     <button type="button" :class="['scrim', { visible: sidebarOpen }]" @click="sidebarOpen = false"></button>
@@ -94,7 +107,7 @@
 
       <div class="content" :class="{ 'slides-mode': slidesMode, 'paper-mode': paperMode, 'export-mode': exportMode }" @mousemove="slidesMode && resetSlideNavTimer()">
         <div v-if="slidesMode" class="slide-meta-bar">
-          <span class="slide-project">香港客家話入門</span>
+          <span class="slide-project">{{ isA2 ? '香港客家話初級' : '香港客家話入門' }}</span>
           <span class="slide-lesson">第 {{ currentLesson.id }} 課 · <span class="font-hakka" v-html="formatHakka(currentLesson.title.hak)"></span></span>
         </div>
         <div v-if="slidesMode && !exportMode" class="slide-tool-bar">
@@ -321,6 +334,23 @@ const router = useRouter()
 const baseUrl = '../'
 
 const isA2 = window.location.pathname.includes('/a2/')
+document.documentElement.dataset.level = isA2 ? 'a2' : 'a1'
+
+const LEVELS = [
+  { id: 'a1', zh: '入門', en: 'Beginner' },
+  { id: 'a2', zh: '初級', en: 'Elementary' },
+  { id: 'b1', zh: '中級', en: 'Intermediate', unavailable: true },
+  { id: 'b2', zh: '中高級', en: 'Upper-Intermediate', unavailable: true },
+]
+const currentLevel = isA2 ? 'a2' : 'a1'
+const _levelPrefixPath = (() => {
+  const p = window.location.pathname
+  const idx = p.indexOf('/' + currentLevel + '/')
+  return idx >= 0 ? p.slice(0, idx) : ''
+})()
+function getLevelHref(level) {
+  return _levelPrefixPath + '/' + level + '/'
+}
 const loading = ref(true)
 const lessons = ref([])
 const lessonCache = ref({})
@@ -1294,8 +1324,8 @@ onMounted(async () => {
     lexicon.value = map
     site.value = siteData
 
-    await loadLessonBundle(currentLessonId.value || indexData[0]?.id)
-    prefetchNeighborLessons(currentLessonId.value || indexData[0]?.id)
+    await loadLessonBundle(currentLessonId.value || lessons.value[0]?.id)
+    prefetchNeighborLessons(currentLessonId.value || lessons.value[0]?.id)
   } catch (e) {
     console.error(e)
   } finally {
@@ -1576,17 +1606,23 @@ watch(audioBarEl, (el) => {
   position: sticky;
   top: var(--nav-h, 2.6rem);
   height: calc(100vh - var(--nav-h, 2.6rem));
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: 0.6rem;
-  padding-right: 0.3rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   background: var(--color-surface);
   border-right: 1px solid var(--color-border);
   z-index: 20;
 }
 .lesson-nav {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0.6rem;
+  padding-right: 0.3rem;
   display: grid;
   gap: 0.3rem;
+  align-content: start;
 }
 .lesson-link {
   display: flex;
@@ -1631,6 +1667,54 @@ watch(audioBarEl, (el) => {
   font-size: 0.72rem;
   color: var(--color-muted);
   line-height: 1.2;
+}
+.level-switcher {
+  flex-shrink: 0;
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.5rem 0.5rem 0.65rem;
+  border-top: 1px solid var(--color-border);
+}
+.level-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.08rem;
+  padding: 0.3rem 0.15rem;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background: none;
+  text-decoration: none;
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  cursor: pointer;
+  transition: background 150ms, border-color 150ms, color 150ms;
+  line-height: 1.2;
+}
+.level-btn:hover:not(.disabled) {
+  background: var(--color-surface-soft);
+  border-color: var(--color-border);
+}
+.level-btn.active {
+  background: var(--color-surface-soft);
+  border-color: var(--color-green);
+  color: var(--color-green);
+}
+.level-btn.disabled {
+  opacity: 0.35;
+  cursor: default;
+  pointer-events: none;
+}
+.level-zh {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.level-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  opacity: 0.8;
 }
 
 .scrim {
