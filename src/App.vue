@@ -3,8 +3,18 @@
     <button type="button" class="menu-btn" @click="sidebarOpen = !sidebarOpen">☰</button>
     <span class="site-brand" @click="navigateTo('textbook')">{{ isA2 ? '香港客家話初級' : '香港客家話入門' }}<span class="site-brand-level">Hong Kong Hakka · {{ isA2 ? 'Elementary (A2)' : 'Beginner (A1)' }}</span></span>
     <div class="site-links">
-      <button type="button" :class="['site-link', { active: page === 'textbook' }]" @click="navigateTo('textbook')">課本 Textbook</button>
-      <button type="button" :class="['site-link', { active: page === 'about' }]" @click="navigateTo('about')">關於計劃 About the Project</button>
+      <button type="button" :class="['site-link', { active: page === 'textbook' }]" @click="navigateTo('textbook')">
+        <span class="site-link-zh">課本</span>
+        <span class="site-link-en">Textbook</span>
+      </button>
+      <button type="button" :class="['site-link', { active: page === 'about' }]" @click="navigateTo('about')">
+        <span class="site-link-zh">關於計劃</span>
+        <span class="site-link-en">About the Project</span>
+      </button>
+      <a class="site-link" href="https://www.hakkastudies.org/" target="_blank" rel="noopener noreferrer">
+        <span class="site-link-zh">客家大學堂</span>
+        <span class="site-link-en">Hakka Studies</span>
+      </a>
     </div>
       <div class="nav-controls" aria-label="顯示設定 Display controls">
       <div class="view-menu">
@@ -1405,8 +1415,22 @@ watch(audioBarEl, (el) => {
   cursor: pointer;
   padding: 0.45rem 0.7rem;
   font-size: 0.86rem;
+  font-family: var(--font-body);
   transition: color 150ms;
   white-space: nowrap;
+  text-decoration: none;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.15;
+}
+.site-link-zh,
+.site-link-en {
+  display: block;
+}
+.site-link-en {
+  font-size: 0.72em;
+  opacity: 0.78;
 }
 .site-link:hover,
 .site-link.active {
