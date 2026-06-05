@@ -2585,6 +2585,17 @@ watch(audioBarEl, (el) => {
     box-shadow: none !important;
     background: #fff !important;
   }
+  .dialogue {
+    max-width: none !important;
+  }
+  .dialogue > .dia-bubble {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .block:has(.dialogue) {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
   .hero,
   .block,
   .note-item,
