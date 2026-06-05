@@ -1,5 +1,5 @@
 <template>
-  <nav v-if="!exportMode && !slidesMode" ref="navEl" class="site-nav">
+  <nav v-if="!exportMode && !slidesMode && !exportLevelMode" ref="navEl" class="site-nav">
     <button type="button" class="menu-btn" @click="sidebarOpen = !sidebarOpen">☰</button>
     <span class="site-brand" @click="navigateTo('textbook')">{{ isA2 ? '香港客家話初級' : '香港客家話入門' }}<span class="site-brand-level">Hong Kong Hakka · {{ isA2 ? 'Elementary (A2)' : 'Beginner (A1)' }}</span></span>
     <div class="site-links">
@@ -60,7 +60,18 @@
         </svg>
         <span>投影片 Slides</span>
       </button>
-      <button type="button" class="ctl-btn ctl-print" @click="downloadPdf">
+      <div v-if="isA2" class="print-menu">
+        <button type="button" class="ctl-btn ctl-print" @click="downloadPdf">
+          <svg class="ctl-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 3h7l4 4v14H7z"></path><path d="M14 3v5h5"></path>
+          </svg>
+          <span>列印/PDF</span>
+        </button>
+        <div class="print-menu-panel">
+          <button type="button" class="ctl-btn ctl-print-menu-btn" @click="downloadLevelPdf">整級 PDF</button>
+        </div>
+      </div>
+      <button v-else type="button" class="ctl-btn ctl-print" @click="downloadPdf">
         <svg class="ctl-icon" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M7 3h7l4 4v14H7z"></path><path d="M14 3v5h5"></path>
         </svg>
@@ -73,7 +84,11 @@
     <p>Loading textbook…</p>
   </div>
 
-  <div v-else-if="page === 'textbook' && currentLesson" class="app-shell" :class="{ 'slides-active': slidesMode, 'paper-active': paperMode, 'export-active': exportMode }">
+  <div v-else-if="page === 'textbook' && exportLevelMode && !exportLevelReady" class="loading-state">
+    <p>Building level export…</p>
+  </div>
+
+  <div v-else-if="page === 'textbook' && currentLesson" class="app-shell" :class="{ 'slides-active': slidesMode, 'paper-active': paperMode, 'export-active': exportMode, 'long-export-active': exportLevelMode }">
     <aside class="sidebar" :class="{ open: sidebarOpen }">
       <nav class="lesson-nav">
         <button
@@ -115,7 +130,7 @@
         <button v-if="currentIndex < lessons.length - 1" type="button" class="topbar-nav topbar-nav-next" @click="selectLesson(lessons[currentIndex + 1].id)">›</button>
       </header>
 
-      <div class="content" :class="{ 'slides-mode': slidesMode, 'paper-mode': paperMode, 'export-mode': exportMode }" @mousemove="slidesMode && resetSlideNavTimer()">
+      <div ref="longExportEl" class="content" :class="{ 'slides-mode': slidesMode, 'paper-mode': (paperMode || exportLevelMode), 'export-mode': exportMode, 'long-export-mode': exportLevelMode }" @mousemove="slidesMode && resetSlideNavTimer()">
         <div v-if="slidesMode" class="slide-meta-bar">
           <span class="slide-project">{{ isA2 ? '香港客家話初級' : '香港客家話入門' }}</span>
           <span class="slide-lesson">第 {{ currentLesson.id }} 課 · <span class="font-hakka" v-html="formatHakka(currentLesson.title.hak)"></span></span>
@@ -157,8 +172,8 @@
             <span>離開 Exit</span>
           </button>
         </div>
-        <section ref="heroEl" class="hero" v-show="!slidesMode || currentSlide === 0" @click="playHeroAudio(currentLesson.id)">
-          <span class="kicker">第 {{ currentLesson.id }} 課 · Lesson {{ currentLesson.id }}</span>
+        <section ref="heroEl" class="hero" v-show="!slidesMode || currentSlide === 0" @click="!exportLevelMode && playHeroAudio(currentLesson.id)">
+          <span class="kicker">{{ heroKicker }}</span>
           <h1 class="font-hakka" v-html="renderTitleRuby(currentLesson.title.hak)"></h1>
           <p class="hero-sub">{{ currentLesson.title.en }}</p>
         </section>
@@ -167,9 +182,15 @@
           <article
             v-for="(block, bi) in currentLesson.blocks"
             :key="`${currentLesson.id}-${bi}`"
-            class="block"
+            :class="['block', { 'lesson-start-block': block._lessonStart } ]"
             v-show="!slidesMode || slideBlockVisible(bi)"
           >
+            <div v-if="exportLevelMode && block._lessonStart" class="lesson-heading">
+              <span class="kicker">第 {{ block._lessonId }} 課 · Lesson {{ block._lessonId }}</span>
+              <h1 class="font-hakka" v-html="renderTitleRuby(block._lessonTitle.hak)"></h1>
+              <p class="hero-sub">{{ block._lessonTitle.en }}</p>
+            </div>
+
             <header class="block-hd">
               <div class="block-hd-text">
                 <span class="block-type">{{ blockTitle(block.type) }}</span>
@@ -310,7 +331,7 @@
     </template>
   </div>
 
-  <div v-if="audioBarVisible && !exportMode" ref="audioBarEl" class="audio-bar">
+  <div v-if="audioBarVisible && !exportMode && !exportLevelMode" ref="audioBarEl" class="audio-bar">
     <div class="audio-bar-progress" @click="seekAudio($event)">
       <div class="audio-bar-progress-fill" :style="{ width: audioDuration ? (audioCurrentTime / audioDuration * 100) + '%' : '0%' }"></div>
     </div>
@@ -325,7 +346,7 @@
     <button type="button" class="audio-bar-btn close" @click="closeAudioBar">✕</button>
   </div>
 
-  <div v-if="!exportMode && !slidesMode && isA2" class="site-banner">⚠️ This site is under construction. Some content, audio, and features may be incomplete or inaccurate.</div>
+  <div v-if="!exportMode && !slidesMode && !exportLevelMode && isA2" class="site-banner">⚠️ This site is under construction. Some content, audio, and features may be incomplete or inaccurate.</div>
 
   <audio ref="audioEl" @ended="onAudioEnded" @pause="onAudioPause"></audio>
 </template>
@@ -391,6 +412,8 @@ const navEl = ref(null)
 let navResizeObserver = null
 const audioBarEl = ref(null)
 let audioBarResizeObserver = null
+const longExportEl = ref(null)
+const longExportPrintStyleId = 'long-export-print-style'
 
 const page = computed(() => {
   if (route.name === 'about') return 'about'
@@ -406,6 +429,7 @@ const viewMode = computed(() => {
 const slidesMode = computed(() => viewMode.value === 'slides')
 const paperMode = computed(() => viewMode.value === 'paper')
 const exportMode = computed(() => route.query.export === '1')
+const exportLevelMode = computed(() => route.query.export === 'level')
 
 const currentLessonId = computed(() => {
   if (route.name === 'chapter' && route.params.id) return parseInt(route.params.id)
@@ -427,16 +451,64 @@ const blockTitles = computed(() => {
 })
 
 const currentLesson = computed(() => {
+  if (exportLevelMode.value) return exportLevelLesson.value
   const id = currentLessonId.value
   if (id == null) return null
   return lessonCache.value[id] || null
 })
 
 const currentMedia = computed(() => {
+  if (exportLevelMode.value) return null
   const id = currentLessonId.value
   if (id == null) return null
   return mediaCache.value[id] || null
 })
+
+const exportLevelLesson = computed(() => {
+  if (!exportLevelMode.value) return null
+  const blocks = []
+  for (const lessonMeta of lessons.value) {
+    const lesson = _lessonModules[`../public/data/${lessonMeta.file}`]?.default || lessonCache.value[lessonMeta.id] || null
+    const lessonBlocks = lesson?.blocks || []
+    if (!lessonBlocks.length) {
+      continue
+    }
+    lessonBlocks.forEach((block, idx) => {
+      if (idx === 0) {
+        blocks.push({
+          ...block,
+          _lessonStart: true,
+          _lessonId: lessonMeta.id,
+          _lessonTitle: lessonMeta.title,
+        })
+      } else {
+        blocks.push(block)
+      }
+    })
+  }
+  return {
+    id: 'a2-level-export',
+    title: {
+      hak: isA2 ? '香港客家話初級' : '香港客家話入門',
+      en: isA2 ? 'Hong Kong Hakka · Elementary (A2)' : 'Hong Kong Hakka · Beginner (A1)',
+    },
+    blocks,
+  }
+})
+
+const exportLevelReady = computed(() => !exportLevelMode.value || lessons.value.every((lessonMeta) => {
+  const lesson = _lessonModules[`../public/data/${lessonMeta.file}`]?.default || lessonCache.value[lessonMeta.id]
+  return Boolean(lesson)
+}))
+
+const heroKicker = computed(() => {
+  if (exportLevelMode.value) {
+    return isA2 ? '初級全級導出 · Lessons 11–20' : 'Level export'
+  }
+  const id = currentLesson.value?.id || currentLessonId.value || ''
+  return '第 ' + id + ' 課 · Lesson ' + id
+})
+
 const currentIndex = computed(() =>
   lessons.value.findIndex((l) => l.id === currentLessonId.value)
 )
@@ -1107,6 +1179,36 @@ async function downloadPdf() {
   window.setTimeout(() => window.print(), 80)
 }
 
+function removeLongExportPrintStyle() {
+  if (typeof document === 'undefined') return
+  const styleEl = document.getElementById(longExportPrintStyleId)
+  if (styleEl) styleEl.remove()
+}
+
+function updateLongExportPrintStyle() {
+  if (typeof document === 'undefined') return
+  if (!exportLevelMode.value) {
+    removeLongExportPrintStyle()
+    return
+  }
+  removeLongExportPrintStyle()
+}
+
+async function loadAllLevelLessons() {
+  await Promise.all(lessons.value.map((lesson) => loadLessonBundle(lesson.id)))
+}
+
+async function downloadLevelPdf() {
+  const q = { ...route.query }
+  delete q.mode
+  q.export = 'level'
+  await router.replace({ ...route, query: q })
+  await loadAllLevelLessons()
+  await nextTick()
+  updateLongExportPrintStyle()
+  window.setTimeout(() => window.print(), 120)
+}
+
 const slidePages = computed(() => {
   if (!currentLesson.value) return []
   const pages = [{ type: 'hero', bi: -1, from: 0, to: 0 }]
@@ -1243,6 +1345,7 @@ onUnmounted(() => {
   if (navResizeObserver) navResizeObserver.disconnect()
   if (audioBarResizeObserver) audioBarResizeObserver.disconnect()
   document.removeEventListener('keydown', onSlideKeydown)
+  removeLongExportPrintStyle()
   if (typeof window !== 'undefined') delete window.__LESSON_EXPORT__
   stopRaf()
 })
@@ -1276,7 +1379,17 @@ watch(slidesMode, (on) => {
   }
 })
 
-watch([currentLesson, currentMedia, slidePages, currentSlide], () => installExportApi(), { immediate: true })
+watch([currentLesson, currentMedia, slidePages, currentSlide, exportLevelMode], () => installExportApi(), { immediate: true })
+
+watch([exportLevelMode, lessons], async ([on, lessonList]) => {
+  if (on && lessonList.length) {
+    await loadAllLevelLessons()
+    await nextTick()
+    updateLongExportPrintStyle()
+  } else {
+    removeLongExportPrintStyle()
+  }
+}, { immediate: true })
 
 async function loadLesson(id) {
   if (lessonCache.value[id]) return lessonCache.value[id]
@@ -1342,6 +1455,11 @@ onMounted(async () => {
 
     await loadLessonBundle(currentLessonId.value || lessons.value[0]?.id)
     prefetchNeighborLessons(currentLessonId.value || lessons.value[0]?.id)
+    if (exportLevelMode.value) {
+      await loadAllLevelLessons()
+      await nextTick()
+      updateLongExportPrintStyle()
+    }
   } catch (e) {
     console.error(e)
   } finally {
@@ -1615,6 +1733,48 @@ watch(audioBarEl, (el) => {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 4px;
 }
+.print-menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.print-menu-panel {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  right: 0;
+  display: grid;
+  min-width: 8.5rem;
+  padding: 0.45rem;
+  border: 1px solid rgba(24, 60, 50, 0.16);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 1rem 2rem rgba(17, 17, 17, 0.14);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 150ms, visibility 0s 180ms;
+}
+.print-menu:hover .print-menu-panel,
+.print-menu:focus-within .print-menu-panel {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 150ms, visibility 0s;
+}
+.ctl-print-hidden {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+.ctl-print-menu-btn {
+  width: 100%;
+  justify-content: center;
+  color: var(--color-green);
+  background: var(--color-surface-soft);
+}
 
 /* ── Loading / empty ── */
 .loading-state {
@@ -1629,6 +1789,64 @@ watch(audioBarEl, (el) => {
   display: grid;
   grid-template-columns: 15rem 1fr;
   min-height: calc(100vh - var(--nav-h, 2.6rem));
+}
+.long-export-active {
+  grid-template-columns: 1fr;
+}
+.long-export-active .sidebar,
+.long-export-active .topbar,
+.long-export-active .lesson-foot,
+.long-export-active .scrim {
+  display: none !important;
+}
+.long-export-active .main-stage {
+  width: 100%;
+}
+.long-export-mode {
+  width: min(186mm, 100%);
+  max-width: 186mm;
+  margin: 0 auto;
+  padding: 1rem 1rem 2.5rem;
+  background: #fff;
+}
+.long-export-mode .lesson-start-block {
+  break-before: page;
+  page-break-before: always;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.long-export-mode .lesson-start-block:first-child {
+  break-before: auto;
+  page-break-before: auto;
+}
+.long-export-mode .hero {
+  cursor: default;
+}
+.lesson-start-block {
+  padding: 0.35rem 0 0.75rem;
+}
+.lesson-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 3rem 3rem 2.2rem;
+  background: radial-gradient(circle at top right, rgba(24, 60, 50, 0.1), transparent 22rem), var(--color-surface);
+}
+.lesson-heading h1 {
+  margin: 0.75rem 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  line-height: 1.7;
+  color: var(--color-green);
+}
+.lesson-heading .hero-sub {
+  margin: 0.15rem 0 0;
+  font-size: 0.92rem;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+  opacity: 0.7;
 }
 
 /* ── Sidebar ── */
@@ -2511,7 +2729,6 @@ watch(audioBarEl, (el) => {
 }
 .paper-mode .block {
   padding: 0.45rem 0;
-  break-inside: avoid;
 }
 .paper-mode .block-hd {
   margin-bottom: 0.4rem;
@@ -2586,23 +2803,21 @@ watch(audioBarEl, (el) => {
     background: #fff !important;
   }
   .dialogue {
+    display: block !important;
     max-width: none !important;
   }
-  .dialogue > .dia-bubble {
+  .dia-bubble {
+    max-width: none !important;
+    margin: 0 0 0.5rem;
     break-inside: avoid;
     page-break-inside: avoid;
   }
-  .block:has(.dialogue) {
-    break-inside: auto;
-    page-break-inside: auto;
+  .dia-bubble.dia-right {
+    margin-left: auto;
   }
-  .hero,
-  .block,
-  .note-item,
-  .dia-bubble,
-  .sent-row,
-  .drill-row-wrap {
-    break-inside: avoid;
+  .long-export-mode .hero {
+    break-after: page;
+    page-break-after: always;
   }
 }
 
@@ -2765,6 +2980,13 @@ watch(audioBarEl, (el) => {
 .slides-mode .block-play-btn,
 .slides-mode .lesson-foot {
   display: none;
+}
+.paper-mode .notes {
+  gap: 0.3rem;
+}
+.paper-mode .note-item {
+  padding: 0.4rem 0.5rem;
+  line-height: 1.5;
 }
 .slides-mode .block {
   position: relative;
