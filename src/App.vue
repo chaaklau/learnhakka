@@ -489,11 +489,17 @@ function tokenize(text) {
   return typeof text === 'string' ? text.split(/\s+/).filter(Boolean) : []
 }
 
+function looksLikeRomOverride(text) {
+  return /^[A-Za-z]+[1-6]?(?:[\s,]+[A-Za-z]+[1-6]?)*$/.test(text)
+}
+
 function parseToken(raw) {
   const s = typeof raw === 'string' ? raw : raw?.hak || ''
   const dot = s.indexOf('.')
   if (dot === -1) return { hak: s, overrideRom: '' }
-  return { hak: s.slice(0, dot), overrideRom: s.slice(dot + 1) }
+  const overrideRom = s.slice(dot + 1)
+  if (!looksLikeRomOverride(overrideRom)) return { hak: s, overrideRom: '' }
+  return { hak: s.slice(0, dot), overrideRom }
 }
 
 function getTokenDisplay(raw) {
