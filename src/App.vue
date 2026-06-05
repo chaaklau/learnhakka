@@ -237,7 +237,7 @@
                   <span v-else class="dia-sp">{{ item.sp || '例' }}</span>
                   <div class="dia-body">
                     <p class="dia-hak font-hakka" v-html="renderSentenceRuby(item.hak)"></p>
-                    <p v-if="getDisplayText(item)" class="dia-tr">{{ getDisplayText(item) }}</p>
+                    <p v-if="displayLang === 'en' && getDisplayText(item)" class="dia-tr">{{ getDisplayText(item) }}</p>
                   </div>
                 </div>
               </div>
@@ -253,7 +253,7 @@
                   <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn">▶</button>
                   <div class="sent-text">
                     <p class="sent-hak font-hakka" v-html="renderSentenceRuby(item.hak)"></p>
-                    <p v-if="getDisplayText(item)" class="sent-tr">{{ getDisplayText(item) }}</p>
+                    <p v-if="displayLang === 'en' && getDisplayText(item)" class="sent-tr">{{ getDisplayText(item) }}</p>
                     <p v-if="item.note" class="sent-note">{{ item.note }}</p>
                   </div>
                 </div>
@@ -595,14 +595,14 @@ function getRom(raw) {
 
 function getMeaning(raw) {
   const e = getLexiconEntry(raw)
-  return displayLang.value === 'en' ? (e.en || e.zh || '') : (e.zh || e.en || '')
+  return displayLang.value === 'en' ? (e.en || '') : (e.zh || '')
 }
 
 function getDisplayText(item) {
   if (!item || typeof item !== 'object') return ''
   return displayLang.value === 'en'
-    ? (item.en || item.zh || '')
-    : (item.zh || item.en || '')
+    ? (item.en || '')
+    : (item.zh || '')
 }
 
 function blockTitle(type) {
@@ -2814,6 +2814,23 @@ watch(audioBarEl, (el) => {
   }
   .dia-bubble.dia-right {
     margin-left: auto;
+  }
+  .long-export-mode .hero {
+    min-height: calc(297mm - 24mm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-bottom: none !important;
+  }
+  .long-export-mode .hero .hero-sub {
+    display: none !important;
+  }
+  .long-export-mode .lesson-heading .hero-sub {
+    display: none !important;
   }
   .long-export-mode .hero {
     break-after: page;
