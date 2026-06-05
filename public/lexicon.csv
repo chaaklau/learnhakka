@@ -1,4 +1,6 @@
 hak,rom,zh,en,unproofread
+伸張,sin1 zong1,,,
+正義,zin4 ngi4,,,
 厓,ngai2,我,I / Me,
 你,ngi2,,You,
 佢,gi2,他,He / She,
@@ -445,7 +447,7 @@ hak,rom,zh,en,unproofread
 荃灣,cien2 van1,,Tsuen Wan,
 有冇,yiu1 mau2,有沒有,Have or not,
 就,ciu4,遷就,Then / Just,
-坐嗨,co3 hoi1,坐著,Sitting,
+坐嗨,co3 hoi1,坐着,Sitting,
 沙田,sa1 tien2,,Sha Tin,
 大埔,tai4 bu1,,Tai Po,
 開,koi1,,Open / Run (a business),
@@ -874,7 +876,7 @@ hak,rom,zh,en,unproofread
 腳囊肚,giok5 lang2 du3,,,
 腳眼仁,giok5 ngan3 yin2,踝骨,,
 細嘅陣,se4 e4 cin4,小時候,,
-冇鞋著,mau2 hai2 zok5,沒鞋穿,,
+冇鞋着,mau2 hai2 zok5,沒鞋穿,,
 村肚,cun1 du3,村裏面,,
 掌牛,zong3 ngiu2,看牛,,
 好惡,hau3 ok5,好兇,,
@@ -928,8 +930,8 @@ hak,rom,zh,en,unproofread
 霜降,song1 gong4,,,
 投降,teu2 hong2,,,
 要求,yau1 kiu2,,,
-著襪,zok5 mat5,,,
-著火,cok6 fo3,,,
+着襪,zok5 mat5,,,
+着火,cok6 fo3,,,
 長輩,zong3 bui4,,,
 長短,cong2 don3,,,
 泡沫,pau1 mat6,,,
@@ -1142,7 +1144,7 @@ hak,rom,zh,en,unproofread
 人家,ngin2 ga,別人,,
 人心節節高，井水變成酒，又嫌豬冇糟,"ngin2 sim1 ziet5 ziet5 gau1, ziang3 sui3 bien4 sang2 ziu3, yiu4 hiam2 zu1 mau2 zau1",,,
 人情緊過債， 鑊頭拿去賣,"ngin2 cin2 gin3 go4 zai4, vok6 teu2 la1 hi4 mai4",,,
-人愛人打落， 火愛人歕著,"ngin2 oi4 ngin2 da3 lok6, fo3 oi4 ngin2 pun2 cok6",打落就是看扁,,
+人愛人打落， 火愛人歕着,"ngin2 oi4 ngin2 da3 lok6, fo3 oi4 ngin2 pun2 cok6",打落就是看扁,,
 亼,cip6,就亼，整齊,,
 今下晝,gim1 ha1 ziu4,今天下午,,
 今日,gim1 ngit5,今天,,
@@ -1334,10 +1336,10 @@ hak,rom,zh,en,unproofread
 刀嫲,dau1 ma2,菜刀,,
 刀石,dau1 sak6,磨刀石,,
 刀石頭,dau1 sak6 teu2,刀石，磨刀石,,
-分,bin1,給（他）,,
-分,fun1,,,
-分,fun4,,,
 分,bun1,分派、分發,,
+分,fun1,,,
+分,bin1,給（他）,,
+分,fun4,,,
 分人打,bin1 ngin2 da3,挨打（被打）,,
 分食人吮手指,bun1 sit6 ngin2 con1 siu3 zi3,分派食物的人自己沒分,,
 切,ciet5,來不及,,
@@ -3119,7 +3121,7 @@ hak,rom,zh,en,unproofread
 眼眉毛,ngan3 mi2 mau1,眉毛,,
 眼花花,ngan3 fa1 fa1,眼睛看不清楚,,
 眼金金,ngan3 gim1 gim1,目不轉睛地盯着,,
-着,dau3,,,
+着,cok5,,,
 着,zok5,,,
 着數,cok6 su4,合算,,
 睡唔落覺,soi4 m1 lok6 gau4,失眠,,
@@ -3446,7 +3448,7 @@ hak,rom,zh,en,unproofread
 聲,sang1,,,
 聽,tang1,（把開水）攤涼,,
 聽,tang4,,,
-聽冷,tang1 lang1,（放著）涼一涼,,
+聽冷,tang1 lang1,（放着）涼一涼,,
 聽話,tang4 va4,乖,,
 聾佬,lung1 lau3,聾子,,
 肆意,ci4 yi4,淘氣,,
@@ -3607,8 +3609,8 @@ hak,rom,zh,en,unproofread
 落雪,lok6 siet5,下雪,,
 落雹,lok6 pok6,下冰雹,,
 落霜,lok6 song1,下霜,,
-著,zok5,穿（衣服）,,
-著,cok6,合適，對,,
+著,zu4,,,
+著作,zu4 zok6,,,
 葫蘆勺,pu2 lu2 sok6,水瓢（葫蘆製）,,
 葵扇,kui2 sen4,蒲扇,,
 葷,fun1,肉菜,,
@@ -4382,7 +4384,7 @@ hak,rom,zh,en,unproofread
 年,ngien2,,Year,1
 日,ngit5,,Day,1
 早,zau3,,Early,1
-厨,cu2,廚,,1
+廚,cu2,廚,,1
 又,yiu4,,Again / Also,1
 算,son4,,Count / Consider,1
 伯,bak5,伯父,,1
@@ -4497,8 +4499,8 @@ hak,rom,zh,en,unproofread
 係講,he4 gong3,如果,If,1
 跌下來,diet5 ha1 loi2,掉下來,Fall down,1
 大來,tai4 loi2,長大後,Grow up,1
-厨房,cu2 fong2,廚房,,1
-厨櫃,cu2 kui4,廚櫃,,1
+廚房,cu2 fong2,廚房,,1
+廚櫃,cu2 kui4,廚櫃,,1
 櫥櫃,cu2 kui4,,,1
 一排,yit5 pai2,,,1
 老闆,lau3 ban3,,Boss,1
@@ -4593,7 +4595,7 @@ hak,rom,zh,en,unproofread
 吊,diau4,,Dollar,1
 釦,keu1,,Coin,1
 嘴,zui3,,Beak / spout,1
-給,bin1,畀,Give,1
+給,kip5,給,Give,1
 因,yin1,,Because,1
 欣,hiun1,,Glad,1
 小,siau3,,Small,1
@@ -4613,3 +4615,5 @@ hak,rom,zh,en,unproofread
 上去,song1 hi4,,,
 上鏈,song3 lien4,,,
 擎天,kiang2 tien1,,, 
+好遠下,hau3 yen3 ha4,,,
+看下,kon4 ha4,,,
