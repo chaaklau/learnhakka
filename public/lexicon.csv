@@ -22,8 +22,8 @@ hak,rom,zh,en,unproofread
 阿㜆,a1 mi1,媽媽,Mother,
 兩十二,liong3 sip6 ngi4,二十二,Twenty-two,
 半隻,ban4 zak5,半個/半隻,Half,
-吾爸,nga2 ba1,我爸爸,My dad,
-吾㜆,nga2 mi1,我媽媽,My mom,
+吾爸,nga1 ba1,我爸爸,My dad,
+吾㜆,nga1 mi1,我媽媽,My mom,
 做乜介,zo4 mak5 gai4,爲什麼,Why,
 恁,an2,這麼,So / Such,
 因爲,yin1 vui4,,Because,
@@ -31,7 +31,7 @@ hak,rom,zh,en,unproofread
 屋卡,vuk5 ka1,家裏,Home,
 長日,cong2 ngit5,經常,Often / Always,
 摎,lau1,和/跟,And / With,
-囉,lo4,嘛,(Particle indicating obviousness),1
+囉,lo1,嘛,(Particle indicating obviousness),
 還曉,han2 hiau3,還會,Also know (how to),
 能替,len2 tai4,能幹,Capable / Smart,
 裏背,di1 boi4,裏面,Inside,
@@ -60,7 +60,7 @@ hak,rom,zh,en,unproofread
 餐館,con1 gon3,,Restaurant,1
 聚會,ci4 fui4,,Gathering,
 恁樣,an2 yong4,這樣,Like this / So,
-仰邊,liong4 bien1,怎樣,How,1
+仰邊,ngiong4 bien1,怎樣,How,1
 轉屋卡,zon3 vuk5 ka1,回家,Go home,
 轉去,zon3 hi4,回去,Go back,
 愛,oi4,要,Need / Want,
@@ -203,6 +203,7 @@ hak,rom,zh,en,unproofread
 哄,fung3,騙,,
 鳳,fung4,,,
 福,fuk5,,,
+伏,fuk6,蚊蟲叮的包（沒水）,,1
 伏,puk6,蚊蟲叮的包（沒水）,,1
 伏,pu4,雞鴨等禽類孵蛋的動作,,
 專,zon1,,,
@@ -319,7 +320,7 @@ hak,rom,zh,en,unproofread
 餐廳,con1 tiang4,,,
 模範,mu2 fam4,,,
 辦法,pan4 fap5,,,
-帆船,fan2 son2,,,1
+帆船,fam2 son2,,,
 壓力,ap5 lit6,,,
 活動,fat6 tung4,,,
 滿足,man1 zuk5,,,
@@ -416,7 +417,7 @@ hak,rom,zh,en,unproofread
 噢,o1,句末助詞,Oh,
 明白,min2 pak6,,Understand,
 咯,lo1,了/咯,Sentence particle,
-今年,gin1 ngien2,,This year,1
+今年,gim1 ngien2,,This year,1
 有,yiu1,,Have,
 哥,go1,哥哥,Older brother,
 表哥,biau3 go1,,Cousin (older male),
@@ -451,7 +452,7 @@ hak,rom,zh,en,unproofread
 坐嗨,co3 hoi1,坐着,Sitting,
 沙田,sa1 tien2,,Sha Tin,
 大埔,tai4 bu1,,Tai Po,
-開,koi1,,Open / Run (a business),
+開,hoi1,,Open / Run (a business),
 倫敦,lun2 dun1,,London,
 外面,ngoi4 mien4,,Outside,
 也,ya1,（真）還是（假的）,Also,1
@@ -461,7 +462,7 @@ hak,rom,zh,en,unproofread
 家庭,ga1 tin2,,Family,
 多,do1,,Many / Much,
 哇,va1,句末助詞,Wow,
-開心,koi1 sim1,,Happy,
+開心,hoi1 sim1,,Happy,
 煮,zu3,燒（開水）,Cook,
 好食,hau3 sit6,好吃,Delicious,
 鑽石山,zon4 sak6 san1,,Diamond Hill,
@@ -663,8 +664,7 @@ hak,rom,zh,en,unproofread
 僬仔,ziau2 zai3,小孩,,
 大賴子,tai4 lai4 zu1,長子,,
 舊年,kiu4 ngien2,去年,,
-今下,gim1 la1,現在,,1
-今下,gin1 la4,現在,,
+今下,gim1 la1,現在,,
 梗係,gang3 he4,當然,,
 正先,zang4 sien1,剛剛,,
 等辰間,den3 sin2 gan1,等一下,,
@@ -809,7 +809,7 @@ hak,rom,zh,en,unproofread
 六隻鐘頭,luk5 zak5 zung1 teu2,六個小時,,
 斷暗,ton1 am4,黃昏,,
 晨朝晚夜,sin2 zau1 man1 ya4,明晚,,
-丈人佬,cong1 yin1 lau3,岳父,,1
+丈人佬,cong1 ngin1 lau3,岳父,,
 行轉來,hang2 zon3 loi2,走回來,,
 唔當,m1 dong4,不如,,1
 好…下子,hau3 ha4 zu3,相當...,,
@@ -819,7 +819,7 @@ hak,rom,zh,en,unproofread
 後日朝辰,heu4 ngit5 zau1 sin2,後天早上,,
 夜晚辰,ya4 man1 sin2,晚上,,
 朝辰頭,zau1 sin2 teu2,早上,,
-丈人婆,cong1 yin1 po2,丈母娘,,1
+丈人婆,cong1 ngin1 po2,丈母娘,,
 需要,si1 yau4,,,
 雖然,sui1 yen2,,,
 區別,ki1 piet6,,,
@@ -829,7 +829,7 @@ hak,rom,zh,en,unproofread
 討論,tau3 lun4,,,
 鄰居,lin2 gi1,,,
 謙虛,kiam1 hi1,,,
-隨便,cui2 pien3,,,1
+隨便,sui2 pien4,,,
 姓徐,siang4 ci2,,,
 坑渠,hang1 ki2,溝渠,,
 拔萃,pat6 cui4,,,
@@ -922,7 +922,7 @@ hak,rom,zh,en,unproofread
 過嗨年,go4 hoi1 ngien2,過年以後,,
 順順溜溜,sun4 sun4 liu4 liu4,順順利利,,
 打爆仗,da3 bau4 cong4,燒鞭炮,,
-天光,tien1 gong,天亮,,1
+天光,tien1 gong1,天亮,,1
 講爛啜,gong3 lan4 zoi4,說髒話,,
 苦瓜,fu3 ga1,,,
 辛苦,sin1 ku3,,,
@@ -959,7 +959,7 @@ hak,rom,zh,en,unproofread
 正月半,zang1 ngiet6 ban4,元宵節,,
 考試,kau3 si4,,,
 試下,ci4 ha4,,,
-開始,koi1 su3,,,1
+開始,hoi1 su3,,,
 開門,hoi1 mun2,,,
 世界,si4 gai4,,,
 前世,cien2 se4,前輩子,,
@@ -1159,9 +1159,9 @@ hak,rom,zh,en,unproofread
 仙人卵屎,sien1 ngin2 lin3 si3,,,
 令,lang4,謎語,,
 仰,ngong1,,,
-仰得來,liong4 det5 loi2,,,
+仰得來,ngiong4 det5 loi2,,,
 仰起,ngong1 hi3,抬（頭）,,
-仰邊好,liong4 bien1 hau3,,,
+仰邊好,ngiong4 bien1 hau3,,,
 件,kien4,,,
 企釘釘,ki1 dang1 dang1,站着不動,,
 伋,kip6,強迫,,
@@ -3913,7 +3913,8 @@ hak,rom,zh,en,unproofread
 返學,fan1 hok6,上學,,
 迣,ce4,傳染,,
 追債,zui1 zai4,要賬,,
-退,tun4,後退的“退”,,
+退,tui4,,,
+!退,tun4,後退的“退”,,
 退茶,tui4 ca2,斟（茶）,,
 逆,ngiak6,討厭、厭倦、抗拒,,
 這下,ngia3 ha4,這會兒,,
@@ -4438,6 +4439,7 @@ hak,rom,zh,en,unproofread
 院,yen4,,,1
 蟻,li1,,Ant,1
 畀,bin1,給,,
+畀你,bin1 ngi2,給你,,
 !畀,bi1,給,,1
 炎,yam2,,Inflammation,1
 抗,kong4,,Resist,1
@@ -4451,7 +4453,7 @@ hak,rom,zh,en,unproofread
 亡,mong2,,Die,1
 當,dong4,,,1
 報,bau4,,Report,1
-字,si4,,Character,1
+字,su4,,Character,
 文,vun2,,Text,1
 經,gin1,,Classic,1
 陣,cin4,時候,,1
@@ -4528,10 +4530,10 @@ hak,rom,zh,en,unproofread
 淥到啜,luk6 dau4 zoi4,燙到嘴,,1
 烏蛟騰,vu1 gau1 ten2,,,1
 荔枝窩,lai1 zi1 vo1,,,1
-然後,ngien2 heu4,,Then,1
+然後,yen2 heu4,,Then,1
 原路,ngien2 lu4,,Original route,1
 之前,zi1 cien2,,Before,1
-元朗,ngien2 long3,,,1
+元朗,ngien2 long4,,,
 老人院,lau3 ngin2 yen4,安老院,,1
 叼尾蟻,diau1 mui1 li1,,,1
 感冒,gam3 mau4,,Cold / Flu,1
@@ -4560,7 +4562,6 @@ hak,rom,zh,en,unproofread
 後輩,heu4 bui4,,Younger generation,1
 掃除,sau4 cu2,,Clean up,1
 石菖蒲,sak6 cong1 pu2,,Sweet flag,1
-畀後輩,bi1 heu4 bui4,給後輩,,1
 迎接,ngiang2 ziap5,,Welcome,1
 每逢,mui1 fung2,,Whenever,1
 清明,ciang1 min2,,Qingming,1
