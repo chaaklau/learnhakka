@@ -1655,7 +1655,7 @@ watch(audioBarEl, (el) => {
   width: max-content;
   min-width: 20rem;
   padding: 0.75rem;
-  border: 1px solid rgba(24, 60, 50, 0.16);
+  border: 1px solid rgba(var(--color-green-rgb), 0.16);
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.98);
   color: var(--color-text);
@@ -1769,7 +1769,7 @@ watch(audioBarEl, (el) => {
   display: grid;
   min-width: 8.5rem;
   padding: 0.45rem;
-  border: 1px solid rgba(24, 60, 50, 0.16);
+  border: 1px solid rgba(var(--color-green-rgb), 0.16);
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 1rem 2rem rgba(17, 17, 17, 0.14);
@@ -1856,7 +1856,7 @@ watch(audioBarEl, (el) => {
   text-align: center;
   margin-bottom: 0;
   padding: 3rem 3rem 2.2rem;
-  background: radial-gradient(circle at top right, rgba(24, 60, 50, 0.1), transparent 22rem), var(--color-surface);
+  background: radial-gradient(circle at top right, rgba(var(--color-green-rgb), 0.1), transparent 22rem), var(--color-surface);
 }
 .lesson-heading h1 {
   margin: 0.75rem 0;
@@ -2076,7 +2076,7 @@ watch(audioBarEl, (el) => {
 .hero {
   padding: 1.2rem;
   margin-bottom: 1rem;
-  background: radial-gradient(circle at top right, rgba(24, 60, 50, 0.08), transparent 14rem), var(--color-surface);
+  background: radial-gradient(circle at top right, rgba(var(--color-green-rgb), 0.08), transparent 14rem), var(--color-surface);
   cursor: pointer;
 }
 .hero h1 {
@@ -2102,6 +2102,7 @@ watch(audioBarEl, (el) => {
   line-height: 1.3;
   margin-top: -0.2em;
   text-align: center;
+  padding: 0 0.16em;
 }
 :deep(.title-word) {
   display: inline-block;
@@ -2233,7 +2234,7 @@ watch(audioBarEl, (el) => {
   transition: background 120ms;
 }
 .vocab-card:hover {
-  background: rgba(24, 60, 50, 0.06);
+  background: rgba(var(--color-green-rgb), 0.06);
 }
 .vocab-card.sm {
   padding: 0.25rem 0.35rem;
@@ -2317,8 +2318,8 @@ watch(audioBarEl, (el) => {
   border: 1px solid var(--color-border);
 }
 .dia-right .dia-body {
-  background: rgba(24, 60, 50, 0.04);
-  border-color: rgba(24, 60, 50, 0.12);
+  background: rgba(var(--color-green-rgb), 0.04);
+  border-color: rgba(var(--color-green-rgb), 0.12);
 }
 .dia-body p {
   margin: 0;
@@ -2452,7 +2453,7 @@ watch(audioBarEl, (el) => {
   margin: 0 0.08em;
   line-height: 1;
   position: relative;
-  bottom: 0.333em;
+  bottom: 0.4em;
 }
 :deep(.ruby .rt) {
   font-size: 0.5em;
@@ -2941,7 +2942,7 @@ watch(audioBarEl, (el) => {
   width: max-content;
   min-width: 19rem;
   padding: 0.75rem;
-  border: 1px solid rgba(24, 60, 50, 0.16);
+  border: 1px solid rgba(var(--color-green-rgb), 0.16);
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.98);
   color: var(--color-text);
@@ -2989,7 +2990,7 @@ watch(audioBarEl, (el) => {
   gap: 0.42rem;
   min-height: 2.35rem;
   padding: 0.42rem 0.85rem;
-  border: 1px solid rgba(24, 60, 50, 0.16);
+  border: 1px solid rgba(var(--color-green-rgb), 0.16);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.86);
   color: var(--color-green);
@@ -3015,7 +3016,7 @@ watch(audioBarEl, (el) => {
   margin-bottom: 0;
   margin: -1rem;
   padding: 3rem;
-  background: radial-gradient(circle at top right, rgba(24, 60, 50, 0.1), transparent 22rem), var(--color-surface);
+  background: radial-gradient(circle at top right, rgba(var(--color-green-rgb), 0.1), transparent 22rem), var(--color-surface);
 }
 .slides-mode .hero .audio-btn,
 .slides-mode .block-play-btn,
@@ -3094,8 +3095,8 @@ watch(audioBarEl, (el) => {
   border-radius: 0.5rem;
 }
 .slides-mode .dia-current .dia-body {
-  border-color: rgba(24, 60, 50, 0.28);
-  box-shadow: 0 0.5rem 1.5rem rgba(24, 60, 50, 0.08);
+  border-color: rgba(var(--color-green-rgb), 0.28);
+  box-shadow: 0 0.5rem 1.5rem rgba(var(--color-green-rgb), 0.08);
 }
 .slides-mode .dia-context {
   opacity: 0.48;
@@ -3218,7 +3219,7 @@ watch(audioBarEl, (el) => {
   gap: 0.75rem;
   width: min(12rem, 45%);
   margin: 0;
-  color: rgba(24, 60, 50, 0.48);
+  color: rgba(var(--color-green-rgb), 0.48);
   font-size: 1.45rem;
   line-height: 1;
 }
