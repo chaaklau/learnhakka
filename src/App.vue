@@ -1183,8 +1183,20 @@ function selectLesson(id) {
   currentSlide.value = 0
 }
 
+function requestSlideFullscreen() {
+  if (typeof document === 'undefined' || !document.fullscreenEnabled || document.fullscreenElement) return
+  document.documentElement.requestFullscreen?.().catch(() => {})
+}
+
+function exitSlideFullscreen() {
+  if (typeof document === 'undefined' || !document.fullscreenElement) return
+  document.exitFullscreen?.().catch(() => {})
+}
+
 function setMode(mode) {
   const nextMode = ['paper', 'slides'].includes(mode) ? mode : 'textbook'
+  if (nextMode === 'slides') requestSlideFullscreen()
+  else exitSlideFullscreen()
   const q = { ...route.query }
   if (nextMode === 'textbook') delete q.mode
   else q.mode = nextMode
