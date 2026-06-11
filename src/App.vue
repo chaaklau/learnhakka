@@ -822,8 +822,8 @@ function renderTitleRuby(text) {
           const word = seg.v.slice(i, i + bestLen)
           const roms = bestEntry.rom.split(/[\s,]+/).filter(Boolean)
           const meaning = displayLang.value === 'en'
-            ? (bestEntry.en || bestEntry.zh || '')
-            : (bestEntry.zh || bestEntry.en || '')
+            ? (bestEntry.en || '')
+            : (bestEntry.zh || '')
           const showMeaning = meaning && meaning !== word
           out += '<span class="title-word">'
           if (romMode.value === 'bracket') {
