@@ -17,8 +17,13 @@
       </a>
     </div>
       <div class="nav-controls" aria-label="顯示設定 Display controls">
+      <div v-if="page !== 'textbook'" class="control-group lang-controls nav-lang-only" role="group" aria-label="譯文語言 Translation language">
+        <button type="button" :class="['ctl-btn', { active: displayLang === 'zh' }]" :aria-pressed="displayLang === 'zh'" title="中文譯文 Chinese translation" @click="displayLang = 'zh'">中文</button>
+        <button type="button" :class="['ctl-btn', { active: displayLang === 'en' }]" :aria-pressed="displayLang === 'en'" title="英文譯文 English translation" @click="displayLang = 'en'">English</button>
+      </div>
+      <template v-else>
       <div class="view-menu">
-        <div :class="['ctl-btn', 'view-menu-summary', { active: paperMode || displayLang !== 'zh' || romMode !== 'ruby' }]" title="顯示設定 Display settings">
+        <div :class="['ctl-btn', 'view-menu-summary', { active: displayLang !== 'zh' || (page === 'textbook' && (paperMode || romMode !== 'ruby')) }]" title="顯示設定 Display settings">
           <svg class="ctl-icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 7h4"></path><path d="M12 7h8"></path><circle cx="10" cy="7" r="2"></circle>
             <path d="M4 17h8"></path><path d="M16 17h4"></path><circle cx="14" cy="17" r="2"></circle>
@@ -30,17 +35,17 @@
             <span class="view-menu-label">譯文 Translation</span>
             <div class="control-group lang-controls" role="group" aria-label="譯文語言 Translation language">
               <button type="button" :class="['ctl-btn', { active: displayLang === 'zh' }]" :aria-pressed="displayLang === 'zh'" title="中文譯文 Chinese translation" @click="displayLang = 'zh'">中文</button>
-              <button type="button" :class="['ctl-btn', { active: displayLang === 'en' }]" :aria-pressed="displayLang === 'en'" title="英文譯文 English translation" @click="displayLang = 'en'">英文</button>
+              <button type="button" :class="['ctl-btn', { active: displayLang === 'en' }]" :aria-pressed="displayLang === 'en'" title="英文譯文 English translation" @click="displayLang = 'en'">English</button>
             </div>
           </div>
           <div class="view-menu-section">
             <span class="view-menu-label">讀音 Pronunciation</span>
             <div class="control-group rom-controls" role="group" aria-label="讀音顯示 Pronunciation display">
               <button type="button" :class="['ctl-btn', 'rom-choice', { active: romMode === 'ruby' }]" :aria-pressed="romMode === 'ruby'" title="讀音在字上 Pronunciation above the word" @click="romMode = 'ruby'">
-                <ruby class="ctl-example">厓<rt>ngai</rt></ruby>
+                <ruby class="ctl-example">厓<rt>ngāi</rt></ruby>
               </button>
               <button type="button" :class="['ctl-btn', 'rom-choice', { active: romMode === 'bracket' }]" :aria-pressed="romMode === 'bracket'" title="讀音在字後 Pronunciation after the word" @click="romMode = 'bracket'">
-                <span class="ctl-example">厓<span class="ctl-rom">[ngai]</span></span>
+                <span class="ctl-example">厓<span class="ctl-rom">[ngāi]</span></span>
               </button>
             </div>
           </div>
@@ -77,6 +82,7 @@
         </svg>
         <span>列印/PDF</span>
       </button>
+      </template>
     </div>
   </nav>
 
