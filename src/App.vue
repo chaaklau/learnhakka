@@ -387,6 +387,7 @@ const lessons = ref([])
 const lessonCache = ref({})
 const mediaCache = ref({})
 const lexicon = ref(new Map())
+const sentenceLexicon = ref(new Map())
 const site = ref({})
 const displayLang = ref(route.query.lang === 'en' ? 'en' : 'zh')
 const romMode = ref(route.query.rom === 'bracket' ? 'bracket' : 'ruby')
@@ -561,6 +562,15 @@ function tokenize(text) {
   return typeof text === 'string' ? text.split(/\s+/).filter(Boolean) : []
 }
 
+function trimSentenceBoundaryPunctuation(text) {
+  return String(text).replace(/^[\p{P}\p{S}\p{Z}\s]+|[\p{P}\p{S}\p{Z}\s]+$/gu, '')
+}
+
+function addLexiconEntry(map, hak, entry) {
+  if (!map.has(hak)) map.set(hak, [])
+  map.get(hak).push(entry)
+}
+
 function looksLikeRomOverride(text) {
   return /^[A-Za-z]+[1-6]?(?:[\s,]+[A-Za-z]+[1-6]?)*$/.test(text)
 }
@@ -587,6 +597,15 @@ function getLexiconEntry(raw) {
     return { hak, rom: overrideRom, zh: entries[0]?.zh || '', en: entries[0]?.en || '', unproofread: false }
   }
   return entries[0] || { hak, rom: '', zh: '', en: '', unproofread: false }
+}
+
+function getSentenceLexiconEntry(raw) {
+  const exactEntry = getLexiconEntry(raw)
+  if (exactEntry.rom) return exactEntry
+
+  const normalizedHak = trimSentenceBoundaryPunctuation(raw)
+  const entries = normalizedHak ? sentenceLexicon.value.get(normalizedHak) : null
+  return entries?.[0] || exactEntry
 }
 
 function getRom(raw) {
@@ -679,7 +698,7 @@ function formatHakka(text) {
 
 function renderItermRuby(inner) {
   // If the content has CJK characters, render with ruby like vocab
-  if (/[\u3400-\u9FFF\uF900-\uFAFF]/.test(inner)) {
+  if (/\p{Unified_Ideograph}/u.test(inner)) {
     return '<span class="iterm">' + renderSentenceRuby(inner) + '</span>'
   }
   return '<span class="iterm">' + escapeHtml(inner) + '</span>'
@@ -868,8 +887,8 @@ function formatPracticeItem(text) {
 
 function renderSentenceRuby(text) {
   if (!text) return ''
-  // First check for an exact full-sentence entry
-  const fullEntry = getLexiconEntry(text)
+  // First check for a full-sentence entry, ignoring sentence boundary punctuation.
+  const fullEntry = getSentenceLexiconEntry(text)
   if (fullEntry.rom) return renderWithRuby(text, fullEntry.rom)
 
   // Greedy longest-string match against lexicon
@@ -1436,6 +1455,7 @@ onMounted(async () => {
     const csvText = _csvRaw
     const siteData = _siteJson
     const map = new Map()
+    const sentenceMap = new Map()
     const lines = csvText.replace(/^\uFEFF/, '').split(/\r?\n/)
 
     for (let i = 1; i < lines.length; i++) {
@@ -1443,14 +1463,18 @@ onMounted(async () => {
       if (!line) continue
       const [hak, rom, zh, en, unproofread] = parseCsvLine(line)
       if (!hak) continue
-      if (!map.has(hak)) map.set(hak, [])
-      map.get(hak).push({ hak, rom: rom || '', zh: zh || '', en: en || '', unproofread: unproofread === '1' })
+      const entry = { hak, rom: rom || '', zh: zh || '', en: en || '', unproofread: unproofread === '1' }
+      addLexiconEntry(map, hak, entry)
+
+      const normalizedHak = trimSentenceBoundaryPunctuation(hak)
+      if (normalizedHak) addLexiconEntry(sentenceMap, normalizedHak, entry)
     }
 
     lessons.value = isA2
       ? indexData.filter((l) => l.id >= 11 && l.id <= 20)
       : indexData.filter((l) => l.id >= 1 && l.id <= 10)
     lexicon.value = map
+    sentenceLexicon.value = sentenceMap
     site.value = siteData
 
     await loadLessonBundle(currentLessonId.value || lessons.value[0]?.id)
