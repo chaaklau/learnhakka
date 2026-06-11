@@ -710,21 +710,31 @@ function renderItermRuby(inner) {
   return '<span class="iterm">' + escapeHtml(inner) + '</span>'
 }
 
+function renderItermPlain(inner) {
+  return '<span class="iterm">' + escapeHtml(inner) + '</span>'
+}
+
 function formatNoteText(text) {
   if (!text) return ''
-  // Process {…} placeholders first on raw text, then annotations and bold
+  // Process {…} and {{…}} placeholders first on raw text, then annotations and bold
   let result = ''
   let rest = String(text)
-  const re = /\{(.*?)\}/g
-  let lastIdx = 0
-  let m
-  while ((m = re.exec(rest)) !== null) {
-    // Process the text before this match through formatHakka
-    result += formatHakka(rest.slice(lastIdx, m.index))
-    result += renderItermRuby(m[1])
-    lastIdx = re.lastIndex
+  let i = 0
+  while (i < rest.length) {
+    const start = rest.indexOf('{', i)
+    if (start === -1) break
+
+    const isDouble = rest[start + 1] === '{'
+    const end = isDouble ? rest.indexOf('}}', start + 2) : rest.indexOf('}', start + 1)
+    if (end === -1) break
+
+    result += formatHakka(rest.slice(i, start))
+    const innerStart = start + (isDouble ? 2 : 1)
+    const inner = rest.slice(innerStart, end)
+    result += isDouble ? renderItermPlain(inner) : renderItermRuby(inner)
+    i = end + (isDouble ? 2 : 1)
   }
-  result += formatHakka(rest.slice(lastIdx))
+  result += formatHakka(rest.slice(i))
   // Support **bold**
   result = result.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
   // Support `code` as crimson inline

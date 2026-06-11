@@ -50,8 +50,8 @@
           "en": "Hakka has six syllable codas: `m`, `n`, `ng`, `p`, `t`, `k`."
         },
         {
-          "zh": "客家話的疑問詞「誰」是{哪人}，發音是 `là ngīn`。客家話區別「哪個」和「誰」，分別是{奈隻}和{哪人}。",
-          "en": "The Hakka question word for 'who' is {哪人} (`là ngīn`). Hakka distinguishes between 'which one' and 'who': {奈隻} and {哪人}."
+          "zh": "客家話的疑問詞「誰」是{{哪人}}，發音是 `là ngīn`。客家話區別「哪個」和「誰」，分別是{奈隻}和{哪人}。",
+          "en": "The Hakka question word for 'who' is {{哪人}} (`là ngīn`). Hakka distinguishes between 'which one' and 'who': {奈隻} and {哪人}."
         }
       ],
       "id": "notes-1"

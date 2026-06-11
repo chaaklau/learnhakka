@@ -70,16 +70,16 @@
           "en": "The Hakka terms for 'son', 'daughter', 'daughter-in-law', and 'son-in-law' are all different from Cantonese and Mandarin."
         },
         {
-          "zh": "{賴子}、{妹子}、{孫子}、{塞子}的「子」唸**第一聲** `zú`。",
-          "en": "The 子 in {賴子}, {妹子}, {孫子}, {塞子} is pronounced with the **first tone** `zú`."
+          "zh": "{賴子}、{妹子}、{孫子}、{塞子}的{{子}}唸**第一聲** `zú`。",
+          "en": "The {{子}} in {賴子}, {妹子}, {孫子}, {塞子} is pronounced with the **first tone** `zú`."
         },
         {
-          "zh": "「正」在客家話有三個發音： `záng` {正月}、`zàng` 「才/剛才」、`zìn` {正確}、{正能量}。",
-          "en": "正 has three pronunciations in Hakka: `záng` 'First Month' - {正月}; `zàng` 'just/only then'; `zìn` 'correct/positive' - {正確}, {正能量}."
+          "zh": "{{正}}在客家話有三個發音： `záng` {正月}、`zàng` 「才/剛才」、`zìn` {正確}、{正能量}。",
+          "en": "{{正}} has three pronunciations in Hakka: `záng` 'First Month' - {正月}; `zàng` 'just/only then'; `zìn` 'correct/positive' - {正確}, {正能量}."
         },
         {
-          "zh": "客家話的「恩」讀 `én`，不讀 `yín`。",
-          "en": "Hakka's {恩} ('grace') is pronounced `én`, not `yín`."
+          "zh": "客家話的{{恩}}讀 `én`，不讀 `yín`。",
+          "en": "Hakka's {{恩}} ('grace') is pronounced `én`, not `yín`."
         }
       ],
       "id": "notes-1"

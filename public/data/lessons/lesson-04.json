@@ -58,8 +58,8 @@
       "type": "notes",
       "items": [
         {
-          "zh": "{在}有兩個發音: (a) **口語音**是 `cói` ({在唔在}、{在卡}); (b) **書面語**唸 `cài` ({自在}、{在意})。",
-          "en": "{在} has two pronunciations: (a) **Spoken**: `cói` ({在唔在}, {在卡}); (b) **Written/Formal**: `cài` ({自在}, {在意})."
+          "zh": "{{在}}有兩個發音: (a) **口語音**是 `cói` ({在唔在}、{在卡}); (b) **書面語**唸 `cài` ({自在}、{在意})。",
+          "en": "{{在}} has two pronunciations: (a) **Spoken**: `cói` ({在唔在}, {在卡}); (b) **Written/Formal**: `cài` ({自在}, {在意})."
         },
         {
           "zh": "{屋}的聲母是 `v`，不是**零聲母**。",
@@ -71,11 +71,11 @@
         },
         {
           "zh": "連接詞{摎}，用法相當於廣州話的「同」。",
-          "en": "The conjunction {摎} is used like 「同」 in Cantonese (meaning 'and' or 'with')."
+          "en": "The conjunction {摎} is used like 「同」 ('and' or 'with') in Cantonese."
         },
         {
           "zh": "客家話的{恁}相當於廣州話的「咁」。",
-          "en": "Hakka's {恁} is equivalent to Cantonese's 「咁」 (meaning 'so' or 'this')."
+          "en": "Hakka's {恁} is equivalent to Cantonese's 「咁」 ('so' or 'this')."
         },
         {
           "zh": "{做乜介}有兩個意思，通常是「為什麼」，但也可以是「做什麼」。",

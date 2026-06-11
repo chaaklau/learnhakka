@@ -66,28 +66,28 @@
       "type": "notes",
       "items": [
         {
-          "zh": "客家話有**介音** `i`，是廣州話沒有的，要注意發音。例如{餅} `biăng`、{茄} `kiō`、{向} `hiòng`、{腳} `giŏk`、{銀} `ngiūn`、{艾} `ngiòi`。",
-          "en": "Hakka has the **i-medial**, which Cantonese lacks. Pay attention to the pronunciation. E.g., 'cake' ({餅} `biăng`), 'eggplant' ({茄} `kiō`), 'direction' ({向} `hiòng`), 'leg' ({腳} `giŏk`), 'silver' ({銀} `ngiūn`), 'mugwort' ({艾} `ngiòi`)."
+          "zh": "客家話有**介音** `i`，是廣州話沒有的，要注意發音。例如{{餅}} `biăng`、{{茄}} `kiō`、{{向}} `hiòng`、{{腳}} `giŏk`、{{銀}} `ngiūn`、{{艾}} `ngiòi`。",
+          "en": "Hakka has the **i-medial**, which Cantonese lacks. Pay attention to the pronunciation. E.g., 'cake' ({{餅}} `biăng`), 'eggplant' ({{茄}} `kiō`), 'direction' ({{向}} `hiòng`), 'leg' ({{腳}} `giŏk`), 'silver' ({{銀}} `ngiūn`), 'mugwort' ({{艾}} `ngiòi`)."
         },
         {
-          "zh": "客家話有 `ung` / `iung` 的對立，例如{公工攻} / {弓宮恭}。要注意發音。",
-          "en": "Hakka distinguishes between `ung` and `iung`. For example: 'public/work/attack' ({公工攻}) vs. 'bow/palace/respect' ({弓宮恭}). Pay attention to the pronunciation."
+          "zh": "客家話有 `ung` / `iung` 的對立，例如{公}{工}{攻} / {弓}{宮}{恭}。要注意發音。",
+          "en": "Hakka distinguishes between `ung` and `iung`. For example: 'public/work/attack' ({公}{工}{攻}) vs. 'bow/palace/respect' ({弓}{宮}{恭}). Pay attention to the pronunciation."
         },
         {
-          "zh": "{先生}有兩個發音：(a) `sín sáng` 意思為老師。(b) `sien sáng` 是對成年男性的禮貌稱呼。",
-          "en": "{先生} has two pronunciations: (a) `sín sáng` means teacher. (b) `sien sáng` is a polite title for an adult male (Mr.)."
+          "zh": "{{先生}}有兩個發音：(a) `sín sáng` 意思為老師。(b) `sien sáng` 是對成年男性的禮貌稱呼。",
+          "en": "{{先生}} has two pronunciations: (a) `sín sáng` means teacher. (b) `sien sáng` is a polite title for an adult male (Mr.)."
         },
         {
-          "zh": "普通話的疑問詞「哪」，客家話發音是 `lài`（中文字寫作{奈}）。",
-          "en": "The Mandarin question word 「哪」 is pronounced `lài` in Hakka (written as {奈})."
+          "zh": "普通話的疑問詞「哪」，客家話發音是 `lài`（中文字寫作{{奈}}）。",
+          "en": "The Mandarin question word 「哪」 is pronounced `lài` in Hakka (written as {{奈}})."
         },
         {
           "zh": "「哪裏」有三個說法：{奈埞}、{奈裏}、{奈}。其中{奈埞}是惠陽腔特有**口語詞**。",
           "en": "There are three ways to say 'where': {奈埞}, {奈裏}, {奈}. Among them, {奈埞} is a colloquial term specific to the **Fuiyong accent**."
         },
         {
-          "zh": "{吂}是客家話常用詞，惠陽腔包括香港的發音是 `mān`。代表「尚未」發生的動作（沒、沒有）。",
-          "en": "{吂} is a common Hakka word, pronounced `mān` in the **Fuiyong accent** (including Hong Kong). It indicates an action that has 'not yet' happened."
+          "zh": "{{吂}}是客家話常用詞，惠陽腔包括香港的發音是 `mān`。代表「尚未」發生的動作（沒、沒有）。",
+          "en": "{{吂}} is a common Hakka word, pronounced `mān` in the **Fuiyong accent** (including Hong Kong). It indicates an action that has 'not yet' happened."
         }
       ],
       "id": "notes-1"

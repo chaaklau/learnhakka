@@ -75,16 +75,16 @@
           "en": "Some characters with **closed-mouth endings** `am`/`ap` are quite special and require attention."
         },
         {
-          "zh": "{賴子}、 {妹子}的「子」唸**第一聲** `zú`，相當於普通話**輕聲**的用法。但{子女}、{孔子}的{子}唸**第三聲** `zŭ`。",
-          "en": "The 子 in 'son' ({賴子}) and 'daughter' ({妹子}) is pronounced with the **first tone** `zú`, similar to the **neutral tone** in Mandarin. However, {子} in 'children' ({子女}) and 'Confucius' ({孔子}) is pronounced with the **third tone** `zŭ`."
+          "zh": "{賴子}、 {妹子}的{{子}}唸**第一聲** `zú`，相當於普通話**輕聲**的用法。但{子女}、{孔子}的{{子}}唸**第三聲** `zŭ`。",
+          "en": "The {{子}} in 'son' ({賴子}) and 'daughter' ({妹子}) is pronounced with the **first tone** `zú`, similar to the **neutral tone** in Mandarin. However, {{子}} in 'children' ({子女}) and 'Confucius' ({孔子}) is pronounced with the **third tone** `zŭ`."
         },
         {
-          "zh": "注意「女」在{子女}的發音是 `n̆g`，是比較**文言**的發音，來自**梅縣話**，{子女}跟{子午}同音。其他{女}發音是 `ngĭ`。",
-          "en": "Note that 女 in 'children' ({子女}) is pronounced `n̆g`. This is a more **formal/literary** pronunciation from **Moiyen**; {子女} and {子午} ('midnight/noon') are homophones. In other cases, {女} is pronounced `ngĭ`."
+          "zh": "注意{{女}}在{子女}的發音是 `n̆g`，是比較**文言**的發音，來自**梅縣話**，{子女}跟{子午}同音。其他{{女}}發音是 `ngĭ`。",
+          "en": "Note that {{女}} in 'children' ({子女}) is pronounced `n̆g`. This is a more **formal/literary** pronunciation from **Moiyen**; {子女} and {子午} ('midnight/noon') are homophones. In other cases, {{女}} is pronounced `ngĭ`."
         },
         {
-          "zh": "{子}在**口語**不能單獨使用，只有在諺語或文言文才用作兒子的意思。兒子口語要說成{賴子}",
-          "en": "{子} cannot be used alone in **colloquial** language; it means 'son' only in idiom or classical texts. In spoken language, 'son' is {賴子}."
+          "zh": "{{子}}在**口語**不能單獨使用，只有在諺語或文言文才用作兒子的意思。兒子口語要說成{賴子}。",
+          "en": "{{子}} cannot be used alone in **colloquial** language; it means 'son' only in idiom or classical texts. In spoken language, 'son' is {賴子}."
         },
         {
           "zh": "「祖父母」、「外祖父母」的稱呼跟廣州話、普通話都不一樣。",

@@ -68,12 +68,12 @@
       "type": "notes",
       "items": [
         {
-          "zh": "香港客家話屬於**惠陽腔**，沒有介音 `u`，所以 「廣/港」`gŏng`、「關/間」`gán`、「過/個」`gò`、「郭/角」`gŏk` 同音。",
-          "en": "Hong Kong Hakka belongs to the **Fuiyong accent** and lacks the `u`-medial. Therefore, 廣/港 `gŏng`、 關/間 `gán`、 過/個 `gò`、 郭/角 `gŏk` are homophones."
+          "zh": "香港客家話屬於**惠陽腔**，沒有介音 `u`，所以 {{廣}}/{{港}} `gŏng`、{{關}}/{{間}} `gán`、{{過}}/{{個}} `gò`、{{郭}}/{{角}} `gŏk` 同音。",
+          "en": "Hong Kong Hakka belongs to the **Fuiyong accent** and lacks the `u`-medial. Therefore, {{廣}}/{{港}} `gŏng`, {{關}}/{{間}} `gán`, {{過}}/{{個}} `gò`, {{郭}}/{{角}} `gŏk` are homophones."
         },
         {
-          "zh": "「國」傳統發音是 `gĕt`，近似英語的「get」，不唸 `gŏk`。",
-          "en": "The traditional pronunciation of 國 is `gĕt`, similar to the English 'get', not `gŏk`."
+          "zh": "{{國}}傳統發音是 `gĕt`，近似英語的「get」，不唸 `gŏk`。",
+          "en": "The traditional pronunciation of {{國}} is `gĕt`, similar to the English 'get', not `gŏk`."
         },
         {
           "zh": "客家話有 `m` **收音**，除了幾個字以外，絕大部分和廣州話相同。",
@@ -88,8 +88,8 @@
           "en": "Hakka **classifiers**: {隻} is generally used instead of Cantonese's 「個」 (e.g., 'one person' - {一隻人}). For four-legged animals, {條} is used (e.g., 'one male cat' - {一條貓公})."
         },
         {
-          "zh": "「幾」在發問，或者意思為「甚為」的時候，發音是 `gĭt`。另外也有 `gĭ` 的發音，例如{幾十歲}、{幾百年}、{第幾}。",
-          "en": "When 幾 is used in questions or means 'what/why', it is pronounced `gĭt`. There is also the pronunciation `gĭ`, used in e.g., 'tens of years old' ({幾十歲}), 'hundreds of years' ({幾百年}), 'which one (ordinal)' ({第幾})."
+          "zh": "{{幾}}在發問，或者意思為「甚為」的時候，發音是 `gĭt`。另外也有 `gĭ` 的發音，例如{幾十歲}、{幾百年}、{第幾}。",
+          "en": "When {{幾}} is used in questions or means 'what/why', it is pronounced `gĭt`. There is also the pronunciation `gĭ`, used in e.g., 'tens of years old' ({幾十歲}), 'hundreds of years' ({幾百年}), 'which one (ordinal)' ({第幾})."
         }
       ],
       "id": "notes-1"
