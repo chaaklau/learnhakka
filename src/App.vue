@@ -2432,7 +2432,7 @@ watch(audioBarEl, (el) => {
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
-  max-width: 80%;
+  max-width: calc(100% - 2.7rem - ((100% - 5.4rem) / 6));
   cursor: pointer;
 }
 .dia-bubble.dia-right {
@@ -3237,7 +3237,7 @@ watch(audioBarEl, (el) => {
   justify-content: center;
 }
 .slides-mode .dia-bubble {
-  max-width: 92%;
+  max-width: calc(100% - 2.7rem - ((100% - 5.4rem) / 8));
   gap: 1rem;
   align-items: center;
 }
@@ -3513,7 +3513,7 @@ watch(audioBarEl, (el) => {
     max-width: 100%;
   }
   .dia-bubble {
-    max-width: 92%;
+    max-width: calc(100% - 2.7rem - ((100% - 5.4rem) / 10));
   }
   .dia-body {
     overflow-wrap: break-word;
