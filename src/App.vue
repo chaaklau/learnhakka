@@ -180,7 +180,7 @@
         </div>
         <section ref="heroEl" class="hero" v-show="!slidesMode || currentSlide === 0" @click="!exportLevelMode && playHeroAudio(currentLesson.id)">
           <span class="kicker">{{ heroKicker }}</span>
-          <h1 class="font-hakka" v-html="renderTitleRuby(currentLesson.title.hak)"></h1>
+          <h1 class="font-hakka" v-html="renderTitleRuby(currentLesson.title)"></h1>
           <p class="hero-sub">{{ currentLesson.title.en }}</p>
         </section>
 
@@ -193,7 +193,7 @@
           >
             <div v-if="exportLevelMode && block._lessonStart" class="lesson-heading">
               <span class="kicker">第 {{ block._lessonId }} 課 · Lesson {{ block._lessonId }}</span>
-              <h1 class="font-hakka" v-html="renderTitleRuby(block._lessonTitle.hak)"></h1>
+              <h1 class="font-hakka" v-html="renderTitleRuby(block._lessonTitle)"></h1>
               <p class="hero-sub">{{ block._lessonTitle.en }}</p>
             </div>
 
@@ -218,15 +218,15 @@
               </div>
 
               <div v-if="block.type === 'vocab'" class="vocab-grid">
-                <div v-for="(token, ti) in tokenize(block.items)" :key="token" class="vocab-card" v-show="!slidesMode || slideItemVisible(bi, ti)" @click="playTokenAudio(block, bi, ti)">
+                <div v-for="(token, ti) in tokenize(block.items)" :key="getTokenDisplay(token) + '-' + ti" class="vocab-card" v-show="!slidesMode || slideItemVisible(bi, ti)" @click="playTokenAudio(block, bi, ti)">
                   <p v-if="slidesMode" class="slide-context">{{ ti + 1 }} / {{ tokenize(block.items).length }}</p>
                   <p class="vocab-hak font-hakka" v-html="renderTokenRuby(token)"></p>
                   <p class="vocab-mean">{{ getMeaning(token) || '—' }}</p>
                 </div>
               </div>
 
-              <div v-else-if="block.type === 'main' && typeof block.items === 'string'" class="vocab-grid vocab-sm">
-                <div v-for="(token, ti) in tokenize(block.items)" :key="token" class="vocab-card sm" v-show="!slidesMode || slideItemVisible(bi, ti)" @click="playTokenAudio(block, bi, ti)">
+              <div v-else-if="block.type === 'main' && isTokenList(block.items)" class="vocab-grid vocab-sm">
+                <div v-for="(token, ti) in tokenize(block.items)" :key="getTokenDisplay(token) + '-' + ti" class="vocab-card sm" v-show="!slidesMode || slideItemVisible(bi, ti)" @click="playTokenAudio(block, bi, ti)">
                   <p class="vocab-hak font-hakka" v-html="renderTokenRuby(token)"></p>
                 </div>
               </div>
@@ -242,7 +242,7 @@
                   <img v-if="speakerInfo(item.sp)" class="dia-avatar" :src="baseUrl + speakerInfo(item.sp).avatar" :alt="item.sp">
                   <span v-else class="dia-sp">{{ item.sp || '例' }}</span>
                   <div class="dia-body">
-                    <p class="dia-hak font-hakka" v-html="renderSentenceRuby(item.hak)"></p>
+                    <p class="dia-hak font-hakka" v-html="renderSentenceRuby(item)"></p>
                     <p v-if="displayLang === 'en' && getDisplayText(item)" class="dia-tr">{{ getDisplayText(item) }}</p>
                   </div>
                 </div>
@@ -258,7 +258,7 @@
                 >
                   <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn">▶</button>
                   <div class="sent-text">
-                    <p class="sent-hak font-hakka" v-html="renderSentenceRuby(item.hak)"></p>
+                    <p class="sent-hak font-hakka" v-html="renderSentenceRuby(item)"></p>
                     <p v-if="displayLang === 'en' && getDisplayText(item)" class="sent-tr">{{ getDisplayText(item) }}</p>
                     <p v-if="item.note" class="sent-note">{{ item.note }}</p>
                   </div>
@@ -564,8 +564,19 @@ function parseCsvLine(line) {
   return fields
 }
 
-function tokenize(text) {
-  return typeof text === 'string' ? text.split(/\s+/).filter(Boolean) : []
+function tokenize(items) {
+  if (typeof items === 'string') return items.split(/\s+/).filter(Boolean)
+  if (Array.isArray(items)) {
+    return items.filter(item => typeof item === 'string' || (item && typeof item === 'object' && item.hak != null))
+  }
+  return []
+}
+
+function isTokenList(items) {
+  return typeof items === 'string' || (Array.isArray(items) && items.every(item => {
+    if (typeof item === 'string') return true
+    return item && typeof item === 'object' && item.hak != null && item.zh == null && item.en == null && item.note == null && item.sp == null
+  }))
 }
 
 function trimSentenceBoundaryPunctuation(text) {
@@ -597,6 +608,10 @@ function getTokenDisplay(raw) {
 function getLexiconEntry(raw) {
   const { hak, overrideRom } = parseToken(raw)
   const entries = lexicon.value.get(hak) || []
+  const storedRom = typeof raw === 'object' && raw?.rom ? raw.rom : ''
+  if (storedRom) {
+    return { ...(entries[0] || {}), hak, rom: storedRom, unproofread: entries[0]?.unproofread || false }
+  }
   if (overrideRom) {
     const match = entries.find((e) => e.rom === overrideRom)
     if (match) return match
@@ -635,8 +650,8 @@ function blockTitle(type) {
 }
 
 function countBlockItems(block) {
-  if (block.type === 'vocab' || (block.type === 'main' && typeof block.items === 'string')) {
-    return block.items.split(/\s+/).filter(Boolean).length
+  if (block.type === 'vocab' || (block.type === 'main' && isTokenList(block.items))) {
+    return tokenize(block.items).length
   }
   if (Array.isArray(block.items)) {
     return block.items.filter(item => typeof item === 'string' || (item && item.hak != null)).length
@@ -702,7 +717,19 @@ function formatHakka(text) {
   return String(text).replace(/\(([^)]+)\)/g, '<span class="anno">$1</span>')
 }
 
+function parseNoteRom(inner) {
+  const match = String(inner).match(/^(.+?):\s+(.+)$/)
+  if (!match) return null
+  const rom = match[2].trim()
+  if (!/[A-Za-z]+[1-6]/.test(rom)) return null
+  return { hak: match[1].trim(), rom }
+}
+
 function renderItermRuby(inner) {
+  const parsed = parseNoteRom(inner)
+  if (parsed) {
+    return '<span class="iterm">' + renderWithRuby(parsed.hak, parsed.rom) + '</span>'
+  }
   // If the content has CJK characters, render with ruby like vocab
   if (/\p{Unified_Ideograph}/u.test(inner)) {
     return '<span class="iterm">' + renderSentenceRuby(inner) + '</span>'
@@ -747,7 +774,7 @@ function renderWithRuby(text, rom) {
   if (!rom) return formatHakka(text)
 
   if (romMode.value === 'bracket') {
-    return escapeHtml(text) + '<span class="rom-bracket">[' + escapeHtml(romToDiacritics(rom)) + ']</span>'
+    return renderBracketRom(text, rom)
   }
 
   const segments = []
@@ -761,7 +788,7 @@ function renderWithRuby(text, rom) {
     rest = rest.slice(m.index + m[0].length)
   }
 
-  const syls = rom.split(/[\s,]+/).filter(Boolean)
+  const syls = romSyllables(rom)
   let si = 0
   let out = ''
 
@@ -784,6 +811,95 @@ function renderWithRuby(text, rom) {
   return out
 }
 
+function renderBracketRom(text, rom) {
+  const units = romUnits(rom)
+  if (!units.length) return formatHakka(text)
+
+  const state = { ui: 0 }
+  let out = ''
+  for (const seg of annotatedTextSegments(text)) {
+    if (seg.t === 'anno') {
+      out += '<span class="anno">' + escapeHtml(seg.v) + '</span>'
+    } else {
+      out += renderBracketRomText(seg.v, units, state)
+    }
+  }
+  return out
+}
+
+function renderBracketRomText(text, units, state) {
+  const str = String(text)
+  let out = ''
+  let i = 0
+
+  while (state.ui < units.length) {
+    while (i < str.length && isRubyBoundary(str[i])) {
+      out += renderRubyBoundary(str[i])
+      i++
+    }
+    if (i >= str.length) break
+
+    const unit = units[state.ui]
+    const syllableCount = romSyllables(unit).length
+    state.ui++
+    if (!syllableCount) continue
+
+    let word = ''
+    let consumed = 0
+    while (i < str.length && consumed < syllableCount) {
+      const ch = str[i]
+      if (isRubyBoundary(ch)) {
+        if (word) {
+          out += escapeHtml(word) + '<span class="rom-bracket">[' + escapeHtml(romToDiacritics(unit)) + ']</span>'
+          word = ''
+        }
+        out += renderRubyBoundary(ch)
+        i++
+        continue
+      }
+      word += ch
+      consumed++
+      i++
+    }
+
+    if (word) {
+      out += escapeHtml(word) + '<span class="rom-bracket">[' + escapeHtml(romToDiacritics(unit)) + ']</span>'
+    }
+  }
+
+  while (i < str.length) {
+    out += isRubyBoundary(str[i]) ? renderRubyBoundary(str[i]) : escapeHtml(str[i])
+    i++
+  }
+
+  return out
+}
+
+function annotatedTextSegments(text) {
+  const segments = []
+  let rest = String(text)
+  const re = /\(([^)]+)\)/
+  while (rest) {
+    const m = re.exec(rest)
+    if (!m) {
+      segments.push({ t: 'text', v: rest })
+      break
+    }
+    if (m.index > 0) segments.push({ t: 'text', v: rest.slice(0, m.index) })
+    segments.push({ t: 'anno', v: m[1] })
+    rest = rest.slice(m.index + m[0].length)
+  }
+  return segments
+}
+
+function isRubyBoundary(ch) {
+  return /[\p{P}\p{S}\p{Z}\s]/u.test(ch)
+}
+
+function renderRubyBoundary(ch) {
+  return escapeHtml(ch)
+}
+
 function renderTokenRuby(token) {
   const { hak } = parseToken(token)
   const entry = getLexiconEntry(token)
@@ -796,8 +912,22 @@ function renderTokenRuby(token) {
   return '<span class="pending">' + escapeHtml(hak) + '</span>'
 }
 
-function renderTitleRuby(text) {
+function romSyllables(rom) {
+  return String(rom || '').match(/[A-Za-z]+[1-6]?/g) || []
+}
+
+function romUnits(rom) {
+  return String(rom || '')
+    .split(/\s*\|\s*|(?<=[,.!?;:()])\s+|\s+(?=[()])/)
+    .map(unit => unit.replace(/^[,.!?;:()]+|[,.!?;:()]+$/g, '').trim())
+    .filter(unit => romSyllables(unit).length)
+}
+
+function renderTitleRuby(raw) {
+  const text = typeof raw === 'object' && raw ? (raw.hak || '') : raw
+  const storedRom = typeof raw === 'object' && raw?.rom ? raw.rom : ''
   if (!text) return ''
+  if (storedRom) return renderWithRuby(text, storedRom)
   const segments = []
   let rest = String(text)
   const re = /\(([^)]+)\)/
@@ -836,7 +966,7 @@ function renderTitleRuby(text) {
         }
         if (bestEntry) {
           const word = seg.v.slice(i, i + bestLen)
-          const roms = bestEntry.rom.split(/[\s,]+/).filter(Boolean)
+          const roms = romSyllables(bestEntry.rom)
           const meaning = displayLang.value === 'en'
             ? (bestEntry.en || '')
             : (bestEntry.zh || '')
@@ -901,8 +1031,11 @@ function formatPracticeItem(text) {
   return parts.join(' <span class="sp-plus">+</span> ')
 }
 
-function renderSentenceRuby(text) {
+function renderSentenceRuby(raw) {
+  const text = typeof raw === 'object' && raw ? (raw.hak || '') : raw
+  const storedRom = typeof raw === 'object' && raw?.rom ? raw.rom : ''
   if (!text) return ''
+  if (storedRom) return renderWithRuby(text, storedRom)
   // First check for a full-sentence entry, ignoring sentence boundary punctuation.
   const fullEntry = getSentenceLexiconEntry(text)
   if (fullEntry.rom) return renderWithRuby(text, fullEntry.rom)
@@ -1154,13 +1287,13 @@ function getBlockTimestamps(lessonId, block, blockIndex) {
 }
 
 function getSegmentText(block, itemIndex) {
-  if (block.type === 'vocab' || (block.type === 'main' && typeof block.items === 'string')) {
-    const tokens = block.items.split(/\s+/).filter(Boolean)
-    return tokens[itemIndex] || ''
+  if (block.type === 'vocab' || (block.type === 'main' && isTokenList(block.items))) {
+    const tokens = tokenize(block.items)
+    return getTokenDisplay(tokens[itemIndex] || '')
   }
   if (block.type === 'practice' && Array.isArray(block.rows)) {
     const row = block.rows[itemIndex]
-    return row ? row.join(' ') : ''
+    return row ? row.map(cell => getTokenDisplay(cell)).join(' ') : ''
   }
   if (Array.isArray(block.items)) {
     const item = block.items[itemIndex]
@@ -1261,7 +1394,7 @@ const slidePages = computed(() => {
   const pages = [{ type: 'hero', bi: -1, from: 0, to: 0 }]
   currentLesson.value.blocks.forEach((block, bi) => {
     const sectionStart = pages.length
-    if (block.type === 'vocab' || (block.type === 'main' && typeof block.items === 'string')) {
+    if (block.type === 'vocab' || (block.type === 'main' && isTokenList(block.items))) {
       const tokens = tokenize(block.items)
       for (let i = 0; i < tokens.length; i++) {
         pages.push({ type: block.type === 'vocab' ? 'vocab' : 'token-list', bi, from: i, to: i + 1 })

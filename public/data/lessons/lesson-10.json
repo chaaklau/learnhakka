@@ -1,29 +1,126 @@
 {
   "id": 10,
-  "title": {"hak":"方位（一）","en":"Positions (1)"},
+  "title": {"hak":"方位（一）","rom":"fong1 vui4 (yit5)","en":"Positions (1)"},
   "blocks": [
     {
       "type": "vocab",
-      "items": "同下 臉前 種嗨兜 屋背戶 棟心 頂高 腳下 長凳 中意 係講 跌下來 大來",
+      "items": [
+        {"hak":"同下","rom":"tung2 ha4"},
+        {"hak":"臉前","rom":"ngiam4 cien2"},
+        {"hak":"種嗨兜","rom":"zung4 hoi1 deu1"},
+        {"hak":"屋背戶","rom":"vuk5 boi4 fu1"},
+        {"hak":"棟心","rom":"dung4 sim1"},
+        {"hak":"頂高","rom":"dang3 gau1"},
+        {"hak":"腳下","rom":"giok5 ha1"},
+        {"hak":"長凳","rom":"cong2 den4"},
+        {"hak":"中意","rom":"zung4 yi4"},
+        {"hak":"係講","rom":"he4 gong3"},
+        {"hak":"跌下來","rom":"diet5 ha1 loi2"},
+        {"hak":"大來","rom":"tai4 loi2"}
+      ],
       "id": "vocab-1"
     },
     {
       "type": "main",
       "items": [
-        {"hak":"這隻係吾表弟阿傑，係吾舅仔嘅賴子。","sp":"B","zh":"這個是我表弟阿傑，是我小舅舅的兒子。","en":"This is my cousin A-kiet, he is my younger uncle's son."},
-        {"hak":"相片嘅背景好像在外國，係麼？","sp":"A","zh":"相片的背景好像在外國，是嗎？","en":"The background of the photo seems to be in a foreign country, doesn't it?"},
-        {"hak":"係呀，佢摎其公其婆同下住在英國蘇格蘭。","sp":"B","zh":"是呀，他跟他爺爺奶奶一起住在英國蘇格蘭。","en":"Yes, he lives in Scotland, UK with his grandparents."},
-        {"hak":"其公其婆就係吾嘅姐公姐婆。","sp":"B","zh":"他爺爺奶奶就是我的外公外婆。","en":"His grandparents are my maternal grandparents."},
-        {"hak":"其間屋好像好大間喔。","sp":"A","zh":"他的房子好像很大呀。","en":"His house seems very big."},
-        {"hak":"係呀，其間屋共總有六間房。","sp":"B","zh":"是呀，他的房子總共有六間臥室。","en":"Yes, his house has six bedrooms in total."},
-        {"hak":"屋臉前還有隻花園仔添。","sp":"A","zh":"房子前面還有個小花園。","en":"There is also a small garden in front of the house."},
-        {"hak":"其兜在這花園仔，種嗨兜繡球摎玫瑰花。","sp":"B","zh":"他們在這個小花園裏種了一些繡球花和玫瑰花。","en":"They planted some hydrangeas and roses in this small garden."},
-        {"hak":"其兜屋背戶應該有一隻大花園係麼？","sp":"A","zh":"他的房子後面應該有個大花園吧？","en":"There should be a large garden behind his house, right?"},
-        {"hak":"係呀，屋背戶嘅花園好大，棟心有棵大蘋果樹。","sp":"B","zh":"是呀，房子後面的花園很大，中心有棵大蘋果樹。","en":"Yes, the garden behind the house is very large, with a big apple tree in the center."},
-        {"hak":"樹頂高有好多蘋果。","sp":"B","zh":"樹上面有好多蘋果。","en":"There are many apples on the tree."},
-        {"hak":"坐在花園休息看書，真係好舒服喔。","sp":"A","zh":"坐在花園裏休息看書，真的好舒服呀。","en":"It's really comfortable to sit in the garden and read."},
-        {"hak":"蘋果樹腳下有一張長凳，阿傑好中意坐在唉裏看書嘅。","sp":"B","zh":"蘋果樹下面有一張長凳，阿傑很喜歡坐在那裏看書。","en":"There is a bench under the apple tree, A-kiet likes to sit there and read."},
-        {"hak":"係講有蘋果跌下來打中佢，佢大來就係隻科學家咯。","sp":"A","zh":"如果有蘋果掉下來打中他，他長大以後就是科學家了。","en":"If an apple would fall down and hit him, he would grow up and become a scientist!"}
+        {
+          "hak": "這隻係吾表弟阿傑，係吾舅仔嘅賴子。",
+          "rom": "ngia3 zak5 | he4 | nga1 | biau3 ti4 | a1 kiet6, he4 | nga1 | kiu1 zai3 | e4 | lai4 zu1.",
+          "sp": "B",
+          "zh": "這個是我表弟阿傑，是我小舅舅的兒子。",
+          "en": "This is my cousin A-kiet, he is my younger uncle's son."
+        },
+        {
+          "hak": "相片嘅背景好像在外國，係麼？",
+          "rom": "siong4 pien3 | e4 | boi4 giang3 | hau3 ciong4 | coi1 | ngoi4 get5, he4 | mo1?",
+          "sp": "A",
+          "zh": "相片的背景好像在外國，是嗎？",
+          "en": "The background of the photo seems to be in a foreign country, doesn't it?"
+        },
+        {
+          "hak": "係呀，佢摎其公其婆同下住在英國蘇格蘭。",
+          "rom": "he4 | a1, gi2 | lau1 | gia1 | gung1 | gia1 | po2 | tung2 ha4 | cu4 | coi1 | yin1 get5 | su1 gak5 lan2.",
+          "sp": "B",
+          "zh": "是呀，他跟他爺爺奶奶一起住在英國蘇格蘭。",
+          "en": "Yes, he lives in Scotland, UK with his grandparents."
+        },
+        {
+          "hak": "其公其婆就係吾嘅姐公姐婆。",
+          "rom": "gia1 | gung1 | gia1 | po2 | ciu4 he4 | nga1 | e4 | zia3 gung1 | zia3 po2.",
+          "sp": "B",
+          "zh": "他爺爺奶奶就是我的外公外婆。",
+          "en": "His grandparents are my maternal grandparents."
+        },
+        {
+          "hak": "其間屋好像好大間喔。",
+          "rom": "gia1 | gan1 | vuk5 | hau3 ciong4 | hau3 | tai4 | gan1 | o1.",
+          "sp": "A",
+          "zh": "他的房子好像很大呀。",
+          "en": "His house seems very big."
+        },
+        {
+          "hak": "係呀，其間屋共總有六間房。",
+          "rom": "he4 | a1, gia1 | gan1 | vuk5 | kiung4 zung3 | yiu1 | luk5 | gan1 | fong2.",
+          "sp": "B",
+          "zh": "是呀，他的房子總共有六間臥室。",
+          "en": "Yes, his house has six bedrooms in total."
+        },
+        {
+          "hak": "屋臉前還有隻花園仔添。",
+          "rom": "vuk5 | ngiam4 cien2 | han2 yiu1 | zak5 | fa1 yen2 zai3 | tiam1.",
+          "sp": "A",
+          "zh": "房子前面還有個小花園。",
+          "en": "There is also a small garden in front of the house."
+        },
+        {
+          "hak": "其兜在這花園仔，種嗨兜繡球摎玫瑰花。",
+          "rom": "gia1 deu1 | coi1 | ngia3 | fa1 yen2 zai3, zung4 hoi1 deu1 | siu4 kiu2 | lau1 | moi2 gui4 fa1.",
+          "sp": "B",
+          "zh": "他們在這個小花園裏種了一些繡球花和玫瑰花。",
+          "en": "They planted some hydrangeas and roses in this small garden."
+        },
+        {
+          "hak": "其兜屋背戶應該有一隻大花園係麼？",
+          "rom": "gia1 deu1 | vuk5 boi4 fu1 | yin4 goi1 yiu1 | yit5 | zak5 | tai4 | fa1 yen2 | he4 | mo1?",
+          "sp": "A",
+          "zh": "他的房子後面應該有個大花園吧？",
+          "en": "There should be a large garden behind his house, right?"
+        },
+        {
+          "hak": "係呀，屋背戶嘅花園好大，棟心有棵大蘋果樹。",
+          "rom": "he4 | a1, vuk5 boi4 fu1 | e4 | fa1 yen2 | hau3 | tai4, dung4 sim1 | yiu1 | po1 | tai4 | pin2 go3 su4.",
+          "sp": "B",
+          "zh": "是呀，房子後面的花園很大，中心有棵大蘋果樹。",
+          "en": "Yes, the garden behind the house is very large, with a big apple tree in the center."
+        },
+        {
+          "hak": "樹頂高有好多蘋果。",
+          "rom": "su4 | dang3 gau1 | yiu1 | hau3 | do1 | pin2 go3.",
+          "sp": "B",
+          "zh": "樹上面有好多蘋果。",
+          "en": "There are many apples on the tree."
+        },
+        {
+          "hak": "坐在花園休息看書，真係好舒服喔。",
+          "rom": "co1 | coi1 | fa1 yen2 | hiu1 sit5 | kon4 su1, zin1 he4 | hau3 | su1 fuk6 | o1.",
+          "sp": "A",
+          "zh": "坐在花園裏休息看書，真的好舒服呀。",
+          "en": "It's really comfortable to sit in the garden and read."
+        },
+        {
+          "hak": "蘋果樹腳下有一張長凳，阿傑好中意坐在唉裏看書嘅。",
+          "rom": "pin2 go3 su4 | giok5 ha1 | yiu1 | yit5 | zong1 | cong2 den4, a1 kiet6 | hau3 | zung4 yi4 | co1 | coi1 | ai4 li1 | kon4 su1 | e4.",
+          "sp": "B",
+          "zh": "蘋果樹下面有一張長凳，阿傑很喜歡坐在那裏看書。",
+          "en": "There is a bench under the apple tree, A-kiet likes to sit there and read."
+        },
+        {
+          "hak": "係講有蘋果跌下來打中佢，佢大來就係隻科學家咯。",
+          "rom": "he4 gong3 | yiu1 | pin2 go3 | diet5 ha1 loi2 | da3 zung4 | gi2, gi2 | tai4 loi2 | ciu4 he4 | zak5 | fo1 hok6 ga1 | lo1.",
+          "sp": "A",
+          "zh": "如果有蘋果掉下來打中他，他長大以後就是科學家了。",
+          "en": "If an apple would fall down and hit him, he would grow up and become a scientist!"
+        }
       ],
       "id": "main-1"
     },
@@ -49,20 +146,20 @@
       "type": "practice",
       "description": {"hak":"兩字詞組合","en":"Two-Character Combinations"},
       "rows": [
-        ["肥佬", "淋肥", "廢水", "沸水"],
-        ["豬肺", "充沛", "斧頭", "符水"],
-        ["文字", "無力", "物理", "房屋"],
-        ["扶穩", "糞缸", "發冷", "剝皮"],
-        ["婦娘", "寬闊", "西湖", "華南"],
-        ["鳳凰", "皇室", "或者", "宏偉"]
+        [{"hak":"肥佬","rom":"pui2 lau3"}, {"hak":"淋肥","rom":"lim2 pui2"}, {"hak":"廢水","rom":"fui4 sui3"}, {"hak":"沸水","rom":"bui4 sui3"}],
+        [{"hak":"豬肺","rom":"zu1 pui4"}, {"hak":"充沛","rom":"cung1 pui4"}, {"hak":"斧頭","rom":"bu3 teu2"}, {"hak":"符水","rom":"pu2 sui3"}],
+        [{"hak":"文字","rom":"vun2 su4"}, {"hak":"無力","rom":"vu2 lit6"}, {"hak":"物理","rom":"vut6 li1"}, {"hak":"房屋","rom":"fong2 vuk5"}],
+        [{"hak":"扶穩","rom":"pu2 vun3"}, {"hak":"糞缸","rom":"bun4 gong1"}, {"hak":"發冷","rom":"bot5 lang1"}, {"hak":"剝皮","rom":"bok5 pi2"}],
+        [{"hak":"婦娘","rom":"bu1 ngiong2"}, {"hak":"寬闊","rom":"kon1 fat5"}, {"hak":"西湖","rom":"si1 fu2"}, {"hak":"華南","rom":"fa2 lam2"}],
+        [{"hak":"鳳凰","rom":"fung4 fong2"}, {"hak":"皇室","rom":"fong2 sit5"}, {"hak":"或者","rom":"fet6 za3"}, {"hak":"宏偉","rom":"fen2 vui3"}]
       ],
       "id": "practice-1"
     },
     {
       "type": "nursery",
       "items": [
-        {"hak":"落大水，發大風，阿姨仔，嫁老公。"},
-        {"hak":"嫁去奈？嫁海豐。食乜介，食老蟹摎蝦公。"}
+        {"hak":"落大水，發大風，阿姨仔，嫁老公。","rom":"lok6 tai4 sui3, bot5 tai4 fung1, a1 | yi2 zai3, ga4 lau3 gung1."},
+        {"hak":"嫁去奈？嫁海豐。食乜介，食老蟹摎蝦公。","rom":"ga4 | hi4 | lai4? ga4 | hoi3 fung1. sit6 | mak5 gai4, sit6 | lau4 hai3 | lau1 | ha2 gung1."}
       ],
       "id": "nursery-1"
     },
@@ -74,16 +171,16 @@
           "en": "A small number of Hakka characters have different initial consonants compared to Cantonese. Pay attention to pronunciation."
         },
         {
-          "zh": "{{老}}在{老虎}、{老蟹}、{老鼠}中唸**第四聲** `làu` ，比較特別。其他情況唸**第三聲** `lău`。",
-          "en": "{{老}} is pronounced with the **fourth tone** `làu` in 'tiger' ({老虎}), 'crab' ({老蟹}), and 'rat' ({老鼠}), which is quite special. In other cases, it is pronounced with the **third tone** `lău`."
+          "zh": "{{老}}在{老虎: lau4 fu3}、{老蟹: lau4 hai3}、{老鼠: lau4 cu3}中唸**第四聲** `làu` ，比較特別。其他情況唸**第三聲** `lău`。",
+          "en": "{{老}} is pronounced with the **fourth tone** `làu` in 'tiger' ({老虎: lau4 fu3}), 'crab' ({老蟹: lau4 hai3}), and 'rat' ({老鼠: lau4 cu3}), which is quite special. In other cases, it is pronounced with the **third tone** `lău`."
         },
         {
           "zh": "{{發}}在跟身體的病理或生理現象有關，或跟天氣現象有關時唸 `bŏt`。其他情況尤其是來自北方話的詞彙唸 `făt`。",
           "en": "{{發}} is pronounced `bŏt` when related to pathological/physiological phenomena or weather. In other cases, especially in vocabulary from Mandarin, it is pronounced `făt`."
         },
         {
-          "zh": "{兜}是「一些」的意思。例如{菜園種嗨兜青菜}。",
-          "en": "{兜} means 'some'. For example: {菜園種嗨兜青菜} (The vegetable garden has planted some vegetables)."
+          "zh": "{兜: deu1}是「一些」的意思。例如{菜園種嗨兜青菜: coi4 yen2 | zung4 hoi1 deu1 | ciang1 coi4}。",
+          "en": "{兜: deu1} means 'some'. For example: {菜園種嗨兜青菜: coi4 yen2 | zung4 hoi1 deu1 | ciang1 coi4} (The vegetable garden has planted some vegetables)."
         }
       ],
       "id": "notes-1"

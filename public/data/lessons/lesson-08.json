@@ -1,26 +1,106 @@
 {
   "id": 8,
-  "title": {"hak":"親屬關係（一）","en":"Kinship Terms (1)"},
+  "title": {"hak":"親屬關係（一）","rom":"cin1 suk6 gan1 he4 (yit5)","en":"Kinship Terms (1)"},
   "blocks": [
     {
       "type": "vocab",
-      "items": "吾公 舊相片 吾伯 吾婆 吂曾 大姑 共總 出世 老妹 老弟 姑仔 吾叔 賴子 妹子 姐公 姐婆 隻隻 邏 子女",
+      "items": [
+        {"hak":"吾公","rom":"nga1 gung1"},
+        {"hak":"舊相片","rom":"kiu4 siong4 pien3"},
+        {"hak":"吾伯","rom":"nga1 bak5"},
+        {"hak":"吾婆","rom":"nga1 po2"},
+        {"hak":"吂曾","rom":"man2 cen2"},
+        {"hak":"大姑","rom":"tai4 gu1"},
+        {"hak":"共總","rom":"kiung4 zung3"},
+        {"hak":"出世","rom":"cut5 se4"},
+        {"hak":"老妹","rom":"lau3 moi4"},
+        {"hak":"老弟","rom":"lau3 tai1"},
+        {"hak":"姑仔","rom":"gu1 zai3"},
+        {"hak":"吾叔","rom":"nga1 suk5"},
+        {"hak":"賴子","rom":"lai4 zu1"},
+        {"hak":"妹子","rom":"moi4 zu1"},
+        {"hak":"姐公","rom":"zia3 gung1"},
+        {"hak":"姐婆","rom":"zia3 po2"},
+        {"hak":"隻隻","rom":"zak5 zak5"},
+        {"hak":"邏","rom":"la2"},
+        {"hak":"子女","rom":"zu3 ng3"}
+      ],
       "id": "vocab-1"
     },
     {
       "type": "main",
       "items": [
-        {"hak":"這張係吾公嘅舊相片。這隻係吾公，這隻係吾婆。","sp":"B","zh":"這張是我爺爺的舊相片。這個我爺爺，這個是我奶奶。","en":"This is an old photo of my grandpa. This is my grandpa, this is my grandma."},
-        {"hak":"這兩隻係吾爸嘅阿哥摎阿姐。其兜係吾伯摎大姑。","sp":"B","zh":"這兩個是我爸的哥哥和姐姐。他們是我伯父和姑媽。","en":"These two are my dad's brother and sister. They are my uncle and aunt."},
-        {"hak":"惹爸呢？","sp":"A","zh":"你爸呢？","en":"What about your dad?"},
-        {"hak":"吾爸還吂曾出世。","sp":"B","zh":"我爸還沒出生。","en":"My dad wasn't born yet."},
-        {"hak":"惹公共總有幾多隻子女噢？","sp":"A","zh":"你爺爺總共有幾個子女？","en":"How many children did your grandpa have in total?"},
-        {"hak":"五隻，三隻賴子，兩隻妹子。","sp":"B","zh":"五個，三個兒子，兩個女兒。","en":"Five. Three sons, two daughters."},
-        {"hak":"吾爸還有一隻老妹摎一隻老弟。其兜係吾叔摎姑仔。","sp":"B","zh":"我爸還有一個妹妹和一個弟弟。他們是我的叔叔和姑姑。","en":"My dad also has a younger sister and a younger brother. They are my uncle and aunt."},
-        {"hak":"你有冇惹姐公姐婆嘅舊相呢 ？","sp":"A","zh":"你有沒有你外公外婆的舊相片呢 ？","en":"Do you have old photos of your maternal grandparents?"},
-        {"hak":"冇呀，但係厓隻隻禮拜都去邏其兜嘅。","sp":"B","zh":"沒有呀，但是我每個星期都去探望他們的。","en":"No, but I visit them every week."},
-        {"hak":"哇，惹兜感情好好喔。","sp":"A","zh":"噢，你們感情很好耶。","en":"Oh, your relationship is very good."},
-        {"hak":"係呀，吾兜好孝順嘅呀。","sp":"B","zh":"是呀，我們很孝順的呢。","en":"Yes, we are very filial."}
+        {
+          "hak": "這張係吾公嘅舊相片。這隻係吾公，這隻係吾婆。",
+          "rom": "ngia3 | zong1 | he4 | nga1 gung1 | e4 | kiu4 siong4 pien3. ngia3 zak5 | he4 | nga1 gung1, ngia3 zak5 | he4 | nga1 po2.",
+          "sp": "B",
+          "zh": "這張是我爺爺的舊相片。這個我爺爺，這個是我奶奶。",
+          "en": "This is an old photo of my grandpa. This is my grandpa, this is my grandma."
+        },
+        {
+          "hak": "這兩隻係吾爸嘅阿哥摎阿姐。其兜係吾伯摎大姑。",
+          "rom": "ngia3 | liong3 | zak5 | he4 | nga1 ba1 | e4 | a1 go1 | lau1 | a1 zia3. gia1 deu1 | he4 | nga1 bak5 | lau1 | tai4 gu1.",
+          "sp": "B",
+          "zh": "這兩個是我爸的哥哥和姐姐。他們是我伯父和姑媽。",
+          "en": "These two are my dad's brother and sister. They are my uncle and aunt."
+        },
+        {"hak":"惹爸呢？","rom":"ngia1 | ba1 | le1?","sp":"A","zh":"你爸呢？","en":"What about your dad?"},
+        {
+          "hak": "吾爸還吂曾出世。",
+          "rom": "nga1 ba1 | han2 man2 | zen1 | cut5 se4.",
+          "sp": "B",
+          "zh": "我爸還沒出生。",
+          "en": "My dad wasn't born yet."
+        },
+        {
+          "hak": "惹公共總有幾多隻子女噢？",
+          "rom": "ngia1 | gung1 | kiung4 zung3 | yiu1 | git5 do1 | zak5 | zu3 ng3 | o1?",
+          "sp": "A",
+          "zh": "你爺爺總共有幾個子女？",
+          "en": "How many children did your grandpa have in total?"
+        },
+        {
+          "hak": "五隻，三隻賴子，兩隻妹子。",
+          "rom": "ng3 | zak5, sam1 zak5 | lai4 zu1, liong3 | zak5 | moi4 zu1.",
+          "sp": "B",
+          "zh": "五個，三個兒子，兩個女兒。",
+          "en": "Five. Three sons, two daughters."
+        },
+        {
+          "hak": "吾爸還有一隻老妹摎一隻老弟。其兜係吾叔摎姑仔。",
+          "rom": "nga1 ba1 | han2 yiu1 | yit5 | zak5 | lau3 moi4 | lau1 | yit5 | zak5 | lau3 tai1. gia1 deu1 | he4 | nga1 suk5 | lau1 | gu1 zai3.",
+          "sp": "B",
+          "zh": "我爸還有一個妹妹和一個弟弟。他們是我的叔叔和姑姑。",
+          "en": "My dad also has a younger sister and a younger brother. They are my uncle and aunt."
+        },
+        {
+          "hak": "你有冇惹姐公姐婆嘅舊相呢 ？",
+          "rom": "ngi2 | yiu1 mau2 | ngia1 | zia3 gung1 | zia3 po2 | e4 | kiu4 siong4 | le1 ?",
+          "sp": "A",
+          "zh": "你有沒有你外公外婆的舊相片呢 ？",
+          "en": "Do you have old photos of your maternal grandparents?"
+        },
+        {
+          "hak": "冇呀，但係厓隻隻禮拜都去邏其兜嘅。",
+          "rom": "mau2 | a1, tan4 | he4 | ngai2 | zak5 zak5 | li3 bai4 | du1 | hi4 | la2 | gia1 deu1 e4.",
+          "sp": "B",
+          "zh": "沒有呀，但是我每個星期都去探望他們的。",
+          "en": "No, but I visit them every week."
+        },
+        {
+          "hak": "哇，惹兜感情好好喔。",
+          "rom": "va1, ngia1 deu1 | gam3 ciang2 | hau3 | hau3 | o1.",
+          "sp": "A",
+          "zh": "噢，你們感情很好耶。",
+          "en": "Oh, your relationship is very good."
+        },
+        {
+          "hak": "係呀，吾兜好孝順嘅呀。",
+          "rom": "he4 | a1, nga1 deu1 | hau3 | hau4 sun4 | e4 | a1.",
+          "sp": "B",
+          "zh": "是呀，我們很孝順的呢。",
+          "en": "Yes, we are very filial."
+        }
       ],
       "id": "main-1"
     },
@@ -50,20 +130,20 @@
       "type": "practice",
       "description": {"hak":"兩字詞組合","en":"Two-Character Combinations"},
       "rows": [
-        ["內在", "軍隊", "謹慎", "屈服"],
-        ["曬穀", "鞠躬", "浴缸", "玉器"],
-        ["酷熱", "郵局", "訓練", "奮鬥"],
-        ["勳章", "分贓", "祖墳", "餐廳"],
-        ["模範", "辦法", "帆船", "壓力"],
-        ["活動", "滿足", "永遠", "榮幸"]
+        [{"hak":"內在","rom":"lui4 cai4"}, {"hak":"軍隊","rom":"giun1 dui4"}, {"hak":"謹慎","rom":"giun3 sin3"}, {"hak":"屈服","rom":"kiut5 fuk6"}],
+        [{"hak":"曬穀","rom":"sai4 guk5"}, {"hak":"鞠躬","rom":"kiuk5 giung1"}, {"hak":"浴缸","rom":"yuk5 gong1"}, {"hak":"玉器","rom":"ngiuk6 hi4"}],
+        [{"hak":"酷熱","rom":"kuk6 ngiet6"}, {"hak":"郵局","rom":"yiu2 kiuk6"}, {"hak":"訓練","rom":"hiun4 lien4"}, {"hak":"奮鬥","rom":"fun4 deu4"}],
+        [{"hak":"勳章","rom":"hiun1 zong1"}, {"hak":"分贓","rom":"fun1 zong1"}, {"hak":"祖墳","rom":"zu3 fun2"}, {"hak":"餐廳","rom":"con1 tiang4"}],
+        [{"hak":"模範","rom":"mu2 fam4"}, {"hak":"辦法","rom":"pan4 fap5"}, {"hak":"帆船","rom":"fam2 son2"}, {"hak":"壓力","rom":"ap5 lit6"}],
+        [{"hak":"活動","rom":"fat6 tung4"}, {"hak":"滿足","rom":"man1 zuk5"}, {"hak":"永遠","rom":"yun1 yen3"}, {"hak":"榮幸","rom":"yin2 hen4"}]
       ],
       "id": "practice-1"
     },
     {
       "type": "idiom",
       "items": [
-        {"hak":"爺娘記子長江水，子記爺娘冇擔竿長。"},
-        {"hak":"早死爺娘冇教招。"}
+        {"hak":"爺娘記子長江水，子記爺娘冇擔竿長。","rom":"ya2 ngiong2 gi4 zu3 cong2 gong1 sui3, zu3 gi4 ya2 ngiong2 mau2 dam4 gon1 cong2"},
+        {"hak":"早死爺娘冇教招。","rom":"zau3 si3 ya2 ngiong2 mau2 gau1 zau1"}
       ],
       "id": "idiom-1"
     },
@@ -75,32 +155,32 @@
           "en": "Some characters with **closed-mouth endings** `am`/`ap` are quite special and require attention."
         },
         {
-          "zh": "{賴子}、 {妹子}的{{子}}唸**第一聲** `zú`，相當於普通話**輕聲**的用法。但{子女}、{孔子}的{{子}}唸**第三聲** `zŭ`。",
-          "en": "The {{子}} in 'son' ({賴子}) and 'daughter' ({妹子}) is pronounced with the **first tone** `zú`, similar to the **neutral tone** in Mandarin. However, {{子}} in 'children' ({子女}) and 'Confucius' ({孔子}) is pronounced with the **third tone** `zŭ`."
+          "zh": "{賴子: lai4 zu1}、 {妹子: moi4 zu1}的{{子}}唸**第一聲** `zú`，相當於普通話**輕聲**的用法。但{子女: zu3 ng3}、{孔子: kung3 zi3}的{{子}}唸**第三聲** `zŭ`。",
+          "en": "The {{子}} in 'son' ({賴子: lai4 zu1}) and 'daughter' ({妹子: moi4 zu1}) is pronounced with the **first tone** `zú`, similar to the **neutral tone** in Mandarin. However, {{子}} in 'children' ({子女: zu3 ng3}) and 'Confucius' ({孔子: kung3 zi3}) is pronounced with the **third tone** `zŭ`."
         },
         {
-          "zh": "注意{{女}}在{子女}的發音是 `n̆g`，是比較**文言**的發音，來自**梅縣話**，{子女}跟{子午}同音。其他{{女}}發音是 `ngĭ`。",
-          "en": "Note that {{女}} in 'children' ({子女}) is pronounced `n̆g`. This is a more **formal/literary** pronunciation from **Moiyen**; {子女} and {子午} ('midnight/noon') are homophones. In other cases, {{女}} is pronounced `ngĭ`."
+          "zh": "注意{{女}}在{子女: zu3 ng3}的發音是 `n̆g`，是比較**文言**的發音，來自**梅縣話**，{子女: zu3 ng3}跟{子午: zi3 ng3}同音。其他{{女}}發音是 `ngĭ`。",
+          "en": "Note that {{女}} in 'children' ({子女: zu3 ng3}) is pronounced `n̆g`. This is a more **formal/literary** pronunciation from **Moiyen**; {子女: zu3 ng3} and {子午: zi3 ng3} ('midnight/noon') are homophones. In other cases, {{女}} is pronounced `ngĭ`."
         },
         {
-          "zh": "{{子}}在**口語**不能單獨使用，只有在諺語或文言文才用作兒子的意思。兒子口語要說成{賴子}。",
-          "en": "{{子}} cannot be used alone in **colloquial** language; it means 'son' only in idiom or classical texts. In spoken language, 'son' is {賴子}."
+          "zh": "{{子}}在**口語**不能單獨使用，只有在諺語或文言文才用作兒子的意思。兒子口語要說成{賴子: lai4 zu1}。",
+          "en": "{{子}} cannot be used alone in **colloquial** language; it means 'son' only in idiom or classical texts. In spoken language, 'son' is {賴子: lai4 zu1}."
         },
         {
           "zh": "「祖父母」、「外祖父母」的稱呼跟廣州話、普通話都不一樣。",
           "en": "The terms for **paternal grandparents** and **maternal grandparents** are different from Cantonese and Mandarin."
         },
         {
-          "zh": "「弟弟」、「妹妹」都帶個 {老} 字前綴。",
-          "en": "'Younger brother' and 'younger sister' both take the prefix {老}."
+          "zh": "「弟弟」、「妹妹」都帶個 {老: lau3} 字前綴。",
+          "en": "'Younger brother' and 'younger sister' both take the prefix {老: lau3}."
         },
         {
-          "zh": "客家話區別爸爸的姐妹。姐姐是{大姑}，妹妹是{姑仔}。",
-          "en": "Hakka distinguishes between father's sisters. The older sister is {大姑}, and the younger sister is {姑仔}."
+          "zh": "客家話區別爸爸的姐妹。姐姐是{大姑: tai4 gu1}，妹妹是{姑仔: gu1 zai3}。",
+          "en": "Hakka distinguishes between father's sisters. The older sister is {大姑: tai4 gu1}, and the younger sister is {姑仔: gu1 zai3}."
         },
         {
-          "zh": "父母文雅的說法是{爺娘}、{爺娭}，口語是{阿㜆}、{阿爸}。",
-          "en": "Formal terms for parents are {爺娘} or {爺娭}; colloquial terms are {阿㜆} and {阿爸}."
+          "zh": "父母文雅的說法是{爺娘: ya2 ngiong2}、{爺娭: ya2 oi1}，口語是{阿㜆: a1 mi1}、{阿爸: a1 ba1}。",
+          "en": "Formal terms for parents are {爺娘: ya2 ngiong2} or {爺娭: ya2 oi1}; colloquial terms are {阿㜆: a1 mi1} and {阿爸: a1 ba1}."
         }
       ],
       "id": "notes-1"

@@ -1,25 +1,104 @@
 {
   "id": 7,
-  "title": {"hak":"恁樣、仰邊、黏等、愛","en":"Like this, How, Then, Want"},
+  "title": {
+    "hak": "恁樣、仰邊、黏等、愛",
+    "rom": "an2 yong4, ngiong4 bien1, ngiam2 den3, oi4",
+    "en": "Like this, How, Then, Want"
+  },
   "blocks": [
     {
       "type": "vocab",
-      "items": "恁樣 仰邊 轉屋卡 轉去 黏等 愛 好像 渾 轉到屋 幾久 小巴 巴士 或者 之後",
+      "items": [
+        {"hak":"恁樣","rom":"an2 yong4"},
+        {"hak":"仰邊","rom":"ngiong4 bien1"},
+        {"hak":"轉屋卡","rom":"zon3 vuk5 ka1"},
+        {"hak":"轉去","rom":"zon3 hi4"},
+        {"hak":"黏等","rom":"ngiam2 den3"},
+        {"hak":"愛","rom":"oi4"},
+        {"hak":"好像","rom":"hau3 ciong4"},
+        {"hak":"渾","rom":"von2"},
+        {"hak":"轉到屋","rom":"zon3 dau4 vuk5"},
+        {"hak":"幾久","rom":"git5 giu3"},
+        {"hak":"小巴","rom":"siau3 ba1"},
+        {"hak":"巴士","rom":"ba4 si3"},
+        {"hak":"或者","rom":"fet6 za3"},
+        {"hak":"之後","rom":"zu1 heu4"}
+      ],
       "id": "vocab-1"
     },
     {
       "type": "main",
       "items": [
-        {"hak":"吾兜嘅學校在鑽石山，惹兜仰邊轉屋卡嘅呢？","sp":"先生","zh":"你們的學校在鑽石山，你們怎樣回家的呢？","en":"Our school is in Diamond Hill, how do you go home?"},
-        {"hak":"你住在奈裏呢？","sp":"B","zh":"你住在哪裏呢？","en":"Where do you live?"},
-        {"hak":"厓住在觀塘。","sp":"A","zh":"我住在觀塘。","en":"I live in Kwun Tong."},
-        {"hak":"你放學之後仰邊轉屋卡呢？","sp":"B","zh":"你放學之後怎樣回家的呢？","en":"How do you go home after school?"},
-        {"hak":"厓直接坐地鐵轉去。你呢？","sp":"A","zh":"我直接坐地鐵回去。你呢？","en":"I take the MTR directly back. And you?"},
-        {"hak":"厓住在橫台山，愛坐火車去錦上路，黏等愛轉小巴或者巴士。","sp":"B","zh":"我住在橫台山，要坐火車去錦上路，然後要轉小巴或者巴士。","en":"I live in Wang Toi Shan, need to take the train to Kam Sheung Road, then transfer to minibus or bus."},
-        {"hak":"哇，好像好遠欸。轉到屋愛幾久噢？","sp":"A","zh":"哇，好像好遠欸。回到家要多幾久呢？","en":"Wow, seems very far. How long does it take to get home?"},
-        {"hak":"連等車渾點鐘久啦。","sp":"B","zh":"連等車大概一個小時吧。","en":"Including waiting for the car, about an hour."},
-        {"hak":"恁樣來回咩愛兩隻鐘頭？你幾多點睡目嘅呢？","sp":"A","zh":"這樣來回不就要兩個小時嗎？你幾點睡覺呢？","en":"Doesn't that mean two hours back and forth? What time do you sleep?"},
-        {"hak":"厓十一點鐘睡目喔。","sp":"B","zh":"我十一點鐘睡覺。","en":"I sleep at eleven o'clock."}
+        {
+          "hak": "吾兜嘅學校在鑽石山，惹兜仰邊轉屋卡嘅呢？",
+          "rom": "nga1 deu1 e4 | hok6 gau3 | coi1 | zon4 sak6 san1, ngia1 deu1 | ngiong4 bien1 | zon3 vuk5 ka1 | e4 | le1?",
+          "sp": "先生",
+          "zh": "你們的學校在鑽石山，你們怎樣回家的呢？",
+          "en": "Our school is in Diamond Hill, how do you go home?"
+        },
+        {
+          "hak": "你住在奈裏呢？",
+          "rom": "ngi2 | cu4 | coi1 | lai4 li1 | le1?",
+          "sp": "B",
+          "zh": "你住在哪裏呢？",
+          "en": "Where do you live?"
+        },
+        {
+          "hak": "厓住在觀塘。",
+          "rom": "ngai2 | cu4 | coi1 | gon1 tong2.",
+          "sp": "A",
+          "zh": "我住在觀塘。",
+          "en": "I live in Kwun Tong."
+        },
+        {
+          "hak": "你放學之後仰邊轉屋卡呢？",
+          "rom": "ngi2 | fong4 hok6 | zu1 heu4 | ngiong4 bien1 | zon3 vuk5 ka1 | le1?",
+          "sp": "B",
+          "zh": "你放學之後怎樣回家的呢？",
+          "en": "How do you go home after school?"
+        },
+        {
+          "hak": "厓直接坐地鐵轉去。你呢？",
+          "rom": "ngai2 | cit6 ziep5 | co1 | ti4 tiet5 | zon3 hi4. ngi2 | le1?",
+          "sp": "A",
+          "zh": "我直接坐地鐵回去。你呢？",
+          "en": "I take the MTR directly back. And you?"
+        },
+        {
+          "hak": "厓住在橫台山，愛坐火車去錦上路，黏等愛轉小巴或者巴士。",
+          "rom": "ngai2 | cu4 | coi1 | vang2 toi2 san1, oi4 | co1 | fo3 ca1 | hi4 | gim3 song4 lu4, ngiam2 den3 | oi4 | zon3 | siau3 ba1 | fet6 za3 | ba4 si3.",
+          "sp": "B",
+          "zh": "我住在橫台山，要坐火車去錦上路，然後要轉小巴或者巴士。",
+          "en": "I live in Wang Toi Shan, need to take the train to Kam Sheung Road, then transfer to minibus or bus."
+        },
+        {
+          "hak": "哇，好像好遠欸。轉到屋愛幾久噢？",
+          "rom": "va1, hau3 ciong4 | hau3 | yen3 | e3. zon3 dau4 vuk5 | oi4 | git5 giu3 | o1?",
+          "sp": "A",
+          "zh": "哇，好像好遠欸。回到家要多幾久呢？",
+          "en": "Wow, seems very far. How long does it take to get home?"
+        },
+        {
+          "hak": "連等車渾點鐘久啦。",
+          "rom": "lien2 | den3 ca1 | von2 | diam3 zung1 | giu3 | la1.",
+          "sp": "B",
+          "zh": "連等車大概一個小時吧。",
+          "en": "Including waiting for the car, about an hour."
+        },
+        {
+          "hak": "恁樣來回咩愛兩隻鐘頭？你幾多點睡目嘅呢？",
+          "rom": "an2 yong4 | loi2 fui2 | me4 | oi4 | liong3 | zak5 | zung1 teu2? ngi2 | git5 do1 | diam3 | soi4 muk5 | e4 | le1?",
+          "sp": "A",
+          "zh": "這樣來回不就要兩個小時嗎？你幾點睡覺呢？",
+          "en": "Doesn't that mean two hours back and forth? What time do you sleep?"
+        },
+        {
+          "hak": "厓十一點鐘睡目喔。",
+          "rom": "ngai2 | sip6 yit5 diam3 zung1 | soi4 muk5 | o1.",
+          "sp": "B",
+          "zh": "我十一點鐘睡覺。",
+          "en": "I sleep at eleven o'clock."
+        }
       ],
       "id": "main-1"
     },
@@ -43,33 +122,33 @@
       "type": "practice",
       "description": {"hak":"兩字詞組合","en":"Two-Character Combinations"},
       "rows": [
-        ["童年", "銀行", "意義", "語言"],
-        ["耳環", "遇到", "責任", "讓座"],
-        ["日頭", "月光", "過年", "元旦"],
-        ["原來", "水源", "圓規", "願望"],
-        ["軟弱", "韌帶", "艾草", "攰死"],
-        ["嚴格", "鹽田", "乳牛", "濃密"]
+        [{"hak":"童年","rom":"tung2 ngien2"}, {"hak":"銀行","rom":"ngiun2 hong2"}, {"hak":"意義","rom":"yi4 ngi4"}, {"hak":"語言","rom":"ngi1 ngien2"}],
+        [{"hak":"耳環","rom":"ngi3 van2"}, {"hak":"遇到","rom":"ngi4 dau3"}, {"hak":"責任","rom":"zit5 ngim4"}, {"hak":"讓座","rom":"ngiong4 co4"}],
+        [{"hak":"日頭","rom":"ngit5 teu2"}, {"hak":"月光","rom":"ngiet6 gong1"}, {"hak":"過年","rom":"go4 ngien2"}, {"hak":"元旦","rom":"ngien2 dan4"}],
+        [{"hak":"原來","rom":"ngien2 loi2"}, {"hak":"水源","rom":"sui3 ngien2"}, {"hak":"圓規","rom":"yen2 gui1"}, {"hak":"願望","rom":"ngien4 mong4"}],
+        [{"hak":"軟弱","rom":"ngion1 ngiok6"}, {"hak":"韌帶","rom":"ngiun4 dai4"}, {"hak":"艾草","rom":"ngioi4 cau3"}, {"hak":"攰死","rom":"kioi4 si3"}],
+        [{"hak":"嚴格","rom":"ngiam2 gak5"}, {"hak":"鹽田","rom":"yam2 tien2"}, {"hak":"乳牛","rom":"yui1 ngiu2"}, {"hak":"濃密","rom":"ngiung2 mit6"}]
       ],
       "id": "practice-1"
     },
     {
       "type": "idiom",
       "items": [
-        {"hak":"一夜冇睡目，十夜補唔足。"},
-        {"hak":"老虎都曉啄目睡。","note":"啄目睡：打瞌睡"}
+        {"hak":"一夜冇睡目，十夜補唔足。","rom":"yit5 ya4 mau2 soi4 muk5, sip6 ya4 bu3 m1 zuk5"},
+        {"hak":"老虎都曉啄目睡。","rom":"lau4 fu3 du1 hiau3 duk5 muk5 soi4","note":"啄目睡：打瞌睡"}
       ],
       "id": "idiom-1"
     },
     {
       "type": "notes",
       "items": [
-        {"zh":"{恁樣}代表「這樣」、「這樣子的」意思。","en":"{恁樣} means 'this way' or 'like this'."},
-        {"zh":"{恁}代表「那麼」的意思。例如{恁高}、{恁大}、{恁厲害}。","en":"{恁} means 'so' or 'that'. For example, {恁高} ('so tall'), {恁大} ('so big'), {恁厲害} ('so great/terrible')."},
+        {"zh":"{恁樣: an2 yong4}代表「這樣」、「這樣子的」意思。","en":"{恁樣: an2 yong4} means 'this way' or 'like this'."},
+        {"zh":"{恁: an2}代表「那麼」的意思。例如{恁高: an2 | gau1}、{恁大: an2 | tai4}、{恁厲害: an2 | li4 hoi4}。","en":"{恁: an2} means 'so' or 'that'. For example, {恁高: an2 | gau1} ('so tall'), {恁大: an2 | tai4} ('so big'), {恁厲害: an2 | li4 hoi4} ('so great/terrible')."},
         {"zh":"{{仰邊}}是疑問詞，香港傳統發音是 `ngiòng bién`。","en":"{{仰邊}} is the question word 'how'. The traditional Hong Kong pronunciation is `ngiòng bién`."},
-        {"zh":"傳統客家話說{好像} ，不說「好似」。","en":"Traditional Hakka says {好像} ('seem'), not 「好似」."},
-        {"zh":"{渾}有「差不多」、「大概」、「整整」的意思，相當於廣州話的「成」。（注意傳統客家話不說「成」。）","en":"{渾} means 'almost', 'approximately', or 'whole'. It is equivalent to Cantonese's 「成」. (Note: Traditional Hakka does not use 「成」)."},
-        {"zh":"注意「巴」在{小巴}、{巴士}的發音不一樣。","en":"Note that 「巴」 is pronounced differently in 'minibus' ({小巴}) and 'bus' ({巴士})."},
-        {"zh":"注意「老」在{老虎}的發音是 `làu`。","en":"Note that 「老」 in 'tiger' ({老虎}) is pronounced `làu`."}
+        {"zh":"傳統客家話說{好像: hau3 ciong4} ，不說「好似」。","en":"Traditional Hakka says {好像: hau3 ciong4} ('seem'), not 「好似」."},
+        {"zh":"{渾: von2}有「差不多」、「大概」、「整整」的意思，相當於廣州話的「成」。（注意傳統客家話不說「成」。）","en":"{渾: von2} means 'almost', 'approximately', or 'whole'. It is equivalent to Cantonese's 「成」. (Note: Traditional Hakka does not use 「成」)."},
+        {"zh":"注意「巴」在{小巴: siau3 ba1}、{巴士: ba4 si3}的發音不一樣。","en":"Note that 「巴」 is pronounced differently in 'minibus' ({小巴: siau3 ba1}) and 'bus' ({巴士: ba4 si3})."},
+        {"zh":"注意「老」在{老虎: lau4 fu3}的發音是 `làu`。","en":"Note that 「老」 in 'tiger' ({老虎: lau4 fu3}) is pronounced `làu`."}
       ],
       "id": "notes-1"
     }

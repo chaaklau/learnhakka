@@ -16,12 +16,27 @@ function existsDataFile(file) {
 }
 
 function playableUnitCount(block) {
-  if (block.type === 'vocab' || (block.type === 'main' && typeof block.items === 'string')) {
-    return block.items.split(/\s+/).filter(Boolean).length
+  if (block.type === 'vocab' || (block.type === 'main' && isTokenList(block.items))) {
+    return tokenize(block.items).length
   }
   if (Array.isArray(block.rows)) return block.rows.length
   if (Array.isArray(block.items)) return block.items.length
   return 0
+}
+
+function tokenize(items) {
+  if (typeof items === 'string') return items.split(/\s+/).filter(Boolean)
+  if (Array.isArray(items)) {
+    return items.filter(item => typeof item === 'string' || (item && typeof item === 'object' && item.hak != null))
+  }
+  return []
+}
+
+function isTokenList(items) {
+  return typeof items === 'string' || (Array.isArray(items) && items.every(item => {
+    if (typeof item === 'string') return true
+    return item && typeof item === 'object' && item.hak != null && item.zh == null && item.en == null && item.note == null && item.sp == null
+  }))
 }
 
 function fail(scope, message) {

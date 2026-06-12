@@ -1,8 +1,28 @@
 {
   "id": 2,
-  "title": {"hak":"數數","en":"Counting"},
+  "title": {"hak":"數數","rom":"su4 | su4","en":"Counting"},
   "blocks": [
-    {"type":"main","items":"零 一 二 三 四 五 六 七 八 九 十 百 千 萬 億","id":"main-1"},
+    {
+      "type": "main",
+      "items": [
+        {"hak":"零","rom":"la1"},
+        {"hak":"一","rom":"yit5"},
+        {"hak":"二","rom":"ngi4"},
+        {"hak":"三","rom":"sam1"},
+        {"hak":"四","rom":"si4"},
+        {"hak":"五","rom":"ng3"},
+        {"hak":"六","rom":"luk5"},
+        {"hak":"七","rom":"cit5"},
+        {"hak":"八","rom":"bat5"},
+        {"hak":"九","rom":"giu3"},
+        {"hak":"十","rom":"sip6"},
+        {"hak":"百","rom":"bak5"},
+        {"hak":"千","rom":"cien1"},
+        {"hak":"萬","rom":"man4"},
+        {"hak":"億","rom":"yi4"}
+      ],
+      "id": "main-1"
+    },
     {
       "type": "main",
       "items": [
@@ -17,9 +37,9 @@
     {
       "type": "main",
       "items": [
-        {"hak":"乘數表","en":"Multiplication Table"},
-        {"hak":"三一如三，三二如六，三三歸九，三四一十二","en":"3x1=3, 3x2=6, 3x3=9, 3x4=12"},
-        {"hak":"三五一十五，三六一十八，三七二十一，三八二十四","en":"3x5=15, 3x6=18, 3x7=21, 3x8=24"}
+        {"hak":"乘數表","rom":"sin2 su4 biau3","en":"Multiplication Table"},
+        {"hak":"三一如三，三二如六，三三歸九，三四一十二","rom":"sam1 | yit5 | yi2 | sam1, sam1 | ngi4 | yi2 | luk5, sam1 | sam1 | gui1 | giu3, sam1 | si4 | yit5 | sip6 | ngi4","en":"3x1=3, 3x2=6, 3x3=9, 3x4=12"},
+        {"hak":"三五一十五，三六一十八，三七二十一，三八二十四","rom":"sam1 | ng3 | yit5 | sip6 | ng3, sam1 | luk5 | yit5 | sip6 | bat5, sam1 | cit5 | ngi4 | sip6 | yit5, sam1 | bat5 | ngi4 | sip6 | si4","en":"3x5=15, 3x6=18, 3x7=21, 3x8=24"}
       ],
       "id": "main-3"
     },
@@ -32,23 +52,23 @@
       "type": "practice",
       "description": {"hak":"聲調摎聲母","en":"Tones and Initials"},
       "rows": [
-        ["沙", "蛇", "灑", "射"],
-        ["車", "茶", "扯", "岔"],
-        ["西", "時", "死", "四"],
-        ["居", "佢", "幾", "記"],
-        ["夫", "胡", "府", "婦"],
-        ["亨", "恆", "肯", "幸"],
-        ["坐", "鋤", "楚", "挫"],
-        ["買", "埋", "嘪", "賣"],
-        ["拋", "袍", "跑", "炮"]
+        [{"hak":"沙","rom":"sa1"}, {"hak":"蛇","rom":"sa2"}, {"hak":"灑","rom":"sa3"}, {"hak":"射","rom":"sa4"}],
+        [{"hak":"車","rom":"ca1"}, {"hak":"茶","rom":"ca2"}, {"hak":"扯","rom":"ca3"}, {"hak":"岔","rom":"ca4"}],
+        [{"hak":"西","rom":"si1"}, {"hak":"時","rom":"si2"}, {"hak":"死","rom":"si3"}, {"hak":"四","rom":"si4"}],
+        [{"hak":"居","rom":"gi1"}, {"hak":"佢","rom":"gi2"}, {"hak":"幾","rom":"git5"}, {"hak":"記","rom":"gi4"}],
+        [{"hak":"夫","rom":"fu1"}, {"hak":"胡","rom":"fu2"}, {"hak":"府","rom":"fu3"}, {"hak":"婦","rom":"fu4"}],
+        [{"hak":"亨","rom":"hen1"}, {"hak":"恆","rom":"hen2"}, {"hak":"肯","rom":"hen3"}, {"hak":"幸","rom":"hen4"}],
+        [{"hak":"坐","rom":"co1"}, {"hak":"鋤","rom":"co2"}, {"hak":"楚","rom":"co3"}, {"hak":"挫","rom":"co4"}],
+        [{"hak":"買","rom":"mai1"}, {"hak":"埋","rom":"mai2"}, {"hak":"嘪","rom":"mai3"}, {"hak":"賣","rom":"mai4"}],
+        [{"hak":"拋","rom":"pau1"}, {"hak":"袍","rom":"pau2"}, {"hak":"跑","rom":"pau3"}, {"hak":"炮","rom":"pau4"}]
       ],
       "id": "practice-1"
     },
     {
       "type": "idiom",
       "items": [
-        {"hak":"一代親，二代表，三代閒了了。"},
-        {"hak":"人冇千日好，花冇百日紅。"}
+        {"hak":"一代親，二代表，三代閒了了。","rom":"yit5 toi4 cin1, ngi4 toi4 biau3, sam1 toi4 han2 liau3 liau3"},
+        {"hak":"人冇千日好，花冇百日紅。","rom":"ngin2 mau2 cien1 ngit6 hau3, fa1 mau2 bat5 ngit6 fung1"}
       ],
       "id": "idiom-1"
     },
@@ -68,8 +88,8 @@
           "en": "The character 數 ('number', 'count') has only one pronunciation: `sù`. There are no other pronunciations."
         },
         {
-          "zh": "客家話 21～29，**口語**可以說 {兩十一}、{兩十二}、... {兩十九}，廣州話、普通話不能這樣說。",
-          "en": "In Hakka **colloquial** language, numbers 21-29 can be said as {兩十一}, {兩十二}, ... {兩十九}. This is not done in Cantonese or Mandarin."
+          "zh": "客家話 21～29，**口語**可以說 {兩十一: liong3 sip6 yit5}、{兩十二: liong3 sip6 ngi4}、... {兩十九: liong3 | sip6 | giu3}，廣州話、普通話不能這樣說。",
+          "en": "In Hakka **colloquial** language, numbers 21-29 can be said as {兩十一: liong3 sip6 yit5}, {兩十二: liong3 sip6 ngi4}, ... {兩十九: liong3 | sip6 | giu3}. This is not done in Cantonese or Mandarin."
         }
       ],
       "id": "notes-1"

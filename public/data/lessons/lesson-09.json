@@ -1,23 +1,38 @@
 {
   "id": 9,
-  "title": {"hak":"親屬關係（二）","en":"Kinship Terms (2)"},
+  "title": {"hak":"親屬關係（二）","rom":"cin1 suk6 gan1 he4 (ngi4)","en":"Kinship Terms (2)"},
   "blocks": [
-    {"type":"vocab","items":"屋卡人 相 心臼 婿郎 正 還有 英國人 孫女 孫子 塞子","id":"vocab-1"},
+    {
+      "type": "vocab",
+      "items": [
+        {"hak":"屋卡人","rom":"vuk5 ka1 ngin2"},
+        {"hak":"相","rom":"siong3"},
+        {"hak":"心臼","rom":"sim1 kiu1"},
+        {"hak":"婿郎","rom":"se4 long2"},
+        {"hak":"正","rom":"zang4"},
+        {"hak":"還有","rom":"han2 yiu1"},
+        {"hak":"英國人","rom":"yin1 get5 ngin2"},
+        {"hak":"孫女","rom":"sun1 ng3"},
+        {"hak":"孫子","rom":"sun1 zu1"},
+        {"hak":"塞子","rom":"set5 zu1"}
+      ],
+      "id": "vocab-1"
+    },
     {
       "type": "main",
       "items": [
-        {"hak":"阿張伯你今年幾多歲咯？","sp":"A","zh":"張伯你今年幾歲了？","en":"Uncle Zhang, how old are you this year?"},
-        {"hak":"厓今年九十二歲啦。","sp":"B","zh":"我今年九十二歲啦。","en":"I am ninety-two years old."},
-        {"hak":"你有屋卡人麼？","sp":"A","zh":"你有家人嗎？","en":"Do you have family?"},
-        {"hak":"有呀，這張係吾嘅全家福相。","sp":"B","zh":"有呀，這張是我的全家福照片。","en":"Yes, this is my family portrait."},
-        {"hak":"這隻係咩惹妹子呢？","sp":"A","zh":"這隻是咩惹妹子呢？","en":"Is this your daughter?"},
-        {"hak":"唔係，佢係吾心臼。最左手析唉隻正係吾妹子。","sp":"B","zh":"不是，她是我兒媳。最左邊那個才是我女兒。","en":"No, she is my daughter-in-law. The one on the far left is my daughter."},
-        {"hak":"這隻外國人係哪人呢？","sp":"A","zh":"這個外國人是誰呢？","en":"Who is this foreigner?"},
-        {"hak":"佢係吾婿郎，佢係英國人。","sp":"B","zh":"佢是我女婿，他是英國人。","en":"He is my son-in-law, he is British."},
-        {"hak":"你有幾多隻孫子呢？","sp":"A","zh":"你有幾個孫子呢？","en":"How many grandsons do you have?"},
-        {"hak":"厓有四隻孫子，四隻孫女。","sp":"B","zh":"我有四個孫子，四個孫女。","en":"I have four grandsons and four granddaughters."},
-        {"hak":"有冇塞子呢？","sp":"A","zh":"有沒有曾孫呢？","en":"Any great-grandchildren?"},
-        {"hak":"有呀，有兩隻塞子。","sp":"B","zh":"有呀，有兩個曾孫。","en":"Yes, two great-grandchildren."}
+        {"hak":"阿張伯你今年幾多歲咯？","rom":"a1 | zong1 | bak5 | ngi2 | gim1 ngien2 | git5 do1 | soi4 | lo1?","sp":"A","zh":"張伯你今年幾歲了？","en":"Uncle Zhang, how old are you this year?"},
+        {"hak":"厓今年九十二歲啦。","rom":"ngai2 | gim1 ngien2 | giu3 | sip6 | ngi4 | soi4 | la1.","sp":"B","zh":"我今年九十二歲啦。","en":"I am ninety-two years old."},
+        {"hak":"你有屋卡人麼？","rom":"ngi2 | yiu1 | vuk5 ka1 ngin2 | mo1?","sp":"A","zh":"你有家人嗎？","en":"Do you have family?"},
+        {"hak":"有呀，這張係吾嘅全家福相。","rom":"yiu1 | a1, ngia3 | zong1 | he4 | nga1 | e4 | cien2 ga1 fuk5 | siong3.","sp":"B","zh":"有呀，這張是我的全家福照片。","en":"Yes, this is my family portrait."},
+        {"hak":"這隻係咩惹妹子呢？","rom":"ngia3 zak5 | he4 | me4 | ngia1 | moi4 zu1 | le1?","sp":"A","zh":"這隻是咩惹妹子呢？","en":"Is this your daughter?"},
+        {"hak":"唔係，佢係吾心臼。最左手析唉隻正係吾妹子。","rom":"m1 he4, gi2 | he4 | nga1 | sim1 kiu1. zui4 | zo3 siu3 sak5 | ai4 | zak5 | zang4 | he4 | nga1 | moi4 zu1.","sp":"B","zh":"不是，她是我兒媳。最左邊那個才是我女兒。","en":"No, she is my daughter-in-law. The one on the far left is my daughter."},
+        {"hak":"這隻外國人係哪人呢？","rom":"ngia3 zak5 | ngoi4 get5 ngin2 | he4 | la4 ngin2 | le1?","sp":"A","zh":"這個外國人是誰呢？","en":"Who is this foreigner?"},
+        {"hak":"佢係吾婿郎，佢係英國人。","rom":"gi2 | he4 | nga1 | se4 long2, gi2 | he4 | yin1 get5 ngin2.","sp":"B","zh":"佢是我女婿，他是英國人。","en":"He is my son-in-law, he is British."},
+        {"hak":"你有幾多隻孫子呢？","rom":"ngi2 | yiu1 | git5 do1 | zak5 | sun1 zu1 | le1?","sp":"A","zh":"你有幾個孫子呢？","en":"How many grandsons do you have?"},
+        {"hak":"厓有四隻孫子，四隻孫女。","rom":"ngai2 | yiu1 | si4 | zak5 | sun1 zu1, si4 | zak5 | sun1 ng3.","sp":"B","zh":"我有四個孫子，四個孫女。","en":"I have four grandsons and four granddaughters."},
+        {"hak":"有冇塞子呢？","rom":"yiu1 mau2 | set5 zu1 | le1?","sp":"A","zh":"有沒有曾孫呢？","en":"Any great-grandchildren?"},
+        {"hak":"有呀，有兩隻塞子。","rom":"yiu1 | a1, yiu1 | liong3 | zak5 | set5 zu1.","sp":"B","zh":"有呀，有兩個曾孫。","en":"Yes, two great-grandchildren."}
       ],
       "id": "main-1"
     },
@@ -45,20 +60,20 @@
       "type": "practice",
       "description": {"hak":"兩字詞組合","en":"Two-Character Combinations"},
       "rows": [
-        ["欠款", "勸解", "牽掛", "禁忌"],
-        ["嫌疑", "遺產", "魏國", "藝術"],
-        ["梅縣", "出現", "柴犬", "明顯"],
-        ["賢才", "姓丘", "現代", "自然"],
-        ["決定", "結果", "構造", "做工"],
-        ["魚鈎", "斑鳩", "視頻", "食品"]
+        [{"hak":"欠款","rom":"kiam4 kan3"}, {"hak":"勸解","rom":"kien4 gai3"}, {"hak":"牽掛","rom":"kien1 ga4"}, {"hak":"禁忌","rom":"gim4 ki4"}],
+        [{"hak":"嫌疑","rom":"hiam2 ngi2"}, {"hak":"遺產","rom":"vui2 san3"}, {"hak":"魏國","rom":"ngui4 get5"}, {"hak":"藝術","rom":"ngi4 sut6"}],
+        [{"hak":"梅縣","rom":"moi2 yen4"}, {"hak":"出現","rom":"cut5 hien4"}, {"hak":"柴犬","rom":"cai2 kien3"}, {"hak":"明顯","rom":"min2 hien3"}],
+        [{"hak":"賢才","rom":"hien2 coi2"}, {"hak":"姓丘","rom":"siang4 hiu1"}, {"hak":"現代","rom":"hien4 toi4"}, {"hak":"自然","rom":"cu4 yen2"}],
+        [{"hak":"決定","rom":"giet5 tin4"}, {"hak":"結果","rom":"giet5 go3"}, {"hak":"構造","rom":"geu4 cau4"}, {"hak":"做工","rom":"zo4 gung1"}],
+        [{"hak":"魚鈎","rom":"ng2 geu1"}, {"hak":"斑鳩","rom":"ban1 geu1"}, {"hak":"視頻","rom":"si4 pin2"}, {"hak":"食品","rom":"sit6 pin3"}]
       ],
       "id": "practice-1"
     },
     {
       "type": "idiom",
       "items": [
-        {"hak":"養子唔知娘辛苦，養女正曉謝娘恩。"},
-        {"hak":"蛇過正來打棍。"}
+        {"hak":"養子唔知娘辛苦，養女正曉謝娘恩。","rom":"yong3 zu3 m1 di1 ngiong2 sin1 ku3, yong3 ng3 zang4 hiau3 cia4 ngiong2 en1"},
+        {"hak":"蛇過正來打棍。","rom":"sa2 go4 zang4 loi2 da3 gun4"}
       ],
       "id": "idiom-1"
     },
@@ -70,12 +85,12 @@
           "en": "The Hakka terms for 'son', 'daughter', 'daughter-in-law', and 'son-in-law' are all different from Cantonese and Mandarin."
         },
         {
-          "zh": "{賴子}、{妹子}、{孫子}、{塞子}的{{子}}唸**第一聲** `zú`。",
-          "en": "The {{子}} in {賴子}, {妹子}, {孫子}, {塞子} is pronounced with the **first tone** `zú`."
+          "zh": "{賴子: lai4 zu1}、{妹子: moi4 zu1}、{孫子: sun1 zu1}、{塞子: set5 zu1}的{{子}}唸**第一聲** `zú`。",
+          "en": "The {{子}} in {賴子: lai4 zu1}, {妹子: moi4 zu1}, {孫子: sun1 zu1}, {塞子: set5 zu1} is pronounced with the **first tone** `zú`."
         },
         {
-          "zh": "{{正}}在客家話有三個發音： `záng` {正月}、`zàng` 「才/剛才」、`zìn` {正確}、{正能量}。",
-          "en": "{{正}} has three pronunciations in Hakka: `záng` 'First Month' - {正月}; `zàng` 'just/only then'; `zìn` 'correct/positive' - {正確}, {正能量}."
+          "zh": "{{正}}在客家話有三個發音： `záng` {正月: zang1 ngiet6}、`zàng` 「才/剛才」、`zìn` {正確: zin4 kok6}、{正能量: zin4 len2 liong4}。",
+          "en": "{{正}} has three pronunciations in Hakka: `záng` 'First Month' - {正月: zang1 ngiet6}; `zàng` 'just/only then'; `zìn` 'correct/positive' - {正確: zin4 kok6}, {正能量: zin4 len2 liong4}."
         },
         {
           "zh": "客家話的{{恩}}讀 `én`，不讀 `yín`。",

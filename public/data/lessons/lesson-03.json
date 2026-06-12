@@ -1,28 +1,121 @@
 {
   "id": 3,
-  "title": {"hak":"吾、惹、其","en":"My, Your, His/Her"},
+  "title": {"hak":"吾、惹、其","rom":"nga1, ngia1, gia1","en":"My, Your, His/Her"},
   "blocks": [
     {
       "type": "vocab",
-      "items": "吾 惹 其 表弟 大舅 姊妹 咩係 阿㜆 阿哥 幾多 兩十二 左手析 三隻 歲",
+      "items": [
+        {"hak":"吾","rom":"nga1"},
+        {"hak":"惹","rom":"ngia1"},
+        {"hak":"其","rom":"gia1"},
+        {"hak":"表弟","rom":"biau3 ti4"},
+        {"hak":"大舅","rom":"tai4 kiu1"},
+        {"hak":"姊妹","rom":"zi3 moi4"},
+        {"hak":"咩係","rom":"me4 he4"},
+        {"hak":"阿㜆","rom":"a1 mi1"},
+        {"hak":"阿哥","rom":"a1 go1"},
+        {"hak":"幾多","rom":"git5 do1"},
+        {"hak":"兩十二","rom":"liong3 sip6 ngi4"},
+        {"hak":"左手析","rom":"zo3 siu3 sak5"},
+        {"hak":"三隻","rom":"sam1 zak5"},
+        {"hak":"歲","rom":"soi4"}
+      ],
       "id": "vocab-1"
     },
     {
       "type": "main",
       "items": [
-        {"hak":"同學你好。你安做乜介名？","sp":"B","zh":"同學你好。你叫什麼名字？","en":"Hello. What is your name?"},
-        {"hak":"厓安做葉錦嫦。","sp":"A","zh":"我叫葉錦嫦。","en":"My name is Yap Gim-song."},
-        {"hak":"你識惹左手析嘅同學麼？","sp":"B","zh":"你認識你左邊的同學嗎？","en":"Do you know the student on your left?"},
-        {"hak":"識呀，佢係李偉雄。佢係吾表弟。其爸係吾大舅。","sp":"A","zh":"認識呀，他是李偉雄。他是我表弟。他爸是我的大舅舅。","en":"Yes, he is Li Vui-hiung. He is my cousin. His dad is my eldest uncle."},
-        {"hak":"大舅係乜介意思？","sp":"B","zh":"大舅舅是什麼意思？","en":"What does 'Tai-kiu' mean?"},
-        {"hak":"大舅咩係阿㜆嘅阿哥囖。","sp":"A","zh":"大舅舅就是媽媽的哥哥嘛。","en":"'Tai-kiu' just means mom's older brother."},
-        {"hak":"噢，厓明白咯。","sp":"B","zh":"噢，我明白了。","en":"Oh, I understand now."},
-        {"hak":"你今年幾多歲？","sp":"A","zh":"你今年幾歲？","en":"How old are you this year?"},
-        {"hak":"厓今年兩十二歲。","sp":"B","zh":"我今年二十二歲。","en":"I am twenty-two years old."},
-        {"hak":"你幾多姊妹？","sp":"A","zh":"你有多少兄弟姊妹？","en":"How many siblings do you have?"},
-        {"hak":"厓有一隻阿哥。","sp":"B","zh":"我有一個哥哥。","en":"I have one older brother."},
-        {"hak":"惹哥幾多歲？","sp":"A","zh":"你哥哥幾歲？","en":"How old is your brother?"},
-        {"hak":"佢兩十九歲。","sp":"B","zh":"他二十九歲。","en":"He is twenty-nine years old."}
+        {
+          "hak": "同學你好。你安做乜介名？",
+          "rom": "tung2 hok6 | ngi2 hau3. ngi2 | on1 zo4 | mak5 gai4 | miang2?",
+          "sp": "B",
+          "zh": "同學你好。你叫什麼名字？",
+          "en": "Hello. What is your name?"
+        },
+        {
+          "hak": "厓安做葉錦嫦。",
+          "rom": "ngai2 | on1 zo4 | yap6 gim3 song2.",
+          "sp": "A",
+          "zh": "我叫葉錦嫦。",
+          "en": "My name is Yap Gim-song."
+        },
+        {
+          "hak": "你識惹左手析嘅同學麼？",
+          "rom": "ngi2 | sit5 | ngia1 | zo3 siu3 sak5 | e4 | tung2 hok6 | mo1?",
+          "sp": "B",
+          "zh": "你認識你左邊的同學嗎？",
+          "en": "Do you know the student on your left?"
+        },
+        {
+          "hak": "識呀，佢係李偉雄。佢係吾表弟。其爸係吾大舅。",
+          "rom": "sit5 | a1, gi2 | he4 | li3 vui3 hiung2. gi2 | he4 | nga1 | biau3 ti4. gia1 | ba1 | he4 | nga1 | tai4 kiu1.",
+          "sp": "A",
+          "zh": "認識呀，他是李偉雄。他是我表弟。他爸是我的大舅舅。",
+          "en": "Yes, he is Li Vui-hiung. He is my cousin. His dad is my eldest uncle."
+        },
+        {
+          "hak": "大舅係乜介意思？",
+          "rom": "tai4 kiu1 | he4 | mak5 gai4 | yi4 su1?",
+          "sp": "B",
+          "zh": "大舅舅是什麼意思？",
+          "en": "What does 'Tai-kiu' mean?"
+        },
+        {
+          "hak": "大舅咩係阿㜆嘅阿哥囖。",
+          "rom": "tai4 kiu1 | me4 he4 | a1 mi1 | e4 | a1 go1 | lo1.",
+          "sp": "A",
+          "zh": "大舅舅就是媽媽的哥哥嘛。",
+          "en": "'Tai-kiu' just means mom's older brother."
+        },
+        {
+          "hak": "噢，厓明白咯。",
+          "rom": "o1, ngai2 | min2 pak6 | lo1.",
+          "sp": "B",
+          "zh": "噢，我明白了。",
+          "en": "Oh, I understand now."
+        },
+        {
+          "hak": "你今年幾多歲？",
+          "rom": "ngi2 | gim1 ngien2 | git5 do1 | soi4?",
+          "sp": "A",
+          "zh": "你今年幾歲？",
+          "en": "How old are you this year?"
+        },
+        {
+          "hak": "厓今年兩十二歲。",
+          "rom": "ngai2 | gim1 ngien2 | liong3 sip6 ngi4 | soi4.",
+          "sp": "B",
+          "zh": "我今年二十二歲。",
+          "en": "I am twenty-two years old."
+        },
+        {
+          "hak": "你幾多姊妹？",
+          "rom": "ngi2 | git5 do1 | zi3 moi4?",
+          "sp": "A",
+          "zh": "你有多少兄弟姊妹？",
+          "en": "How many siblings do you have?"
+        },
+        {
+          "hak": "厓有一隻阿哥。",
+          "rom": "ngai2 | yiu1 | yit5 | zak5 | a1 go1.",
+          "sp": "B",
+          "zh": "我有一個哥哥。",
+          "en": "I have one older brother."
+        },
+        {
+          "hak": "惹哥幾多歲？",
+          "rom": "ngia1 | go1 | git5 do1 | soi4?",
+          "sp": "A",
+          "zh": "你哥哥幾歲？",
+          "en": "How old is your brother?"
+        },
+        {
+          "hak": "佢兩十九歲。",
+          "rom": "gi2 | liong3 | sip6 | giu3 | soi4.",
+          "sp": "B",
+          "zh": "他二十九歲。",
+          "en": "He is twenty-nine years old."
+        }
       ],
       "id": "main-1"
     },
@@ -46,21 +139,21 @@
         "en": "Tone 5 & 6 (Entering Tones `-p`, `-t`, `-k`, `-m`, `-n`, `-ng`)"
       },
       "rows": [
-        ["金", "＿.gim2", "錦", "禁", "急", "＿.gip6"],
-        ["番", "繁", "反", "飯", "發.fat5", "活"],
-        ["淵", "園", "遠", "縣", "乙", "越"],
-        ["旱", "寒", "罕", "汗", "喝", "＿.hot6"],
-        ["閹", "鹽", "掩", "豔", "醃", "葉"],
-        ["商", "常", "賞", "尚", "索", "勺"],
-        ["冷", "零", "㘄", "另", "壢", "曆"],
-        ["風", "馮", "哄", "鳳", "福", "伏"]
+        [{"hak":"金","rom":"gim1"}, {"hak":"＿","rom":"gim2"}, {"hak":"錦","rom":"gim3"}, {"hak":"禁","rom":"gim4"}, {"hak":"急","rom":"gip5"}, {"hak":"＿","rom":"gip6"}],
+        [{"hak":"番","rom":"fan1"}, {"hak":"繁","rom":"fan2"}, {"hak":"反","rom":"ban3"}, {"hak":"飯","rom":"fan4"}, {"hak":"發","rom":"fat5"}, {"hak":"活","rom":"fat6"}],
+        [{"hak":"淵","rom":"yen1"}, {"hak":"園","rom":"yen2"}, {"hak":"遠","rom":"yen3"}, {"hak":"縣","rom":"yen4"}, {"hak":"乙","rom":"yet5"}, {"hak":"越","rom":"yet6"}],
+        [{"hak":"旱","rom":"hon1"}, {"hak":"寒","rom":"hon2"}, {"hak":"罕","rom":"han4"}, {"hak":"汗","rom":"hon4"}, {"hak":"喝","rom":"hot5"}, {"hak":"＿","rom":"hot6"}],
+        [{"hak":"閹","rom":"yam1"}, {"hak":"鹽","rom":"yam2"}, {"hak":"掩","rom":"em1"}, {"hak":"豔","rom":"yam4"}, {"hak":"醃","rom":"yap5"}, {"hak":"葉","rom":"yap6"}],
+        [{"hak":"商","rom":"song1"}, {"hak":"常","rom":"song2"}, {"hak":"賞","rom":"song3"}, {"hak":"尚","rom":"song4"}, {"hak":"索","rom":"sok5"}, {"hak":"勺","rom":"sok6"}],
+        [{"hak":"冷","rom":"lang1"}, {"hak":"零","rom":"la1"}, {"hak":"㘄","rom":"lang3"}, {"hak":"另","rom":"lang4"}, {"hak":"壢","rom":"lak5"}, {"hak":"曆","rom":"lak6"}],
+        [{"hak":"風","rom":"fung1"}, {"hak":"馮","rom":"fung2"}, {"hak":"哄","rom":"fung3"}, {"hak":"鳳","rom":"fung4"}, {"hak":"福","rom":"fuk5"}, {"hak":"伏","rom":"fuk6"}]
       ],
       "id": "practice-1"
     },
     {
       "type": "idiom",
       "items": [
-        {"hak":"瓠打瓠，瓜打瓜，唔係像阿㜆就像阿爸。","note":"打：結果子/開花的動作"}
+        {"hak":"瓠打瓠，瓜打瓜，唔係像阿㜆就像阿爸。","rom":"pu2 da3 pu2, ga1 da3 ga1, m1 he4 ciong4 a1 mi2 ciu4 ciong4 a1 ba4","note":"打：結果子/開花的動作"}
       ],
       "id": "idiom-1"
     },
@@ -72,24 +165,24 @@
           "en": "**Tone 5** and **Tone 6** are **Entering Tones**. Their pitch values are similar to **Tone 3** and **Tone 4**, so the symbols used are the same."
         },
         {
-          "zh": "客家話的**人稱代名詞****屬格**的變化，原理類似英語。{厓}、{你}、{佢}（= I, you, he/she） -> {吾}、{惹}、{其}（= my, your, his/her）。",
-          "en": "The change in Hakka **personal pronouns** for the **genitive case** is similar in principle to English. {厓}, {你}, {佢} (= I, you, he/she) -> {吾}, {惹}, {其} (= my, your, his/her)."
+          "zh": "客家話的**人稱代名詞****屬格**的變化，原理類似英語。{厓: ngai2}、{你: ngi2}、{佢: gi2}（= I, you, he/she） -> {吾: nga1}、{惹: ngia1}、{其: gia1}（= my, your, his/her）。",
+          "en": "The change in Hakka **personal pronouns** for the **genitive case** is similar in principle to English. {厓: ngai2}, {你: ngi2}, {佢: gi2} (= I, you, he/she) -> {吾: nga1}, {惹: ngia1}, {其: gia1} (= my, your, his/her)."
         },
         {
-          "zh": "客家話的{{析}}（`săk`）是「邊」的意思。例如{左手析}、{右手析}、{西瓜切做兩析}。",
-          "en": "In Hakka, {{析}} (`săk`) means 'side'. For example: 'left side' ({左手析}), 'right side' ({右手析}), 'cut the watermelon into two halves' ({西瓜切做兩析})."
+          "zh": "客家話的{{析}}（`săk`）是「邊」的意思。例如{左手析: zo3 siu3 sak5}、{右手析: yiu4 siu3 sak5}、{西瓜切做兩析: si1 ga1 | ciet6 zo4 | liong3 | sak5}。",
+          "en": "In Hakka, {{析}} (`săk`) means 'side'. For example: 'left side' ({左手析: zo3 siu3 sak5}), 'right side' ({右手析: yiu4 siu3 sak5}), 'cut the watermelon into two halves' ({西瓜切做兩析: si1 ga1 | ciet6 zo4 | liong3 | sak5})."
         },
         {
-          "zh": "香港客家話區分「舅父」比媽媽大還是小，哥哥是{大舅}、弟弟是{舅仔}。",
-          "en": "Hong Kong Hakka distinguishes whether a 'maternal uncle' is older or younger than one's mother. The older brother is {大舅}, and the younger brother is {舅仔}."
+          "zh": "香港客家話區分「舅父」比媽媽大還是小，哥哥是{大舅: tai4 kiu1}、弟弟是{舅仔: kiu1 zai3}。",
+          "en": "Hong Kong Hakka distinguishes whether a 'maternal uncle' is older or younger than one's mother. The older brother is {大舅: tai4 kiu1}, and the younger brother is {舅仔: kiu1 zai3}."
         },
         {
-          "zh": "{{幾}}在發問，或者意思是「甚為」的時候，發音是 `gĭt`，例如{幾多}、{幾時}、{幾好看}、{幾聰明}。另外也有 `gĭ` 的發音，詳見第六課。",
-          "en": "When {{幾}} is used in questions or means 'how/very', it is pronounced `gĭt`. For example: 'how many' ({幾多}), 'when' ({幾時}), 'how nice' ({幾好看}), 'how clever' ({幾聰明}). There is also the pronunciation `gĭ`, detailed in Lesson 6."
+          "zh": "{{幾}}在發問，或者意思是「甚為」的時候，發音是 `gĭt`，例如{幾多: git5 do1}、{幾時: git5 si3}、{幾好看: git5 hau3 kon4}、{幾聰明: git5 | cung1 min2}。另外也有 `gĭ` 的發音，詳見第六課。",
+          "en": "When {{幾}} is used in questions or means 'how/very', it is pronounced `gĭt`. For example: 'how many' ({幾多: git5 do1}), 'when' ({幾時: git5 si3}), 'how nice' ({幾好看: git5 hau3 kon4}), 'how clever' ({幾聰明: git5 | cung1 min2}). There is also the pronunciation `gĭ`, detailed in Lesson 6."
         },
         {
-          "zh": "{你幾多姊妹}是連同自己計算的，是你父母有多少個孩子的意思。傳統客家話不說「兄弟姊妹」，只說{姊妹}。",
-          "en": "'{你幾多姊妹}' ('How many siblings do you have?') includes yourself in the count; it asks how many children your parents have. Traditional Hakka says {姊妹} ('sisters/siblings') instead of 「兄弟姊妹」 ('brothers and sisters')."
+          "zh": "{你幾多姊妹: ngi2 | git5 do1 | zi3 moi4}是連同自己計算的，是你父母有多少個孩子的意思。傳統客家話不說「兄弟姊妹」，只說{姊妹: zi3 moi4}。",
+          "en": "'{你幾多姊妹: ngi2 | git5 do1 | zi3 moi4}' ('How many siblings do you have?') includes yourself in the count; it asks how many children your parents have. Traditional Hakka says {姊妹: zi3 moi4} ('sisters/siblings') instead of 「兄弟姊妹」 ('brothers and sisters')."
         }
       ],
       "id": "notes-1"

@@ -1,21 +1,36 @@
 {
   "id": 1,
-  "title": {"hak":"厓、你、佢","en":"I, You, He/She"},
+  "title": {"hak":"厓、你、佢","rom":"ngai2, ngi2, gi2","en":"I, You, He/She"},
   "blocks": [
-    {"type":"vocab","items":"厓 你 佢 係 安做 乜介 名 貴姓 哪人 唔係","id":"vocab-1"},
+    {
+      "type": "vocab",
+      "items": [
+        {"hak":"厓","rom":"ngai2"},
+        {"hak":"你","rom":"ngi2"},
+        {"hak":"佢","rom":"gi2"},
+        {"hak":"係","rom":"he4"},
+        {"hak":"安做","rom":"on1 zo4"},
+        {"hak":"乜介","rom":"mak5 gai4"},
+        {"hak":"名","rom":"miang2"},
+        {"hak":"貴姓","rom":"gui4 siang4"},
+        {"hak":"哪人","rom":"la4 ngin2"},
+        {"hak":"唔係","rom":"m1 he4"}
+      ],
+      "id": "vocab-1"
+    },
     {
       "type": "main",
       "items": [
-        {"hak":"同學你好。你貴姓？","sp":"A","zh":"同學你好。你貴姓？","en":"Hello, classmate. What is your surname?"},
-        {"hak":"厓姓陳。","sp":"B","zh":"我姓陳。","en":"My surname is Cin."},
-        {"hak":"你安做乜介名？","sp":"A","zh":"你叫什麼名字？","en":"What is your name?"},
-        {"hak":"厓安做陳大明。你呢？","sp":"B","zh":"我叫陳大明。你呢？","en":"My name is Cin Tai-min. And you?"},
-        {"hak":"厓係羅春蘭。佢係哪人？","sp":"A","zh":"我是羅春蘭。他是誰？","en":"I am Lo Cun-lan. Who is he?"},
-        {"hak":"佢係何小安。","sp":"B","zh":"他是何小安。","en":"He is Ho Siau-on."},
-        {"hak":"你係唔係客家人？","sp":"A","zh":"你是不是客家人？","en":"Are you Hakka?"},
-        {"hak":"係，厓係客家人。","sp":"B","zh":"是，我是客家人。","en":"Yes, I am Hakka."},
-        {"hak":"佢呢，佢係唔係客家人？","sp":"A","zh":"他呢，他是不是客家人？","en":"What about him, is he Hakka?"},
-        {"hak":"唔係，佢唔係客家人。","sp":"B","zh":"不是，他不是客家人。","en":"No, he is not Hakka."}
+        {"hak":"同學你好。你貴姓？","rom":"tung2 hok6 | ngi2 hau3. ngi2 | gui4 siang4?","sp":"A","zh":"同學你好。你貴姓？","en":"Hello, classmate. What is your surname?"},
+        {"hak":"厓姓陳。","rom":"ngai2 | siang4 | cin2.","sp":"B","zh":"我姓陳。","en":"My surname is Cin."},
+        {"hak":"你安做乜介名？","rom":"ngi2 | on1 zo4 | mak5 gai4 | miang2?","sp":"A","zh":"你叫什麼名字？","en":"What is your name?"},
+        {"hak":"厓安做陳大明。你呢？","rom":"ngai2 | on1 zo4 | cin2 tai4 min2. ngi2 | le1?","sp":"B","zh":"我叫陳大明。你呢？","en":"My name is Cin Tai-min. And you?"},
+        {"hak":"厓係羅春蘭。佢係哪人？","rom":"ngai2 | he4 | lo2 cun1 lan2. gi2 | he4 | la4 ngin2?","sp":"A","zh":"我是羅春蘭。他是誰？","en":"I am Lo Cun-lan. Who is he?"},
+        {"hak":"佢係何小安。","rom":"gi2 | he4 | ho2 siau3 on1.","sp":"B","zh":"他是何小安。","en":"He is Ho Siau-on."},
+        {"hak":"你係唔係客家人？","rom":"ngi2 | he4 | m1 he4 | hak5 ga1 ngin2?","sp":"A","zh":"你是不是客家人？","en":"Are you Hakka?"},
+        {"hak":"係，厓係客家人。","rom":"he4, ngai2 | he4 | hak5 ga1 ngin2.","sp":"B","zh":"是，我是客家人。","en":"Yes, I am Hakka."},
+        {"hak":"佢呢，佢係唔係客家人？","rom":"gi2 | le1, gi2 | he4 | m1 he4 | hak5 ga1 ngin2?","sp":"A","zh":"他呢，他是不是客家人？","en":"What about him, is he Hakka?"},
+        {"hak":"唔係，佢唔係客家人。","rom":"m1 he4, gi2 | m1 he4 | hak5 ga1 ngin2.","sp":"B","zh":"不是，他不是客家人。","en":"No, he is not Hakka."}
       ],
       "id": "main-1"
     },
@@ -28,9 +43,9 @@
       "type": "practice",
       "description": {"hak":"姓","en":"Surnames"},
       "rows": [
-        ["包", "潘", "梅", "方", "溫", "戴", "田", "廖"],
-        ["曾", "陳", "沈", "郭", "柯", "魏", "韓", "袁", "歐"],
-        ["趙", "錢", "孫", "李", "周", "吳", "鄭", "王"]
+        [{"hak":"包","rom":"bau1"}, {"hak":"潘","rom":"pan1"}, {"hak":"梅","rom":"moi2"}, {"hak":"方","rom":"fong1"}, {"hak":"溫","rom":"vun1"}, {"hak":"戴","rom":"dai4"}, {"hak":"田","rom":"tien2"}, {"hak":"廖","rom":"liau4"}],
+        [{"hak":"曾","rom":"zen1"}, {"hak":"陳","rom":"cin2"}, {"hak":"沈","rom":"sim3"}, {"hak":"郭","rom":"gok5"}, {"hak":"柯","rom":"ko1"}, {"hak":"魏","rom":"ngui4"}, {"hak":"韓","rom":"hon2"}, {"hak":"袁","rom":"yen2"}, {"hak":"歐","rom":"eu1"}],
+        [{"hak":"趙","rom":"cau4"}, {"hak":"錢","rom":"cien2"}, {"hak":"孫","rom":"sun1"}, {"hak":"李","rom":"li3"}, {"hak":"周","rom":"ziu1"}, {"hak":"吳","rom":"ng2"}, {"hak":"鄭","rom":"cang4"}, {"hak":"王","rom":"vong2"}]
       ],
       "id": "practice-1"
     },
@@ -50,8 +65,8 @@
           "en": "Hakka has six syllable codas: `m`, `n`, `ng`, `p`, `t`, `k`."
         },
         {
-          "zh": "客家話的疑問詞「誰」是{{哪人}}，發音是 `là ngīn`。客家話區別「哪個」和「誰」，分別是{奈隻}和{哪人}。",
-          "en": "The Hakka question word for 'who' is {{哪人}} (`là ngīn`). Hakka distinguishes between 'which one' and 'who': {奈隻} and {哪人}."
+          "zh": "客家話的疑問詞「誰」是{{哪人}}，發音是 `là ngīn`。客家話區別「哪個」和「誰」，分別是{奈隻: lai4 | zak5}和{哪人: la4 ngin2}。",
+          "en": "The Hakka question word for 'who' is {{哪人}} (`là ngīn`). Hakka distinguishes between 'which one' and 'who': {奈隻: lai4 | zak5} and {哪人: la4 ngin2}."
         }
       ],
       "id": "notes-1"
