@@ -1,4 +1,150 @@
 {
   "lessonId": 12,
-  "blocks": {}
+  "titleAudio": "audio/ch12-title.m4a",
+  "blocks": {
+    "vocab-1": {
+      "audio": "audio/ch12-vocab.m4a",
+      "segments": [
+        {
+          "start": 2.0,
+          "end": 3.75
+        },
+        {
+          "start": 3.75,
+          "end": 5.75
+        },
+        {
+          "start": 5.75,
+          "end": 8.0
+        },
+        {
+          "start": 8.0,
+          "end": 10.0
+        },
+        {
+          "start": 10.0,
+          "end": 11.7
+        },
+        {
+          "start": 11.7,
+          "end": 13.65
+        },
+        {
+          "start": 13.65,
+          "end": 15.75
+        },
+        {
+          "start": 15.75,
+          "end": 18.75
+        },
+        {
+          "start": 18.75,
+          "end": 20.4
+        },
+        {
+          "start": 20.4,
+          "end": 22.75
+        },
+        {
+          "start": 22.75,
+          "end": 24.65
+        },
+        {
+          "start": 24.65,
+          "end": 26.6
+        },
+        {
+          "start": 26.6,
+          "end": 28.7
+        },
+        {
+          "start": 28.7,
+          "end": 29.2
+        }
+      ]
+    },
+    "main-1": {
+      "audio": "audio/ch12-main.m4a",
+      "segments": [
+        {
+          "start": 1.5,
+          "end": 6
+        },
+        {
+          "start": 6.4,
+          "end": 14
+        },
+        {
+          "start": 14.85,
+          "end": 16.5
+        },
+        {
+          "start": 17.35,
+          "end": 23.6
+        },
+        {
+          "start": 24.25,
+          "end": 27.5
+        },
+        {
+          "start": 28.2,
+          "end": 33.6
+        },
+        {
+          "start": 34.2,
+          "end": 38.5
+        },
+        {
+          "start": 38.95,
+          "end": 45.6
+        },
+        {
+          "start": 46.55,
+          "end": 48.65
+        },
+        {
+          "start": 49.55,
+          "end": 55.1
+        }
+      ]
+    },
+    "practice-1": {
+      "audio": "audio/ch12-practice.m4a",
+      "segments": [
+        {
+          "start": 3.85,
+          "end": 9.8
+        },
+        {
+          "start": 10.9,
+          "end": 14.95
+        },
+        {
+          "start": 15.85,
+          "end": 21.7
+        },
+        {
+          "start": 22.55,
+          "end": 28.3
+        },
+        {
+          "start": 29.7,
+          "end": 36.0
+        },
+        {
+          "start": 37.05,
+          "end": 43.2
+        }
+      ]
+    },
+    "nursery-1": {
+      "audio": "audio/ch12-nursery.m4a",
+      "segments": [
+        {
+          "start": 2.35,
+          "end": 9.3
+        }
+      ]
+    }
+  }
 }

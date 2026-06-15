@@ -1,4 +1,118 @@
 {
   "lessonId": 20,
-  "blocks": {}
+  "titleAudio": "audio/ch20-title.m4a",
+  "blocks": {
+    "vocab-1": {
+      "audio": "audio/ch20-vocab.m4a",
+      "segments": [
+        {
+          "start": 2.0,
+          "end": 4.1
+        },
+        {
+          "start": 4.1,
+          "end": 6.0
+        },
+        {
+          "start": 6.0,
+          "end": 7.8
+        },
+        {
+          "start": 7.8,
+          "end": 9.7
+        },
+        {
+          "start": 9.7,
+          "end": 11.5
+        },
+        {
+          "start": 11.5,
+          "end": 13.3
+        },
+        {
+          "start": 13.3,
+          "end": 15.55
+        },
+        {
+          "start": 15.55,
+          "end": 16.3
+        }
+      ]
+    },
+    "main-1": {
+      "audio": "audio/ch20-main.m4a",
+      "segments": [
+        {
+          "start": 1.8,
+          "end": 10.1
+        },
+        {
+          "start": 11.75,
+          "end": 21.5
+        },
+        {
+          "start": 22.9,
+          "end": 37.0
+        },
+        {
+          "start": 38.5,
+          "end": 44.0
+        },
+        {
+          "start": 45.9,
+          "end": 52.3
+        },
+        {
+          "start": 53.65,
+          "end": 57.0
+        },
+        {
+          "start": 58.7,
+          "end": 66.7
+        }
+      ]
+    },
+    "practice-1": {
+      "audio": "audio/ch20-practice.m4a",
+      "segments": [
+        {
+          "start": 5.3,
+          "end": 12.4
+        },
+        {
+          "start": 13.9,
+          "end": 21.2
+        },
+        {
+          "start": 22.65,
+          "end": 29.5
+        },
+        {
+          "start": 30.55,
+          "end": 37.75
+        },
+        {
+          "start": 39.5,
+          "end": 46.8
+        },
+        {
+          "start": 48.25,
+          "end": 55.55
+        }
+      ]
+    },
+    "nursery-1": {
+      "audio": "audio/ch20-nursery.m4a",
+      "segments": [
+        {
+          "start": 2.15,
+          "end": 8.1
+        },
+        {
+          "start": 9.8,
+          "end": 16.3
+        }
+      ]
+    }
+  }
 }

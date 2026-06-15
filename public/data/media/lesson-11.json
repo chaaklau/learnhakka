@@ -1,4 +1,142 @@
 {
   "lessonId": 11,
-  "blocks": {}
+  "titleAudio": "audio/ch11-title.m4a",
+  "blocks": {
+    "vocab-1": {
+      "audio": "audio/ch11-vocab.m4a",
+      "segments": [
+        {
+          "start": 1.85,
+          "end": 3.5
+        },
+        {
+          "start": 3.5,
+          "end": 5.5
+        },
+        {
+          "start": 5.5,
+          "end": 7.1
+        },
+        {
+          "start": 7.1,
+          "end": 8.9
+        },
+        {
+          "start": 8.9,
+          "end": 10.65
+        },
+        {
+          "start": 10.65,
+          "end": 12.8
+        },
+        {
+          "start": 12.8,
+          "end": 14.1
+        },
+        {
+          "start": 14.1,
+          "end": 15.7
+        },
+        {
+          "start": 15.7,
+          "end": 17.4
+        },
+        {
+          "start": 17.4,
+          "end": 19.1
+        },
+        {
+          "start": 19.1,
+          "end": 21.0
+        },
+        {
+          "start": 21.0,
+          "end": 22.85
+        }
+      ]
+    },
+    "main-1": {
+      "audio": "audio/ch11-main.m4a",
+      "segments": [
+        {
+          "start": 1.9,
+          "end": 7.7
+        },
+        {
+          "start": 7.7,
+          "end": 11.1
+        },
+        {
+          "start": 11.1,
+          "end": 18.6
+        },
+        {
+          "start": 18.6,
+          "end": 25.3
+        },
+        {
+          "start": 25.3,
+          "end": 36.1
+        },
+        {
+          "start": 36.1,
+          "end": 39.6
+        },
+        {
+          "start": 39.6,
+          "end": 46.4
+        },
+        {
+          "start": 46.4,
+          "end": 49.0
+        },
+        {
+          "start": 49.0,
+          "end": 51.2
+        }
+      ]
+    },
+    "practice-1": {
+      "audio": "audio/ch11-practice.m4a",
+      "segments": [
+        {
+          "start": 5.2,
+          "end": 11.2
+        },
+        {
+          "start": 12.0,
+          "end": 18.1
+        },
+        {
+          "start": 18.8,
+          "end": 24.6
+        },
+        {
+          "start": 25.1,
+          "end": 30.3
+        },
+        {
+          "start": 30.8,
+          "end": 36.5
+        },
+        {
+          "start": 37.1,
+          "end": 42.4
+        }
+      ]
+    },
+    "idiom-1": {
+      "audio": "audio/ch11-idiom.m4a",
+      "segments": [
+        {
+          "start": 2,
+          "end": 5.65
+        },
+        {
+          "start": 6.75,
+          "end": 11.95
+        }
+      ]
+    }
+  }
 }

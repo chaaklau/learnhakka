@@ -1,4 +1,146 @@
 {
   "lessonId": 14,
-  "blocks": {}
+  "titleAudio": "audio/ch14-title.m4a",
+  "blocks": {
+    "vocab-1": {
+      "audio": "audio/ch14-vocab.m4a",
+      "segments": [
+        {
+          "start": 1.7,
+          "end": 3.45
+        },
+        {
+          "start": 3.45,
+          "end": 5.2
+        },
+        {
+          "start": 5.2,
+          "end": 6.85
+        },
+        {
+          "start": 6.85,
+          "end": 9.45
+        },
+        {
+          "start": 9.45,
+          "end": 11.25
+        },
+        {
+          "start": 11.25,
+          "end": 12.9
+        },
+        {
+          "start": 12.9,
+          "end": 15.0
+        },
+        {
+          "start": 15.0,
+          "end": 16.9
+        },
+        {
+          "start": 16.9,
+          "end": 18.7
+        },
+        {
+          "start": 18.7,
+          "end": 19.6
+        }
+      ]
+    },
+    "main-1": {
+      "audio": "audio/ch14-main.m4a",
+      "segments": [
+        {
+          "start": 1.45,
+          "end": 3.7
+        },
+        {
+          "start": 4.2,
+          "end": 5.8
+        },
+        {
+          "start": 6.45,
+          "end": 7.9
+        },
+        {
+          "start": 8.5,
+          "end": 9.4
+        },
+        {
+          "start": 9.9,
+          "end": 10.8
+        },
+        {
+          "start": 11.5,
+          "end": 12.7
+        },
+        {
+          "start": 13.45,
+          "end": 16.5
+        },
+        {
+          "start": 16.8,
+          "end": 20.0
+        },
+        {
+          "start": 21.0,
+          "end": 27.5
+        },
+        {
+          "start": 28.5,
+          "end": 43.5
+        },
+        {
+          "start": 43.95,
+          "end": 54.5
+        }
+      ]
+    },
+    "practice-1": {
+      "audio": "audio/ch14-practice.m4a",
+      "segments": [
+        {
+          "start": 4.6,
+          "end": 11.8
+        },
+        {
+          "start": 12.65,
+          "end": 19.5
+        },
+        {
+          "start": 20.8,
+          "end": 27.5
+        },
+        {
+          "start": 28.45,
+          "end": 34.5
+        },
+        {
+          "start": 35.4,
+          "end": 42.5
+        },
+        {
+          "start": 43.55,
+          "end": 50.0
+        }
+      ]
+    },
+    "nursery-1": {
+      "audio": "audio/ch14-nursery.m4a",
+      "segments": [
+        {
+          "start": 1.8,
+          "end": 4.5
+        },
+        {
+          "start": 5.55,
+          "end": 11.5
+        },
+        {
+          "start": 12.3,
+          "end": 18.2
+        }
+      ]
+    }
+  }
 }

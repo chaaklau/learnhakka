@@ -1,4 +1,162 @@
 {
   "lessonId": 18,
-  "blocks": {}
+  "titleAudio": "audio/ch18-title.m4a",
+  "blocks": {
+    "vocab-1": {
+      "audio": "audio/ch18-vocab.m4a",
+      "segments": [
+        {
+          "start": 2.75,
+          "end": 5.1
+        },
+        {
+          "start": 5.1,
+          "end": 7.3
+        },
+        {
+          "start": 7.3,
+          "end": 9.1
+        },
+        {
+          "start": 9.1,
+          "end": 10.9
+        },
+        {
+          "start": 10.9,
+          "end": 12.85
+        },
+        {
+          "start": 12.85,
+          "end": 14.45
+        },
+        {
+          "start": 14.45,
+          "end": 16.75
+        },
+        {
+          "start": 16.75,
+          "end": 18.25
+        },
+        {
+          "start": 18.25,
+          "end": 20.5
+        },
+        {
+          "start": 20.5,
+          "end": 22.3
+        },
+        {
+          "start": 22.3,
+          "end": 24.15
+        },
+        {
+          "start": 24.15,
+          "end": 26.1
+        },
+        {
+          "start": 26.1,
+          "end": 28.0
+        },
+        {
+          "start": 28.0,
+          "end": 29.95
+        },
+        {
+          "start": 29.95,
+          "end": 31.15
+        },
+        {
+          "start": 31.15,
+          "end": 33.0
+        },
+        {
+          "start": 33.0,
+          "end": 34.0
+        }
+      ]
+    },
+    "main-1": {
+      "audio": "audio/ch18-main.m4a",
+      "segments": [
+        {
+          "start": 2.2,
+          "end": 8.0
+        },
+        {
+          "start": 8.5,
+          "end": 17.5
+        },
+        {
+          "start": 18.4,
+          "end": 26.6
+        },
+        {
+          "start": 27.5,
+          "end": 31.5
+        },
+        {
+          "start": 32.3,
+          "end": 40.0
+        },
+        {
+          "start": 41.0,
+          "end": 53.0
+        },
+        {
+          "start": 54.7,
+          "end": 61.0
+        },
+        {
+          "start": 62.0,
+          "end": 64.5
+        },
+        {
+          "start": 66.0,
+          "end": 71.7
+        },
+        {
+          "start": 72.5,
+          "end": 77.5
+        }
+      ]
+    },
+    "practice-1": {
+      "audio": "audio/ch18-practice.m4a",
+      "segments": [
+        {
+          "start": 4.95,
+          "end": 13.0
+        },
+        {
+          "start": 14.0,
+          "end": 22.0
+        },
+        {
+          "start": 23.0,
+          "end": 30.0
+        },
+        {
+          "start": 31.15,
+          "end": 38.5
+        },
+        {
+          "start": 39.45,
+          "end": 47.0
+        },
+        {
+          "start": 48.4,
+          "end": 56.0
+        }
+      ]
+    },
+    "nursery-1": {
+      "audio": "audio/ch18-nursery.m4a",
+      "segments": [
+        {
+          "start": 3,
+          "end": 11.5
+        }
+      ]
+    }
+  }
 }

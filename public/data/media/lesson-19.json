@@ -1,4 +1,146 @@
 {
   "lessonId": 19,
-  "blocks": {}
+  "titleAudio": "audio/ch19-title.m4a",
+  "blocks": {
+    "vocab-1": {
+      "audio": "audio/ch19-vocab.m4a",
+      "segments": [
+        {
+          "start": 2.25,
+          "end": 4.0
+        },
+        {
+          "start": 4.0,
+          "end": 5.7
+        },
+        {
+          "start": 5.7,
+          "end": 7.9
+        },
+        {
+          "start": 7.9,
+          "end": 10.7
+        },
+        {
+          "start": 10.7,
+          "end": 13.0
+        },
+        {
+          "start": 13.0,
+          "end": 14.95
+        },
+        {
+          "start": 14.95,
+          "end": 17.3
+        },
+        {
+          "start": 17.3,
+          "end": 20.0
+        },
+        {
+          "start": 20.0,
+          "end": 22.1
+        },
+        {
+          "start": 22.1,
+          "end": 24.8
+        },
+        {
+          "start": 24.8,
+          "end": 26.95
+        },
+        {
+          "start": 26.95,
+          "end": 28.0
+        }
+      ]
+    },
+    "main-1": {
+      "audio": "audio/ch19-main.m4a",
+      "segments": [
+        {
+          "start": 2.2,
+          "end": 6.5
+        },
+        {
+          "start": 7.0,
+          "end": 13.6
+        },
+        {
+          "start": 14.8,
+          "end": 17.3
+        },
+        {
+          "start": 17.7,
+          "end": 22.0
+        },
+        {
+          "start": 23.3,
+          "end": 31.0
+        },
+        {
+          "start": 32.6,
+          "end": 37.7
+        },
+        {
+          "start": 38.5,
+          "end": 45.1
+        },
+        {
+          "start": 46.0,
+          "end": 56.2
+        },
+        {
+          "start": 57.3,
+          "end": 68.0
+        },
+        {
+          "start": 69.6,
+          "end": 74.5
+        }
+      ]
+    },
+    "practice-1": {
+      "audio": "audio/ch19-practice.m4a",
+      "segments": [
+        {
+          "start": 6.6,
+          "end": 16.0
+        },
+        {
+          "start": 17.4,
+          "end": 27.5
+        },
+        {
+          "start": 28.75,
+          "end": 38.0
+        },
+        {
+          "start": 39.85,
+          "end": 49.3
+        },
+        {
+          "start": 51.2,
+          "end": 59.6
+        },
+        {
+          "start": 60.85,
+          "end": 70.0
+        }
+      ]
+    },
+    "nursery-1": {
+      "audio": "audio/ch19-nursery.m4a",
+      "segments": [
+        {
+          "start": 3.1,
+          "end": 10.5
+        },
+        {
+          "start": 11.4,
+          "end": 17.5
+        }
+      ]
+    }
+  }
 }
