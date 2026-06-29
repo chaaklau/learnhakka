@@ -112,9 +112,9 @@
       "type": "practice",
       "description": {"hak":"聲調練習（詞組）","en":"Tone Drills (Phrases)"},
       "rows": [
-        [{"hak":"三","rom":"sam1"}, {"hak":"零","rom":"la1"}, {"hak":"五","rom":"ng3"}, {"hak":"二","rom":"ngi4"}],
+        [{"hak":"三","rom":"sam1"}, {"hak":"零","rom":"lang2"}, {"hak":"五","rom":"ng3"}, {"hak":"二","rom":"ngi4"}],
         [{"hak":"專","rom":"zon1"}, {"hak":"題","rom":"ti2"}, {"hak":"訪","rom":"fong3"}, {"hak":"問","rom":"mun4"}],
-        [{"hak":"精","rom":"ziang1"}, {"hak":"神","rom":"sin2"}, {"hak":"爽","rom":"song3"}, {"hak":"利","rom":"li4"}],
+        [{"hak":"精","rom":"zin1"}, {"hak":"神","rom":"sin2"}, {"hak":"爽","rom":"song3"}, {"hak":"利","rom":"li4"}],
         [{"hak":"妖","rom":"yau1"}, {"hak":"魔","rom":"mo2"}, {"hak":"鬼","rom":"gui3"}, {"hak":"怪","rom":"gai4"}],
         [{"hak":"山","rom":"san1"}, {"hak":"神","rom":"sin2"}, {"hak":"土","rom":"tu3"}, {"hak":"地","rom":"ti4"}],
         [{"hak":"鮮","rom":"sien1"}, {"hak":"魚","rom":"ng2"}, {"hak":"酒","rom":"ziu3"}, {"hak":"菜","rom":"coi4"}]

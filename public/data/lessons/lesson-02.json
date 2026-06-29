@@ -55,7 +55,7 @@
         [{"hak":"沙","rom":"sa1"}, {"hak":"蛇","rom":"sa2"}, {"hak":"灑","rom":"sa3"}, {"hak":"射","rom":"sa4"}],
         [{"hak":"車","rom":"ca1"}, {"hak":"茶","rom":"ca2"}, {"hak":"扯","rom":"ca3"}, {"hak":"岔","rom":"ca4"}],
         [{"hak":"西","rom":"si1"}, {"hak":"時","rom":"si2"}, {"hak":"死","rom":"si3"}, {"hak":"四","rom":"si4"}],
-        [{"hak":"居","rom":"gi1"}, {"hak":"佢","rom":"gi2"}, {"hak":"幾","rom":"git5"}, {"hak":"記","rom":"gi4"}],
+        [{"hak":"居","rom":"gi1"}, {"hak":"佢","rom":"gi2"}, {"hak":"己","rom":"gi3"}, {"hak":"記","rom":"gi4"}],
         [{"hak":"夫","rom":"fu1"}, {"hak":"胡","rom":"fu2"}, {"hak":"府","rom":"fu3"}, {"hak":"婦","rom":"fu4"}],
         [{"hak":"亨","rom":"hen1"}, {"hak":"恆","rom":"hen2"}, {"hak":"肯","rom":"hen3"}, {"hak":"幸","rom":"hen4"}],
         [{"hak":"坐","rom":"co1"}, {"hak":"鋤","rom":"co2"}, {"hak":"楚","rom":"co3"}, {"hak":"挫","rom":"co4"}],
@@ -68,7 +68,7 @@
       "type": "idiom",
       "items": [
         {"hak":"一代親，二代表，三代閒了了。","rom":"yit5 toi4 cin1, ngi4 toi4 biau3, sam1 toi4 han2 liau3 liau3"},
-        {"hak":"人冇千日好，花冇百日紅。","rom":"ngin2 mau2 cien1 ngit6 hau3, fa1 mau2 bat5 ngit6 fung1"}
+        {"hak":"人冇千日好，花冇百日紅。","rom":"ngin2 mau2 cien1 ngit5 hau3, fa1 mau2 bat5 ngit5 fung2"}
       ],
       "id": "idiom-1"
     },

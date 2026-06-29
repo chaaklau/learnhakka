@@ -172,7 +172,7 @@ async function main() {
     const { chromium } = require('playwright')
     browser = await chromium.launch()
     const page = await browser.newPage({ viewport: { width: args.width, height: args.height }, deviceScaleFactor: 1 })
-    const lessonUrl = new URL(`#/chapter/${args.lesson}?mode=slides&export=1`, baseUrl).toString()
+    const lessonUrl = new URL(`a1/#/chapter/${args.lesson}?mode=slides&export=1`, baseUrl).toString()
     await page.goto(lessonUrl, { waitUntil: 'networkidle' })
     await page.waitForFunction(() => window.__LESSON_EXPORT__?.getSlideCount?.() > 0)
 

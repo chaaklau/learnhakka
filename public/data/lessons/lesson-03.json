@@ -142,10 +142,10 @@
         [{"hak":"金","rom":"gim1"}, {"hak":"＿","rom":"gim2"}, {"hak":"錦","rom":"gim3"}, {"hak":"禁","rom":"gim4"}, {"hak":"急","rom":"gip5"}, {"hak":"＿","rom":"gip6"}],
         [{"hak":"番","rom":"fan1"}, {"hak":"繁","rom":"fan2"}, {"hak":"反","rom":"ban3"}, {"hak":"飯","rom":"fan4"}, {"hak":"發","rom":"fat5"}, {"hak":"活","rom":"fat6"}],
         [{"hak":"淵","rom":"yen1"}, {"hak":"園","rom":"yen2"}, {"hak":"遠","rom":"yen3"}, {"hak":"縣","rom":"yen4"}, {"hak":"乙","rom":"yet5"}, {"hak":"越","rom":"yet6"}],
-        [{"hak":"旱","rom":"hon1"}, {"hak":"寒","rom":"hon2"}, {"hak":"罕","rom":"han4"}, {"hak":"汗","rom":"hon4"}, {"hak":"喝","rom":"hot5"}, {"hak":"＿","rom":"hot6"}],
-        [{"hak":"閹","rom":"yam1"}, {"hak":"鹽","rom":"yam2"}, {"hak":"掩","rom":"em1"}, {"hak":"豔","rom":"yam4"}, {"hak":"醃","rom":"yap5"}, {"hak":"葉","rom":"yap6"}],
+        [{"hak":"旱","rom":"hon1"}, {"hak":"寒","rom":"hon2"}, {"hak":"罕","rom":"hon3"}, {"hak":"汗","rom":"hon4"}, {"hak":"喝","rom":"hot5"}, {"hak":"＿","rom":"hot6"}],
+        [{"hak":"閹","rom":"yam1"}, {"hak":"鹽","rom":"yam2"}, {"hak":"掩","rom":"yam3"}, {"hak":"豔","rom":"yam4"}, {"hak":"醃","rom":"yap5"}, {"hak":"葉","rom":"yap6"}],
         [{"hak":"商","rom":"song1"}, {"hak":"常","rom":"song2"}, {"hak":"賞","rom":"song3"}, {"hak":"尚","rom":"song4"}, {"hak":"索","rom":"sok5"}, {"hak":"勺","rom":"sok6"}],
-        [{"hak":"冷","rom":"lang1"}, {"hak":"零","rom":"la1"}, {"hak":"㘄","rom":"lang3"}, {"hak":"另","rom":"lang4"}, {"hak":"壢","rom":"lak5"}, {"hak":"曆","rom":"lak6"}],
+        [{"hak":"冷","rom":"lang1"}, {"hak":"零","rom":"lang2"}, {"hak":"㘄","rom":"lang3"}, {"hak":"另","rom":"lang4"}, {"hak":"壢","rom":"lak5"}, {"hak":"曆","rom":"lak6"}],
         [{"hak":"風","rom":"fung1"}, {"hak":"馮","rom":"fung2"}, {"hak":"哄","rom":"fung3"}, {"hak":"鳳","rom":"fung4"}, {"hak":"福","rom":"fuk5"}, {"hak":"伏","rom":"fuk6"}]
       ],
       "id": "practice-1"
