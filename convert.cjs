@@ -23,7 +23,7 @@ const proverbRomMap = {
   "一代親，二代表，三代閒了了。": "yit5 toi4 cin1, ngi4 toi4 biau3, sam1 toi4 han2 liau3 liau3",
   "人冇千日好，花冇百日紅。": "ngin2 mau2 cien1 ngit6 hau3, fa1 mau2 bat5 ngit6 fung1",
   "瓠打瓠，瓜打瓜，唔係像阿㜆就像阿爸。": "pu2 da3 pu2, ga1 da3 ga1, m he4 ciong4 a1 mi2 ciu4 ciong4 a1 ba4",
-  "先生教厓讀書，厓教先生打山豬。": "sin1 sang1 gau4 ngai2 tuk6 su1, ngai2 gau4 sin1 sang1 da3 san1 zu1",
+  "先生教厓讀書，厓教先生打山豬。": "sin1 sang1 gau1 ngai2 tuk6 su1, ngai2 gau1 sin1 sang1 da3 san1 zu1",
   "山豬飆過河，嚇到先生兩公婆。": "san1 zu1 biau1 go4 ho2, hak5 dau3 sin1 sang1 liong3 gung1 po2",
   "一夜冇睡目，十夜補唔足。": "yit5 ya4 mau2 soi4 muk5, sip6 ya4 bu3 m zuk5",
   "老虎都曉啄目睡。": "lau3 fu3 du1 hiau3 duk5 muk5 soi4",

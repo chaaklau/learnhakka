@@ -136,7 +136,7 @@
     {
       "type": "nursery",
       "items": [
-        {"hak":"先生教厓讀書，厓教先生打山豬。","rom":"sin1 sang1 gau4 ngai2 tuk6 su1, ngai2 gau4 sin1 sang1 da3 san1 zu1"},
+        {"hak":"先生教厓讀書，厓教先生打山豬。","rom":"sin1 sang1 gau1 ngai2 tuk6 su1, ngai2 gau1 sin1 sang1 da3 san1 zu1"},
         {"hak":"山豬飆過河，嚇到先生兩公婆。","rom":"san1 zu1 biau1 go4 ho2, hak5 dau3 sin1 sang1 liong3 gung1 po2"}
       ],
       "id": "nursery-1"
