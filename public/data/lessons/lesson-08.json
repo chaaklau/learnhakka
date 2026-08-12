@@ -47,7 +47,7 @@
         {"hak":"惹爸呢？","rom":"ngia1 | ba1 | le1?","sp":"A","zh":"你爸呢？","en":"What about your dad?"},
         {
           "hak": "吾爸還吂曾出世。",
-          "rom": "nga1 ba1 | han2 man2 | zen1 | cut5 se4.",
+          "rom": "nga1 ba1 | han2 man2 | cen2 | cut5 se4.",
           "sp": "B",
           "zh": "我爸還沒出生。",
           "en": "My dad wasn't born yet."
@@ -89,7 +89,7 @@
         },
         {
           "hak": "哇，惹兜感情好好喔。",
-          "rom": "va1, ngia1 deu1 | gam3 ciang2 | hau3 | hau3 | o1.",
+          "rom": "va1, ngia1 deu1 | gam3 cin2 | hau3 | hau3 | o1.",
           "sp": "A",
           "zh": "噢，你們感情很好耶。",
           "en": "Oh, your relationship is very good."
@@ -133,7 +133,7 @@
         [{"hak":"內在","rom":"lui4 cai4"}, {"hak":"軍隊","rom":"giun1 dui4"}, {"hak":"謹慎","rom":"giun3 sin3"}, {"hak":"屈服","rom":"kiut5 fuk6"}],
         [{"hak":"曬穀","rom":"sai4 guk5"}, {"hak":"鞠躬","rom":"kiuk5 giung1"}, {"hak":"浴缸","rom":"yuk5 gong1"}, {"hak":"玉器","rom":"ngiuk6 hi4"}],
         [{"hak":"酷熱","rom":"kuk6 ngiet6"}, {"hak":"郵局","rom":"yiu2 kiuk6"}, {"hak":"訓練","rom":"hiun4 lien4"}, {"hak":"奮鬥","rom":"fun4 deu4"}],
-        [{"hak":"勳章","rom":"hiun1 zong1"}, {"hak":"分贓","rom":"fun1 zong1"}, {"hak":"祖墳","rom":"zu3 fun2"}, {"hak":"餐廳","rom":"con1 tiang4"}],
+        [{"hak":"勳章","rom":"hiun1 zong1"}, {"hak":"分贓","rom":"fun1 zong1"}, {"hak":"祖墳","rom":"zu3 fun2"}, {"hak":"餐廳","rom":"con1 tiang1"}],
         [{"hak":"模範","rom":"mu2 fam4"}, {"hak":"辦法","rom":"pan4 fap5"}, {"hak":"帆船","rom":"fam2 son2"}, {"hak":"壓力","rom":"ap5 lit6"}],
         [{"hak":"活動","rom":"fat6 tung4"}, {"hak":"滿足","rom":"man1 zuk5"}, {"hak":"永遠","rom":"yun1 yen3"}, {"hak":"榮幸","rom":"yin2 hen4"}]
       ],
@@ -155,7 +155,7 @@
           "en": "Some characters with **closed-mouth endings** `am`/`ap` are quite special and require attention."
         },
         {
-          "zh": "{賴子: lai4 zu1}、 {妹子: moi4 zu1}的{{子}}唸**第一聲** `zú`，相當於普通話**輕聲**的用法。但{子女: zu3 ng3}、{孔子: kung3 zi3}的{{子}}唸**第三聲** `zŭ`。",
+          "zh": "{賴子: lai4 zu1}、 {妹子: moi4 zu1}的{{子}}唸**第一聲** `zú`，相當於普通話**輕聲**的用法。但{子女: zu3 ng3}、{孔子: kung3 zu3}的{{子}}唸**第三聲** `zŭ`。",
           "en": "The {{子}} in 'son' ({賴子: lai4 zu1}) and 'daughter' ({妹子: moi4 zu1}) is pronounced with the **first tone** `zú`, similar to the **neutral tone** in Mandarin. However, {{子}} in 'children' ({子女: zu3 ng3}) and 'Confucius' ({孔子: kung3 zi3}) is pronounced with the **third tone** `zŭ`."
         },
         {
