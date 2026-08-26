@@ -24,7 +24,7 @@
         {"hak":"阿張伯你今年幾多歲咯？","rom":"a1 | zong1 | bak5 | ngi2 | gim1 ngien2 | git5 do1 | soi4 | lo1?","sp":"A","zh":"張伯你今年幾歲了？","en":"Uncle Zhang, how old are you this year?"},
         {"hak":"厓今年九十二歲啦。","rom":"ngai2 | gim1 ngien2 | giu3 | sip6 | ngi4 | soi4 | la1.","sp":"B","zh":"我今年九十二歲啦。","en":"I am ninety-two years old."},
         {"hak":"你有屋卡人麼？","rom":"ngi2 | yiu1 | vuk5 ka1 ngin2 | mo1?","sp":"A","zh":"你有家人嗎？","en":"Do you have family?"},
-        {"hak":"有呀，這張係吾嘅全家福相。","rom":"yiu1 | a1, ngia3 | zong1 | he4 | nga1 | e4 | cien2 ga1 fuk5 | siong3.","sp":"B","zh":"有呀，這張是我的全家福照片。","en":"Yes, this is my family portrait."},
+        {"hak":"有呀，這張係吾嘅全家福相。","rom":"yiu1 | a1, ngia3 | zong1 | he4 | nga1 | e4 | cien2 ga1 fuk5 | siong4.","sp":"B","zh":"有呀，這張是我的全家福照片。","en":"Yes, this is my family portrait."},
         {"hak":"這隻係咩惹妹子呢？","rom":"ngia3 zak5 | he4 | me4 | ngia1 | moi4 zu1 | le1?","sp":"A","zh":"這隻是咩惹妹子呢？","en":"Is this your daughter?"},
         {"hak":"唔係，佢係吾心臼。最左手析唉隻正係吾妹子。","rom":"m1 he4, gi2 | he4 | nga1 | sim1 kiu1. zui4 | zo3 siu3 sak5 | ai4 | zak5 | zang4 | he4 | nga1 | moi4 zu1.","sp":"B","zh":"不是，她是我兒媳。最左邊那個才是我女兒。","en":"No, she is my daughter-in-law. The one on the far left is my daughter."},
         {"hak":"這隻外國人係哪人呢？","rom":"ngia3 zak5 | ngoi4 get5 ngin2 | he4 | la4 ngin2 | le1?","sp":"A","zh":"這個外國人是誰呢？","en":"Who is this foreigner?"},
@@ -72,7 +72,7 @@
     {
       "type": "idiom",
       "items": [
-        {"hak":"養子唔知娘辛苦，養女正曉謝娘恩。","rom":"yong3 zu3 m1 di1 ngiong2 sin1 ku3, yong3 ng3 zang4 hiau3 cia4 ngiong2 en1"},
+        {"hak":"養子唔知娘辛苦，養女正曉謝娘恩。","rom":"yong1 zu3 m1 di1 ngiong2 sin1 ku3, yong1 ng3 zang4 hiau3 cia4 ngiong2 en1"},
         {"hak":"蛇過正來打棍。","rom":"sa2 go4 zang4 loi2 da3 gun4"}
       ],
       "id": "idiom-1"
