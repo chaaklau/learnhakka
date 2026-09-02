@@ -797,7 +797,7 @@ function renderWithRuby(text, rom) {
       out += '<span class="anno">' + escapeHtml(seg.v) + '</span>'
     } else {
       for (const ch of seg.v) {
-        if (/[\p{P}\p{S}\p{Z}\s]/u.test(ch)) {
+        if (!isRubyBaseChar(ch)) {
           out += escapeHtml(ch)
         } else if (si < syls.length) {
           out += '<span class="ruby"><span class="rb">' + escapeHtml(ch) + '</span><span class="rt">' + escapeHtml(romToDiacritics(syls[si])) + '</span></span>'
@@ -892,8 +892,12 @@ function annotatedTextSegments(text) {
   return segments
 }
 
+function isRubyBaseChar(ch) {
+  return /[\p{Unified_Ideograph}\u3007\uF900-\uFAFF\uE000-\uF8FF]/u.test(ch)
+}
+
 function isRubyBoundary(ch) {
-  return /[\p{P}\p{S}\p{Z}\s]/u.test(ch)
+  return !isRubyBaseChar(ch)
 }
 
 function renderRubyBoundary(ch) {
@@ -947,7 +951,7 @@ function renderTitleRuby(raw) {
       let i = 0
       while (i < seg.v.length) {
         const ch = seg.v[i]
-        if (/[\p{P}\p{S}\p{Z}\s]/u.test(ch)) {
+        if (!isRubyBaseChar(ch)) {
           out += escapeHtml(ch)
           i++
           continue
@@ -1047,7 +1051,7 @@ function renderSentenceRuby(raw) {
   while (i < str.length) {
     const ch = str[i]
     // Skip punctuation/whitespace
-    if (/[\p{P}\p{S}\p{Z}\s]/u.test(ch)) {
+    if (!isRubyBaseChar(ch)) {
       out += escapeHtml(ch)
       i++
       continue

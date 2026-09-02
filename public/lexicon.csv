@@ -404,7 +404,7 @@ hak,rom,zh,en,unproofread
 歸,gui1,得,Yields (in math),
 倍數,pui1 su4,,Multiple,
 唸出,ngiam4 cut5,,Read out,
-其他,gi2 ta1,,Other,
+其他,ki2 ta1,,Other,
 葉錦嫦,yap6 gim3 song2,,Yap Gim-song (name),
 李偉雄,li3 vui3 hiung2,,Li Vui-hiung (name),
 識,sit5,認識,Know / Recognize,
@@ -664,12 +664,12 @@ hak,rom,zh,en,unproofread
 僬仔,ziau2 zai3,小孩,,
 大賴子,tai4 lai4 zu1,長子,,
 舊年,kiu4 ngien2,去年,,
-今下,gim1 la1,現在,,
+今下,gim1 la4,現在,,
 梗係,gang3 he4,當然,,
 正先,zang4 sien1,剛剛,,
 等辰間,den3 sin2 gan1,等一下,,
 係呀？,he4 a2?,是嗎？,,
-照常,zau4 song1,通常,,
+照常,zau4 song2,通常,,
 一隻禮拜,yit5 zak5 li1 bai4,一週,,
 成下,sang2 ha4,有時候,,
 久唔久,giu3 m1 giu3,偶爾,,
@@ -1128,6 +1128,7 @@ hak,rom,zh,en,unproofread
 亂,lon4,,,
 亂嗑,lon4 kap5,胡說,,
 亂東東,lon4 dung1 dung1,非常凌亂,,
+事,su4,事情,,
 事,se4,幹活,,
 二,ngi4,,,
 二十二,ngi4 sip6 ngi4,,,
@@ -2446,7 +2447,7 @@ hak,rom,zh,en,unproofread
 有錯子，冇錯孫,"yiu1 co4 zu3, mau2 co4 sun1",被人收養的孩子,,
 望,mong4,希望,,
 朝,zau1,早飯,,
-朝上無人莫做官，廚下無人莫去鑚,"cau2 song4 mau2 ngin2 mok6 zo4 gon1, cu4 ha4 mau2 ngin2 mok6 hi4 zon1",沒有熟人哪裏都不行,,
+朝上無人莫做官，廚下無人莫去鑚,"cau2 song4 mau2 ngin2 mok6 zo4 gon1, cu2 ha4 mau2 ngin2 mok6 hi4 zon1",沒有熟人哪裏都不行,,
 朝晨頭,zau1 sin2 teu2,早晨（泛指）,,
 木,muk6,指人笨，不靈光,,
 木棉花,muk5 mien2 fa1,,,
@@ -4573,7 +4574,7 @@ hak,rom,zh,en,unproofread
 十月初一,sip6 ngiet6 co1 yit5,,,1
 十一月,sip6 yit5 ngiet6,,,1
 上屋搬下屋，唔見一籮穀,"song4 vuk5 ban1 ha1 vuk5, m1 gien4 yit5 lo2 guk5",搬家會遺失東西,,1
-朝上無人莫做官，廚下無人莫去鑽,"cau2 song4 mau2 ngin2 mok6 zo4 gon1, cu4 ha4 mau2 ngin2 mok6 hi4 zon1",沒有熟人哪裏都不行,,1
+朝上無人莫做官，廚下無人莫去鑽,"cau2 song4 mau2 ngin2 mok6 zo4 gon1, cu2 ha4 mau2 ngin2 mok6 hi4 zon1",沒有熟人哪裏都不行,,1
 吓,ha4,,,1
 攻,gung1,,Attack,1
 弓,giung1,,Bow,1

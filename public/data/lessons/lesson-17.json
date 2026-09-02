@@ -1,21 +1,120 @@
 {
   "id": 17,
-  "title": {"hak":"看醫生（一）","en":"Seeing a Doctor (1)"},
+  "title": {
+    "hak": "看醫生（一）",
+    "rom": "kon4 yi1 sang1 (yit5)",
+    "en": "Seeing a Doctor (1)"
+  },
   "blocks": [
-    {"type":"vocab","items":"喉連 流鼻膿 凵 伸 舌嫲 擘大啜 叮東仔 嘪 耳公 等厓","id":"vocab-1"},
+    {
+      "type": "vocab",
+      "items": [
+        {
+          "hak": "喉連",
+          "rom": "heu2 lien2"
+        },
+        {
+          "hak": "流鼻膿",
+          "rom": "liu2 pi4 lung2"
+        },
+        {
+          "hak": "凵",
+          "rom": "kem3"
+        },
+        {
+          "hak": "伸",
+          "rom": "cun1"
+        },
+        {
+          "hak": "舌嫲",
+          "rom": "set6 ma2"
+        },
+        {
+          "hak": "擘大啜",
+          "rom": "mak5 tai4 zoi4"
+        },
+        {
+          "hak": "叮東仔",
+          "rom": "din1 dung1 zai3"
+        },
+        {
+          "hak": "嘪",
+          "rom": "mai3"
+        },
+        {
+          "hak": "耳公",
+          "rom": "ngi3 gung1"
+        },
+        {
+          "hak": "等厓",
+          "rom": "den3 ngai2"
+        }
+      ],
+      "id": "vocab-1"
+    },
     {
       "type": "main",
       "items": [
-        {"hak":"醫生，厓喉連痛、發燒又流鼻膿，還有滴凵，係唔係感冒噢。","sp":"A","zh":"醫生，我喉嚨痛、發燒又流鼻涕，還有些咳嗽，是不是感冒了。"},
-        {"hak":"你伸條舌嫲畀厓看下。擘大啜，講阿⋯。噢，叮東仔都發炎添。應該係流感。還有嘪唔舒服麼？","sp":"B","zh":"你伸舌頭給我看下。張大嘴巴，說阿⋯。噢，連扁桃腺也發炎呢。應該是流感。還有什麼不舒服嗎？"},
-        {"hak":"耳公裏背也有滴痛。","sp":"A","zh":"耳朵裏面也有點痛。"},
-        {"hak":"可能係中耳炎，屬於細菌感染。等厓看下。⋯","sp":"B","zh":"可能是中耳炎，屬於細菌感染。讓我看下⋯。"},
-        {"hak":"愛食抗生素麼？","sp":"A","zh":"要吃抗生素嗎？"},
-        {"hak":"愛。看起來你愛休息三日以上正曉好，你需要請假單麼？","sp":"B","zh":"看起來你需要休息三天以上才會好，你需要請假單嗎？"},
-        {"hak":"愛呀。","sp":"A","zh":"要呀。"},
-        {"hak":"恁樣厓寫三日病假畀你啦。","sp":"B","zh":"這樣我寫三天病假給你吧。"},
-        {"hak":"醫生，我長日感冒，有乜介辦法可以減少感染呢？","sp":"A","zh":"醫生，我經常感冒，有什麼辦法可以減少感染呢？"},
-        {"hak":"你愛做多滴運動，曬多滴日頭，還愛食多滴生果正得嘅呀。","sp":"B","zh":"你要多做運動，多點曬太陽，還要多食些水果才行的。"}
+        {
+          "hak": "醫生，厓喉連痛、發燒又流鼻膿，還有滴凵，係唔係感冒噢。",
+          "rom": "yi1 sang1, ngai2 | heu2 lien2 | tung4, fat5 sau1 | yiu4 | liu2 pi4 lung2, han2 yiu1 | dit6 | kem3, he4 | m1 he4 | gam3 mau4 | o1.",
+          "sp": "A",
+          "zh": "醫生，我喉嚨痛、發燒又流鼻涕，還有些咳嗽，是不是感冒了。"
+        },
+        {
+          "hak": "你伸條舌嫲畀厓看下。擘大啜，講阿⋯。噢，叮東仔都發炎添。應該係流感。還有嘪唔舒服麼？",
+          "rom": "ngi2 | cun1 | tiau2 | set6 ma2 | bin1 | ngai2 | kon4 ha4. mak5 tai4 zoi4, gong3 | a1. o1, din1 dung1 zai3 | du1 | fat5 yam2 | tiam1. yin1 goi1 | he4 | liu2 gam3. han2 yiu1 | mai3 | m1 | su1 fuk6 | mo1?",
+          "sp": "B",
+          "zh": "你伸舌頭給我看下。張大嘴巴，說阿⋯。噢，連扁桃腺也發炎呢。應該是流感。還有什麼不舒服嗎？"
+        },
+        {
+          "hak": "耳公裏背也有滴痛。",
+          "rom": "ngi3 gung1 | di1 boi4 | ya1 | yiu1 dit6 | tung4.",
+          "sp": "A",
+          "zh": "耳朵裏面也有點痛。"
+        },
+        {
+          "hak": "可能係中耳炎，屬於細菌感染。等厓看下。⋯",
+          "rom": "ko3 len2 | he4 | zung1 ngi3 yam2, suk6 yi1 | se4 kiun1 gam3 ngiam3. den3 ngai2 | kon4 ha4.",
+          "sp": "B",
+          "zh": "可能是中耳炎，屬於細菌感染。讓我看下⋯。"
+        },
+        {
+          "hak": "愛食抗生素麼？",
+          "rom": "oi4 | sit6 | kong4 sang1 su4 | mo1?",
+          "sp": "A",
+          "zh": "要吃抗生素嗎？"
+        },
+        {
+          "hak": "愛。看起來你愛休息三日以上正曉好，你需要請假單麼？",
+          "rom": "oi4. kon4 | hi3 | loi2 | ngi2 | oi4 | hiu1 sit5 | sam1 | ngit5 | yi3 song4 | zang4 | hiau3 | hau3, ngi2 | si1 yau4 | ciang3 ga3 dan1 | mo1?",
+          "sp": "B",
+          "zh": "看起來你需要休息三天以上才會好，你需要請假單嗎？"
+        },
+        {
+          "hak": "愛呀。",
+          "rom": "oi4 | a1.",
+          "sp": "A",
+          "zh": "要呀。"
+        },
+        {
+          "hak": "恁樣厓寫三日病假畀你啦。",
+          "rom": "an2 yong4 | ngai2 | sia3 | sam1 | ngit5 | piang4 ga3 | bin1 ngi2 | la1.",
+          "sp": "B",
+          "zh": "這樣我寫三天病假給你吧。"
+        },
+        {
+          "hak": "醫生，我長日感冒，有乜介辦法可以減少感染呢？",
+          "rom": "yi1 sang1, ngai2 | cong2 ngit5 | gam3 mau4, yiu1 | mak5 gai4 | pan4 fap5 | ko3 yi3 | gam3 sau3 gam3 ngiam3 | le1?",
+          "sp": "A",
+          "zh": "醫生，我經常感冒，有什麼辦法可以減少感染呢？"
+        },
+        {
+          "hak": "你愛做多滴運動，曬多滴日頭，還愛食多滴生果正得嘅呀。",
+          "rom": "ngi2 | oi4 | zo4 | do1 | dit6 | yun4 tung4, sai4 | do1 | dit6 | ngit5 teu2, han2 | oi4 | sit6 | do1 | dit6 | sang1 go3 | zang4 | det5 | e4 | a1.",
+          "sp": "B",
+          "zh": "你要多做運動，多點曬太陽，還要多食些水果才行的。"
+        }
       ],
       "id": "main-1"
     },
@@ -38,35 +137,161 @@
     },
     {
       "type": "practice",
-      "description": {"hak":"身體部分","en":"Body Parts"},
+      "description": {
+        "hak": "身體部分",
+        "en": "Body Parts"
+      },
       "rows": [
-        ["頭那", "鼻公", "眼眉", "梅子罌"],
-        ["面缽", "啜角", "啜唇", "眼珠仔"],
-        ["下頷", "頸筋", "肩頭", "肋拆下"],
-        ["手臂", "脈門", "手盤", "手指"],
-        ["渾身", "肚胈", "肚臍", "屎窟臀"],
-        ["大髀", "屎窟", "腳囊肚", "腳眼仁"]
+        [
+          {
+            "hak": "頭那",
+            "rom": "teu2 la1"
+          },
+          {
+            "hak": "鼻公",
+            "rom": "pi4 gung1"
+          },
+          {
+            "hak": "眼眉",
+            "rom": "ngan3 mi2"
+          },
+          {
+            "hak": "梅子罌",
+            "rom": "moi2 zu1 ang1"
+          }
+        ],
+        [
+          {
+            "hak": "面缽",
+            "rom": "mien4 bat5"
+          },
+          {
+            "hak": "啜角",
+            "rom": "zoi4 gok5"
+          },
+          {
+            "hak": "啜唇",
+            "rom": "zoi4 sun2"
+          },
+          {
+            "hak": "眼珠仔",
+            "rom": "ngan3 zu1 zai3"
+          }
+        ],
+        [
+          {
+            "hak": "下頷",
+            "rom": "ha1 ngam1"
+          },
+          {
+            "hak": "頸筋",
+            "rom": "giang3 gin1"
+          },
+          {
+            "hak": "肩頭",
+            "rom": "gien1 teu2"
+          },
+          {
+            "hak": "肋拆下",
+            "rom": "lak6 cak5 ha1"
+          }
+        ],
+        [
+          {
+            "hak": "手臂",
+            "rom": "siu3 bi4"
+          },
+          {
+            "hak": "脈門",
+            "rom": "mak5 mun2"
+          },
+          {
+            "hak": "手盤",
+            "rom": "siu3 pan2"
+          },
+          {
+            "hak": "手指",
+            "rom": "siu3 zi3"
+          }
+        ],
+        [
+          {
+            "hak": "渾身",
+            "rom": "von2 sin1"
+          },
+          {
+            "hak": "肚胈",
+            "rom": "du3 pat6"
+          },
+          {
+            "hak": "肚臍",
+            "rom": "du3 ci2"
+          },
+          {
+            "hak": "屎窟臀",
+            "rom": "si3 fut5 tun2"
+          }
+        ],
+        [
+          {
+            "hak": "大髀",
+            "rom": "tai4 bi3"
+          },
+          {
+            "hak": "屎窟",
+            "rom": "si3 fut5"
+          },
+          {
+            "hak": "腳囊肚",
+            "rom": "giok5 lang2 du3"
+          },
+          {
+            "hak": "腳眼仁",
+            "rom": "giok5 ngan3 yin2"
+          }
+        ]
       ],
       "id": "practice-1"
     },
     {
       "type": "idiom",
       "items": [
-        {"hak":"窮人多算命，醜人多照鏡。"},
-        {"hak":"地理先生冇屋場，算命先生半路亡，醫藥先生死婦娘。","note":"比喻自身難保"}
+        {
+          "hak": "窮人多算命，醜人多照鏡。",
+          "rom": "kiung2 | ngin2 | do1 | son4 miang4, ciu3 | ngin2 | do1 | zau4 | giang4."
+        },
+        {
+          "hak": "地理先生冇屋場，算命先生半路亡，醫藥先生死婦娘。",
+          "rom": "ti4 | li1 | sin1 sang1 | mau2 | vuk5 | cong2, son4 miang4 sin1 sang1 | ban4 lu4 | mong2, yi1 yok6 sin1 sang1 | si3 | bu1 ngiong2.",
+          "note": "比喻自身難保"
+        }
       ],
       "id": "idiom-1"
     },
     {
       "type": "notes",
       "items": [
-        {"zh":"{屋場}：間房子的地"},
-        {"zh":"{醫藥先生}：客家話舊稱{醫生}"},
-        {"zh":"{婦娘}：婦女、也指老婆"},
-        {"zh":"客家話咳嗽說{凵}，不說「咳」。"},
-        {"zh":"客家話的身體部分和疾病名稱跟廣州話有很多不同。"},
-        {"zh":"客家話以前稱呼有學問的人爲{{先生}}，發音是 `sín sáng`。老師是{教書先生}。"},
-        {"zh":"{{伸}}口語音是 `cún`，與{春}同音。但讀書的時候發音是 `sín`，如{伸張正義}。"}
+        {
+          "zh": "{屋場}：間房子的地"
+        },
+        {
+          "zh": "{醫藥先生}：客家話舊稱{醫生}"
+        },
+        {
+          "zh": "{婦娘}：婦女、也指老婆"
+        },
+        {
+          "zh": "客家話咳嗽說{凵}，不說「咳」。"
+        },
+        {
+          "zh": "客家話的身體部分和疾病名稱跟廣州話有很多不同。"
+        },
+        {
+          "zh": "客家話以前稱呼有學問的人爲{{先生}}，發音是 `sín sáng`。老師是{教書先生}。"
+        },
+        {
+          "zh": "{{伸}}口語音是 `cún`，與{春}同音。但讀書的時候發音是 `sín`，如{伸張正義}。"
+        }
       ],
       "id": "notes-1"
     }

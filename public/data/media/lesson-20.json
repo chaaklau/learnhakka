@@ -1,4 +1,15 @@
 {
   "lessonId": 20,
-  "blocks": {}
+  "titleAudio": "audio/ch20-title.m4a",
+  "blocks": {
+    "main-1": {
+      "audio": "audio/ch20-main.m4a"
+    },
+    "practice-1": {
+      "audio": "audio/ch20-practice.m4a"
+    },
+    "nursery-1": {
+      "audio": "audio/ch20-nursery.m4a"
+    }
+  }
 }

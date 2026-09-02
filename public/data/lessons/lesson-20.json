@@ -1,18 +1,94 @@
 {
   "id": 20,
-  "title": {"hak":"過年（二）","en":"Lunar New Year (2)"},
+  "title": {
+    "hak": "過年（二）",
+    "rom": "go4 ngien2 (ngi4)",
+    "en": "Lunar New Year (2)"
+  },
   "blocks": [
-    {"type":"vocab","items":"開電火 食齋 剃頭 還過 食葷 劣屑 正月半 鬧熱","id":"vocab-1"},
+    {
+      "type": "vocab",
+      "items": [
+        {
+          "hak": "開電火",
+          "rom": "hoi1 tien4 fo3"
+        },
+        {
+          "hak": "食齋",
+          "rom": "sit6 zai1"
+        },
+        {
+          "hak": "剃頭",
+          "rom": "tai4 teu2"
+        },
+        {
+          "hak": "還過",
+          "rom": "han2 go4"
+        },
+        {
+          "hak": "食葷",
+          "rom": "sit6 fun1"
+        },
+        {
+          "hak": "劣屑",
+          "rom": "lot5 sot5"
+        },
+        {
+          "hak": "正月半",
+          "rom": "zang1 ngiet6 ban4"
+        },
+        {
+          "hak": "鬧熱",
+          "rom": "lau4 ngiet6"
+        }
+      ],
+      "id": "vocab-1"
+    },
     {
       "type": "main",
       "items": [
-        {"hak":"年三十晚到年初三，夜晚辰大廳係愛開等電火過夜嘅，安做開年光。","sp":"A","zh":"除夕到年初三，晚上大廳是要開電燈過夜的，叫做開年光。"},
-        {"hak":"年初一朝辰頭，打早就食朝，講係早食早發財。大部分鄉村都係食齋嘅。","sp":"B","zh":"年初一早上，一大早就吃早飯，說是早吃早發財。大部分鄉村都吃素。"},
-        {"hak":"年初一摎年初二兩日，唔准剃頭、洗頭、剪手指甲這兜動作，唔准罵人，也唔准掃地。好多人還會收起掃把添。","sp":"A","zh":"年初一和年初二兩天，不准理髮、洗頭、剪手指甲這些動作，不準罵人，更不准掃地。好多人還會收起掃把。"},
-        {"hak":"年初二係開年，通常會食葷，有豬肉、雞肉。","sp":"B","zh":"年初二是開年，通常會食葷，有豬肉、雞肉。"},
-        {"hak":"年初三做得掃地咯，打早將劣屑掃出門，安做送窮鬼。","sp":"A","zh":"年初三可以掃地了，一大早將垃圾掃出門，叫做送窮鬼。"},
-        {"hak":"年初四係出年架，算係過嗨年咯。","sp":"B","zh":"年初四是出年架，算是過完年了。"},
-        {"hak":"但係正月半也係好鬧熱嘅。好多人覺得，愛過嗨正月半正算過嗨年添。","sp":"A","zh":"但是元宵節也是挺熱鬧的。很多人覺得，更要過完元宵節才算過完年呢。"}
+        {
+          "hak": "年三十晚到年初三，夜晚辰大廳係愛開等電火過夜嘅，安做開年光。",
+          "rom": "ngien2 sam1 sip6 man1 | dau4 | ngien2 co1 sam1, ya4 man1 sin2 | tai4 | tiang1 | he4 | oi4 | hoi1 | den3 | tien4 fo3 | go4 ya4 | e4, on1 zo4 | hoi1 | ngien2 | gong1.",
+          "sp": "A",
+          "zh": "除夕到年初三，晚上大廳是要開電燈過夜的，叫做開年光。"
+        },
+        {
+          "hak": "年初一朝辰頭，打早就食朝，講係早食早發財。大部分鄉村都係食齋嘅。",
+          "rom": "ngien2 co1 yit5 | zau1 sin2 teu2, da3 zau3 | ciu4 | sit6 zau1, gong3 | he4 | zau3 | sit6 | zau3 | fat5 coi2. tai4 pu4 fun4 | hiong1 cun1 | du1 | he4 | sit6 zai1 | e4.",
+          "sp": "B",
+          "zh": "年初一早上，一大早就吃早飯，說是早吃早發財。大部分鄉村都吃素。"
+        },
+        {
+          "hak": "年初一摎年初二兩日，唔准剃頭、洗頭、剪手指甲這兜動作，唔准罵人，也唔准掃地。好多人還會收起掃把添。",
+          "rom": "ngien2 co1 yit5 | lau1 | ngien2 co1 ngi4 | liong3 | ngit5, m1 zun3 | tai4 teu2, se3 teu2, zien3 | siu3 zi3 gap5 | ngia3 deu1 | tung4 zok5, m1 zun3 | ma4 | ngin2, ya1 | m1 zun3 | sau4 ti4. hau3 | do1 | ngin2 | han2 | voi4 | siu1 hi3 | sau4 ba3 | tiam1.",
+          "sp": "A",
+          "zh": "年初一和年初二兩天，不准理髮、洗頭、剪手指甲這些動作，不準罵人，更不准掃地。好多人還會收起掃把。"
+        },
+        {
+          "hak": "年初二係開年，通常會食葷，有豬肉、雞肉。",
+          "rom": "ngien2 co1 ngi4 | he4 | hoi1 | ngien2, tung1 song2 | voi4 | sit6 fun1, yiu1 | zu1 ngiuk5, gai1 ngiuk5.",
+          "sp": "B",
+          "zh": "年初二是開年，通常會食葷，有豬肉、雞肉。"
+        },
+        {
+          "hak": "年初三做得掃地咯，打早將劣屑掃出門，安做送窮鬼。",
+          "rom": "ngien2 co1 sam1 | zo4 det5 | sau4 ti4 | lo1, da3 zau3 | ziong1 | lot5 sot5 | sau4 cut5 | mun2, on1 zo4 | sung4 kiung2 gui3.",
+          "sp": "A",
+          "zh": "年初三可以掃地了，一大早將垃圾掃出門，叫做送窮鬼。"
+        },
+        {
+          "hak": "年初四係出年架，算係過嗨年咯。",
+          "rom": "ngien2 co1 si4 | he4 | cut5 ngien2 ga4, son4 | he4 | go4 hoi1 ngien2 | lo1.",
+          "sp": "B",
+          "zh": "年初四是出年架，算是過完年了。"
+        },
+        {
+          "hak": "但係正月半也係好鬧熱嘅。好多人覺得，愛過嗨正月半正算過嗨年添。",
+          "rom": "tan4 | he4 | zang1 ngiet6 ban4 | ya1 | he4 | hau3 | lau4 ngiet6 | e4. hau3 | do1 | ngin2 | gok5 det5, oi4 | go4 | hoi1 | zang1 ngiet6 ban4 | zang4 | son4 | go4 hoi1 ngien2 | tiam1.",
+          "sp": "A",
+          "zh": "但是元宵節也是挺熱鬧的。很多人覺得，更要過完元宵節才算過完年呢。"
+        }
       ],
       "id": "main-1"
     },
@@ -34,25 +110,139 @@
     },
     {
       "type": "practice",
-      "description": {"hak":"發音練習","en":"Pronunciation Practice"},
+      "description": {
+        "hak": "發音練習",
+        "en": "Pronunciation Practice"
+      },
       "rows": [
-        ["考試", "試下", "開始", "開門"],
-        ["世界", "前世", "犯法", "疑犯"],
-        ["窗門", "聰明", "手槍", "建築"],
-        ["健康", "米糠", "線路", "改善"],
-        ["射箭", "戰爭", "客棧", "棧道"],
-        ["交換", "呼喚", "崇拜", "松樹"]
+        [
+          {
+            "hak": "考試",
+            "rom": "kau3 si4"
+          },
+          {
+            "hak": "試下",
+            "rom": "ci4 ha4"
+          },
+          {
+            "hak": "開始",
+            "rom": "hoi1 su3"
+          },
+          {
+            "hak": "開門",
+            "rom": "hoi1 mun2"
+          }
+        ],
+        [
+          {
+            "hak": "世界",
+            "rom": "si4 gai4"
+          },
+          {
+            "hak": "前世",
+            "rom": "cien2 se4"
+          },
+          {
+            "hak": "犯法",
+            "rom": "fam1 fap5"
+          },
+          {
+            "hak": "疑犯",
+            "rom": "ngi2 fam4"
+          }
+        ],
+        [
+          {
+            "hak": "窗門",
+            "rom": "cung1 mun2"
+          },
+          {
+            "hak": "聰明",
+            "rom": "cung1 min2"
+          },
+          {
+            "hak": "手槍",
+            "rom": "siu3 ciong1"
+          },
+          {
+            "hak": "建築",
+            "rom": "gien4 zuk5"
+          }
+        ],
+        [
+          {
+            "hak": "健康",
+            "rom": "kien4 kong1"
+          },
+          {
+            "hak": "米糠",
+            "rom": "mi3 hong1"
+          },
+          {
+            "hak": "線路",
+            "rom": "sien4 lu4"
+          },
+          {
+            "hak": "改善",
+            "rom": "goi3 sen4"
+          }
+        ],
+        [
+          {
+            "hak": "射箭",
+            "rom": "sa4 zien4"
+          },
+          {
+            "hak": "戰爭",
+            "rom": "zien4 zang1"
+          },
+          {
+            "hak": "客棧",
+            "rom": "hak5 can4"
+          },
+          {
+            "hak": "棧道",
+            "rom": "can4 tau4"
+          }
+        ],
+        [
+          {
+            "hak": "交換",
+            "rom": "gau1 von4"
+          },
+          {
+            "hak": "呼喚",
+            "rom": "fu1 fon4"
+          },
+          {
+            "hak": "崇拜",
+            "rom": "cung2 bai4"
+          },
+          {
+            "hak": "松樹",
+            "rom": "cung2 su4"
+          }
+        ]
       ],
       "id": "practice-1"
     },
     {
       "type": "nursery",
       "items": [
-        {"hak":"八月半係中秋節。九月九，去登高。"},
-        {"hak":"十月初一十月朝。十一月冬十二月年。"}
+        {
+          "hak": "八月半係中秋節。九月九，去登高。",
+          "rom": "bat5 ngiet6 ban4 | he4 | zung1 ciu1 ziet5. giu3 | ngiet6 | giu3, hi4 | dang1 gau1."
+        },
+        {
+          "hak": "十月初一十月朝。十一月冬十二月年。",
+          "rom": "sip6 ngiet6 co1 yit5 | sip6 | ngiet6 | zau1. sip6 yit5 ngiet6 | dung1 | sip6 ngi4 ngiet6 | ngien2."
+        }
       ],
       "id": "nursery-1",
-      "description": {"hak":"節日童謠（二）","en":"Festival Nursery Rhyme (2)"}
+      "description": {
+        "hak": "節日童謠（二）",
+        "en": "Festival Nursery Rhyme (2)"
+      }
     }
   ]
 }

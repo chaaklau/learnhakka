@@ -1,24 +1,126 @@
 {
   "id": 19,
-  "title": {"hak":"過年（一）","en":"Lunar New Year (1)"},
+  "title": {
+    "hak": "過年（一）",
+    "rom": "go4 ngien2 (yit5)",
+    "en": "Lunar New Year (1)"
+  },
   "blocks": [
     {
       "type": "vocab",
-      "items": "早下 廿四 入年架 年三十晚 碌仔葉 洗身 派利是 矺年利是 過嗨年 順順溜溜 打爆仗 天光 講爛啜",
+      "items": [
+        {
+          "hak": "早下",
+          "rom": "zau3 ha4"
+        },
+        {
+          "hak": "廿四",
+          "rom": "ngip6 si4"
+        },
+        {
+          "hak": "入年架",
+          "rom": "ngip6 ngien2 ga4"
+        },
+        {
+          "hak": "年三十晚",
+          "rom": "ngien2 sam1 sip6 man1"
+        },
+        {
+          "hak": "碌仔葉",
+          "rom": "luk5 zai3 yap6"
+        },
+        {
+          "hak": "洗身",
+          "rom": "se3 sin1"
+        },
+        {
+          "hak": "派利是",
+          "rom": "pai4 li4 si4"
+        },
+        {
+          "hak": "矺年利是",
+          "rom": "zak5 ngien2 li4 si4"
+        },
+        {
+          "hak": "過嗨年",
+          "rom": "go4 hoi1 ngien2"
+        },
+        {
+          "hak": "順順溜溜",
+          "rom": "sun4 sun4 liu4 liu4"
+        },
+        {
+          "hak": "打爆仗",
+          "rom": "da3 bau4 cong4"
+        },
+        {
+          "hak": "天光",
+          "rom": "tien1 gong1"
+        },
+        {
+          "hak": "講爛啜",
+          "rom": "gong3 lan4 zoi4"
+        }
+      ],
       "id": "vocab-1"
     },
     {
       "type": "main",
       "items": [
-        {"hak":"早下新界客家人過年係好鬧熱嘅。","sp":"A","zh":"以前新界客家人過年是很熱鬧的。"},
-        {"hak":"係呀，農曆十二月廿四係入年架，算係踏入年關咯。","sp":"B","zh":"農曆十二月廿四是入年架，算是踏入年關了。"},
-        {"hak":"所謂「入年架、講好話」，過年期間唔做得講唔吉利嘅說話嘅。","sp":"A","zh":"所謂「入年架、講好話」，過年期間不可以講不吉利的話。"},
-        {"hak":"十二月最後一日係年三十晚，愛大掃除，貼門神、門對摎揮春。","sp":"B","zh":"十二月最後一天是除夕，要大掃除，貼門神、對聯和揮春。"},
-        {"hak":"一家人全部愛轉來食夜，這餐飯安做團年飯。","sp":"A","zh":"一家人全部要回來吃晚飯，這頓飯叫做團年飯。"},
-        {"hak":"夜晚辰愛用石菖蒲、碌仔葉煮水洗身，黏等就換新衫。","sp":"B","zh":"晚上要用石菖蒲、柚子葉煮水洗澡，然後就換新衣服。"},
-        {"hak":"長輩在食夜之後會派利是畀後輩，安做矺年利是。祝福其兜過嗨年順順溜溜。","sp":"A","zh":"長輩在晚飯之後會發紅包給後輩，叫做壓歲錢。祝福他們過年後順順利利。"},
-        {"hak":"半夜就愛打爆仗，迎接新嘅一年。好多時候，曉聽到爆仗一夜打到天光嘅喔。","sp":"B","zh":"半夜就要燒鞭炮，迎接新的一年。很多時候，可以聽到鞭炮整晚燒到天亮。"},
-        {"hak":"係呀，厓每逢年三十晚都好難睡落覺嘅呀。","sp":"A","zh":"是的，我每逢除夕都很難睡得着的。"}
+        {
+          "hak": "早下新界客家人過年係好鬧熱嘅。",
+          "rom": "zau3 ha4 | sin1 gai4 | hak5 ga1 ngin2 | go4 ngien2 | he4 | hau3 | lau4 ngiet6 | e4.",
+          "sp": "A",
+          "zh": "以前新界客家人過年是很熱鬧的。"
+        },
+        {
+          "hak": "係呀，農曆十二月廿四係入年架，算係踏入年關咯。",
+          "rom": "he4 | a1, lung2 lak6 | sip6 ngi4 ngiet6 | ngip6 si4 | he4 | ngip6 ngien2 ga4, son4 | he4 | ap6 | ngip6 | ngien2 gan1 | lo1.",
+          "sp": "B",
+          "zh": "農曆十二月廿四是入年架，算是踏入年關了。"
+        },
+        {
+          "hak": "所謂「入年架、講好話」，過年期間唔做得講唔吉利嘅說話嘅。",
+          "rom": "so3 vui4\"ngip6 ngien2 ga4, gong3 | hau3 | va4\", go4 ngien2 | ki2 | gan1 | m1 zo4 det5 | gong3 | m1 | git5 li4 | e4 | sot5 | va4 | e4.",
+          "sp": "A",
+          "zh": "所謂「入年架、講好話」，過年期間不可以講不吉利的話。"
+        },
+        {
+          "hak": "十二月最後一日係年三十晚，愛大掃除，貼門神、門對摎揮春。",
+          "rom": "sip6 ngi4 ngiet6 | zui4 bau1 mui1 | yit5 | ngit5 | he4 | ngien2 sam1 sip6 man1, oi4 | tai4 | sau4 cu2, tiap5 | mun2 | sin2, mun2 dui4 | lau1 | fui1 | cun1.",
+          "sp": "B",
+          "zh": "十二月最後一天是除夕，要大掃除，貼門神、對聯和揮春。"
+        },
+        {
+          "hak": "一家人全部愛轉來食夜，這餐飯安做團年飯。",
+          "rom": "yit5 | ga1 | ngin2 | cien2 pu4 | oi4 | zon3 | loi2 | sit6 ya4, ngia3 | con1 | fan4 | on1 zo4 | ton2 | ngien2 | fan4.",
+          "sp": "A",
+          "zh": "一家人全部要回來吃晚飯，這頓飯叫做團年飯。"
+        },
+        {
+          "hak": "夜晚辰愛用石菖蒲、碌仔葉煮水洗身，黏等就換新衫。",
+          "rom": "ya4 man1 sin2 | oi4 | yung4 | sak6 cong1 pu2, luk5 zai3 yap6 | zu3 | sui3 | se3 sin1, ngiam2 den3 | ciu4 | von4 | sin1 sam1.",
+          "sp": "B",
+          "zh": "晚上要用石菖蒲、柚子葉煮水洗澡，然後就換新衣服。"
+        },
+        {
+          "hak": "長輩在食夜之後會派利是畀後輩，安做矺年利是。祝福其兜過嗨年順順溜溜。",
+          "rom": "zong3 bui4 | coi1 | sit6 ya4 | zu1 heu4 | voi4 | pai4 li4 si4 | bin1 | heu4 bui4, on1 zo4 | zak5 ngien2 li4 si4. zuk5 | fuk5 | gia1 deu1 | go4 hoi1 ngien2 | sun4 sun4 liu4 liu4.",
+          "sp": "A",
+          "zh": "長輩在晚飯之後會發紅包給後輩，叫做壓歲錢。祝福他們過年後順順利利。"
+        },
+        {
+          "hak": "半夜就愛打爆仗，迎接新嘅一年。好多時候，曉聽到爆仗一夜打到天光嘅喔。",
+          "rom": "ban4 ya4 | ciu4 | oi4 | da3 bau4 cong4, ngiang2 ziap5 | sin1 | e4 | yit5 | ngien2. hau3 | do1 | si2 tu2, hiau3 | tang1 | dau4 | bau4 cong4 | yit5 | ya4 | da3 | dau4 | tien1 gong1 | e4 | o1.",
+          "sp": "B",
+          "zh": "半夜就要燒鞭炮，迎接新的一年。很多時候，可以聽到鞭炮整晚燒到天亮。"
+        },
+        {
+          "hak": "係呀，厓每逢年三十晚都好難睡落覺嘅呀。",
+          "rom": "he4 | a1, ngai2 | mui1 fung2 | ngien2 sam1 sip6 man1 | du1 | hau3 | lan2 | soi4 lok6 gau4 | e4 | a1.",
+          "sp": "A",
+          "zh": "是的，我每逢除夕都很難睡得着的。"
+        }
       ],
       "id": "main-1"
     },
@@ -42,30 +144,145 @@
     },
     {
       "type": "practice",
-      "description": {"hak":"發音練習","en":"Pronunciation Practice"},
+      "description": {
+        "hak": "發音練習",
+        "en": "Pronunciation Practice"
+      },
       "rows": [
-        ["苦瓜", "辛苦", "背後", "背書"],
-        ["霜降", "投降", "要求", "需要"],
-        ["着襪", "着火", "長輩", "長短"],
-        ["泡沫", "泡茶", "元氣", "美元"],
-        ["貼紙", "貼錢", "應該", "應付"],
-        ["輕鬆", "雙重", "重傷", "保重"]
+        [
+          {
+            "hak": "苦瓜",
+            "rom": "fu3 ga1"
+          },
+          {
+            "hak": "辛苦",
+            "rom": "sin1 ku3"
+          },
+          {
+            "hak": "背後",
+            "rom": "boi4 heu1"
+          },
+          {
+            "hak": "背書",
+            "rom": "poi4 su1"
+          }
+        ],
+        [
+          {
+            "hak": "霜降",
+            "rom": "song1 gong4"
+          },
+          {
+            "hak": "投降",
+            "rom": "teu2 hong2"
+          },
+          {
+            "hak": "要求",
+            "rom": "yau1 kiu2"
+          },
+          {
+            "hak": "需要",
+            "rom": "si1 yau4"
+          }
+        ],
+        [
+          {
+            "hak": "着襪",
+            "rom": "zok5 mat5"
+          },
+          {
+            "hak": "着火",
+            "rom": "cok6 fo3"
+          },
+          {
+            "hak": "長輩",
+            "rom": "zong3 bui4"
+          },
+          {
+            "hak": "長短",
+            "rom": "cong2 don3"
+          }
+        ],
+        [
+          {
+            "hak": "泡沫",
+            "rom": "pau1 mat6"
+          },
+          {
+            "hak": "泡茶",
+            "rom": "pau4 ca2"
+          },
+          {
+            "hak": "元氣",
+            "rom": "ngien2 hi4"
+          },
+          {
+            "hak": "美元",
+            "rom": "mui1 yen2"
+          }
+        ],
+        [
+          {
+            "hak": "貼紙",
+            "rom": "diap5 zi3"
+          },
+          {
+            "hak": "貼錢",
+            "rom": "tiap5 cien2"
+          },
+          {
+            "hak": "應該",
+            "rom": "yin1 goi1"
+          },
+          {
+            "hak": "應付",
+            "rom": "yin4 fu4"
+          }
+        ],
+        [
+          {
+            "hak": "輕鬆",
+            "rom": "kiang1 sung1"
+          },
+          {
+            "hak": "雙重",
+            "rom": "sung1 cung2"
+          },
+          {
+            "hak": "重傷",
+            "rom": "cung1 song1"
+          },
+          {
+            "hak": "保重",
+            "rom": "bau3 cung4"
+          }
+        ]
       ],
       "id": "practice-1"
     },
     {
       "type": "nursery",
       "items": [
-        {"hak":"正月正、二月二，三月清明四月八。"},
-        {"hak":"五月端陽五月節，六月六、七月七。"}
+        {
+          "hak": "正月正、二月二，三月清明四月八。",
+          "rom": "zang1 ngiet6 zang1, ngi4 | ngiet6 | ngi4, sam1 | ngiet6 | ciang1 min2 | si4 | ngiet6 | bat5."
+        },
+        {
+          "hak": "五月端陽五月節，六月六、七月七。",
+          "rom": "ng3 | ngiet6 | don1 yong2 | ng3 ngiet6 ziet5, luk5 | ngiet6 | luk5, cit5 | ngiet6 | cit5."
+        }
       ],
       "id": "nursery-1"
     },
     {
       "type": "notes",
       "items": [
-        {"zh":"{{廿}}的發音是 `ngìp`，與{入}同音，是{二十}兩個字的合音。"},
-        {"zh":"客家話的{打}有很多意思，其中{打爆仗}是燒鞭炮的意思。"}
+        {
+          "zh": "{{廿}}的發音是 `ngìp`，與{入}同音，是{二十}兩個字的合音。"
+        },
+        {
+          "zh": "客家話的{打}有很多意思，其中{打爆仗}是燒鞭炮的意思。"
+        }
       ],
       "id": "notes-1"
     }

@@ -1,4 +1,15 @@
 {
   "lessonId": 15,
-  "blocks": {}
+  "titleAudio": "audio/ch15-title.m4a",
+  "blocks": {
+    "main-1": {
+      "audio": "audio/ch15-main.m4a"
+    },
+    "practice-1": {
+      "audio": "audio/ch15-practice.m4a"
+    },
+    "idiom-1": {
+      "audio": "audio/ch15-idiom.m4a"
+    }
+  }
 }
