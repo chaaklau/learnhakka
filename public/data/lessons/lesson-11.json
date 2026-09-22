@@ -104,8 +104,8 @@
           "zh": "小桌子下面有一張小凳子耶？"
         },
         {
-          "hak": "阿嫂唔夠高，愛企上這張凳仔正拿到廚櫃裏背的東西。",
-          "rom": "a1 sau3 | m1 | geu4 | gau1, oi4 | ki1 song1 | ngia3 | zong1 | den4 zai3 | zang4 | la1 | dau4 | cu2 kui4 | di1 boi4 | dit5 | dung1 si1.",
+          "hak": "阿嫂唔夠高，愛企上這張凳仔正拿倒廚櫃裏背的東西。",
+          "rom": "a1 sau3 | m1 | geu4 | gau1, oi4 | ki1 song1 | ngia3 | zong1 | den4 zai3 | zang4 | la1 | dau3 | cu2 kui4 | di1 boi4 | dit5 | dung1 si1.",
           "sp": "A",
           "zh": "嫂子不夠高，要站上這張凳子才拿到廚櫃裏面的東西。"
         },
@@ -269,7 +269,7 @@
         },
         {
           "hak": "朝上無人莫做官，廚下無人莫去鑽。",
-          "rom": "cau2 song4 | mau2 | ngin2 | mok6 | zo4 | gon1, cu2 ha4 | mau2 | ngin2 | mok6 | hi4 | zon1."
+          "rom": "cau2 song4 | vu2 | ngin2 | mok6 | zo4 | gon1, cu2 ha4 | vu2 | ngin2 | mok6 | hi4 | zon1."
         }
       ],
       "id": "idiom-1"
