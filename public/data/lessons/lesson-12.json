@@ -210,7 +210,7 @@
           },
           {
             "hak": "千丈",
-            "rom": "cien1 cong1"
+            "rom": "cien1 cong4"
           }
         ],
         [
@@ -275,7 +275,7 @@
       "items": [
         {
           "hak": "黃蜊仔，嗙嗙飛。阿僬仔，拈惹尾。",
-          "rom": "vong2 li1 | zai3, pong4 pong4 | fui1. a1 | ziau2 zai3, ngiam4 | ngia1 | mui1."
+          "rom": "vong2 li1 | zai3, pong4 pong4 | bui1. a1 | ziau2 zai3, ngiam4 | ngia1 | mui1."
         }
       ],
       "id": "nursery-1"
@@ -284,7 +284,7 @@
       "type": "notes",
       "items": [
         {
-          "zh": "{仔}：蜻蜓"
+          "zh": "{黃蜊仔}：蜻蜓"
         },
         {
           "zh": "{嗙嗙}：擬聲詞"
