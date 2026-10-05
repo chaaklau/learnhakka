@@ -2,8 +2,14 @@
   "lessonId": 13,
   "titleAudio": "audio/ch13-title.m4a",
   "blocks": {
+    "vocab-1": {
+      "audio": "audio/ch13-vocab.m4a"
+    },
     "main-1": {
       "audio": "audio/ch13-main.m4a"
+    },
+    "sentence_practice-1": {
+      "audio": "audio/ch13-sentence-practice.m4a"
     },
     "practice-1": {
       "audio": "audio/ch13-practice.m4a"
