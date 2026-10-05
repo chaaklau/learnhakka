@@ -2,6 +2,9 @@
   "lessonId": 17,
   "titleAudio": "audio/ch17-title.m4a",
   "blocks": {
+    "vocab-1": {
+      "audio": "audio/ch17-vocab.m4a"
+    },
     "main-1": {
       "audio": "audio/ch17-main.m4a"
     },
