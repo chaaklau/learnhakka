@@ -329,17 +329,37 @@
     <p>No lessons found.</p>
   </div>
 
-  <div v-else-if="page === 'about' && aboutPage" class="static-page">
-    <h1>{{ aboutPage.title.zh }} {{ aboutPage.title.en }}</h1>
-    <template v-for="(section, si) in aboutPage.sections" :key="si">
-      <h2>{{ section.heading.zh }} {{ section.heading.en }}</h2>
-      <div v-for="(item, ii) in section.items" :key="ii" class="about-item">
-        <p v-if="item.url"><a :href="item.url" target="_blank" rel="noopener noreferrer">{{ displayLang === 'en' ? item.label.en : item.label.zh }}</a></p>
-        <p v-else-if="item.label"><strong>{{ displayLang === 'en' ? item.label.en : item.label.zh }}:</strong> {{ item.text || '' }}</p>
-        <p v-if="item.zh && !item.label">{{ displayLang === 'en' ? (item.en || item.zh) : item.zh }}</p>
-        <p v-if="item.zh && item.label">{{ displayLang === 'en' ? (item.en || item.zh) : item.zh }}</p>
+  <div v-else-if="page === 'about' && aboutPage" class="static-page about-page" :lang="displayLang === 'en' ? 'en' : 'zh-Hant'">
+    <h1>{{ localized(aboutPage.title) }}</h1>
+    <p class="about-intro">{{ localized(aboutPage.intro) }}</p>
+    <section v-for="(section, si) in aboutPage.sections" :key="si">
+      <h2>{{ localized(section.heading) }}</h2>
+      <div :class="section.items.some(item => item.thumbnail) ? 'resource-grid' : 'about-list'">
+        <template v-for="(item, ii) in section.items" :key="ii">
+          <p v-if="item.citation" class="reference-entry">
+            <span>{{ localized(item.citation.prefix) }}</span><template v-if="item.citation.chapterTitle"><a v-if="item.url" :href="item.url" target="_blank" rel="noopener noreferrer">{{ localized(item.citation.chapterTitle) }}</a><span v-else>{{ localized(item.citation.chapterTitle) }}</span><span>{{ localized(item.citation.containerPrefix) }}</span></template><cite>{{ romToDiacritics(localized(item.citation.title)) }}</cite><span>{{ localized(item.citation.suffix) }}</span>
+          </p>
+          <a v-else-if="item.url && item.thumbnail" class="resource-card" :href="item.url" target="_blank" rel="noopener noreferrer">
+            <img :src="baseUrl + item.thumbnail" :class="{ 'resource-logo': item.thumbnailStyle === 'logo' }" alt="" width="720" height="450" loading="lazy">
+            <span class="resource-copy">
+              <span class="resource-title">
+                <svg class="resource-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path v-if="item.icon === 'play'" d="M9 5l11 7-11 7Z" />
+                  <path v-else-if="item.icon === 'audio'" d="M4 9v6h4l5 4V5L8 9ZM17 8a6 6 0 0 1 0 8M20 5a10 10 0 0 1 0 14" />
+                  <path v-else d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM3 12h18M12 3c-5 5-5 13 0 18 5-5 5-13 0-18Z" />
+                </svg>
+                {{ localized(item.label) }} <span class="resource-arrow" aria-hidden="true">↗</span>
+              </span>
+              <span class="resource-description">{{ localized(item.description) }}</span>
+            </span>
+          </a>
+          <p v-else-if="item.url" class="reference-entry"><a :href="item.url" target="_blank" rel="noopener noreferrer">{{ localized(item.label) }}</a></p>
+          <p v-else-if="item.label" class="credit-row"><strong>{{ localized(item.label) }}</strong><span>{{ localized(item.text) }}</span></p>
+          <p v-else>{{ localized(item) }}</p>
+        </template>
       </div>
-    </template>
+    </section>
+    <p v-if="aboutPage.feedback" class="about-feedback">{{ localized(aboutPage.feedback.text) }}<a :href="aboutPage.feedback.url" target="_blank" rel="noopener noreferrer">{{ localized(aboutPage.feedback.label) }}</a></p>
   </div>
 
   <div v-if="audioBarVisible && !exportMode && !exportLevelMode" ref="audioBarEl" class="audio-bar">
@@ -356,8 +376,6 @@
     <button type="button" class="audio-bar-btn" @click="replayAudio">⟲</button>
     <button type="button" class="audio-bar-btn close" @click="closeAudioBar">✕</button>
   </div>
-
-  <div v-if="!exportMode && !slidesMode && !exportLevelMode && isA2" class="site-banner">⚠️ This site is under construction. Some content, audio, and features may be incomplete or inaccurate.</div>
 
   <audio ref="audioEl" @ended="onAudioEnded" @pause="onAudioPause"></audio>
 </template>
@@ -533,6 +551,11 @@ function speakerInfo(sp) {
 }
 
 const aboutPage = computed(() => site.value.pages?.about || null)
+
+function localized(value) {
+  if (typeof value === 'string') return value
+  return value?.[displayLang.value] || value?.zh || value?.en || ''
+}
 
 function escapeHtml(str) {
   return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
@@ -1494,7 +1517,7 @@ function navigateTo(p) {
     const id = currentLessonId.value || lessons.value[0]?.id || 1
     router.push({ name: 'chapter', params: { id }, query: route.query })
   } else {
-    router.push({ name: p })
+    router.push({ name: p, query: displayLang.value === 'en' ? { lang: 'en' } : {} })
   }
   sidebarOpen.value = false
 }
@@ -1675,15 +1698,6 @@ watch(audioBarEl, (el) => {
 
 <style scoped>
 /* ── Site nav ── */
-.site-banner {
-  background: #fef3cd;
-  color: #664d03;
-  text-align: center;
-  padding: 0.45rem 1rem;
-  font-size: 0.82rem;
-  font-family: var(--font-body);
-  line-height: 1.4;
-}
 .site-nav {
   position: sticky;
   top: 0;
@@ -2885,6 +2899,28 @@ watch(audioBarEl, (el) => {
   color: var(--color-muted);
   margin: 0 0 0.8rem;
 }
+.about-page { max-width: 52rem; }
+.about-page .about-intro { font-size: 1.08rem; line-height: 1.85; color: var(--color-text); }
+.about-page .about-feedback { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--color-border); }
+.reference-entry a, .about-feedback a { color: var(--color-green); text-underline-offset: 0.2em; }
+.reference-entry { padding-left: 1.5rem; text-indent: -1.5rem; }
+.reference-entry cite { font-style: italic; }
+.credit-row { display: grid; grid-template-columns: 10rem 1fr; gap: 0.6rem; }
+.credit-row strong { color: var(--color-text); font-weight: 500; }
+.resource-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.resource-card { overflow: hidden; border: 1px solid var(--color-border); border-radius: 0.65rem; color: var(--color-text); text-decoration: none; background: var(--color-surface); }
+.resource-card:hover, .resource-card:focus-visible { border-color: var(--color-green); box-shadow: var(--shadow-card); }
+.resource-card img { display: block; width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: contain; object-position: center; background: #fff; border-bottom: 1px solid var(--color-border); }
+.resource-card img.resource-logo { padding: 2rem; }
+.resource-copy { display: block; padding: 0.9rem; }
+.resource-title { display: flex; align-items: center; gap: 0.45rem; font-size: 0.98rem; font-weight: 600; }
+.resource-icon { width: 1.2rem; height: 1.2rem; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; color: var(--color-green); }
+.resource-arrow { margin-left: auto; color: var(--color-muted); }
+.resource-description { display: block; margin-top: 0.45rem; font-size: 0.9rem; line-height: 1.6; color: var(--color-muted); }
+@media (max-width: 560px) {
+  .resource-grid { grid-template-columns: 1fr; }
+  .credit-row { grid-template-columns: 1fr; gap: 0.15rem; }
+}
 
 /* ── Paper mode ── */
 .paper-active {
@@ -2965,7 +3001,6 @@ watch(audioBarEl, (el) => {
     background: #fff !important;
   }
   .site-nav,
-  .site-banner,
   .sidebar,
   .topbar,
   .audio-bar,

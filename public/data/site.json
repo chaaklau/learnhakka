@@ -1,61 +1,227 @@
 {
   "blockTypes": {
-    "vocab":             {"zh": "生字",     "en": "Vocabulary"},
-    "main":              {"zh": "課文",     "en": "Dialogue"},
-    "practice":          {"zh": "練習",     "en": "Practice"},
-    "sentence_practice": {"zh": "造句練習", "en": "Sentence Practice"},
-    "sentences":         {"zh": "造句練習", "en": "Sentence Practice"},
-    "notes":             {"zh": "語言筆記", "en": "Language Notes"},
-    "idiom":             {"zh": "諺語",     "en": "Proverbs"},
-    "nursery":           {"zh": "童謠",     "en": "Nursery Rhyme"}
+    "vocab": {
+      "zh": "生字",
+      "en": "Vocabulary"
+    },
+    "main": {
+      "zh": "課文",
+      "en": "Dialogue"
+    },
+    "practice": {
+      "zh": "練習",
+      "en": "Practice"
+    },
+    "sentence_practice": {
+      "zh": "造句練習",
+      "en": "Sentence Practice"
+    },
+    "sentences": {
+      "zh": "造句練習",
+      "en": "Sentence Practice"
+    },
+    "notes": {
+      "zh": "語言筆記",
+      "en": "Language Notes"
+    },
+    "idiom": {
+      "zh": "諺語",
+      "en": "Proverbs"
+    },
+    "nursery": {
+      "zh": "童謠",
+      "en": "Nursery Rhyme"
+    }
   },
-
   "speakers": {
-    "A":    {"avatar": "avatar/girl.png", "label": "A"},
-    "B":    {"avatar": "avatar/boy.png",  "label": "B"},
-    "老師": {"avatar": "avatar/man.png",  "label": "老師"},
-    "先生": {"avatar": "avatar/man.png",  "label": "先生"}
+    "A": {
+      "avatar": "avatar/girl.png",
+      "label": "A"
+    },
+    "B": {
+      "avatar": "avatar/boy.png",
+      "label": "B"
+    },
+    "老師": {
+      "avatar": "avatar/man.png",
+      "label": "老師"
+    },
+    "先生": {
+      "avatar": "avatar/man.png",
+      "label": "先生"
+    }
   },
-
   "pages": {
     "about": {
-      "title": {"zh": "關於我們及鳴謝", "en": "About Us & Acknowledgement"},
+      "title": {
+        "zh": "關於計劃",
+        "en": "About the Project"
+      },
       "sections": [
         {
-          "heading": {"zh": "項目簡介", "en": "About This Project"},
+          "heading": {
+            "zh": "製作團隊",
+            "en": "Credits"
+          },
           "items": [
             {
-              "zh": "（請補充簡單介紹）",
-              "en": "(To be added)"
+              "label": {
+                "zh": "內容",
+                "en": "Content"
+              },
+              "text": {
+                "zh": "劉鎮發教授",
+                "en": "Prof. Lau Chun Fat"
+              }
             },
             {
-              "zh": "想了解及學習更多客家話，請瀏覽「客家大學堂」YouTube 頻道及報讀其開設的客家話課程。",
-              "en": "To learn more Hakka, please visit the Hakka Studies YouTube channel and enroll in their Hakka classes."
+              "label": {
+                "zh": "錄音",
+                "en": "Recordings"
+              },
+              "text": {
+                "zh": "張志雄、林山宜",
+                "en": "Cheung Chi Hung Maurice; Nata Lam"
+              }
+            },
+            {
+              "label": {
+                "zh": "程式及排版",
+                "en": "Development & design"
+              },
+              "text": {
+                "zh": "劉擇明博士（香港教育大學語言學及語言研究中心）",
+                "en": "Dr. Lau Chaak Ming, CRLLS, EdUHK"
+              }
             }
           ]
         },
         {
-          "heading": {"zh": "項目團隊", "en": "Project Team"},
+          "heading": {
+            "zh": "參考資料",
+            "en": "References"
+          },
           "items": [
-            {"label": {"zh": "內容準備", "en": "Content Preparation"}, "text": "劉鎮發教授 Prof. Lau Chun Fat"},
-            {"label": {"zh": "錄音", "en": "Recording"}, "text": "張志雄 Cheung Chi Hung Maurice；林山宜 Nata Lam"},
-            {"label": {"zh": "編程及排版", "en": "Coding & Layout"}, "text": "劉擇明博士 (香港教育大學語言學及語言研究中心） Dr. Lau Chaak Ming (CRLLS, EdUHK)"}
+            {
+              "citation": {
+                "prefix": {
+                  "zh": "劉鎮發（2021）。",
+                  "en": "Lau, C. F. [劉鎮發]. (2021). "
+                },
+                "title": {
+                  "zh": "香港客家話研究",
+                  "en": "Hiong1-gong3 Hak5-ga1-va4 ngan1-giu4"
+                },
+                "suffix": {
+                  "zh": "。中華書局。",
+                  "en": " (Xiānggǎng Kèjiāhuà yánjiū) [香港客家話研究]. Chung Hwa Book Company (Hong Kong) Limited [中華書局]."
+                }
+              }
+            },
+            {
+              "citation": {
+                "prefix": {
+                  "zh": "Lau, C.-M. [劉擇明]. (2026). ",
+                  "en": "Lau, C.-M. (2026). "
+                },
+                "title": {
+                  "zh": "Endangered and marginalized languages in East and Southeast Asia",
+                  "en": "Endangered and marginalized languages in East and Southeast Asia"
+                },
+                "suffix": {
+                  "zh": " (pp. 176–202). Brill.",
+                  "en": " (pp. 176–202). Brill."
+                },
+                "chapterTitle": {
+                  "zh": "Shaping language ideologies through language resource development: The case of Cantonese and Hakka in Hong Kong",
+                  "en": "Shaping language ideologies through language resource development: The case of Cantonese and Hakka in Hong Kong"
+                },
+                "containerPrefix": {
+                  "zh": ". In W. O’Grady & S. Iwasaki (Eds.), ",
+                  "en": ". In W. O’Grady & S. Iwasaki (Eds.), "
+                }
+              },
+              "url": "https://brill.com/display/book/9789004765719/BP000008.xml"
+            }
           ]
         },
         {
-          "heading": {"zh": "資源與參考", "en": "Resources & References"},
+          "heading": {
+            "zh": "延伸學習",
+            "en": "Explore more"
+          },
           "items": [
-            {"label": {"zh": "參考書籍", "en": "Reference"}, "text": "劉鎮發，2021，《香港客家話研究》。香港：中華書局。"}
-          ]
-        },
-        {
-          "heading": {"zh": "相關連結", "en": "Links"},
-          "items": [
-            {"label": {"zh": "客家大學堂網站", "en": "Hakka Studies Website"}, "url": "https://www.hakkastudies.org/"},
-            {"label": {"zh": "客家大學堂 YouTube 頻道", "en": "Hakka Studies YouTube Channel"}, "url": "https://www.youtube.com/channel/UC8YqMfgildEZ6epQ1tScGSg"}
+            {
+              "label": {
+                "zh": "客家大學堂",
+                "en": "Hakka Studies"
+              },
+              "description": {
+                "zh": "客家話課程及學習資源。",
+                "en": "Hakka courses and learning resources."
+              },
+              "url": "https://www.hakkastudies.org/",
+              "icon": "globe",
+              "thumbnail": "images/links/hakka-studies.png"
+            },
+            {
+              "label": {
+                "zh": "客家大學堂 YouTube",
+                "en": "Hakka Studies on YouTube"
+              },
+              "description": {
+                "zh": "觀看客家話教學影片。",
+                "en": "Watch Hakka lessons and videos."
+              },
+              "url": "https://www.youtube.com/channel/UC8YqMfgildEZ6epQ1tScGSg",
+              "icon": "play",
+              "thumbnail": "images/links/youtube.png"
+            },
+            {
+              "label": {
+                "zh": "香港本土語言保育協會",
+                "en": "HKILANG"
+              },
+              "description": {
+                "zh": "認識香港本土語言及保育工作。",
+                "en": "Explore Hong Kong’s local languages."
+              },
+              "url": "https://hkilang.org/",
+              "icon": "globe",
+              "thumbnail": "images/links/hkilang.svg",
+              "thumbnailStyle": "logo"
+            },
+            {
+              "label": {
+                "zh": "客家話及圍頭話文字轉語音",
+                "en": "Hakka & Waitau Text-to-Speech"
+              },
+              "description": {
+                "zh": "輸入文字，聆聽客家話或圍頭話。",
+                "en": "Type text and listen in Hakka or Waitau."
+              },
+              "url": "https://hkilang.github.io/TTS/",
+              "icon": "audio",
+              "thumbnail": "images/links/tts.png"
+            }
           ]
         }
-      ]
+      ],
+      "intro": {
+        "zh": "透過日常對話、錄音和拼音練習，按自己的步伐學習香港客家話。我們希望以易於使用的學習資源，提升客家話的可學習性，讓更多人學會和使用客家話。",
+        "en": "Learn Hong Kong Hakka at your own pace through everyday conversations, recordings and pronunciation guides. By making learning resources accessible, we aim to make Hakka easier to learn and use."
+      },
+      "feedback": {
+        "text": {
+          "zh": "如發現錯字或其他錯誤，",
+          "en": "Spotted a typo or error? "
+        },
+        "label": {
+          "zh": "歡迎填寫表格告訴我們。",
+          "en": "Please let us know."
+        },
+        "url": "https://forms.gle/8GBaUYJzAQHxJrTS9"
+      }
     }
   }
 }
