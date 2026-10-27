@@ -3,13 +3,131 @@
   "titleAudio": "audio/ch19-title.m4a",
   "blocks": {
     "vocab-1": {
-      "audio": "audio/ch19-vocab.m4a"
+      "audio": "audio/ch19-vocab.m4a",
+      "segments": [
+        {
+          "start": 5.117,
+          "end": 6.155
+        },
+        {
+          "start": 6.851,
+          "end": 7.862
+        },
+        {
+          "start": 8.574,
+          "end": 10.051
+        },
+        {
+          "start": 10.779,
+          "end": 12.833
+        },
+        {
+          "start": 13.612,
+          "end": 14.906
+        },
+        {
+          "start": 15.883,
+          "end": 17.053
+        },
+        {
+          "start": 17.791,
+          "end": 19.162
+        },
+        {
+          "start": 20.144,
+          "end": 21.955
+        },
+        {
+          "start": 22.861,
+          "end": 24.253
+        },
+        {
+          "start": 24.982,
+          "end": 26.8
+        },
+        {
+          "start": 27.652,
+          "end": 29.038
+        },
+        {
+          "start": 29.792,
+          "end": 30.941
+        },
+        {
+          "start": 31.909,
+          "end": 33.233
+        }
+      ]
     },
     "main-1": {
-      "audio": "audio/ch19-main.m4a"
+      "audio": "audio/ch19-main.m4a",
+      "segments": [
+        {
+          "start": 2.077,
+          "end": 6.406
+        },
+        {
+          "start": 6.962,
+          "end": 13.641
+        },
+        {
+          "start": 14.718,
+          "end": 21.947
+        },
+        {
+          "start": 23.224,
+          "end": 31.139
+        },
+        {
+          "start": 32.518,
+          "end": 37.716
+        },
+        {
+          "start": 38.422,
+          "end": 45.145
+        },
+        {
+          "start": 45.926,
+          "end": 56.276
+        },
+        {
+          "start": 57.157,
+          "end": 67.915
+        },
+        {
+          "start": 69.461,
+          "end": 74.117
+        }
+      ]
     },
     "practice-1": {
-      "audio": "audio/ch19-practice.m4a"
+      "audio": "audio/ch19-practice.m4a",
+      "segments": [
+        {
+          "start": 6.457,
+          "end": 15.609
+        },
+        {
+          "start": 17.321,
+          "end": 27.492
+        },
+        {
+          "start": 28.64,
+          "end": 37.948
+        },
+        {
+          "start": 39.721,
+          "end": 49.288
+        },
+        {
+          "start": 51.093,
+          "end": 59.582
+        },
+        {
+          "start": 60.74,
+          "end": 69.956
+        }
+      ]
     },
     "nursery-1": {
       "audio": "audio/ch19-nursery.m4a"

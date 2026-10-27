@@ -3,16 +3,136 @@
   "titleAudio": "audio/ch17-title.m4a",
   "blocks": {
     "vocab-1": {
-      "audio": "audio/ch17-vocab.m4a"
+      "audio": "audio/ch17-vocab.m4a",
+      "segments": [
+        {
+          "start": 5.257,
+          "end": 6.263
+        },
+        {
+          "start": 6.887,
+          "end": 7.959
+        },
+        {
+          "start": 9.495,
+          "end": 10.113
+        },
+        {
+          "start": 11.732,
+          "end": 12.465
+        },
+        {
+          "start": 13.403,
+          "end": 14.327
+        },
+        {
+          "start": 15.335,
+          "end": 16.665
+        },
+        {
+          "start": 17.631,
+          "end": 18.77
+        },
+        {
+          "start": 19.682,
+          "end": 20.437
+        },
+        {
+          "start": 21.815,
+          "end": 22.886
+        },
+        {
+          "start": 23.648,
+          "end": 24.555
+        }
+      ]
     },
     "main-1": {
-      "audio": "audio/ch17-main.m4a"
+      "audio": "audio/ch17-main.m4a",
+      "segments": [
+        {
+          "start": 1.638,
+          "end": 9.704
+        },
+        {
+          "start": 10.706,
+          "end": 26.88
+        },
+        {
+          "start": 28.243,
+          "end": 30.548
+        },
+        {
+          "start": 31.576,
+          "end": 38.991
+        },
+        {
+          "start": 40.137,
+          "end": 42.215
+        },
+        {
+          "start": 42.771,
+          "end": 49.971
+        },
+        {
+          "start": 50.238,
+          "end": 51.208
+        },
+        {
+          "start": 51.703,
+          "end": 54.892
+        },
+        {
+          "start": 55.717,
+          "end": 61.763
+        },
+        {
+          "start": 63.253,
+          "end": 70.401
+        }
+      ]
     },
     "practice-1": {
-      "audio": "audio/ch17-practice.m4a"
+      "audio": "audio/ch17-practice.m4a",
+      "segments": [
+        {
+          "start": 5.255,
+          "end": 12.587
+        },
+        {
+          "start": 13.273,
+          "end": 19.795
+        },
+        {
+          "start": 20.79,
+          "end": 27.859
+        },
+        {
+          "start": 28.862,
+          "end": 35.597
+        },
+        {
+          "start": 36.552,
+          "end": 43.578
+        },
+        {
+          "start": 44.649,
+          "end": 51.947
+        }
+      ]
     },
     "idiom-1": {
-      "audio": "audio/ch17-idiom.m4a"
+      "audio": "audio/ch17-idiom.m4a",
+      "segments": [
+        {
+          "start": 2.406,
+          "end": 7.414
+        },
+        {
+          "start": 8.8,
+          "end": 17.992
+        }
+      ]
     }
   }
 }

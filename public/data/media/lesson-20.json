@@ -3,13 +3,103 @@
   "titleAudio": "audio/ch20-title.m4a",
   "blocks": {
     "vocab-1": {
-      "audio": "audio/ch20-vocab.m4a"
+      "audio": "audio/ch20-vocab.m4a",
+      "segments": [
+        {
+          "start": 4.975,
+          "end": 6.388
+        },
+        {
+          "start": 7.093,
+          "end": 8.294
+        },
+        {
+          "start": 8.998,
+          "end": 9.993
+        },
+        {
+          "start": 10.797,
+          "end": 11.845
+        },
+        {
+          "start": 12.713,
+          "end": 13.912
+        },
+        {
+          "start": 14.538,
+          "end": 15.447
+        },
+        {
+          "start": 16.322,
+          "end": 17.636
+        },
+        {
+          "start": 18.55,
+          "end": 19.463
+        }
+      ]
     },
     "main-1": {
-      "audio": "audio/ch20-main.m4a"
+      "audio": "audio/ch20-main.m4a",
+      "segments": [
+        {
+          "start": 1.696,
+          "end": 10.138
+        },
+        {
+          "start": 11.673,
+          "end": 21.568
+        },
+        {
+          "start": 22.8,
+          "end": 36.997
+        },
+        {
+          "start": 38.357,
+          "end": 44.094
+        },
+        {
+          "start": 45.829,
+          "end": 52.407
+        },
+        {
+          "start": 53.525,
+          "end": 57.126
+        },
+        {
+          "start": 58.579,
+          "end": 66.727
+        }
+      ]
     },
     "practice-1": {
-      "audio": "audio/ch20-practice.m4a"
+      "audio": "audio/ch20-practice.m4a",
+      "segments": [
+        {
+          "start": 5.241,
+          "end": 12.353
+        },
+        {
+          "start": 13.779,
+          "end": 21.285
+        },
+        {
+          "start": 22.55,
+          "end": 29.489
+        },
+        {
+          "start": 30.469,
+          "end": 37.805
+        },
+        {
+          "start": 39.461,
+          "end": 46.877
+        },
+        {
+          "start": 48.119,
+          "end": 55.626
+        }
+      ]
     },
     "nursery-1": {
       "audio": "audio/ch20-nursery.m4a"

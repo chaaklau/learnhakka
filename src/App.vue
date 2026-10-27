@@ -267,7 +267,7 @@
 
               <template v-else-if="block.type === 'practice' && Array.isArray(block.items)">
                 <ol class="prompt-list">
-                  <li v-for="(item, ii) in block.items" :key="ii" v-show="!slidesMode || slideItemVisible(bi, ii)">
+                  <li v-for="(item, ii) in block.items" :key="ii" :class="{ 'has-audio': getBlockTimestamps(currentLesson.id, block, bi) }" v-show="!slidesMode || slideItemVisible(bi, ii)" @click="playBlockItem(currentLesson.id, block, bi, ii)">
                     <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn" @click.stop="playBlockItem(currentLesson.id, block, bi, ii)">▶</button>
                     <span v-html="formatNoteText(item)"></span>
                   </li>
@@ -275,7 +275,7 @@
               </template>
 
               <div v-else-if="block.type === 'practice' && Array.isArray(block.rows)" class="drill-rows">
-                <div v-for="(row, ri) in block.rows" :key="ri" class="drill-row-wrap" v-show="!slidesMode || slideItemVisible(bi, ri)">
+                <div v-for="(row, ri) in block.rows" :key="ri" class="drill-row-wrap" :class="{ 'has-audio': getBlockTimestamps(currentLesson.id, block, bi) }" v-show="!slidesMode || slideItemVisible(bi, ri)" @click="playBlockItem(currentLesson.id, block, bi, ri)">
                   <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn" @click.stop="playBlockItem(currentLesson.id, block, bi, ri)">▶</button>
                   <div class="vocab-grid">
                     <div v-for="(cell, ci) in row" :key="ci" class="vocab-card sm">
@@ -293,7 +293,10 @@
 
               <template v-else-if="block.type === 'sentence_practice' || block.type === 'sentences'">
                 <ol class="sp-list" :style="slidesMode && curPage()?.bi === bi ? { counterReset: 'sp-counter ' + curPage().from } : {}">
-                  <li v-for="(item, ii) in block.items" :key="ii" class="sp-item" v-show="!slidesMode || slideItemVisible(bi, ii)" v-html="formatPracticeItem(item)"></li>
+                  <li v-for="(item, ii) in block.items" :key="ii" class="sp-item" :class="{ 'has-audio': getBlockTimestamps(currentLesson.id, block, bi) }" v-show="!slidesMode || slideItemVisible(bi, ii)" @click="playBlockItem(currentLesson.id, block, bi, ii)">
+                    <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn" :aria-label="`Play sentence ${ii + 1}`" @click.stop="playBlockItem(currentLesson.id, block, bi, ii)">▶</button>
+                    <span v-html="formatPracticeItem(item)"></span>
+                  </li>
                 </ol>
               </template>
 
@@ -2339,6 +2342,9 @@ watch(audioBarEl, (el) => {
   min-width: 0;
   padding: 1rem 0;
 }
+.has-audio {
+  cursor: pointer;
+}
 .block + .block {
   border-top: 1px solid var(--color-border);
 }
@@ -2646,7 +2652,9 @@ watch(audioBarEl, (el) => {
 :deep(.anno) {
   font-size: 0.75em;
   vertical-align: super;
-  color: var(--color-crimson);
+  color: var(--color-muted);
+  font-weight: 300;
+  opacity: 0.75;
   font-family: var(--font-body);
 }
 :deep(.rom-bracket) {

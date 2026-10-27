@@ -3,19 +3,197 @@
   "titleAudio": "audio/ch15-title.m4a",
   "blocks": {
     "vocab-1": {
-      "audio": "audio/ch15-vocab.m4a"
+      "audio": "audio/ch15-vocab.m4a",
+      "segments": [
+        {
+          "start": 4.858,
+          "end": 5.914
+        },
+        {
+          "start": 6.77,
+          "end": 8.26
+        },
+        {
+          "start": 8.903,
+          "end": 10.08
+        },
+        {
+          "start": 10.901,
+          "end": 12.303
+        },
+        {
+          "start": 13.245,
+          "end": 14.346
+        },
+        {
+          "start": 15.279,
+          "end": 16.232
+        },
+        {
+          "start": 17.309,
+          "end": 18.501
+        },
+        {
+          "start": 19.389,
+          "end": 20.357
+        },
+        {
+          "start": 21.269,
+          "end": 21.998
+        },
+        {
+          "start": 22.804,
+          "end": 23.591
+        },
+        {
+          "start": 24.672,
+          "end": 25.868
+        },
+        {
+          "start": 26.772,
+          "end": 27.909
+        },
+        {
+          "start": 28.797,
+          "end": 29.738
+        },
+        {
+          "start": 31.285,
+          "end": 33.084
+        },
+        {
+          "start": 33.864,
+          "end": 35.118
+        },
+        {
+          "start": 36.205,
+          "end": 38.103
+        }
+      ]
     },
     "main-1": {
-      "audio": "audio/ch15-main.m4a"
+      "audio": "audio/ch15-main.m4a",
+      "segments": [
+        {
+          "start": 1.334,
+          "end": 8.147
+        },
+        {
+          "start": 8.717,
+          "end": 13.344
+        },
+        {
+          "start": 14.261,
+          "end": 28.686
+        },
+        {
+          "start": 29.736,
+          "end": 37.988
+        },
+        {
+          "start": 38.922,
+          "end": 49.478
+        },
+        {
+          "start": 50.195,
+          "end": 59.605
+        }
+      ]
     },
     "sentence_practice-1": {
-      "audio": "audio/ch15-sentence-practice.m4a"
+      "audio": "audio/ch15-sentence-practice.m4a",
+      "segments": [
+        {
+          "start": 4.79,
+          "end": 12.353
+        },
+        {
+          "start": 13.334,
+          "end": 16.942
+        },
+        {
+          "start": 17.911,
+          "end": 22.323
+        },
+        {
+          "start": 23.175,
+          "end": 27.357
+        },
+        {
+          "start": 28.476,
+          "end": 34.283
+        },
+        {
+          "start": 36.176,
+          "end": 40.314
+        },
+        {
+          "start": 41.78,
+          "end": 46.628
+        },
+        {
+          "start": 47.547,
+          "end": 52.302
+        },
+        {
+          "start": 53.368,
+          "end": 58.354
+        },
+        {
+          "start": 59.751,
+          "end": 63.789
+        },
+        {
+          "start": 64.958,
+          "end": 69.08
+        },
+        {
+          "start": 70.527,
+          "end": 74.982
+        }
+      ]
     },
     "practice-1": {
-      "audio": "audio/ch15-practice.m4a"
+      "audio": "audio/ch15-practice.m4a",
+      "segments": [
+        {
+          "start": 4.733,
+          "end": 12.009
+        },
+        {
+          "start": 12.705,
+          "end": 20.616
+        },
+        {
+          "start": 21.087,
+          "end": 28.593
+        },
+        {
+          "start": 29.597,
+          "end": 37.757
+        },
+        {
+          "start": 39.001,
+          "end": 46.081
+        },
+        {
+          "start": 47.032,
+          "end": 53.767
+        }
+      ]
     },
     "idiom-1": {
-      "audio": "audio/ch15-idiom.m4a"
+      "audio": "audio/ch15-idiom.m4a",
+      "segments": [
+        {
+          "start": 2.356,
+          "end": 9.038
+        },
+        {
+          "start": 10.844,
+          "end": 13.622
+        }
+      ]
     }
   }
 }

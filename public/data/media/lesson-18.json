@@ -3,13 +3,151 @@
   "titleAudio": "audio/ch18-title.m4a",
   "blocks": {
     "vocab-1": {
-      "audio": "audio/ch18-vocab.m4a"
+      "audio": "audio/ch18-vocab.m4a",
+      "segments": [
+        {
+          "start": 5.84,
+          "end": 7.198
+        },
+        {
+          "start": 8.237,
+          "end": 9.389
+        },
+        {
+          "start": 10.371,
+          "end": 11.444
+        },
+        {
+          "start": 12.208,
+          "end": 13.267
+        },
+        {
+          "start": 13.997,
+          "end": 14.895
+        },
+        {
+          "start": 15.934,
+          "end": 16.606
+        },
+        {
+          "start": 17.535,
+          "end": 18.811
+        },
+        {
+          "start": 19.826,
+          "end": 20.487
+        },
+        {
+          "start": 21.343,
+          "end": 22.645
+        },
+        {
+          "start": 23.555,
+          "end": 24.431
+        },
+        {
+          "start": 25.393,
+          "end": 26.535
+        },
+        {
+          "start": 27.235,
+          "end": 28.418
+        },
+        {
+          "start": 29.192,
+          "end": 30.506
+        },
+        {
+          "start": 31.3,
+          "end": 32.488
+        },
+        {
+          "start": 33.204,
+          "end": 34.266
+        },
+        {
+          "start": 35.017,
+          "end": 36.055
+        },
+        {
+          "start": 36.835,
+          "end": 38.031
+        }
+      ]
     },
     "main-1": {
-      "audio": "audio/ch18-main.m4a"
+      "audio": "audio/ch18-main.m4a",
+      "segments": [
+        {
+          "start": 2.142,
+          "end": 7.815
+        },
+        {
+          "start": 8.422,
+          "end": 17.439
+        },
+        {
+          "start": 18.301,
+          "end": 26.681
+        },
+        {
+          "start": 27.397,
+          "end": 31.376
+        },
+        {
+          "start": 32.302,
+          "end": 39.749
+        },
+        {
+          "start": 40.917,
+          "end": 52.921
+        },
+        {
+          "start": 54.632,
+          "end": 61.012
+        },
+        {
+          "start": 61.928,
+          "end": 64.584
+        },
+        {
+          "start": 65.888,
+          "end": 71.671
+        },
+        {
+          "start": 72.384,
+          "end": 77.41
+        }
+      ]
     },
     "practice-1": {
-      "audio": "audio/ch18-practice.m4a"
+      "audio": "audio/ch18-practice.m4a",
+      "segments": [
+        {
+          "start": 4.842,
+          "end": 12.808
+        },
+        {
+          "start": 13.883,
+          "end": 21.79
+        },
+        {
+          "start": 22.951,
+          "end": 29.802
+        },
+        {
+          "start": 31.033,
+          "end": 38.421
+        },
+        {
+          "start": 39.359,
+          "end": 46.908
+        },
+        {
+          "start": 48.28,
+          "end": 55.356
+        }
+      ]
     },
     "nursery-1": {
       "audio": "audio/ch18-nursery.m4a"

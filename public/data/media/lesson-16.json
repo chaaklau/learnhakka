@@ -3,16 +3,200 @@
   "titleAudio": "audio/ch16-title.m4a",
   "blocks": {
     "vocab-1": {
-      "audio": "audio/ch16-vocab.m4a"
+      "audio": "audio/ch16-vocab.m4a",
+      "segments": [
+        {
+          "start": 4.593,
+          "end": 5.564
+        },
+        {
+          "start": 6.186,
+          "end": 7.126
+        },
+        {
+          "start": 7.788,
+          "end": 8.89
+        },
+        {
+          "start": 9.31,
+          "end": 10.38
+        },
+        {
+          "start": 11.797,
+          "end": 13.164
+        },
+        {
+          "start": 13.782,
+          "end": 15.287
+        },
+        {
+          "start": 15.854,
+          "end": 16.873
+        },
+        {
+          "start": 18.407,
+          "end": 20.068
+        },
+        {
+          "start": 20.658,
+          "end": 21.921
+        },
+        {
+          "start": 22.797,
+          "end": 24.079
+        },
+        {
+          "start": 24.666,
+          "end": 25.586
+        },
+        {
+          "start": 26.751,
+          "end": 28.649
+        },
+        {
+          "start": 29.557,
+          "end": 30.282
+        },
+        {
+          "start": 31.299,
+          "end": 32.107
+        },
+        {
+          "start": 33.239,
+          "end": 34.264
+        },
+        {
+          "start": 35.255,
+          "end": 36.603
+        },
+        {
+          "start": 37.495,
+          "end": 38.627
+        },
+        {
+          "start": 39.472,
+          "end": 40.639
+        },
+        {
+          "start": 41.464,
+          "end": 42.626
+        }
+      ]
     },
     "main-1": {
-      "audio": "audio/ch16-main.m4a"
+      "audio": "audio/ch16-main.m4a",
+      "segments": [
+        {
+          "start": 1.138,
+          "end": 11.934
+        },
+        {
+          "start": 13.315,
+          "end": 18.365
+        },
+        {
+          "start": 19.199,
+          "end": 25.657
+        },
+        {
+          "start": 26.231,
+          "end": 36.948
+        },
+        {
+          "start": 37.996,
+          "end": 49.369
+        },
+        {
+          "start": 50.681,
+          "end": 58.859
+        }
+      ]
     },
     "sentence_practice-1": {
-      "audio": "audio/ch16-sentence-practice.m4a"
+      "audio": "audio/ch16-sentence-practice.m4a",
+      "segments": [
+        {
+          "start": 4.612,
+          "end": 8.095
+        },
+        {
+          "start": 9.211,
+          "end": 15.281
+        },
+        {
+          "start": 16.277,
+          "end": 21.82
+        },
+        {
+          "start": 22.919,
+          "end": 27.477
+        },
+        {
+          "start": 29.399,
+          "end": 33.35
+        },
+        {
+          "start": 34.644,
+          "end": 39.403
+        },
+        {
+          "start": 40.659,
+          "end": 46.023
+        },
+        {
+          "start": 47.248,
+          "end": 52.137
+        },
+        {
+          "start": 54.017,
+          "end": 59.307
+        },
+        {
+          "start": 61.156,
+          "end": 67.631
+        },
+        {
+          "start": 69.145,
+          "end": 72.766
+        },
+        {
+          "start": 74.216,
+          "end": 78.24
+        },
+        {
+          "start": 79.498,
+          "end": 83.508
+        }
+      ]
     },
     "practice-1": {
-      "audio": "audio/ch16-practice.m4a"
+      "audio": "audio/ch16-practice.m4a",
+      "segments": [
+        {
+          "start": 4.572,
+          "end": 11.08
+        },
+        {
+          "start": 12.336,
+          "end": 19.544
+        },
+        {
+          "start": 20.566,
+          "end": 28.293
+        },
+        {
+          "start": 29.226,
+          "end": 36.371
+        },
+        {
+          "start": 37.504,
+          "end": 44.418
+        },
+        {
+          "start": 45.571,
+          "end": 52.51
+        }
+      ]
     },
     "nursery-1": {
       "audio": "audio/ch16-nursery.m4a"

@@ -3,16 +3,184 @@
   "titleAudio": "audio/ch14-title.m4a",
   "blocks": {
     "vocab-1": {
-      "audio": "audio/ch14-vocab.m4a"
+      "audio": "audio/ch14-vocab.m4a",
+      "segments": [
+        {
+          "start": 4.806,
+          "end": 5.877
+        },
+        {
+          "start": 6.557,
+          "end": 7.662
+        },
+        {
+          "start": 8.335,
+          "end": 9.358
+        },
+        {
+          "start": 10.019,
+          "end": 11.857
+        },
+        {
+          "start": 12.591,
+          "end": 13.618
+        },
+        {
+          "start": 14.379,
+          "end": 15.267
+        },
+        {
+          "start": 16.008,
+          "end": 17.203
+        },
+        {
+          "start": 18.127,
+          "end": 19.157
+        },
+        {
+          "start": 20.023,
+          "end": 21.044
+        },
+        {
+          "start": 21.817,
+          "end": 22.848
+        }
+      ]
     },
     "main-1": {
-      "audio": "audio/ch14-main.m4a"
+      "audio": "audio/ch14-main.m4a",
+      "segments": [
+        {
+          "start": 1.314,
+          "end": 3.746
+        },
+        {
+          "start": 4.101,
+          "end": 5.833
+        },
+        {
+          "start": 6.348,
+          "end": 7.951
+        },
+        {
+          "start": 8.378,
+          "end": 9.415
+        },
+        {
+          "start": 9.772,
+          "end": 10.836
+        },
+        {
+          "start": 11.363,
+          "end": 12.757
+        },
+        {
+          "start": 13.316,
+          "end": 16.526
+        },
+        {
+          "start": 16.666,
+          "end": 20.037
+        },
+        {
+          "start": 20.894,
+          "end": 27.585
+        },
+        {
+          "start": 28.356,
+          "end": 43.318
+        },
+        {
+          "start": 43.809,
+          "end": 54.408
+        }
+      ]
     },
     "sentence_practice-1": {
-      "audio": "audio/ch14-sentence-practice.m4a"
+      "audio": "audio/ch14-sentence-practice.m4a",
+      "segments": [
+        {
+          "start": 3.91,
+          "end": 7.721
+        },
+        {
+          "start": 8.215,
+          "end": 11.67
+        },
+        {
+          "start": 12.534,
+          "end": 15.935
+        },
+        {
+          "start": 16.708,
+          "end": 19.462
+        },
+        {
+          "start": 20.525,
+          "end": 23.356
+        },
+        {
+          "start": 24.415,
+          "end": 28.15
+        },
+        {
+          "start": 29.543,
+          "end": 32.805
+        },
+        {
+          "start": 33.955,
+          "end": 37.656
+        },
+        {
+          "start": 38.589,
+          "end": 43.269
+        },
+        {
+          "start": 44.55,
+          "end": 48.384
+        },
+        {
+          "start": 49.085,
+          "end": 54.212
+        },
+        {
+          "start": 55.816,
+          "end": 59.789
+        },
+        {
+          "start": 60.544,
+          "end": 64.765
+        }
+      ]
     },
     "practice-1": {
-      "audio": "audio/ch14-practice.m4a"
+      "audio": "audio/ch14-practice.m4a",
+      "segments": [
+        {
+          "start": 4.475,
+          "end": 11.749
+        },
+        {
+          "start": 12.538,
+          "end": 19.576
+        },
+        {
+          "start": 20.703,
+          "end": 27.376
+        },
+        {
+          "start": 28.312,
+          "end": 34.408
+        },
+        {
+          "start": 35.292,
+          "end": 42.093
+        },
+        {
+          "start": 43.455,
+          "end": 50.034
+        }
+      ]
     },
     "nursery-1": {
       "audio": "audio/ch14-nursery.m4a"

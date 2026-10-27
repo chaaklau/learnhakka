@@ -62,7 +62,7 @@ const description = computed(() => props.block.rows.map(row =>
 
 <style scoped>
 .time-diagram-wrap { overflow-x: auto; }
-.time-diagram { display: block; width: 100%; min-width: 760px; text-anchor: middle; }
+.time-diagram { display: block; width: 70%; min-width: 532px; text-anchor: middle; }
 .diagram-bg { fill: var(--color-surface); }
 .row-bg { fill: var(--color-surface-soft); }
 .grid-line, .outline { fill: none; stroke: var(--color-border); stroke-width: 1; }
