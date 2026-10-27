@@ -199,8 +199,8 @@
 
             <header class="block-hd">
               <div class="block-hd-text">
-                <span class="block-type">{{ blockTitle(block.type) }}</span>
-                <span class="block-type-en">{{ (blockTitlesEn[block.type]) || '' }}</span>
+                <span class="block-type">{{ block.title?.zh || blockTitle(block.type) }}</span>
+                <span class="block-type-en">{{ block.title?.en || blockTitlesEn[block.type] || '' }}</span>
                 <button
                   v-if="getBlockAudio(currentLesson.id, block, bi)"
                   type="button"
@@ -297,6 +297,8 @@
                 </ol>
               </template>
 
+              <TimeExpressionsDiagram v-else-if="block.type === 'table'" :block="block" :rom-mode="romMode" />
+
               <div v-else class="note-item fallback">
                 <p>Unsupported block: {{ block.type }}</p>
               </div>
@@ -360,6 +362,8 @@
 <script setup>
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { romToDiacritics } from './romanization.js'
+import TimeExpressionsDiagram from './components/TimeExpressionsDiagram.vue'
 import _indexJson from '../public/data/index.json'
 import _siteJson from '../public/data/site.json'
 import _csvRaw from '../public/lexicon.csv?raw'
@@ -529,16 +533,6 @@ const aboutPage = computed(() => site.value.pages?.about || null)
 
 function escapeHtml(str) {
   return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
-}
-
-// Numerical tone → diacritic conversion
-const TONE_DIACRITICS = " \u0301\u0304\u0306\u0300\u0306\u0300" // index 1–6
-
-function romToDiacritics(pron) {
-  if (!pron) return pron
-  return pron.replace(/(\D*[aeo]|\D*[iu](?!\d)|\D*[iumn])(\D*)(\d)/g,
-    (_, $1, $2, $3) => $1 + TONE_DIACRITICS[+$3] + $2
-  ).normalize('NFC')
 }
 
 /* Wrap n/N + combining diacritics in a <span> so CSS can fix vertical positioning */
@@ -765,7 +759,7 @@ function formatNoteText(text) {
   // Support **bold**
   result = result.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
   // Support `code` as crimson inline
-  result = result.replace(/`(.*?)`/g, '<span class="note-rom">$1</span>')
+  result = result.replace(/`(.*?)`/g, (_, rom) => '<span class="note-rom">' + romToDiacritics(rom) + '</span>')
   return result
 }
 
@@ -2342,6 +2336,7 @@ watch(audioBarEl, (el) => {
   gap: 1.2rem;
 }
 .block {
+  min-width: 0;
   padding: 1rem 0;
 }
 .block + .block {

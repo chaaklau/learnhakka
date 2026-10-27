@@ -145,28 +145,28 @@
       "type": "notes",
       "items": [
         {
-          "zh": "客家話有**介音** `i`，是廣州話沒有的，要注意發音。例如{{餅}} `biăng`、{{茄}} `kiō`、{{向}} `hiòng`、{{腳}} `giŏk`、{{銀}} `ngiūn`、{{艾}} `ngiòi`。",
-          "en": "Hakka has the **i-medial**, which Cantonese lacks. Pay attention to the pronunciation. E.g., 'cake' ({{餅}} `biăng`), 'eggplant' ({{茄}} `kiō`), 'direction' ({{向}} `hiòng`), 'leg' ({{腳}} `giŏk`), 'silver' ({{銀}} `ngiūn`), 'mugwort' ({{艾}} `ngiòi`)."
+          "zh": "客家話有**介音** `i`，是廣州話沒有的，要注意發音。例如{{餅}} `biang3`、{{茄}} `kio2`、{{向}} `hiong4`、{{腳}} `giok5`、{{銀}} `ngiun2`、{{艾}} `ngioi4`。",
+          "en": "Hakka has the **i-medial**, which Cantonese lacks. Pay attention to the pronunciation. E.g., 'cake' ({{餅}} `biang3`), 'eggplant' ({{茄}} `kio2`), 'direction' ({{向}} `hiong4`), 'leg' ({{腳}} `giok5`), 'silver' ({{銀}} `ngiun2`), 'mugwort' ({{艾}} `ngioi4`)."
         },
         {
           "zh": "客家話有 `ung` / `iung` 的對立，例如{公: gung1}{工: gung1}{攻: gung1} / {弓: giung1}{宮: giung1}{恭: giung1}。要注意發音。",
           "en": "Hakka distinguishes between `ung` and `iung`. For example: 'public/work/attack' ({公: gung1}{工: gung1}{攻: gung1}) vs. 'bow/palace/respect' ({弓: giung1}{宮: giung1}{恭: giung1}). Pay attention to the pronunciation."
         },
         {
-          "zh": "{{先生}}有兩個發音：(a) `sín sáng` 意思為老師。(b) `sien sáng` 是對成年男性的禮貌稱呼。",
-          "en": "{{先生}} has two pronunciations: (a) `sín sáng` means teacher. (b) `sien sáng` is a polite title for an adult male (Mr.)."
+          "zh": "{{先生}}有兩個發音：(a) `sin1 sang1` 意思為老師。(b) `sien sang1` 是對成年男性的禮貌稱呼。",
+          "en": "{{先生}} has two pronunciations: (a) `sin1 sang1` means teacher. (b) `sien sang1` is a polite title for an adult male (Mr.)."
         },
         {
-          "zh": "普通話的疑問詞「哪」，客家話發音是 `lài`（中文字寫作{{奈}}）。",
-          "en": "The Mandarin question word 「哪」 is pronounced `lài` in Hakka (written as {{奈}})."
+          "zh": "普通話的疑問詞「哪」，客家話發音是 `lai4`（中文字寫作{{奈}}）。",
+          "en": "The Mandarin question word 「哪」 is pronounced `lai4` in Hakka (written as {{奈}})."
         },
         {
           "zh": "「哪裏」有三個說法：{奈埞: lai4 tang4}、{奈裏: lai4 li1}、{奈: lai4}。其中{奈埞: lai4 tang4}是惠陽腔特有**口語詞**。",
           "en": "There are three ways to say 'where': {奈埞: lai4 tang4}, {奈裏: lai4 li1}, {奈: lai4}. Among them, {奈埞: lai4 tang4} is a colloquial term specific to the **Fuiyong accent**."
         },
         {
-          "zh": "{{吂}}是客家話常用詞，惠陽腔包括香港的發音是 `mān`。代表「尚未」發生的動作（沒、沒有）。",
-          "en": "{{吂}} is a common Hakka word, pronounced `mān` in the **Fuiyong accent** (including Hong Kong). It indicates an action that has 'not yet' happened."
+          "zh": "{{吂}}是客家話常用詞，惠陽腔包括香港的發音是 `man2`。代表「尚未」發生的動作（沒、沒有）。",
+          "en": "{{吂}} is a common Hakka word, pronounced `man2` in the **Fuiyong accent** (including Hong Kong). It indicates an action that has 'not yet' happened."
         }
       ],
       "id": "notes-1"

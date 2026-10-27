@@ -77,6 +77,104 @@
       "id": "vocab-1"
     },
     {
+      "id": "table-1",
+      "type": "table",
+      "title": {
+        "zh": "時間段一覽",
+        "en": "Time Expressions"
+      },
+      "headers": [
+        "日期／時段",
+        "上午",
+        "下午",
+        "晚上"
+      ],
+      "rows": [
+        {
+          "label": {
+            "hak": "昝暋日",
+            "rom": "cam4 min1 ngit5",
+            "zh": "昨天"
+          },
+          "cells": [
+            {
+              "hak": "昝暋朝",
+              "rom": "cam4 min1 zau1"
+            },
+            {
+              "hak": "昝暋下晝",
+              "rom": "cam4 min1 ha1 ziu4"
+            },
+            {
+              "hak": "昝晚夜",
+              "rom": "cam4 man1 ya4"
+            }
+          ]
+        },
+        {
+          "label": {
+            "hak": "今日",
+            "rom": "gim1 ngit5",
+            "zh": "今天"
+          },
+          "cells": [
+            {
+              "hak": "今朝（辰）",
+              "rom": "gim1 zau1 sin2"
+            },
+            {
+              "hak": "今下晝",
+              "rom": "gim1 ha1 ziu4"
+            },
+            {
+              "hak": "今晚夜",
+              "rom": "gim1 man1 ya4"
+            }
+          ]
+        },
+        {
+          "label": {
+            "hak": "晨朝日",
+            "rom": "sin2 zau1 ngit5",
+            "zh": "明天"
+          },
+          "cells": [
+            {
+              "hak": "晨朝朝（辰）",
+              "rom": "sin2 zau1 zau1 sin2"
+            },
+            {
+              "hak": "晨朝下晝",
+              "rom": "sin2 zau1 ha1 ziu4"
+            },
+            {
+              "hak": "晨朝晚（夜）",
+              "rom": "sin2 zau1 man1 ya4"
+            }
+          ]
+        },
+        {
+          "label": {
+            "zh": "每天"
+          },
+          "cells": [
+            {
+              "hak": "朝辰頭",
+              "rom": "zau1 sin2 teu2"
+            },
+            {
+              "hak": "下晝辰",
+              "rom": "ha1 ziu4 sin2"
+            },
+            {
+              "hak": "夜晚辰",
+              "rom": "ya4 man1 sin2"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "type": "main",
       "items": [
         {
@@ -283,13 +381,13 @@
           "zh": "一天內的時段是：{朝辰早}/{朝辰頭}、{當晝}、{下晝辰}、{斷暗}、{夜晚辰}/{暗晡夜}。"
         },
         {
-          "zh": "{{嘛？}}在客家話的發音是 `miá`，意思是「的嗎？」"
+          "zh": "{{嘛？}}在客家話的發音是 `mia1`，意思是「的嗎？」"
         },
         {
           "zh": "{亢}是客家話特有用字，起來的意思。起牀一般說{亢身}、{亢牀}。"
         },
         {
-          "zh": "{{假}}在客家話只有 `gă` 的發音，{假期}、{放假}也是唸 `gă`。"
+          "zh": "{{假}}在客家話只有 `ga3` 的發音，{假期}、{放假}也是唸 `ga3`。"
         }
       ],
       "id": "notes-1"
