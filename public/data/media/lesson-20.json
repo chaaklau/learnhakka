@@ -72,6 +72,51 @@
         }
       ]
     },
+    "sentence_practice-1": {
+      "audio": "audio/ch20-sentence-practice.m4a",
+      "segments": [
+        {
+          "start": 6.681,
+          "end": 10.049
+        },
+        {
+          "start": 12.318,
+          "end": 14.652
+        },
+        {
+          "start": 17.397,
+          "end": 19.92
+        },
+        {
+          "start": 22.768,
+          "end": 25.598
+        },
+        {
+          "start": 27.843,
+          "end": 30.955
+        },
+        {
+          "start": 32.941,
+          "end": 37.808
+        },
+        {
+          "start": 41.185,
+          "end": 45.584
+        },
+        {
+          "start": 48.313,
+          "end": 50.672
+        },
+        {
+          "start": 53.634,
+          "end": 57.429
+        },
+        {
+          "start": 60.905,
+          "end": 64.046
+        }
+      ]
+    },
     "practice-1": {
       "audio": "audio/ch20-practice.m4a",
       "segments": [

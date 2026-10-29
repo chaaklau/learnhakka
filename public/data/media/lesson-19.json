@@ -100,6 +100,59 @@
         }
       ]
     },
+    "sentence_practice-1": {
+      "audio": "audio/ch19-sentence-practice.m4a",
+      "segments": [
+        {
+          "start": 7.424,
+          "end": 10.652
+        },
+        {
+          "start": 14.137,
+          "end": 17.013
+        },
+        {
+          "start": 20.623,
+          "end": 23.926
+        },
+        {
+          "start": 26.732,
+          "end": 32.784
+        },
+        {
+          "start": 35.344,
+          "end": 38.985
+        },
+        {
+          "start": 41.177,
+          "end": 46.185
+        },
+        {
+          "start": 48.351,
+          "end": 52.245
+        },
+        {
+          "start": 55.125,
+          "end": 58.001
+        },
+        {
+          "start": 60.352,
+          "end": 62.947
+        },
+        {
+          "start": 65.868,
+          "end": 68.578
+        },
+        {
+          "start": 72.073,
+          "end": 74.743
+        },
+        {
+          "start": 77.26,
+          "end": 79.241
+        }
+      ]
+    },
     "practice-1": {
       "audio": "audio/ch19-practice.m4a",
       "segments": [
