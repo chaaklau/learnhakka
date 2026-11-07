@@ -221,7 +221,8 @@
                 <div v-for="(token, ti) in tokenize(block.items)" :key="getTokenDisplay(token) + '-' + ti" class="vocab-card" v-show="!slidesMode || slideItemVisible(bi, ti)" @click="playTokenAudio(block, bi, ti)">
                   <p v-if="slidesMode" class="slide-context">{{ ti + 1 }} / {{ tokenize(block.items).length }}</p>
                   <p class="vocab-hak font-hakka" v-html="renderTokenRuby(token)"></p>
-                  <p class="vocab-mean">{{ getMeaning(token) || '—' }}</p>
+                  <p v-if="getDisplayText(token)" class="vocab-mean">{{ getDisplayText(token) }}</p>
+                  <p v-else class="vocab-mean" aria-hidden="true"><span class="vocab-mean-placeholder"></span></p>
                 </div>
               </div>
 
@@ -635,9 +636,9 @@ function getLexiconEntry(raw) {
   if (overrideRom) {
     const match = entries.find((e) => e.rom === overrideRom)
     if (match) return match
-    return { hak, rom: overrideRom, zh: entries[0]?.zh || '', en: entries[0]?.en || '', unproofread: false }
+    return { hak, rom: overrideRom, unproofread: false }
   }
-  return entries[0] || { hak, rom: '', zh: '', en: '', unproofread: false }
+  return entries[0] || { hak, rom: '', unproofread: false }
 }
 
 function getSentenceLexiconEntry(raw) {
@@ -651,11 +652,6 @@ function getSentenceLexiconEntry(raw) {
 
 function getRom(raw) {
   return getLexiconEntry(raw).rom
-}
-
-function getMeaning(raw) {
-  const e = getLexiconEntry(raw)
-  return displayLang.value === 'en' ? (e.en || '') : (e.zh || '')
 }
 
 function getDisplayText(item) {
@@ -991,10 +987,6 @@ function renderTitleRuby(raw) {
         if (bestEntry) {
           const word = seg.v.slice(i, i + bestLen)
           const roms = romSyllables(bestEntry.rom)
-          const meaning = displayLang.value === 'en'
-            ? (bestEntry.en || '')
-            : (bestEntry.zh || '')
-          const showMeaning = meaning && meaning !== word
           out += '<span class="title-word">'
           if (romMode.value === 'bracket') {
             out += escapeHtml(word) + '<span class="rom-bracket">[' + escapeHtml(romToDiacritics(roms.join(' '))) + ']</span>'
@@ -1009,9 +1001,6 @@ function renderTitleRuby(raw) {
                 out += escapeHtml(c)
               }
             }
-          }
-          if (showMeaning) {
-            out += '<span class="hero-gloss">' + escapeHtml(meaning) + '</span>'
           }
           out += '</span>'
           i += bestLen
@@ -1646,9 +1635,9 @@ onMounted(async () => {
     for (let i = 1; i < lines.length; i++) {
       const line = lines[i].trim()
       if (!line) continue
-      const [hak, rom, zh, en, unproofread] = parseCsvLine(line)
+      const [hak, rom, , , unproofread] = parseCsvLine(line)
       if (!hak) continue
-      const entry = { hak, rom: rom || '', zh: zh || '', en: en || '', unproofread: unproofread === '1' }
+      const entry = { hak, rom: rom || '', unproofread: unproofread === '1' }
       addLexiconEntry(map, hak, entry)
 
       const normalizedHak = trimSentenceBoundaryPunctuation(hak)
@@ -2269,17 +2258,6 @@ watch(audioBarEl, (el) => {
   letter-spacing: 0.02em;
   opacity: 0.7;
 }
-:deep(.hero-gloss) {
-  display: block;
-  font-size: 0.3em;
-  color: var(--color-muted);
-  font-family: var(--font-body);
-  font-weight: 300;
-  line-height: 1.3;
-  margin-top: -0.2em;
-  text-align: center;
-  padding: 0 0.16em;
-}
 :deep(.title-word) {
   display: inline-block;
   text-align: center;
@@ -2435,6 +2413,13 @@ watch(audioBarEl, (el) => {
   font-size: 0.78rem;
   color: var(--color-muted);
   line-height: 1.4;
+}
+.vocab-mean-placeholder {
+  display: inline-block;
+  width: 1.5em;
+  border-top: 1px dotted currentColor;
+  vertical-align: middle;
+  opacity: 0.45;
 }
 
 /* ── Dialogue ── */
@@ -3395,9 +3380,6 @@ watch(audioBarEl, (el) => {
 }
 .slides-mode .hero-sub {
   font-size: 1.35rem;
-}
-:deep(.slides-mode .hero-gloss) {
-  font-size: 1.25rem;
 }
 .slides-mode .kicker {
   font-size: 1.2rem;

@@ -9,16 +9,16 @@
     {
       "type": "vocab",
       "items": [
-        {"hak":"裏背","rom":"di1 boi4"},
-        {"hak":"這裏","rom":"ngia3 li1"},
-        {"hak":"唉裏","rom":"ai4 li1"},
-        {"hak":"共總","rom":"kiung4 zung3"},
-        {"hak":"先生","rom":"sin1 sang1"},
-        {"hak":"奈埞","rom":"lai4 tang4"},
-        {"hak":"奈裏","rom":"lai4 li1"},
-        {"hak":"還吂","rom":"han2 man2"},
-        {"hak":"學校","rom":"hok6 gau3"},
-        {"hak":"附近","rom":"fu4 kiun4"}
+        {"hak":"裏背","rom":"di1 boi4","zh":"裏面","en":"Inside"},
+        {"hak":"這裏","rom":"ngia3 li1","en":"Here"},
+        {"hak":"唉裏","rom":"ai4 li1","zh":"那邊","en":"Over there"},
+        {"hak":"共總","rom":"kiung4 zung3","zh":"總共","en":"Total"},
+        {"hak":"先生","rom":"sin1 sang1","zh":"老師","en":"Teacher"},
+        {"hak":"奈埞","rom":"lai4 tang4","zh":"哪裏","en":"Where (place)"},
+        {"hak":"奈裏","rom":"lai4 li1","zh":"哪裏","en":"Where"},
+        {"hak":"還吂","rom":"han2 man2","zh":"還沒有","en":"Not yet"},
+        {"hak":"學校","rom":"hok6 gau3","en":"School"},
+        {"hak":"附近","rom":"fu4 kiun4","en":"Nearby"}
       ],
       "id": "vocab-1"
     },

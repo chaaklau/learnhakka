@@ -11,19 +11,23 @@
       "items": [
         {
           "hak": "開電火",
-          "rom": "hoi1 tien4 fo3"
+          "rom": "hoi1 tien4 fo3",
+          "zh": "開電燈"
         },
         {
           "hak": "食齋",
-          "rom": "sit6 zai1"
+          "rom": "sit6 zai1",
+          "zh": "食素"
         },
         {
           "hak": "剃頭",
-          "rom": "tai4 teu2"
+          "rom": "tai4 teu2",
+          "zh": "理髮"
         },
         {
           "hak": "還過",
-          "rom": "han2 go4"
+          "rom": "han2 go4",
+          "zh": "更加"
         },
         {
           "hak": "食葷",
@@ -31,15 +35,19 @@
         },
         {
           "hak": "劣屑",
-          "rom": "lot5 sot5"
+          "rom": "lot5 sot5",
+          "zh": "垃圾"
         },
         {
           "hak": "正月半",
-          "rom": "zang1 ngiet6 ban4"
+          "rom": "zang1 ngiet6 ban4",
+          "zh": "元宵節"
         },
         {
           "hak": "鬧熱",
-          "rom": "lau4 ngiet6"
+          "rom": "lau4 ngiet6",
+          "zh": "熱鬧",
+          "en": "Lively / Bustling"
         }
       ],
       "id": "vocab-1"

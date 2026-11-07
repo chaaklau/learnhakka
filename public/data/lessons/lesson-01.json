@@ -5,16 +5,16 @@
     {
       "type": "vocab",
       "items": [
-        {"hak":"厓","rom":"ngai2"},
-        {"hak":"你","rom":"ngi2"},
-        {"hak":"佢","rom":"gi2"},
-        {"hak":"係","rom":"he4"},
-        {"hak":"安做","rom":"on1 zo4"},
-        {"hak":"乜介","rom":"mak5 gai4"},
-        {"hak":"名","rom":"miang2"},
-        {"hak":"貴姓","rom":"gui4 siang4"},
-        {"hak":"哪人","rom":"la4 ngin2"},
-        {"hak":"唔係","rom":"m1 he4"}
+        {"hak":"厓","rom":"ngai2","zh":"我","en":"I / Me"},
+        {"hak":"你","rom":"ngi2","en":"You"},
+        {"hak":"佢","rom":"gi2","zh":"他","en":"He / She"},
+        {"hak":"係","rom":"he4","zh":"是","en":"To be (is/am/are)"},
+        {"hak":"安做","rom":"on1 zo4","zh":"叫做","en":"Called / Named"},
+        {"hak":"乜介","rom":"mak5 gai4","zh":"什麼","en":"What"},
+        {"hak":"名","rom":"miang2","zh":"名字","en":"Name"},
+        {"hak":"貴姓","rom":"gui4 siang4","en":"Your surname (honorific)"},
+        {"hak":"哪人","rom":"la4 ngin2","zh":"誰","en":"Who"},
+        {"hak":"唔係","rom":"m1 he4","zh":"不是","en":"Is not"}
       ],
       "id": "vocab-1"
     },

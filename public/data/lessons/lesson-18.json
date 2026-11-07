@@ -11,71 +11,88 @@
       "items": [
         {
           "hak": "細嘅陣",
-          "rom": "se4 e4 cin4"
+          "rom": "se4 e4 cin4",
+          "zh": "小時候"
         },
         {
           "hak": "冇鞋着",
-          "rom": "mau2 hai2 zok5"
+          "rom": "mau2 hai2 zok5",
+          "zh": "沒鞋穿"
         },
         {
           "hak": "村肚",
-          "rom": "cun1 du3"
+          "rom": "cun1 du3",
+          "zh": "村裏面"
         },
         {
           "hak": "掌牛",
-          "rom": "zong3 ngiu2"
+          "rom": "zong3 ngiu2",
+          "zh": "看牛"
         },
         {
           "hak": "好惡",
-          "rom": "hau3 ok5"
+          "rom": "hau3 ok5",
+          "zh": "好兇"
         },
         {
           "hak": "搞",
-          "rom": "gau3"
+          "rom": "gau3",
+          "zh": "玩耍"
         },
         {
           "hak": "取鳥仔",
-          "rom": "ci3 diau1 zai3"
+          "rom": "ci3 diau1 zai3",
+          "zh": "捉雛鳥"
         },
         {
           "hak": "供(動物)",
-          "rom": "giung4"
+          "rom": "giung4",
+          "zh": "餵(動物)"
         },
         {
           "hak": "養唔大",
-          "rom": "yong1 m1 tai4"
+          "rom": "yong1 m1 tai4",
+          "zh": "夭折"
         },
         {
           "hak": "河壢",
-          "rom": "ho2 lak5"
+          "rom": "ho2 lak5",
+          "zh": "小溪"
         },
         {
           "hak": "熱天",
-          "rom": "ngiet6 tien1"
+          "rom": "ngiet6 tien1",
+          "zh": "夏天"
         },
         {
           "hak": "滑哥",
-          "rom": "vat6 go1"
+          "rom": "vat6 go1",
+          "zh": "鯰魚"
         },
         {
           "hak": "洗身仔",
-          "rom": "se3 sin1 zai3"
+          "rom": "se3 sin1 zai3",
+          "zh": "游泳"
         },
         {
           "hak": "冷天",
-          "rom": "lang1 tien1"
+          "rom": "lang1 tien1",
+          "zh": "冬天"
         },
         {
           "hak": "棯仔",
-          "rom": "lem3 zai3"
+          "rom": "lem3 zai3",
+          "zh": "桃金娘"
         },
         {
           "hak": "米成",
-          "rom": "mi3 cang2"
+          "rom": "mi3 cang2",
+          "zh": "米通"
         },
         {
           "hak": "新衫",
-          "rom": "sin1 sam1"
+          "rom": "sin1 sam1",
+          "zh": "新衣服"
         }
       ],
       "id": "vocab-1"

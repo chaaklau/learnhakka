@@ -9,20 +9,20 @@
     {
       "type": "vocab",
       "items": [
-        {"hak":"恁樣","rom":"an2 yong4"},
-        {"hak":"仰邊","rom":"ngiong4 bien1"},
-        {"hak":"轉屋卡","rom":"zon3 vuk5 ka1"},
-        {"hak":"轉去","rom":"zon3 hi4"},
-        {"hak":"黏等","rom":"ngiam2 den3"},
-        {"hak":"愛","rom":"oi4"},
-        {"hak":"好像","rom":"hau3 ciong4"},
-        {"hak":"渾","rom":"von2"},
-        {"hak":"轉到屋","rom":"zon3 dau4 vuk5"},
-        {"hak":"幾久","rom":"git5 giu3"},
-        {"hak":"小巴","rom":"siau3 ba1"},
-        {"hak":"巴士","rom":"ba4 si3"},
+        {"hak":"恁樣","rom":"an2 yong4","zh":"這樣","en":"Like this / So"},
+        {"hak":"仰邊","rom":"ngiong4 bien1","zh":"怎樣","en":"How"},
+        {"hak":"轉屋卡","rom":"zon3 vuk5 ka1","zh":"回家","en":"Go home"},
+        {"hak":"轉去","rom":"zon3 hi4","zh":"回去","en":"Go back"},
+        {"hak":"黏等","rom":"ngiam2 den3","zh":"跟着（就走了）"},
+        {"hak":"愛","rom":"oi4","zh":"要","en":"Need / Want"},
+        {"hak":"好像","rom":"hau3 ciong4","en":"Seem like"},
+        {"hak":"渾","rom":"von2","zh":"大概","en":"Approximately / About"},
+        {"hak":"轉到屋","rom":"zon3 dau4 vuk5","zh":"回到家","en":"Arrive home"},
+        {"hak":"幾久","rom":"git5 giu3","zh":"多久"},
+        {"hak":"小巴","rom":"siau3 ba1","en":"Minibus"},
+        {"hak":"巴士","rom":"ba4 si3","en":"Bus"},
         {"hak":"或者","rom":"fet6 za3"},
-        {"hak":"之後","rom":"zu1 heu4"}
+        {"hak":"之後","rom":"zu1 heu4","en":"Later"}
       ],
       "id": "vocab-1"
     },

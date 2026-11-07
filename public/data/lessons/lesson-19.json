@@ -11,55 +11,68 @@
       "items": [
         {
           "hak": "早下",
-          "rom": "zau3 ha4"
+          "rom": "zau3 ha4",
+          "zh": "從前"
         },
         {
           "hak": "廿四",
-          "rom": "ngip6 si4"
+          "rom": "ngip6 si4",
+          "zh": "二十四"
         },
         {
           "hak": "入年架",
-          "rom": "ngip6 ngien2 ga4"
+          "rom": "ngip6 ngien2 ga4",
+          "zh": "進年關"
         },
         {
           "hak": "年三十晚",
-          "rom": "ngien2 sam1 sip6 man1"
+          "rom": "ngien2 sam1 sip6 man1",
+          "zh": "除夕"
         },
         {
           "hak": "碌仔葉",
-          "rom": "luk5 zai3 yap6"
+          "rom": "luk5 zai3 yap6",
+          "zh": "柚子"
         },
         {
           "hak": "洗身",
-          "rom": "se3 sin1"
+          "rom": "se3 sin1",
+          "zh": "洗澡"
         },
         {
           "hak": "派利是",
-          "rom": "pai4 li4 si4"
+          "rom": "pai4 li4 si4",
+          "zh": "發紅包"
         },
         {
           "hak": "矺年利是",
-          "rom": "zak5 ngien2 li4 si4"
+          "rom": "zak5 ngien2 li4 si4",
+          "zh": "壓歲錢"
         },
         {
           "hak": "過嗨年",
-          "rom": "go4 hoi1 ngien2"
+          "rom": "go4 hoi1 ngien2",
+          "zh": "過年以後"
         },
         {
           "hak": "順順溜溜",
-          "rom": "sun4 sun4 liu4 liu4"
+          "rom": "sun4 sun4 liu4 liu4",
+          "zh": "順順利利"
         },
         {
           "hak": "打爆仗",
-          "rom": "da3 bau4 cong4"
+          "rom": "da3 bau4 cong4",
+          "zh": "燒鞭炮"
         },
         {
           "hak": "天光",
-          "rom": "tien1 gong1"
+          "rom": "tien1 gong1",
+          "zh": "天亮"
         },
         {
           "hak": "講爛啜",
-          "rom": "gong3 lan4 zoi4"
+          "rom": "gong3 lan4 zoi4",
+          "zh": "說髒話"
         }
       ],
       "id": "vocab-1"

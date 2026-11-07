@@ -11,59 +11,73 @@
       "items": [
         {
           "hak": "僬仔",
-          "rom": "ziau2 zai3"
+          "rom": "ziau2 zai3",
+          "zh": "小孩"
         },
         {
           "hak": "大賴子",
-          "rom": "tai4 lai4 zu1"
+          "rom": "tai4 lai4 zu1",
+          "zh": "長子"
         },
         {
           "hak": "舊年",
-          "rom": "kiu4 ngien2"
+          "rom": "kiu4 ngien2",
+          "zh": "去年"
         },
         {
           "hak": "今下",
-          "rom": "gim1 la4"
+          "rom": "gim1 la4",
+          "zh": "現在"
         },
         {
           "hak": "梗係",
-          "rom": "gang3 he4"
+          "rom": "gang3 he4",
+          "zh": "當然"
         },
         {
           "hak": "正先",
-          "rom": "zang4 sien1"
+          "rom": "zang4 sien1",
+          "zh": "剛剛"
         },
         {
           "hak": "等辰間",
-          "rom": "den3 sin2 gan1"
+          "rom": "den3 sin2 gan1",
+          "zh": "等一下"
         },
         {
           "hak": "係呀？",
-          "rom": "he4 a1?"
+          "rom": "he4 a1?",
+          "zh": "是嗎？"
         },
         {
           "hak": "照常",
-          "rom": "zau4 song2"
+          "rom": "zau4 song2",
+          "zh": "通常"
         },
         {
           "hak": "一隻禮拜",
-          "rom": "yit5 zak5 li1 bai4"
+          "rom": "yit5 zak5 li1 bai4",
+          "zh": "一週"
         },
         {
           "hak": "成下",
-          "rom": "sang2 ha4"
+          "rom": "sang2 ha4",
+          "zh": "有時候"
         },
         {
           "hak": "久唔久",
-          "rom": "giu3 m1 giu3"
+          "rom": "giu3 m1 giu3",
+          "zh": "偶爾"
         },
         {
           "hak": "出嗨年",
-          "rom": "cut5 hoi1 ngien2"
+          "rom": "cut5 hoi1 ngien2",
+          "zh": "明年"
         },
         {
           "hak": "…添",
-          "rom": "tiam1"
+          "rom": "tiam1",
+          "zh": "更..."
         }
       ],
       "id": "vocab-1"

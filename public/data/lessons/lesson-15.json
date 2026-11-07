@@ -11,67 +11,84 @@
       "items": [
         {
           "hak": "昝暋日",
-          "rom": "cam4 min1 ngit5"
+          "rom": "cam4 min1 ngit5",
+          "zh": "昨天"
         },
         {
           "hak": "昝暋下晝",
-          "rom": "cam4 min1 ha1 ziu4"
+          "rom": "cam4 min1 ha1 ziu4",
+          "zh": "昨下午"
         },
         {
           "hak": "昝暋朝",
-          "rom": "cam4 min1 zau1"
+          "rom": "cam4 min1 zau1",
+          "zh": "昨天早上"
         },
         {
           "hak": "打轉電話",
-          "rom": "da3 zon3 tien4 va4"
+          "rom": "da3 zon3 tien4 va4",
+          "zh": "回電"
         },
         {
           "hak": "昝晚夜",
-          "rom": "cam4 man1 ya4"
+          "rom": "cam4 man1 ya4",
+          "zh": "昨晚"
         },
         {
           "hak": "跟尾",
-          "rom": "gen1 mui1"
+          "rom": "gen1 mui1",
+          "zh": "後來"
         },
         {
           "hak": "下晝辰",
-          "rom": "ha1 ziu4 sin2"
+          "rom": "ha1 ziu4 sin2",
+          "zh": "下午時分"
         },
         {
           "hak": "食夜",
-          "rom": "sit6 ya4"
+          "rom": "sit6 ya4",
+          "zh": "吃晚飯"
         },
         {
           "hak": "尋",
-          "rom": "cim2"
+          "rom": "cim2",
+          "zh": "找"
         },
         {
           "hak": "嘛？",
-          "rom": "mia3?"
+          "rom": "mia3?",
+          "zh": "嗎？"
         },
         {
           "hak": "今朝辰",
-          "rom": "gim1 zau1 sin2"
+          "rom": "gim1 zau1 sin2",
+          "zh": "今早"
         },
         {
           "hak": "亢身",
-          "rom": "hong4 sin1"
+          "rom": "hong4 sin1",
+          "zh": "起來"
         },
         {
           "hak": "落水",
-          "rom": "lok6 sui3"
+          "rom": "lok6 sui3",
+          "zh": "下雨",
+          "en": "Rain"
         },
         {
           "hak": "晨朝朝辰",
-          "rom": "sin2 zau1 zau1 sin2"
+          "rom": "sin2 zau1 zau1 sin2",
+          "zh": "明天早上"
         },
         {
           "hak": "晨朝日",
-          "rom": "sin2 zau1 ngit5"
+          "rom": "sin2 zau1 ngit5",
+          "zh": "明天"
         },
         {
           "hak": "晨朝下晝",
-          "rom": "sin2 zau1 ha1 ziu4"
+          "rom": "sin2 zau1 ha1 ziu4",
+          "zh": "明天下午"
         }
       ],
       "id": "vocab-1"

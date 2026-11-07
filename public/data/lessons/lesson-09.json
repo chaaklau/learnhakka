@@ -5,16 +5,16 @@
     {
       "type": "vocab",
       "items": [
-        {"hak":"屋卡人","rom":"vuk5 ka1 ngin2"},
-        {"hak":"相","rom":"siong4"},
-        {"hak":"心臼","rom":"sim1 kiu1"},
-        {"hak":"婿郎","rom":"se4 long2"},
-        {"hak":"正","rom":"zang4"},
-        {"hak":"還有","rom":"han2 yiu1"},
-        {"hak":"英國人","rom":"yin1 get5 ngin2"},
-        {"hak":"孫女","rom":"sun1 ng3"},
-        {"hak":"孫子","rom":"sun1 zu1"},
-        {"hak":"塞子","rom":"set5 zu1"}
+        {"hak":"屋卡人","rom":"vuk5 ka1 ngin2","zh":"家人","en":"Family Members / People at home"},
+        {"hak":"相","rom":"siong4","zh":"照片","en":"Photo"},
+        {"hak":"心臼","rom":"sim1 kiu1","zh":"兒媳婦","en":"Daughter-in-law"},
+        {"hak":"婿郎","rom":"se4 long2","zh":"女婿","en":"Son-in-law"},
+        {"hak":"正","rom":"zang4","zh":"才","en":"Only then / Just"},
+        {"hak":"還有","rom":"han2 yiu1","en":"Also have"},
+        {"hak":"英國人","rom":"yin1 get5 ngin2","en":"British person"},
+        {"hak":"孫女","rom":"sun1 ng3","en":"Granddaughter"},
+        {"hak":"孫子","rom":"sun1 zu1","en":"Grandson"},
+        {"hak":"塞子","rom":"set5 zu1","zh":"曾孫","en":"Great-grandson"}
       ],
       "id": "vocab-1"
     },

@@ -5,20 +5,20 @@
     {
       "type": "vocab",
       "items": [
-        {"hak":"吾","rom":"nga1"},
-        {"hak":"惹","rom":"ngia1"},
-        {"hak":"其","rom":"gia1"},
-        {"hak":"表弟","rom":"biau3 ti4"},
-        {"hak":"大舅","rom":"tai4 kiu1"},
-        {"hak":"姊妹","rom":"zi3 moi4"},
-        {"hak":"咩係","rom":"me4 he4"},
-        {"hak":"阿㜆","rom":"a1 mi1"},
-        {"hak":"阿哥","rom":"a1 go1"},
+        {"hak":"吾","rom":"nga1","zh":"我的","en":"My"},
+        {"hak":"惹","rom":"ngia1","zh":"你的","en":"Your"},
+        {"hak":"其","rom":"gia1","zh":"他的","en":"His / Her"},
+        {"hak":"表弟","rom":"biau3 ti4","en":"Cousin (younger male, mother's side)"},
+        {"hak":"大舅","rom":"tai4 kiu1","zh":"媽媽的哥哥","en":"Uncle (Mother's oldest brother)"},
+        {"hak":"姊妹","rom":"zi3 moi4","zh":"姐妹","en":"Sisters / Siblings"},
+        {"hak":"咩係","rom":"me4 he4","zh":"不就是","en":"Isn't it"},
+        {"hak":"阿㜆","rom":"a1 mi1","zh":"媽媽","en":"Mother"},
+        {"hak":"阿哥","rom":"a1 go1","zh":"哥哥（面稱）"},
         {"hak":"幾多","rom":"git5 do1"},
-        {"hak":"兩十二","rom":"liong3 sip6 ngi4"},
-        {"hak":"左手析","rom":"zo3 siu3 sak5"},
-        {"hak":"三隻","rom":"sam1 zak5"},
-        {"hak":"歲","rom":"soi4"}
+        {"hak":"兩十二","rom":"liong3 sip6 ngi4","zh":"二十二","en":"Twenty-two"},
+        {"hak":"左手析","rom":"zo3 siu3 sak5","zh":"左邊"},
+        {"hak":"三隻","rom":"sam1 zak5","zh":"三個","en":"Three items"},
+        {"hak":"歲","rom":"soi4","en":"Years old"}
       ],
       "id": "vocab-1"
     },

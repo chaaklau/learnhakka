@@ -11,11 +11,13 @@
       "items": [
         {
           "hak": "擘仔",
-          "rom": "mak5 zai3"
+          "rom": "mak5 zai3",
+          "zh": "唐生菜"
         },
         {
           "hak": "找轉",
-          "rom": "zau3 zon3"
+          "rom": "zau3 zon3",
+          "zh": "找回"
         },
         {
           "hak": "番茄",
@@ -23,15 +25,18 @@
         },
         {
           "hak": "一隻花邊",
-          "rom": "yit5 zak5 fa1 bien1"
+          "rom": "yit5 zak5 fa1 bien1",
+          "zh": "一個銀元"
         },
         {
           "hak": "街市",
-          "rom": "gai1 si4"
+          "rom": "gai1 si4",
+          "zh": "菜市場"
         },
         {
           "hak": "論隻",
-          "rom": "lun4 zak5"
+          "rom": "lun4 zak5",
+          "zh": "論個"
         },
         {
           "hak": "鮮魚",
@@ -39,15 +44,19 @@
         },
         {
           "hak": "恅過",
-          "rom": "lau1 go4"
+          "rom": "lau1 go4",
+          "zh": "以爲"
         },
         {
           "hak": "真係",
-          "rom": "zin1 he4"
+          "rom": "zin1 he4",
+          "zh": "真的",
+          "en": "Really is"
         },
         {
           "hak": "唔慣",
-          "rom": "m1 gan4"
+          "rom": "m1 gan4",
+          "zh": "不習慣"
         }
       ],
       "id": "vocab-1"

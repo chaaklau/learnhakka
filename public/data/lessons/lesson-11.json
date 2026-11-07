@@ -11,11 +11,13 @@
       "items": [
         {
           "hak": "吾嫂",
-          "rom": "nga1 sau3"
+          "rom": "nga1 sau3",
+          "zh": "我嫂子"
         },
         {
           "hak": "雪櫃",
-          "rom": "siet5 kui4"
+          "rom": "siet5 kui4",
+          "zh": "冰箱"
         },
         {
           "hak": "風扇",
@@ -23,31 +25,38 @@
         },
         {
           "hak": "側邊",
-          "rom": "zet5 bien1"
+          "rom": "zet5 bien1",
+          "zh": "旁邊"
         },
         {
           "hak": "桌仔",
-          "rom": "zok5 zai3"
+          "rom": "zok5 zai3",
+          "zh": "小桌子"
         },
         {
           "hak": "凳仔",
-          "rom": "den4 zai3"
+          "rom": "den4 zai3",
+          "zh": "小凳子"
         },
         {
           "hak": "企",
-          "rom": "ki1"
+          "rom": "ki1",
+          "zh": "站"
         },
         {
           "hak": "碗箸",
-          "rom": "von3 cu4"
+          "rom": "von3 cu4",
+          "zh": "碗筷"
         },
         {
           "hak": "調羹",
-          "rom": "tiau2 gang1"
+          "rom": "tiau2 gang1",
+          "zh": "勺子"
         },
         {
           "hak": "人客",
-          "rom": "ngin2 hak5"
+          "rom": "ngin2 hak5",
+          "zh": "客人"
         },
         {
           "hak": "拿下來",
@@ -55,11 +64,13 @@
         },
         {
           "hak": "做人客",
-          "rom": "zo4 ngin2 hak5"
+          "rom": "zo4 ngin2 hak5",
+          "zh": "作客"
         },
         {
           "hak": "大姨",
-          "rom": "tai4 yi2"
+          "rom": "tai4 yi2",
+          "zh": "媽媽的姐姐"
         }
       ],
       "id": "vocab-1"

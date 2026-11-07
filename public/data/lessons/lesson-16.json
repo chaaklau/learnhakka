@@ -11,79 +11,98 @@
       "items": [
         {
           "hak": "打早",
-          "rom": "da3 zau3"
+          "rom": "da3 zau3",
+          "zh": "一大早"
         },
         {
           "hak": "行去",
-          "rom": "hang2 hi4"
+          "rom": "hang2 hi4",
+          "zh": "走去"
         },
         {
           "hak": "在卡",
-          "rom": "coi1 ka1"
+          "rom": "coi1 ka1",
+          "zh": "在家"
         },
         {
           "hak": "食晝",
-          "rom": "sit6 ziu4"
+          "rom": "sit6 ziu4",
+          "zh": "吃午飯"
         },
         {
           "hak": "下晝辰",
-          "rom": "ha1 ziu4 sin2"
+          "rom": "ha1 ziu4 sin2",
+          "zh": "下午時分"
         },
         {
           "hak": "六隻鐘頭",
-          "rom": "luk5 zak5 zung1 teu2"
+          "rom": "luk5 zak5 zung1 teu2",
+          "zh": "六個小時"
         },
         {
           "hak": "斷暗",
-          "rom": "ton1 am4"
+          "rom": "ton1 am4",
+          "zh": "黃昏"
         },
         {
           "hak": "晨朝晚夜",
-          "rom": "sin2 zau1 man1 ya4"
+          "rom": "sin2 zau1 man1 ya4",
+          "zh": "明晚"
         },
         {
           "hak": "丈人佬",
-          "rom": "cong1 ngin1 lau3"
+          "rom": "cong1 ngin1 lau3",
+          "zh": "岳父"
         },
         {
           "hak": "行轉來",
-          "rom": "hang2 zon3 loi2"
+          "rom": "hang2 zon3 loi2",
+          "zh": "走回來"
         },
         {
           "hak": "唔當",
-          "rom": "m1 dong4"
+          "rom": "m1 dong4",
+          "zh": "不如"
         },
         {
           "hak": "好…下子",
-          "rom": "hau3 ha4 zu3"
+          "rom": "hau3 ha4 zu3",
+          "zh": "相當..."
         },
         {
           "hak": "後日",
-          "rom": "heu4 ngit5"
+          "rom": "heu4 ngit5",
+          "zh": "後天"
         },
         {
           "hak": "好滴",
-          "rom": "hau3 dit6"
+          "rom": "hau3 dit6",
+          "zh": "好些"
         },
         {
           "hak": "唔曉停",
-          "rom": "m1 hiau3 tin2"
+          "rom": "m1 hiau3 tin2",
+          "zh": "不會停"
         },
         {
           "hak": "後日朝辰",
-          "rom": "heu4 ngit5 zau1 sin2"
+          "rom": "heu4 ngit5 zau1 sin2",
+          "zh": "後天早上"
         },
         {
           "hak": "夜晚辰",
-          "rom": "ya4 man1 sin2"
+          "rom": "ya4 man1 sin2",
+          "zh": "晚上"
         },
         {
           "hak": "朝辰頭",
-          "rom": "zau1 sin2 teu2"
+          "rom": "zau1 sin2 teu2",
+          "zh": "早上"
         },
         {
           "hak": "丈人婆",
-          "rom": "cong1 ngin1 po2"
+          "rom": "cong1 ngin1 po2",
+          "zh": "丈母娘"
         }
       ],
       "id": "vocab-1"

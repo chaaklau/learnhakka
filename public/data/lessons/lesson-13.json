@@ -11,71 +11,88 @@
       "items": [
         {
           "hak": "這兜",
-          "rom": "ngia3 deu1"
+          "rom": "ngia3 deu1",
+          "zh": "這些"
         },
         {
           "hak": "朳仔",
-          "rom": "pat6 zai3"
+          "rom": "pat6 zai3",
+          "zh": "番石榴"
         },
         {
           "hak": "十吊錢",
-          "rom": "sip6 diau4 cien2"
+          "rom": "sip6 diau4 cien2",
+          "zh": "十塊錢"
         },
         {
           "hak": "恁貴",
-          "rom": "an2 gui4"
+          "rom": "an2 gui4",
+          "zh": "那麼貴"
         },
         {
           "hak": "荔果",
-          "rom": "lai1 go3"
+          "rom": "lai1 go3",
+          "zh": "荔枝"
         },
         {
           "hak": "唉兜",
-          "rom": "ai4 deu1"
+          "rom": "ai4 deu1",
+          "zh": "那些"
         },
         {
           "hak": "牙蕉",
-          "rom": "nga2 ziau1"
+          "rom": "nga2 ziau1",
+          "zh": "香蕉"
         },
         {
           "hak": "哪兜",
-          "rom": "lai4 deu1"
+          "rom": "lai4 deu1",
+          "zh": "哪些"
         },
         {
           "hak": "大蕉",
-          "rom": "tai4 ziau1"
+          "rom": "tai4 ziau1",
+          "zh": "芭蕉"
         },
         {
           "hak": "有兜",
-          "rom": "yiu1 deu1"
+          "rom": "yiu1 deu1",
+          "zh": "有一些"
         },
         {
           "hak": "論隻",
-          "rom": "lun4 zak5"
+          "rom": "lun4 zak5",
+          "zh": "論個"
         },
         {
           "hak": "自家",
-          "rom": "ci2 ga1"
+          "rom": "ci2 ga1",
+          "zh": "自己"
         },
         {
           "hak": "有滴",
-          "rom": "yiu1 dit6"
+          "rom": "yiu1 dit6",
+          "zh": "有點"
         },
         {
           "hak": "做得",
-          "rom": "zo4 det5"
+          "rom": "zo4 det5",
+          "zh": "可以"
         },
         {
           "hak": "平滴",
-          "rom": "piang2 dit6"
+          "rom": "piang2 dit6",
+          "zh": "便宜一點"
         },
         {
           "hak": "…揫",
-          "rom": "ciu1"
+          "rom": "ciu1",
+          "zh": "全部..."
         },
         {
           "hak": "畀你",
-          "rom": "bin1 ngi2"
+          "rom": "bin1 ngi2",
+          "zh": "給你"
         }
       ],
       "id": "vocab-1"

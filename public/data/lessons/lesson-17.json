@@ -11,15 +11,18 @@
       "items": [
         {
           "hak": "喉連",
-          "rom": "heu2 lien2"
+          "rom": "heu2 lien2",
+          "zh": "喉嚨"
         },
         {
           "hak": "流鼻膿",
-          "rom": "liu2 pi4 lung2"
+          "rom": "liu2 pi4 lung2",
+          "zh": "流鼻涕"
         },
         {
           "hak": "凵",
-          "rom": "kem3"
+          "rom": "kem3",
+          "zh": "咳嗽"
         },
         {
           "hak": "伸",
@@ -27,27 +30,33 @@
         },
         {
           "hak": "舌嫲",
-          "rom": "set6 ma2"
+          "rom": "set6 ma2",
+          "zh": "舌頭"
         },
         {
           "hak": "擘大啜",
-          "rom": "mak5 tai4 zoi4"
+          "rom": "mak5 tai4 zoi4",
+          "zh": "張開嘴巴"
         },
         {
           "hak": "叮東仔",
-          "rom": "din1 dung1 zai3"
+          "rom": "din1 dung1 zai3",
+          "zh": "扁桃腺"
         },
         {
-          "hak": "(還有)嘪",
-          "rom": "mai3"
+          "hak": "嘪",
+          "rom": "mai3",
+          "zh": "什麼"
         },
         {
           "hak": "耳公",
-          "rom": "ngi3 gung1"
+          "rom": "ngi3 gung1",
+          "zh": "耳朵"
         },
         {
           "hak": "等厓",
-          "rom": "den3 ngai2"
+          "rom": "den3 ngai2",
+          "zh": "讓我"
         }
       ],
       "id": "vocab-1"
@@ -63,7 +72,7 @@
         },
         {
           "hak": "你伸條舌嫲畀厓看下。擘大啜，講阿⋯。噢，叮東仔都發炎添。應該係流感。還有嘪唔舒服麼？",
-          "rom": "ngi2 | cun1 | tiau2 | set6 ma2 | bin1 | ngai2 | kon4 ha4. mak5 tai4 zoi4, gong3 | a1. o1, din1 dung1 zai3 | du1 | fat5 yam2 | tiam1. yin1 goi1 | he4 | liu2 gam3. han2 yiu1 | mai3 | m1 | su1 fuk6 | mo1?",
+          "rom": "ngi2 | cun1 | tiau2 | set6 ma2 | bin1 | ngai2 | kon4 ha4. mak5 tai4 zoi4, gong3 | a1. o1, din1 dung1 zai3 | du1 | fat5 yam2 | tiam1. yin4 goi1 | he4 | liu2 gam3. han2 yiu1 | mai3 | m1 | su1 fuk6 | mo1?",
           "sp": "B",
           "zh": "你伸舌頭給我看下。張大嘴巴，說阿⋯。噢，連扁桃腺也發炎呢。應該是流感。還有什麼不舒服嗎？"
         },
@@ -75,7 +84,7 @@
         },
         {
           "hak": "可能係中耳炎，屬於細菌感染。等厓看下。⋯",
-          "rom": "ko3 len2 | he4 | zung1 ngi3 yam2, suk6 yi1 | si4 kiun3 gam3 ngiam3. den3 ngai2 | kon4 ha4.",
+          "rom": "ko3 len2 | he4 | zung1 ngi3 yam2, suk6 yi1 | si4 kiun4 gam3 ngiam4. den3 ngai2 | kon4 ha4.",
           "sp": "B",
           "zh": "可能是中耳炎，屬於細菌感染。讓我看下⋯。"
         },
