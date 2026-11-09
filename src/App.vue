@@ -257,7 +257,7 @@
                   v-show="!slidesMode || slideItemVisible(bi, ii)"
                   @click="playBlockItem(currentLesson.id, block, bi, ii)"
                 >
-                  <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn">▶</button>
+                  <button v-if="getBlockTimestamps(currentLesson.id, block, bi)?.[ii]" type="button" class="row-play-btn">▶</button>
                   <div class="sent-text">
                     <p class="sent-hak font-hakka" v-html="renderSentenceRuby(item)"></p>
                     <p v-if="displayLang === 'en' && getDisplayText(item)" class="sent-tr">{{ getDisplayText(item) }}</p>
@@ -268,16 +268,16 @@
 
               <template v-else-if="block.type === 'practice' && Array.isArray(block.items)">
                 <ol class="prompt-list">
-                  <li v-for="(item, ii) in block.items" :key="ii" :class="{ 'has-audio': getBlockTimestamps(currentLesson.id, block, bi) }" v-show="!slidesMode || slideItemVisible(bi, ii)" @click="playBlockItem(currentLesson.id, block, bi, ii)">
-                    <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn" @click.stop="playBlockItem(currentLesson.id, block, bi, ii)">▶</button>
+                  <li v-for="(item, ii) in block.items" :key="ii" :class="{ 'has-audio': getBlockTimestamps(currentLesson.id, block, bi)?.[ii] }" v-show="!slidesMode || slideItemVisible(bi, ii)" @click="playBlockItem(currentLesson.id, block, bi, ii)">
+                    <button v-if="getBlockTimestamps(currentLesson.id, block, bi)?.[ii]" type="button" class="row-play-btn" @click.stop="playBlockItem(currentLesson.id, block, bi, ii)">▶</button>
                     <span v-html="formatNoteText(item)"></span>
                   </li>
                 </ol>
               </template>
 
               <div v-else-if="block.type === 'practice' && Array.isArray(block.rows)" class="drill-rows">
-                <div v-for="(row, ri) in block.rows" :key="ri" class="drill-row-wrap" :class="{ 'has-audio': getBlockTimestamps(currentLesson.id, block, bi) }" v-show="!slidesMode || slideItemVisible(bi, ri)" @click="playBlockItem(currentLesson.id, block, bi, ri)">
-                  <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn" @click.stop="playBlockItem(currentLesson.id, block, bi, ri)">▶</button>
+                <div v-for="(row, ri) in block.rows" :key="ri" class="drill-row-wrap" :class="{ 'has-audio': getBlockTimestamps(currentLesson.id, block, bi)?.[ri] }" v-show="!slidesMode || slideItemVisible(bi, ri)" @click="playBlockItem(currentLesson.id, block, bi, ri)">
+                  <button v-if="getBlockTimestamps(currentLesson.id, block, bi)?.[ri]" type="button" class="row-play-btn" @click.stop="playBlockItem(currentLesson.id, block, bi, ri)">▶</button>
                   <div class="vocab-grid">
                     <div v-for="(cell, ci) in row" :key="ci" class="vocab-card sm">
                       <p class="vocab-hak font-hakka" v-html="renderTokenRuby(cell)"></p>
@@ -294,8 +294,8 @@
 
               <template v-else-if="block.type === 'sentence_practice' || block.type === 'sentences'">
                 <ol class="sp-list" :style="slidesMode && curPage()?.bi === bi ? { counterReset: 'sp-counter ' + curPage().from } : {}">
-                  <li v-for="(item, ii) in block.items" :key="ii" class="sp-item" :class="{ 'has-audio': getBlockTimestamps(currentLesson.id, block, bi) }" v-show="!slidesMode || slideItemVisible(bi, ii)" @click="playBlockItem(currentLesson.id, block, bi, ii)">
-                    <button v-if="getBlockTimestamps(currentLesson.id, block, bi)" type="button" class="row-play-btn" :aria-label="`Play sentence ${ii + 1}`" @click.stop="playBlockItem(currentLesson.id, block, bi, ii)">▶</button>
+                  <li v-for="(item, ii) in block.items" :key="ii" class="sp-item" :class="{ 'has-audio': getBlockTimestamps(currentLesson.id, block, bi)?.[ii] }" v-show="!slidesMode || slideItemVisible(bi, ii)" @click="playBlockItem(currentLesson.id, block, bi, ii)">
+                    <button v-if="getBlockTimestamps(currentLesson.id, block, bi)?.[ii]" type="button" class="row-play-btn" :aria-label="`Play sentence ${ii + 1}`" @click.stop="playBlockItem(currentLesson.id, block, bi, ii)">▶</button>
                     <span v-html="formatPracticeItem(item)"></span>
                   </li>
                 </ol>
@@ -1114,12 +1114,10 @@ function getBlockAudio(lessonId, block, blockIndex) {
 
 function normalizeSegments(segments) {
   if (!Array.isArray(segments)) return null
-  return segments
-    .map((segment) => {
-      if (Array.isArray(segment)) return [segment[0], segment[1]]
-      return [segment.start, segment.end]
-    })
-    .filter(([start, end]) => Number.isFinite(start) && Number.isFinite(end) && end > start)
+  return segments.map((segment) => {
+    const [start, end] = Array.isArray(segment) ? segment : [segment?.start, segment?.end]
+    return Number.isFinite(start) && Number.isFinite(end) && end > start ? [start, end] : null
+  })
 }
 
 const audioLabel = computed(() => {
@@ -1153,7 +1151,7 @@ function rafLoop() {
     audioDuration.value = el.duration || 0
     if (activeSegments) {
       const t = el.currentTime
-      const idx = activeSegments.timestamps.findIndex(([s, e]) => t >= s && t < e)
+      const idx = activeSegments.timestamps.findIndex(segment => segment && t >= segment[0] && t < segment[1])
       audioSegmentText.value = idx >= 0 ? (activeSegments.texts[idx] || '') : ''
     }
     if (stopAtTime != null && el.currentTime >= stopAtTime) {
@@ -1290,7 +1288,7 @@ function seekAudio(e) {
   // Update segment text immediately; rafLoop will keep it live if playing
   if (activeSegments) {
     const t = el.currentTime
-    const idx = activeSegments.timestamps.findIndex(([s, end]) => t >= s && t < end)
+    const idx = activeSegments.timestamps.findIndex(segment => segment && t >= segment[0] && t < segment[1])
     audioSegmentText.value = idx >= 0 ? (activeSegments.texts[idx] || '') : ''
   }
 }
@@ -1321,6 +1319,7 @@ function playBlockItem(lessonId, block, blockIndex, itemIndex) {
   const src = getBlockAudio(lessonId, block, blockIndex)
   if (!src) return
   const ts = getBlockTimestamps(lessonId, block, blockIndex)
+  if (ts && !ts[itemIndex]) return
   if (ts) {
     activeSegments = { timestamps: ts, texts: ts.map((_, i) => getSegmentText(block, i)) }
   } else {
@@ -1468,6 +1467,7 @@ function getSlideAudio(page) {
   if (!block || !media?.audio) return null
   const segments = normalizeSegments(media.segments)
   const segment = segments?.[page.from]
+  if (segments && !segment) return null
   return {
     src: baseUrl + 'data/' + media.audio,
     start: segment?.[0] ?? null,

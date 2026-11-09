@@ -91,6 +91,7 @@ for (const entry of index) {
       let previousEnd = -Infinity
       for (let i = 0; i < blockMedia.segments.length; i++) {
         const segment = blockMedia.segments[i]
+        if (segment === null) continue // Displayed item with no recording.
         if (!Number.isFinite(segment.start) || !Number.isFinite(segment.end)) {
           fail(blockScope, `segment ${i} start/end must be finite numbers`)
         } else if (segment.end <= segment.start) {

@@ -165,6 +165,39 @@
           "end": 8.56
         }
       ]
+    },
+    "sentence_practice-1": {
+      "audio": "audio/ch3-sentence-practice.m4a",
+      "segments": [
+        {
+          "start": 6.95,
+          "end": 21.023
+        },
+        {
+          "start": 24.239,
+          "end": 35.166
+        },
+        {
+          "start": 38.892,
+          "end": 47.189
+        },
+        {
+          "start": 49.915,
+          "end": 51.273
+        },
+        {
+          "start": 54.606,
+          "end": 64.515
+        },
+        {
+          "start": 67.626,
+          "end": 76.992
+        },
+        {
+          "start": 79.957,
+          "end": 87.268
+        }
+      ]
     }
   }
 }

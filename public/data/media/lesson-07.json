@@ -149,6 +149,51 @@
           "end": 12.43
         }
       ]
+    },
+    "sentence_practice-1": {
+      "audio": "audio/ch7-sentence-practice.m4a",
+      "segments": [
+        {
+          "start": 6.003,
+          "end": 7.581
+        },
+        {
+          "start": 10.034,
+          "end": 11.435
+        },
+        {
+          "start": 14.581,
+          "end": 17.189
+        },
+        {
+          "start": 19.485,
+          "end": 27.565
+        },
+        {
+          "start": 30.114,
+          "end": 32.143
+        },
+        {
+          "start": 34.939,
+          "end": 37.312
+        },
+        {
+          "start": 40.06,
+          "end": 42.179
+        },
+        {
+          "start": 43.44,
+          "end": 48.162
+        },
+        {
+          "start": 50.765,
+          "end": 52.65
+        },
+        {
+          "start": 54.86,
+          "end": 56.658
+        }
+      ]
     }
   }
 }
